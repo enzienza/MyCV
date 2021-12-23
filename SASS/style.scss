@@ -1,0 +1,31 @@
+/*!
+Theme Name: MyCV 2021
+Theme URI:
+Author: Enza Lombardo
+Author URI: http://www.enzalombardo.be
+Description: Mon Curriculum Vitae online
+Version: 1.0
+Text Domain: MyCV
+copyright : Enza ©2021
+Tags:
+*/
+
+// VENDOR -------------------------------
+
+// UTILITIES ----------------------------
+@import "./utilities/utilities";
+
+// BASE ---------------------------------
+@import "./base/base";
+
+// COMPONENTS ---------------------------
+@import "./components/components";
+
+// ELEMENTS -----------------------------
+@import "./elements/elements";
+
+// FORM ---------------------------------
+@import "./form/form";
+
+// LAYOUT -------------------------------
+@import "./layout/layout";
