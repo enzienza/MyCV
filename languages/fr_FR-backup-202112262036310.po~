@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MyCV 2021\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-26 20:16+0000\n"
+"PO-Revision-Date: 2021-12-26 20:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.5; wp-5.8.2\n"
+"X-Domain: MyCV"
+
+#. Author of the theme
+msgid "Enza Lombardo"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://www.enzalombardo.be"
+msgstr ""
+
+#. Description of the theme
+msgid "Mon Curriculum Vitae online"
+msgstr ""
+
+#. Name of the theme
+msgid "MyCV 2021"
+msgstr ""
