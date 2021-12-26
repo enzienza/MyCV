@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: header
- * Description:
+ * Description: Header file for the MyCV WordPress default theme.
  *
  * @package WordPress
  * @subpackage MyCV

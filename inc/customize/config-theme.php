@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: config-theme
- * Description:
+ * Description: MyCV functions and definitions
  *
  * @package WordPress
  * @subpackage MyCV

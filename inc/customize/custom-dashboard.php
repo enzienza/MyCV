@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: custom-dashboard
- * Description:
+ * Description: MyCV custom elements in Dashboard
  *
  * @package WordPress
  * @subpackage MyCV

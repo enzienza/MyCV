@@ -1,7 +1,7 @@
 <?php
 /**
- * Name file: 404
- * Description:
+ * Name file: index
+ * Description: The main template file
  *
  * @package WordPress
  * @subpackage MyCV

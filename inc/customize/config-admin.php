@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: config-admin
- * Description:
+ * Description: MyCV custom Administration (CSS/JS)
  *
  * @package WordPress
  * @subpackage MyCV

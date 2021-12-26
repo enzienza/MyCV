@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: functions
- * Description:
+ * Description: includes all functions
  *
  * @package WordPress
  * @subpackage MyCV
