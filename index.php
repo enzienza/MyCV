@@ -12,6 +12,7 @@
 
 <?php get_header() ?>
     <main>
+        <?php get_template_part('template-parts/components/switch-theme') ?>
         <h1>this is main page</h1>
     </main>
 <?php get_footer() ?>

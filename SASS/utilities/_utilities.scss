@@ -6,6 +6,7 @@
 // =======================================================
 @import "variables/flaticons";
 @import "variables/typographies";
+@import "variables/colors";
 
 
 // =======================================================
@@ -20,6 +21,12 @@
 
 // boxes ...................................
 @import "mixins/boxes/box-shadow";
+
+// flex-grid ................................
+@import "mixins/flex-grid/align";
+@import "mixins/flex-grid/flexbox";
+@import "mixins/flex-grid/grid";
+@import "mixins/flex-grid/justify";
 
 
 // =======================================================
