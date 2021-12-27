@@ -262,4 +262,59 @@ img {
 .capitalize {
   text-transform: capitalize; }
 
+.switcher-mode {
+  position: fixed;
+  top: 3rem;
+  right: 2rem; }
+
+.checkbox {
+  opacity: 0;
+  position: absolute; }
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px); }
+
+.label {
+  background: #261237;
+  position: relative;
+  border-radius: 50px;
+  height: 30px;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  margin: 0 7px; }
+  .label .ball {
+    background: #fafafa;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    transform: translateX(0px);
+    transition: all .2s ease;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15); }
+  .label .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.flaticon-moon {
+  position: absolute;
+  right: 5px;
+  color: #fafafa; }
+.flaticon-sun {
+  position: absolute;
+  left: 5px;
+  color: #fafafa; }
+
+body {
+  background: #fafafa;
+  color: #0b0511; }
+
+body.dark {
+  background: #242525;
+  color: #fafafa; }
+
 /*# sourceMappingURL=style.css.map */

@@ -53,8 +53,8 @@ add_action('after_setup_theme','mycv_supports' );
 
 /**
  * 2 - Custom css nav menu
- *     nav_menu_css_class: Filters the CSS classes applied to a menu item’s list item elements.
- *     nav_menu_link_attributes: Filters the HTML attributes applied to a menu item’s anchor elements.
+ *     nav_menu_css_class: Filters the CSS classes applied to a menu item’s list item components.
+ *     nav_menu_link_attributes: Filters the HTML attributes applied to a menu item’s anchor components.
  */
 add_filter(
     "nav_menu_css_class",
@@ -102,6 +102,18 @@ if(!function_exists('mycv_register_assets')) {
             [],
             '1.16.0', true
         );
+
+        // CDN jquery-cookie
+        wp_register_script(
+            'jquery-cookie',
+            'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
+',
+            [],
+            '1.4.1', true
+        );
+
+        wp_enqueue_script('jquery-cookie');
+
         // CDN jQuery
         wp_deregister_script('jquery');
         wp_register_script(
@@ -113,7 +125,13 @@ if(!function_exists('mycv_register_assets')) {
         );
 
         // JS Custom  ---------------------------------
-
+        wp_enqueue_script(
+            'switch-mode',
+            get_template_directory_uri().'/assets/js/switch-mode.js',
+            [],
+            '1.0',
+            true
+        );
 
         // ===================================================================
         // CSS
