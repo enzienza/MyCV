@@ -22,11 +22,27 @@ Tags:
 */
 
 /* ==============================================
+ *      0 - ROOT
+ */
+
+:root{
+    --bg-login: #232634;
+    --darken-bluegray: #32373c;
+    --lighten-bluegray: #5B6786;
+    --color-white: #fff;
+    --color-light: #f1f1f1;
+    --color-border: #7e8993;
+    --lighten-grey: #cecece;
+
+}
+
+
+/* ==============================================
  *      1 - STYLE FOR THE LOGIN PAGE
  */
 /* fond */
 body.login {
-    background: #232634;
+    background: var(--bg-login);
     height: 100vh;
 }
 
@@ -79,13 +95,14 @@ input[type="week"],
 select, textarea {
     box-shadow: 0 0 0 transparent;
     border-radius: 4px;
-    border: 1px solid #7e8993;
-    background: #fff;
-    color: #32373c;
+    border: 1px solid var(--lighten-grey);
+    /*border: 1px solid var(--color-border);*/
+    background: var(--color-white);
+    color: var(--darken-bluegray);
 }
 
 .wp-admin {
-    background: #f1f1f1;
+    background: var(--color-light);
 }
 
 .wrap .wp-heagin-inline {
@@ -94,15 +111,81 @@ select, textarea {
 
 form h2 {
     padding-top: 1.5em;
-    border-top: 1px solid #cecece;
+    border-top: 1px solid var(--lighten-grey);
     width: 98%;
     font-size: 1.3em;
 }
 
 /* ==============================================
- *      3 - STYLE FOR THE MYOPTIONS
+ *      3 - STYLE FOR THE MYOPTIONS (Form)
  */
+/* Title */
+.myoptions h2{
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: var(--lighten-bluegray);
+}
 
+.myoptions h2::before{
+    content: "-";
+    margin-right: .5em;
+    font-size: larger;
+}
+
+.myoptions .section-description{
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 20px;
+    font-weight: lighter;
+    font-size: .9em;
+}
+
+
+/* Photo / Media  */
+.mini-thumbnail{
+    width: 70%;
+    border-radius: 50%;
+    height: auto;
+}
+
+
+/* GRID */
+.grid-3{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+}
+
+.item-picture-cv{
+    border-right: 1px solid var(--lighten-grey);
+    padding: 0 .5rem;
+}
+
+.item-picture-cv:last-child{
+    border-right: none;
+}
+
+.picture-cv-title{
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+}
+
+.picture-cv-preview{
+    line-height: 3;
+    margin-bottom: .5rem;
+}
+
+.picture-cv-file input[type="file"] {
+    background: var(--color-white);
+    width: 100%;
+    padding: 2px;
+    border-radius: 5px;
+    border:1px solid var(--lighten-grey);
+}
 
 /* ==============================================
  *      4 - STYLE FOR COLUMNS ADMIN OF CPT

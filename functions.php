@@ -43,7 +43,7 @@ require_once ('inc/customize/custom-dashboard.php');
 /** =====================================================
  *  3 - OPTIONS-THEME
  */
-
+require_once ('inc/options-theme/OP_about.php');
 
 /** =====================================================
  *  4 - POST-TYPE
