@@ -2,6 +2,7 @@
 /**
  * Name file: OP_about
  * Description: File for the manage CV Settings.
+ *              [information general]
  *
  * @package WordPress
  * @subpackage MyCV
@@ -243,6 +244,7 @@ class mycv_opabout{
                name="job_title"
                value="<?php echo $job_title  ?>"
                class="regular-text"
+               placeholder="Le titre du job"
         />
         <?php
     }
@@ -254,17 +256,19 @@ class mycv_opabout{
                name="mylocation"
                value="<?php echo $mylocation  ?>"
                class="regular-text"
+               placeholder="La localité"
         />
         <?php
     }
     public static function field_myemail(){
         $myemail = esc_attr(get_option('myemail'))
         ?>
-        <input type="text"
+        <input type="email"
                id="myemail"
                name="myemail"
                value="<?php echo $myemail  ?>"
                class="regular-text"
+               placeholder="sophie@example.com"
         />
         <?php
     }
@@ -276,6 +280,7 @@ class mycv_opabout{
                name="myphone"
                value="<?php echo $myphone  ?>"
                class="regular-text"
+               placeholder="0000000000"
         />
         <?php
     }

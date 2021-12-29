@@ -2,6 +2,7 @@
 /**
  * Name file: 03-social
  * Description: File for the manage CV Settings.
+ *              [contact via social networks]
  *
  * @package WordPress
  * @subpackage MyCV
@@ -70,7 +71,7 @@ class opabout_network{
         <div class="wrap">
             <h1 class="wp-heagin-inline"><?php _e('À propos de moi', 'mycv') ?></h1>
             <p class="description">
-                <?php _e('Sur cette page vous pouvez gérer les informations de votre Curriculum Vitae', 'mycv') ?>
+                <?php _e('Sur cette page vous pouvez gérer les url de vos réseaux sociaux', 'mycv') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->

@@ -2,6 +2,7 @@
 /**
  * Name file: 02-media
  * Description: File for the manage CV Settings.
+ *              [Upload of media]
  *
  * @package WordPress
  * @subpackage MyCV
@@ -70,7 +71,7 @@ class opabout_medias{
         <div class="wrap">
             <h1 class="wp-heagin-inline"><?php _e('À propos de moi', 'mycv') ?></h1>
             <p class="description">
-                <?php _e('Sur cette page vous pouvez gérer les informations de votre Curriculum Vitae', 'mycv') ?>
+                <?php _e('Sur cette page vous pouvez gérer les différents média de votre Curriculum Vitae', 'mycv') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->
