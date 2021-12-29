@@ -43,7 +43,9 @@ require_once ('inc/customize/custom-dashboard.php');
 /** =====================================================
  *  3 - OPTIONS-THEME
  */
-require_once ('inc/options-theme/OP_about.php');
+require_once('inc/options-theme/op_aboutme/01-personalDetails.php');
+require_once('inc/options-theme/op_aboutme/02-media.php');
+require_once('inc/options-theme/op_aboutme/03-network.php');
 
 /** =====================================================
  *  4 - POST-TYPE

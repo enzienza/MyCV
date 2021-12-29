@@ -38,7 +38,6 @@ class mycv_opabout{
 
     //definir les sections de la page d'option
     const SECTION_DETAIL = 'section_detail';
-    const SECTION_MEDIA  = 'section_media';
 
 
     /**
@@ -176,27 +175,7 @@ class mycv_opabout{
          *             -> Sauvegarder les champs
          *
          */
-        // -> créer la section
-        add_settings_section(
-            self::SECTION_MEDIA,                 // SLUG_SECTION
-            __('Mes photos', 'mycv'),                // TITLE
-            [self::class, 'display_section_media'],  // CALLBACK
-            self::GROUP                        // SLUG_PAGE
-        ); // Section 2
 
-        // -> Ajouter les éléments du formulaire
-        add_settings_field(
-            'add_media',                          // SLUG_FIELD
-            __('Ajouter les medias', 'mycv'),         // LABEL
-            [self::class,'field_add_media'],          // CALLBACK
-            self::GROUP ,                       // SLUG_PAGE
-            self::SECTION_MEDIA               // SLUG_SECTION
-        );
-
-        // -> Sauvegarder les champs
-        register_setting(self::GROUP, 'myprofil', [self::class, 'handle_profil_upload']);
-        register_setting(self::GROUP, 'myavatar', [self::class, 'handle_avatar_upload']);
-        register_setting(self::GROUP, 'mylogo', [self::class, 'handle_logo_upload']);
     }
 
     /**
@@ -211,69 +190,16 @@ class mycv_opabout{
         <?php
     }
 
-    // SECTION 2 : SECTION_MEDIA ===========================================
-    public static function display_section_media(){
-        ?>
-        <p class="section-description">
-            <?php _e('Ajouter les différentes photo de votre Curriculum Vitae', 'mycv') ?>
-        </p>
-        <?php
-    }
+
 
 
     /**
      * 7 - DEFINIR LE TELECHARGEMENT DES FICHIER
      *     le fichier sera stocké dans le dossier upload
      */
-    // SECTION 2 : SECTION_MEDIA ===========================================
-    public static function handle_profil_upload($options){
-        if(!function_exists('wp_handle_upload'))
-        {
-            require_once(ABSPATH .'wp-admin/includes/file.php');
-        }
-        //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['myprofil'])){
-            $url = wp_handle_upload($_FILES['myprofil'], array('test_form' => false));
-            $temp = $url['url'];
-            return $temp;
-        } else {
-            // no upload. Old file url is the new value.
-            return $options;
-        }
-    }
 
-    public static function handle_avatar_upload($options){
-        if(!function_exists('wp_handle_upload'))
-        {
-            require_once(ABSPATH .'wp-admin/includes/file.php');
-        }
-        //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['myavatar'])){
-            $url = wp_handle_upload($_FILES['myavatar'], array('test_form' => false));
-            $temp = $url['url'];
-            return $temp;
-        } else {
-            // no upload. Old file url is the new value.
-            return $options;
-        }
-    }
 
-    public static function handle_logo_upload($options){
-        if(!function_exists('wp_handle_upload'))
-        {
-            require_once(ABSPATH .'wp-admin/includes/file.php');
-        }
-        //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['mylogo'])){
-            $url = wp_handle_upload($_FILES['mylogo'], array('test_form' => false));
-            $temp = $url['url'];
-            return $temp;
-        } else {
-            // no upload. Old file url is the new value.
-            return $options;
-        }
-    }
-/**
+    /**
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
      */
     // SECTION 1 : SECTION_DETAIL ==========================================
@@ -351,69 +277,6 @@ class mycv_opabout{
                value="<?php echo $myphone  ?>"
                class="regular-text"
         />
-        <?php
-    }
-
-    // SECTION 2 : SECTION_MEDIA ===========================================
-    public static function field_add_media(){
-        $myprofil = esc_attr(get_option('myprofil'));
-        $myavatar = esc_attr(get_option('myavatar'));
-        $mylogo = esc_attr(get_option('mylogo'));
-        ?>
-        <div class="grid-3">
-            <div class="item-picture-cv">
-                <p class="picture-cv-title">Ma photot de profile</p>
-                <div class="picture-cv-preview">
-                    <p>aperçu :</p>
-                    <img src="<?php echo get_option("myprofil") ?>"
-                         alt="Ma photo de profile"
-                         class="mini-thumbnail"
-                    />
-                </div>
-                <div class="picture-cv-file">
-                    <input type="file"
-                           id="myprofil"
-                           name="myprofil"
-                           value="<?php echo get_option("myprofil") ?>"
-                    />
-                </div>
-            </div><!--./item-picture-cv-->
-            <div class="item-picture-cv">
-                <p class="picture-cv-title">Ma photot d'avatar</p>
-                <div class="picture-cv-preview">
-                    <p>aperçu :</p>
-                    <img src="<?php echo get_option("myavatar") ?>"
-                         alt="Ma photo d'avatar"
-                         class="mini-thumbnail"
-                    />
-                </div>
-                <div class="picture-cv-file">
-                    <input type="file"
-                           id="myavatar"
-                           name="myavatar"
-                           value="<?php echo get_option("myavatar") ?>"
-                    />
-                </div>
-            </div><!--./item-picture-cv-->
-            <div class="item-picture-cv">
-                <p class="picture-cv-title">Mon logo</p>
-                <div class="picture-cv-preview">
-                    <p>aperçu :</p>
-                    <img src="<?php echo get_option("mylogo") ?>"
-                         alt="Mon logo"
-                         class="mini-thumbnail"
-                    />
-                </div>
-                <div class="picture-cv-file">
-                    <input type="file"
-                           id="mylogo"
-                           name="mylogo"
-                           value="<?php echo get_option("mylogo") ?>"
-                    />
-                </div>
-            </div><!--./item-picture-cv-->
-        </div><!--./grid-->
-
         <?php
     }
 
