@@ -227,42 +227,53 @@ class mycv_opabout{
      */
     // SECTION 2 : SECTION_MEDIA ===========================================
     public static function handle_profil_upload($options){
+        if(!function_exists('wp_handle_upload'))
+        {
+            require_once(ABSPATH .'wp-admin/includes/file.php');
+        }
         //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['myprofil']['tmp_name'])){
+        if(!empty($_FILES['myprofil'])){
             $url = wp_handle_upload($_FILES['myprofil'], array('test_form' => false));
             $temp = $url['url'];
             return $temp;
-        } // endif
-
-        // no upload. Old file url is the new value.
-        return get_option('myprofil');
+        } else {
+            // no upload. Old file url is the new value.
+            return $options;
+        }
     }
 
     public static function handle_avatar_upload($options){
+        if(!function_exists('wp_handle_upload'))
+        {
+            require_once(ABSPATH .'wp-admin/includes/file.php');
+        }
         //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['myavatar']['tmp_name'])){
+        if(!empty($_FILES['myavatar'])){
             $url = wp_handle_upload($_FILES['myavatar'], array('test_form' => false));
             $temp = $url['url'];
             return $temp;
-        } // endif
-
-        // no upload. Old file url is the new value.
-        return get_option('myavatar');
+        } else {
+            // no upload. Old file url is the new value.
+            return $options;
+        }
     }
 
     public static function handle_logo_upload($options){
+        if(!function_exists('wp_handle_upload'))
+        {
+            require_once(ABSPATH .'wp-admin/includes/file.php');
+        }
         //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['mylogo']['tmp_name'])){
+        if(!empty($_FILES['mylogo'])){
             $url = wp_handle_upload($_FILES['mylogo'], array('test_form' => false));
             $temp = $url['url'];
             return $temp;
-        } // endif
-
-        // no upload. Old file url is the new value.
-        return get_option('mylogo');
+        } else {
+            // no upload. Old file url is the new value.
+            return $options;
+        }
     }
-
-    /**
+/**
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
      */
     // SECTION 1 : SECTION_DETAIL ==========================================

@@ -144,9 +144,12 @@ form h2 {
 
 /* Photo / Media  */
 .mini-thumbnail{
-    width: 70%;
+    width: 200px;
     border-radius: 50%;
-    height: auto;
+    height: 200px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -154,8 +157,8 @@ form h2 {
 .grid-3{
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1rem 1fr 1rem 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr .5rem;
+    grid-template-columns: 1fr;
     gap: .5rem;
 }
 
@@ -170,7 +173,6 @@ form h2 {
 
 .picture-cv-title{
     font-weight: bold;
-    text-align: center;
     line-height: 2;
 }
 
@@ -195,3 +197,46 @@ form h2 {
 /* ==============================================
  *      5 - CUSTOM  METABOXES
  */
+
+
+
+/* ==============================================
+ *      6 - RESPONSIVE
+ */
+
+/* XS */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+}
+
+/* SM */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* MD */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* LG */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .grid-3{
+        -ms-grid-columns: 1fr .5rem 1fr .5em 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .picture-cv-title{
+        text-align: center;
+    }
+}
+
+/* XL */
+@media only screen and (min-width: 1200px){
+    .grid-3{
+        -ms-grid-columns: 1fr .5rem 1fr .5em 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .picture-cv-title{
+        text-align: center;
+    }
+}
