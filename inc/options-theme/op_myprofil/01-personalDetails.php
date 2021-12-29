@@ -23,19 +23,19 @@
  * 9 - AJOUT STYLE & SCRIPT
  */
 
-class mycv_opabout{
+class mycv_myprofil{
 
     /**
      * 1 - DEFINIR LES ELEMENTS (repeter)
      *     afin d'evite les fautes de frappe
      */
     // page info - level 1
-    const INFO_TITLE = 'About Me';
-    const INFO_MENU  = 'About Me';
+    const INFO_TITLE = 'Mon profile';
+    const INFO_MENU  = 'Mon profile';
     const PERMITION  = 'manage_options';
     const DASHICON   = 'dashicons-smiley';
-    const GROUP      = 'opabout';
-    const NONCE      = '_opabout';
+    const GROUP      = 'myprofil';
+    const NONCE      = '_myprofil';
 
     //definir les sections de la page d'option
     const SECTION_DETAIL = 'section_detail';
@@ -71,7 +71,7 @@ class mycv_opabout{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('À propos de moi', 'mycv') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e('Mon profile', 'mycv') ?></h1>
             <p class="description">
                 <?php _e('Sur cette page vous pouvez gérer les informations de votre Curriculum Vitae', 'mycv') ?>
             </p><!--./description-->
@@ -291,6 +291,6 @@ class mycv_opabout{
      */
 }
 
-if(class_exists('mycv_opabout')){
-    mycv_opabout::register();
+if(class_exists('mycv_myprofil')){
+    mycv_myprofil::register();
 }

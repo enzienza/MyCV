@@ -1,6 +1,6 @@
 <?php
 /**
- * Name file: 03-social
+ * Name file: 03-network
  * Description: File for the manage CV Settings.
  *              [contact via social networks]
  *
@@ -23,7 +23,7 @@
  * 9 - AJOUT STYLE & SCRIPT
  */
 
-class opabout_network{
+class myprofil_network{
 
     /**
      * 1 - DEFINIR LES ELEMENTS (repeter)
@@ -33,8 +33,8 @@ class opabout_network{
     const SUB_TITLE   = 'Mes réseaux';
     const SUB_MENU    = 'Mes réseaux';
     const PERMITION    = 'manage_options';
-    const SUB_GROUP   = 'opabout_network';
-    const NONCE        = '_opabout_network';
+    const SUB_GROUP   = 'myprofil_network';
+    const NONCE        = '_myprofil_network';
 
     //definir les sections de la page d'option
     const SECTION_SOCIAL = "section_social";
@@ -54,7 +54,7 @@ class opabout_network{
      */
     public static function addMenu(){
         add_submenu_page(
-            mycv_opabout::GROUP,        // slug parent
+            mycv_myprofil::GROUP,        // slug parent
             self::SUB_TITLE,                    // page_title
             self::SUB_MENU,                     // menu_title
             self::PERMITION,                     // capability
@@ -69,7 +69,7 @@ class opabout_network{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('À propos de moi', 'mycv') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e('Mes réseaux sociaux', 'mycv') ?></h1>
             <p class="description">
                 <?php _e('Sur cette page vous pouvez gérer les url de vos réseaux sociaux', 'mycv') ?>
             </p><!--./description-->
@@ -355,6 +355,6 @@ class opabout_network{
      */
 }
 
-if(class_exists('opabout_network')){
-    opabout_network::register();
+if(class_exists('myprofil_network')){
+    myprofil_network::register();
 }

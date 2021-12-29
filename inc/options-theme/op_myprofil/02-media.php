@@ -24,7 +24,7 @@
  */
 
 
-class opabout_medias{
+class myprofil_medias{
 
     /**
      * 1 - DEFINIR LES ELEMENTS (repeter)
@@ -34,8 +34,8 @@ class opabout_medias{
     const SUB_TITLE   = 'Mes médias';
     const SUB_MENU    = 'Mes médias';
     const PERMITION    = 'manage_options';
-    const SUB_GROUP   = 'opabout_medias';
-    const NONCE        = '_opabout_medias';
+    const SUB_GROUP   = 'myprofil_medias';
+    const NONCE        = '_myprofil_medias';
 
     //definir les sections de la page d'option
     const SECTION_MEDIA  = 'section_media';
@@ -54,7 +54,7 @@ class opabout_medias{
      */
     public static function addMenu(){
         add_submenu_page(
-            mycv_opabout::GROUP,        // slug parent
+            mycv_myprofil::GROUP,        // slug parent
             self::SUB_TITLE,                    // page_title
             self::SUB_MENU,                     // menu_title
             self::PERMITION,                     // capability
@@ -69,7 +69,7 @@ class opabout_medias{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('À propos de moi', 'mycv') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e('Mes médias', 'mycv') ?></h1>
             <p class="description">
                 <?php _e('Sur cette page vous pouvez gérer les différents média de votre Curriculum Vitae', 'mycv') ?>
             </p><!--./description-->
@@ -259,6 +259,6 @@ class opabout_medias{
      */
 }
 
-if(class_exists('opabout_medias')){
-    opabout_medias::register();
+if(class_exists('myprofil_medias')){
+    myprofil_medias::register();
 }
