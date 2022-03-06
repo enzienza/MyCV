@@ -6,6 +6,7 @@
  * Author: Enza Lombardo
  */
 
+// jQuery(document).ready(function($){
 (function($){
 
   $(document).ready(function() {
@@ -17,6 +18,7 @@
       // ajoute/supprime ".bark" à "body"
       $("body").toggleClass("dark");
 
+
       // vérifier si body à la classe dark
       // !! $.cookie viens du script jquery-cookie (voir CDN) !!
       $.cookie("toggle", $("body").hasClass('dark'));
@@ -26,7 +28,9 @@
       // Si la vérification est vrai
       $(".switcher-mode").addClass("active");
       $("body").addClass("dark");
+      console.log("add class dark and active");
     }
   });
 
 })(jQuery);
+// });

@@ -34,7 +34,7 @@ if(!function_exists('mycv_supports')){
 
         // Enable support for Post Thumbnails on posts and pages.
         add_theme_support('post-thumbnails');
-        
+
         // dimention image
         add_image_size('post-thumbnail', 350, 215, true);
 
@@ -105,33 +105,33 @@ if(!function_exists('mycv_register_assets')) {
 
         // CDN jquery-cookie
         wp_register_script(
-            'jquery-cookie',
-            'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js
-',
-            [],
-            '1.4.1', true
-        );
+             'jquery-cookie',
+             'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js',
+             ['jquery'],
+             '1.4.1', true
+         );
+         wp_enqueue_script('jquery-cookie');
 
-        wp_enqueue_script('jquery-cookie');
-
-        // CDN jQuery
-        wp_deregister_script('jquery');
-        wp_register_script(
-            'jquery',
-            'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
-            [],
-            '3.5.1',
-            true
-        );
 
         // JS Custom  ---------------------------------
         wp_enqueue_script(
-            'switch-mode',
-            get_template_directory_uri().'/assets/js/switch-mode.js',
-            [],
-            '1.0',
-            true
-        );
+		     'switch-mode',
+		     get_template_directory_uri().'/assets/js/switch-mode.js',
+		     ['jquery-cookie','jquery'],
+		     '1.0',
+		     true
+	     );
+
+        // CDN jQuery
+        wp_deregister_script('jquery');
+         wp_register_script(
+             'jquery',
+             'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
+             [],
+             '3.5.1',
+             true
+         );
+
 
         // ===================================================================
         // CSS
