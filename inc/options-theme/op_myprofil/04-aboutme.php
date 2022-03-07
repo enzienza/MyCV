@@ -111,7 +111,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_field(
             'talk_aboutme_fr',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'mucv'),               // LABEL
+            __('Qui suis-je ?', 'mycv'),               // LABEL
             [self::class,'field_talk_aboutme_fr'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_FR                   // SLUG_SECTION
@@ -138,7 +138,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_field(
             'talk_aboutme_en',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'mucv'),               // LABEL
+            __('Qui suis-je ?', 'mycv'),               // LABEL
             [self::class,'field_talk_aboutme_en'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_EN                   // SLUG_SECTION
@@ -165,7 +165,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_field(
             'talk_aboutme_it',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'mucv'),               // LABEL
+            __('Qui suis-je ?', 'mycv'),               // LABEL
             [self::class,'field_talk_aboutme_it'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_IT                   // SLUG_SECTION

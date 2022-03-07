@@ -39,6 +39,8 @@ class mycv_myprofil{
 
     //definir les sections de la page d'option
     const SECTION_DETAIL = 'section_detail';
+    const SECTION_LOCATION = 'section_location';
+    const SECTION_POST = 'section_post';
 
 
     /**
@@ -109,52 +111,33 @@ class mycv_myprofil{
         ); // Section 1
 
         // -> Ajouter les éléments du formulaire
+        // add_settings_field(
+        //     'mylastname',                             // SLUG_FIELD
+        //     __('Nom', 'mycv'),             // LABEL
+        //     [self::class,'field_mylastname'],         // CALLBACK
+        //     self::GROUP ,                             // SLUG_PAGE
+        //     self::SECTION_DETAIL                      // SLUG_SECTION
+        // );
+        // add_settings_field(
+        //     'myfirstname',                            // SLUG_FIELD
+        //     __('Prénom', 'mycv'),            // LABEL
+        //     [self::class,'field_myfirstname'],        // CALLBACK
+        //     self::GROUP ,                             // SLUG_PAGE
+        //     self::SECTION_DETAIL                      // SLUG_SECTION
+        // );
+
         add_settings_field(
-            'mylastname',                             // SLUG_FIELD
-            __('Nom', 'mycv'),             // LABEL
-            [self::class,'field_mylastname'],         // CALLBACK
+            'myfullname',                            // SLUG_FIELD
+            __('Nom complet', 'mycv'),            // LABEL
+            [self::class,'field_myfullname'],        // CALLBACK
             self::GROUP ,                             // SLUG_PAGE
             self::SECTION_DETAIL                      // SLUG_SECTION
         );
-        add_settings_field(
-            'myfirstname',                            // SLUG_FIELD
-            __('Prénom', 'mycv'),            // LABEL
-            [self::class,'field_myfirstname'],        // CALLBACK
-            self::GROUP ,                             // SLUG_PAGE
-            self::SECTION_DETAIL                      // SLUG_SECTION
-        );
+
         add_settings_field(
             'mybirthday',                           // SLUG_FIELD
             __('Date de naissance', 'mycv'),            // LABEL
             [self::class,'field_mybirthday'],       // CALLBACK
-            self::GROUP ,                           // SLUG_PAGE
-            self::SECTION_DETAIL                    // SLUG_SECTION
-        );
-        add_settings_field(
-            'job_title',                            // SLUG_FIELD
-            __('Profession', 'customtheme 2021'),          // LABEL
-            [self::class,'field_job_title'],        // CALLBACK
-            self::GROUP ,                           // SLUG_PAGE
-            self::SECTION_DETAIL                    // SLUG_SECTION
-        );
-        add_settings_field(
-            'mylocation',                              // SLUG_FIELD
-            __('Localité', 'mycv'),               // LABEL
-            [self::class,'field_mylocation'],          // CALLBACK
-            self::GROUP ,                           // SLUG_PAGE
-            self::SECTION_DETAIL                    // SLUG_SECTION
-        );
-        add_settings_field(
-            'myemail',                              // SLUG_FIELD
-            __('Email', 'mycv'),               // LABEL
-            [self::class,'field_myemail'],          // CALLBACK
-            self::GROUP ,                           // SLUG_PAGE
-            self::SECTION_DETAIL                    // SLUG_SECTION
-        );
-        add_settings_field(
-            'myphone',                              // SLUG_FIELD
-            __('Téléphone', 'mycv'),        // LABEL
-            [self::class,'field_myphone'],          // CALLBACK
             self::GROUP ,                           // SLUG_PAGE
             self::SECTION_DETAIL                    // SLUG_SECTION
         );
@@ -163,20 +146,80 @@ class mycv_myprofil{
         register_setting(self::GROUP, 'mylastname');
         register_setting(self::GROUP, 'myfirstname');
         register_setting(self::GROUP, 'mybirthday');
-        register_setting(self::GROUP, 'job_title');
-        register_setting(self::GROUP, 'mylocation');
-        register_setting(self::GROUP, 'myemail');
-        register_setting(self::GROUP, 'myphone');
+
 
 
         /**
-         * SECTION 2 : SECTION_MEDIA ===================================
+         * SECTION 2 : SECTION_LOCATION ===================================
          *             -> Créer la section
          *             -> Ajouter les éléments du formulaire
          *             -> Sauvegarder les champs
          *
          */
+        // -> créer la section
+        add_settings_section(
+            self::SECTION_LOCATION,                 // SLUG_SECTION
+            __('Mes coordonnés', 'mycv'),         // TITLE
+            [self::class, 'display_section_location'],  // CALLBACK
+            self::GROUP                         // SLUG_PAGE
+        ); // Section 2
 
+        // -> Ajouter les éléments du formulaire
+        add_settings_field(
+            'mylocation',                              // SLUG_FIELD
+            __('Localité', 'mycv'),               // LABEL
+            [self::class,'field_mylocation'],          // CALLBACK
+            self::GROUP ,                           // SLUG_PAGE
+            self::SECTION_LOCATION                    // SLUG_SECTION
+        );
+        add_settings_field(
+            'myemail',                              // SLUG_FIELD
+            __('Email', 'mycv'),               // LABEL
+            [self::class,'field_myemail'],          // CALLBACK
+            self::GROUP ,                           // SLUG_PAGE
+            self::SECTION_LOCATION                    // SLUG_SECTION
+        );
+        add_settings_field(
+            'myphone',                              // SLUG_FIELD
+            __('Téléphone', 'mycv'),        // LABEL
+            [self::class,'field_myphone'],          // CALLBACK
+            self::GROUP ,                           // SLUG_PAGE
+            self::SECTION_LOCATION                    // SLUG_SECTION
+        );
+
+        // -> Sauvegarder les champs
+        register_setting(self::GROUP, 'mylocation');
+        register_setting(self::GROUP, 'myemail');
+        register_setting(self::GROUP, 'myphone');
+
+        /**
+         * SECTION 3 : SECTION_POST ===================================
+         *             -> Créer la section
+         *             -> Ajouter les éléments du formulaire
+         *             -> Sauvegarder les champs
+         *
+         */
+        // -> créer la section
+        add_settings_section(
+            self::SECTION_POST,                 // SLUG_SECTION
+            __('Post', 'mycv'),         // TITLE
+            [self::class, 'display_section_post'],  // CALLBACK
+            self::GROUP                         // SLUG_PAGE
+        ); // Section 3
+
+        // -> Ajouter les éléments du formulaire
+        add_settings_field(
+            'job_title',                            // SLUG_FIELD
+            __('Titre du job', 'mycv'),          // LABEL
+            [self::class,'field_job_title'],        // CALLBACK
+            self::GROUP ,                           // SLUG_PAGE
+            self::SECTION_POST                    // SLUG_SECTION
+        );
+
+        // -> Sauvegarder les champs
+        register_setting(self::GROUP, 'title_job_fr');
+        register_setting(self::GROUP, 'title_job_en');
+        register_setting(self::GROUP, 'title_job_it');
     }
 
     /**
@@ -191,6 +234,21 @@ class mycv_myprofil{
         <?php
     }
 
+    // SECTION 2 : SECTION_LOCATION ========================================
+    public static function display_section_location(){
+    ?>
+      <p class="section-description">
+        <?php _e('Section dédiée aux informations de contact', 'mycv') ?>
+      </p>
+    <?php
+    }
+    public static function display_section_post(){
+    ?>
+      <p class="section-description">
+        <?php _e('Section dédiée à la traduction du post', 'mycv') ?>
+      </p>
+    <?php
+    }
 
 
 
@@ -204,27 +262,27 @@ class mycv_myprofil{
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
      */
     // SECTION 1 : SECTION_DETAIL ==========================================
-    public static function field_mylastname(){
-        $mylastname = esc_attr(get_option('mylastname'))
-        ?>
-        <input type="text"
-               id="mylastname"
-               name="mylastname"
-               value="<?php echo $mylastname ?>"
-               class="regular-text"
-        />
-        <?php
-    }
-    public static function field_myfirstname(){
-        $myfirstname = esc_attr(get_option('myfirstname'))
-        ?>
-        <input type="text"
-               id="myfirstname"
-               name="myfirstname"
-               value="<?php echo $myfirstname ?>"
-               class="regular-text"
-        />
-        <?php
+    public static function field_myfullname(){
+      $mylastname = esc_attr(get_option('mylastname'));
+      $myfirstname = esc_attr(get_option('myfirstname'));
+      ?>
+        <div>
+          <input type="text"
+                id="mylastname"
+                name="mylastname"
+                value="<?php echo $mylastname ?>"
+                class="regular-text"
+                 placeholder="Nom"
+          />
+          <input type="text"
+                id="myfirstname"
+                name="myfirstname"
+                value="<?php echo $myfirstname ?>"
+                class="regular-text"
+                 placeholder="Prénom"
+          />
+        </div>
+      <?php
     }
     public static function field_mybirthday(){
         $mybirthday = esc_attr(get_option('mybirthday'));
@@ -236,30 +294,9 @@ class mycv_myprofil{
         />
         <?php
     }
-    public static function field_job_title(){
-        $job_title = esc_attr(get_option('job_title'))
-        ?>
-        <input type="text"
-               id="job_title"
-               name="job_title"
-               value="<?php echo $job_title  ?>"
-               class="regular-text"
-               placeholder="Le titre du job"
-        />
-        <?php
-    }
-    public static function field_mylocation(){
-        $mylocation = esc_attr(get_option('mylocation'))
-        ?>
-        <input type="text"
-               id="mylocation"
-               name="mylocation"
-               value="<?php echo $mylocation  ?>"
-               class="regular-text"
-               placeholder="La localité"
-        />
-        <?php
-    }
+
+
+    // SECTION 2 : SECTION_LOCATION ========================================
     public static function field_myemail(){
         $myemail = esc_attr(get_option('myemail'))
         ?>
@@ -284,7 +321,65 @@ class mycv_myprofil{
         />
         <?php
     }
+    public static function field_mylocation(){
+        $mylocation = esc_attr(get_option('mylocation'))
+        ?>
+        <input type="text"
+               id="mylocation"
+               name="mylocation"
+               value="<?php echo $mylocation  ?>"
+               class="regular-text"
+               placeholder="La localité"
+        />
+        <?php
+    }
 
+    // SECTION 3 : SECTION_POST ============================================
+    public static function field_job_title(){
+        $title_job_fr = esc_attr(get_option('title_job_fr'));
+        $title_job_en = esc_attr(get_option('title_job_en'));
+        $title_job_it = esc_attr(get_option('title_job_it'));
+        ?>
+        <div class="grid-3">
+          <div class="grid-box">
+            <p class="box-title"><?php _e("Français", "mycv") ?></p>
+            <div>
+              <input type="text"
+                     id="title_job_fr"
+                     name="title_job_fr"
+                     value="<?php echo $title_job_fr ?>"
+                     class="regular-text"
+                     placeholder="<?php _e("Titre du post en français", "mycv") ?>"
+              />
+            </div>
+          </div>
+          <div class="grid-box">
+            <p class="box-title"><?php _e("Anglais", "mycv") ?></p>
+            <div>
+              <input type="text"
+                     id="title_job_en"
+                     name="title_job_en"
+                     value="<?php echo $title_job_en ?>"
+                     class="regular-text"
+                     placeholder="<?php _e("Titre du post en anglais", "mycv") ?>"
+              />
+            </div>
+          </div>
+          <div class="grid-box">
+            <p class="box-title"><?php _e("Italien", "mycv") ?></p>
+            <div>
+              <input type="text"
+                     id="title_job_it"
+                     name="title_job_it"
+                     value="<?php echo $title_job_it ?>"
+                     class="regular-text"
+                     placeholder="<?php _e("Titre du post en italien", "mycv") ?>"
+              />
+            </div>
+          </div>
+        </div>
+        <?php
+    }
 
     /**
      * 9 - AJOUT STYLE ET SCRIPT

@@ -193,16 +193,16 @@ form h2 {
     gap: .5rem;
 }
 
-.item-picture-cv{
+.item-picture-cv, .grid-box{
     border-right: 1px solid var(--lighten-grey);
     padding: 0 .5rem;
 }
 
-.item-picture-cv:last-child{
+.item-picture-cv:last-child, .grid-box:last-child{
     border-right: none;
 }
 
-.picture-cv-title{
+.picture-cv-title, .box-title{
     font-weight: bold;
     line-height: 2;
 }
