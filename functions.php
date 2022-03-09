@@ -43,10 +43,12 @@ require_once ('inc/customize/custom-dashboard.php');
 /** =====================================================
  *  3 - OPTIONS-THEME
  */
+// OP -> MyProfil
 require_once('inc/options-theme/op_myprofil/01-personalDetails.php');
 require_once('inc/options-theme/op_myprofil/02-media.php');
 require_once('inc/options-theme/op_myprofil/03-network.php');
 require_once('inc/options-theme/op_myprofil/04-aboutme.php');
+require_once('inc/options-theme/op_myprofil/05-curriculum.php');
 
 /** =====================================================
  *  4 - POST-TYPE
