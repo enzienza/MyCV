@@ -340,7 +340,7 @@ class mycv_myprofil{
         $title_job_en = esc_attr(get_option('title_job_en'));
         $title_job_it = esc_attr(get_option('title_job_it'));
         ?>
-        <div class="grid-3">
+        <div class="grid-cols-3">
           <div class="grid-box">
             <p class="box-title"><?php _e("Français", "mycv") ?></p>
             <div>

@@ -29,7 +29,7 @@ class myprofil_aboutme{
      * 1 - DEFINIR LES ELEMENTS (repeter)
      *     afin d'evite les fautes de frappe
      */
-    // page info - level 1
+    // page info - level 4
     const SUB_TITLE   = 'About me';
     const SUB_MENU    = 'About me';
     const PERMITION    = 'manage_options';

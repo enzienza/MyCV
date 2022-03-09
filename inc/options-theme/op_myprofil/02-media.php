@@ -139,52 +139,52 @@ class myprofil_medias{
      *     le fichier sera stocké dans le dossier upload
      */
     // SECTION 1 : SECTION_MEDIA ============================================
-    public static function handle_profil_upload($options){
+    public static function handle_profil_upload(){
         if(!function_exists('wp_handle_upload'))
         {
             require_once(ABSPATH . 'wp-admin/includes/file.php');
         }
         //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['myprofil'])){
+        if(!empty($_FILES['myprofil']['tmp_name'])){
             $url = wp_handle_upload($_FILES['myprofil'], array('test_form' => false));
             $temp = $url['url'];
             return $temp;
-        } else {
-            // no upload. Old file url is the new value.
-            return $options;
         }
+        // no upload. Old file url is the new value.
+        return get_option('myprofil');
+
     }
 
-    public static function handle_avatar_upload($options){
+    public static function handle_avatar_upload(){
         if(!function_exists('wp_handle_upload'))
         {
             require_once(ABSPATH . 'wp-admin/includes/file.php');
         }
         //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['myavatar'])){
+        if(!empty($_FILES['myavatar']['tmp_name'])){
             $url = wp_handle_upload($_FILES['myavatar'], array('test_form' => false));
             $temp = $url['url'];
             return $temp;
-        } else {
-            // no upload. Old file url is the new value.
-            return $options;
         }
+        // no upload. Old file url is the new value.
+        return get_option('myavatar');
+
     }
 
-    public static function handle_logo_upload($options){
+    public static function handle_logo_upload(){
         if(!function_exists('wp_handle_upload'))
         {
             require_once(ABSPATH . 'wp-admin/includes/file.php');
         }
         //check if user had uploaded a file and clicked save changes button
-        if(!empty($_FILES['mylogo'])){
+        if(!empty($_FILES['mylogo']['tmp_name'])){
             $url = wp_handle_upload($_FILES['mylogo'], array('test_form' => false));
             $temp = $url['url'];
             return $temp;
-        } else {
-            // no upload. Old file url is the new value.
-            return $options;
         }
+        // no upload. Old file url is the new value.
+        return get_option('mylogo');
+
     }
 
     /**
@@ -196,7 +196,7 @@ class myprofil_medias{
         $myavatar = esc_attr(get_option('myavatar'));
         $mylogo = esc_attr(get_option('mylogo'));
         ?>
-        <div class="grid-3">
+        <div class="grid-cols-3">
             <div class="item-picture-cv">
                 <p class="picture-cv-title">Ma photot de profile</p>
                 <div class="picture-cv-preview">

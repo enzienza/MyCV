@@ -59,6 +59,35 @@ Tags:
     justify-content: center;
 }
 
+/* SIZING */
+.w-50{
+    width: 50%;
+}
+.w-full{
+    width: 100%;
+}
+
+.h-50{
+    height: 50%;
+}
+.h-full{
+    height: 100%;
+}
+
+/* GRID */
+.grid-cols-3{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr .5rem;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+}
+
+.grid-cols-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
 
 /* ==============================================
  *      2 - STYLE FOR THE LOGIN PAGE
@@ -183,16 +212,6 @@ form h2 {
     justify-content: center;
 }
 
-
-/* GRID */
-.grid-3{
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr .5rem;
-    grid-template-columns: 1fr;
-    gap: .5rem;
-}
-
 .item-picture-cv, .grid-box{
     border-right: 1px solid var(--lighten-grey);
     padding: 0 .5rem;
@@ -212,7 +231,7 @@ form h2 {
     margin-bottom: .5rem;
 }
 
-.picture-cv-file input[type="file"] {
+.picture-cv-file input[type="file"], .input-file input[type="file"] {
     background: var(--color-white);
     width: 100%;
     padding: 2px;
@@ -252,7 +271,7 @@ form h2 {
 
 /* LG */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .grid-3{
+    .grid-cols-3{
         -ms-grid-columns: 1fr .5rem 1fr .5em 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -263,7 +282,7 @@ form h2 {
 
 /* XL */
 @media only screen and (min-width: 1200px){
-    .grid-3{
+    .grid-cols-3{
         -ms-grid-columns: 1fr .5rem 1fr .5em 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
