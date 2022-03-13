@@ -11,22 +11,90 @@ Tags:
 
 
 /*
-  Table of Contents:
+  TABLE OF CONTENTS:
 
-1 - STYLE FOR THE LOGIN PAGE
-2 - STYLE FOR ALL DASHBOARD
-3 - STYLE FOR THE MYOPTIONS
-4 - STYLE FOR COLUMNS ADMIN OF CPT
-5 - CUSTOM  METABOXES
+0 - ROOT
+1 - GENERAL
+2 - STYLE FOR THE LOGIN PAGE
+3 - STYLE FOR ALL DASHBOARD
+4 - STYLE FOR THE MYOPTIONS
+5 - STYLE FOR COLUMNS ADMIN OF CPT
+6 - CUSTOM  METABOXES
+7 - RESPONSIVE
 
 */
 
 /* ==============================================
- *      1 - STYLE FOR THE LOGIN PAGE
+ *      0 - ROOT
+ */
+:root{
+    --bg-login: #232634;
+    --darken-bluegray: #32373c;
+    --lighten-bluegray: #5B6786;
+    --color-white: #fff;
+    --color-light: #f1f1f1;
+    --color-border: #7e8993;
+    --lighten-grey: #cecece;
+
+}
+
+/* ==============================================
+ *      1 - GENERAL
+ */
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.align-center{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.justify-center{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* SIZING */
+.w-50{
+    width: 50%;
+}
+.w-full{
+    width: 100%;
+}
+
+.h-50{
+    height: 50%;
+}
+.h-full{
+    height: 100%;
+}
+
+/* GRID */
+.grid-cols-3{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr .5rem;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+}
+
+.grid-cols-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ==============================================
+ *      2 - STYLE FOR THE LOGIN PAGE
  */
 /* fond */
 body.login {
-    background: #232634;
+    background: var(--bg-login);
     height: 100vh;
 }
 
@@ -60,7 +128,7 @@ body.login {
 }
 
 /* ==============================================
- *      2 - STYLE FOR ALL DASHBOARD
+ *      3 - STYLE FOR ALL DASHBOARD
  */
 input[type="color"],
 input[type="date"],
@@ -79,13 +147,22 @@ input[type="week"],
 select, textarea {
     box-shadow: 0 0 0 transparent;
     border-radius: 4px;
-    border: 1px solid #7e8993;
-    background: #fff;
-    color: #32373c;
+    border: 1px solid var(--lighten-grey);
+    background: var(--color-white);
+    color: var(--darken-bluegray);
+}
+
+input[type="checkbox"]{
+    border-color: var(--lighten-grey);
+    margin: auto 5px;
+}
+
+::placeholder{
+    color: var(--color-border);
 }
 
 .wp-admin {
-    background: #f1f1f1;
+    background: var(--color-light);
 }
 
 .wrap .wp-heagin-inline {
@@ -94,21 +171,122 @@ select, textarea {
 
 form h2 {
     padding-top: 1.5em;
-    border-top: 1px solid #cecece;
+    border-top: 1px solid var(--lighten-grey);
     width: 98%;
     font-size: 1.3em;
 }
 
 /* ==============================================
- *      3 - STYLE FOR THE MYOPTIONS
+ *      4 - STYLE FOR THE MYOPTIONS (Form)
+ */
+/* Title */
+.myoptions h2{
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: var(--lighten-bluegray);
+}
+
+.myoptions h2::before{
+    content: "-";
+    margin-right: .5em;
+    font-size: larger;
+}
+
+.myoptions .section-description{
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 20px;
+    font-weight: lighter;
+    font-size: .9em;
+}
+
+
+/* Photo / Media  */
+.mini-thumbnail{
+    width: 200px;
+    border-radius: 50%;
+    height: 200px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.item-picture-cv, .grid-box{
+    border-right: 1px solid var(--lighten-grey);
+    padding: 0 .5rem;
+}
+
+.item-picture-cv:last-child, .grid-box:last-child{
+    border-right: none;
+}
+
+.picture-cv-title, .box-title{
+    font-weight: bold;
+    line-height: 2;
+}
+
+.picture-cv-preview{
+    line-height: 3;
+    margin-bottom: .5rem;
+}
+
+.picture-cv-file input[type="file"], .input-file input[type="file"] {
+    background: var(--color-white);
+    width: 100%;
+    padding: 2px;
+    border-radius: 5px;
+    border:1px solid var(--lighten-grey);
+}
+
+/* ==============================================
+ *      5 - STYLE FOR COLUMNS ADMIN OF CPT
  */
 
 
 /* ==============================================
- *      4 - STYLE FOR COLUMNS ADMIN OF CPT
+ *      6 - CUSTOM  METABOXES
  */
+
 
 
 /* ==============================================
- *      5 - CUSTOM  METABOXES
+ *      7 - RESPONSIVE
  */
+
+/* XS */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+}
+
+/* SM */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* MD */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* LG */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .grid-cols-3{
+        -ms-grid-columns: 1fr .5rem 1fr .5em 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .picture-cv-title{
+        text-align: center;
+    }
+}
+
+/* XL */
+@media only screen and (min-width: 1200px){
+    .grid-cols-3{
+        -ms-grid-columns: 1fr .5rem 1fr .5em 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .picture-cv-title{
+        text-align: center;
+    }
+}
