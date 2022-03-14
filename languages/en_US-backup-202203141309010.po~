@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-26 20:16+0000\n"
-"PO-Revision-Date: 2022-03-14 13:08+0000\n"
+"PO-Revision-Date: 2022-03-14 12:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Loco-Version: 2.5.5; wp-5.8.2\n"
 "X-Domain: MyCV"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:318
@@ -33,7 +33,7 @@ msgstr "Add media"
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:144
 msgid "Behance"
-msgstr "Behance"
+msgstr ""
 
 #: inc/options-theme/op_myprofil/03-network.php:190
 msgid "Cocher et ajouter l'url de vos réseaux sociaux"
@@ -41,7 +41,7 @@ msgstr "Check and add the url of your social networks"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:73
 msgid "Curriculum Vitae"
-msgstr "Curriculum Vitae"
+msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:139
@@ -56,11 +56,11 @@ msgstr "Personal details"
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:177
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #. Author of the theme
 msgid "Enza Lombardo"
-msgstr "Enza Lombardo"
+msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/05-curriculum.php:119
@@ -72,7 +72,7 @@ msgstr "Export my CV"
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:112
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:217
 #: inc/options-theme/op_myprofil/04-aboutme.php:194
@@ -92,11 +92,11 @@ msgstr "Management of the Italian section"
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:152
 msgid "GitHub"
-msgstr "GitHub"
+msgstr ""
 
 #. Author URI of the theme
 msgid "http://www.enzalombardo.be"
-msgstr "http://www.enzalombardo.be"
+msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/05-curriculum.php:112
@@ -108,12 +108,12 @@ msgstr "Import my CV"
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:128
 msgid "Instagram"
-msgstr "Instagram"
+msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:136
 msgid "LinkedIn"
-msgstr "LinkedIn"
+msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:170
@@ -150,7 +150,7 @@ msgstr "My profile"
 
 #. Name of the theme
 msgid "MyCV 2021"
-msgstr "MyCV 2021"
+msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:131
@@ -166,7 +166,7 @@ msgstr "Talk about me"
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:205
 msgid "Post"
-msgstr "MyCV 2021"
+msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/04-aboutme.php:114
@@ -242,7 +242,7 @@ msgstr "job title "
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:120
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:184
