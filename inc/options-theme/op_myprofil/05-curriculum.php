@@ -70,9 +70,9 @@ class myprofil_curriculum{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('Curriculum Vitae', 'mycv') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e('Curriculum Vitae', 'MyCV') ?></h1>
             <p class="description">
-                <?php _e("Sur cette page, vous pouvez gérer l'import / export de votre CV", 'mycv') ?>
+                <?php _e("Sur cette page, vous pouvez gérer l'import / export de votre CV", 'MyCV') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->
@@ -102,21 +102,21 @@ class myprofil_curriculum{
         // -> créer la section
         add_settings_section(
             self::SECTION_FR,                   // SLUG_SECTION
-            __('Section en français', 'mycv'),      // TITLE
+            __('Section en français', 'MyCV'),      // TITLE
             [self::class, 'display_section_fr'],    // CALLBACK
             self:: SUB_GROUP                  // SLUG_PAGE
         );
         // -> Ajouter les éléments du formulaire
         add_settings_field(
             'import_cv_fr',                     // SLUG_FIELD
-            __('Importer mon CV', 'mycv'),               // LABEL
+            __('Importer mon CV', 'MyCV'),               // LABEL
             [self::class,'field_import_cv_fr'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_FR                   // SLUG_SECTION
         );
         add_settings_field(
             'export_cv_fr',                     // SLUG_FIELD
-            __('Exporter mon CV', 'mycv'),               // LABEL
+            __('Exporter mon CV', 'MyCV'),               // LABEL
             [self::class,'field_export_cv_fr'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_FR                   // SLUG_SECTION
@@ -136,21 +136,21 @@ class myprofil_curriculum{
         // -> créer la section
         add_settings_section(
             self::SECTION_EN,                   // SLUG_SECTION
-            __('Section en anglais', 'mycv'),      // TITLE
+            __('Section en anglais', 'MyCV'),      // TITLE
             [self::class, 'display_section_en'],    // CALLBACK
             self:: SUB_GROUP                  // SLUG_PAGE
         );
     // -> Ajouter les éléments du formulaire
         add_settings_field(
             'import_cv_en',                     // SLUG_FIELD
-            __('Importer mon CV', 'mycv'),               // LABEL
+            __('Importer mon CV', 'MyCV'),               // LABEL
             [self::class,'field_import_cv_en'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_EN                   // SLUG_SECTION
         );
         add_settings_field(
             'export_cv_en',                     // SLUG_FIELD
-            __('Exporter mon CV', 'mycv'),               // LABEL
+            __('Exporter mon CV', 'MyCV'),               // LABEL
             [self::class,'field_export_cv_en'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_EN                   // SLUG_SECTION
@@ -172,21 +172,21 @@ class myprofil_curriculum{
         // -> créer la section
         add_settings_section(
             self::SECTION_IT,                   // SLUG_SECTION
-            __('Section en italien', 'mycv'),      // TITLE
+            __('Section en italien', 'MyCV'),      // TITLE
             [self::class, 'display_section_it'],   // CALLBACK
             self:: SUB_GROUP                // SLUG_PAGE
         );
         // -> Ajouter les éléments du formulaire
         add_settings_field(
             'import_cv_it',                     // SLUG_FIELD
-            __('Importer mon CV', 'mycv'),               // LABEL
+            __('Importer mon CV', 'MyCV'),               // LABEL
             [self::class,'field_import_cv_it'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_IT                   // SLUG_SECTION
         );
         add_settings_field(
             'export_cv_it',                     // SLUG_FIELD
-            __('Exporter mon CV', 'mycv'),               // LABEL
+            __('Exporter mon CV', 'MyCV'),               // LABEL
             [self::class,'field_export_cv_it'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_IT                   // SLUG_SECTION
@@ -205,7 +205,7 @@ class myprofil_curriculum{
     public static function display_section_fr(){
         ?>
         <p class="section-description">
-            <?php _e('Gestion de la section en français', 'mycv') ?>
+            <?php _e('Gestion de la section en français', 'MyCV') ?>
         </p>
         <?php
     }
@@ -214,7 +214,7 @@ class myprofil_curriculum{
     public static function display_section_en(){
         ?>
         <p class="section-description">
-            <?php _e('Gestion de la section en anglais', 'mycv') ?>
+            <?php _e('Gestion de la section en anglais', 'MyCV') ?>
         </p>
         <?php
     }
@@ -223,7 +223,7 @@ class myprofil_curriculum{
     public static function display_section_it(){
         ?>
         <p class="section-description">
-            <?php _e('Gestion de la section en italien' , 'mycv') ?>
+            <?php _e('Gestion de la section en italien' , 'MyCV') ?>
         </p>
         <?php
     }
@@ -315,7 +315,7 @@ class myprofil_curriculum{
                        <?php checked(1, $export_cv_fr, true); ?>
                 />
                 <label for="">
-                    <?php _e('Ajouter le bouton "télécharger mon cv"', 'mycv') ?>
+                    <?php _e('Ajouter le bouton "télécharger mon cv"', 'MyCV') ?>
                 </label>
             </div>
         <?php
@@ -353,7 +353,7 @@ class myprofil_curriculum{
                 <?php checked(1, $export_cv_en, true); ?>
             />
             <label for="">
-                <?php _e('Ajouter le bouton "télécharger mon cv"', 'mycv') ?>
+                <?php _e('Ajouter le bouton "télécharger mon cv"', 'MyCV') ?>
             </label>
         </div>
         <?php
@@ -391,7 +391,7 @@ class myprofil_curriculum{
                 <?php checked(1, $export_cv_it, true); ?>
             />
             <label for="">
-                <?php _e('Ajouter le bouton "télécharger mon cv"', 'mycv') ?>
+                <?php _e('Ajouter le bouton "télécharger mon cv"', 'MyCV') ?>
             </label>
         </div>
         <?php

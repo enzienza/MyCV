@@ -71,9 +71,9 @@ class myprofil_aboutme{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('À propos de moi', 'mycv') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e('À propos de moi', 'MyCV') ?></h1>
             <p class="description">
-                <?php _e('Sur cette page, vous pouvez parler de vous', 'mycv') ?>
+                <?php _e('Sur cette page, vous pouvez parler de vous', 'MyCV') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->
@@ -103,7 +103,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_section(
             self::SECTION_FR,                   // SLUG_SECTION
-            __('Section en français', 'mycv'),      // TITLE
+            __('Section en français', 'MyCV'),      // TITLE
             [self::class, 'display_section_fr'],    // CALLBACK
             self:: SUB_GROUP                  // SLUG_PAGE
         );
@@ -111,7 +111,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_field(
             'talk_aboutme_fr',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'mycv'),               // LABEL
+            __('Qui suis-je ?', 'MyCV'),               // LABEL
             [self::class,'field_talk_aboutme_fr'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_FR                   // SLUG_SECTION
@@ -130,7 +130,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_section(
             self::SECTION_EN,                   // SLUG_SECTION
-            __('Section en anglais', 'mycv'),       // TITLE
+            __('Section en anglais', 'MyCV'),       // TITLE
             [self::class, 'display_section_en'],    // CALLBACK
             self:: SUB_GROUP                  // SLUG_PAGE
         );
@@ -138,7 +138,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_field(
             'talk_aboutme_en',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'mycv'),               // LABEL
+            __('Qui suis-je ?', 'MyCV'),               // LABEL
             [self::class,'field_talk_aboutme_en'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_EN                   // SLUG_SECTION
@@ -157,7 +157,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_section(
             self::SECTION_IT,                   // SLUG_SECTION
-            __('Section en italien', 'mycv'),      // TITLE
+            __('Section en italien', 'MyCV'),      // TITLE
             [self::class, 'display_section_it'],   // CALLBACK
             self:: SUB_GROUP                // SLUG_PAGE
         );
@@ -165,7 +165,7 @@ class myprofil_aboutme{
     // -> créer la section
         add_settings_field(
             'talk_aboutme_it',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'mycv'),               // LABEL
+            __('Qui suis-je ?', 'MyCV'),               // LABEL
             [self::class,'field_talk_aboutme_it'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_IT                   // SLUG_SECTION
@@ -183,7 +183,7 @@ class myprofil_aboutme{
     public static function display_section_fr(){
         ?>
         <p class="section-description">
-            <?php _e('Gestion de la section en français', 'mycv') ?>
+            <?php _e('Gestion de la section en français', 'MyCV') ?>
         </p>
         <?php
     }
@@ -191,7 +191,7 @@ class myprofil_aboutme{
     public static function display_section_en(){
         ?>
         <p class="section-description">
-            <?php _e('Gestion de la section en anglais', 'mycv') ?>
+            <?php _e('Gestion de la section en anglais', 'MyCV') ?>
         </p>
         <?php
     }
@@ -199,7 +199,7 @@ class myprofil_aboutme{
     public static function display_section_it(){
         ?>
         <p class="section-description">
-            <?php _e('Gestion de la section en italien' , 'mycv') ?>
+            <?php _e('Gestion de la section en italien' , 'MyCV') ?>
         </p>
         <?php
     }
@@ -219,7 +219,7 @@ class myprofil_aboutme{
     public static function field_talk_aboutme_fr(){
         $talk_aboutme_fr = esc_attr(get_option('talk_aboutme_fr'));
         ?>
-        <label for="talk_aboutme_fr"><?php _e('Parlez de moi', 'mycv') ?></label>
+        <label for="talk_aboutme_fr"><?php _e('Parlez de moi', 'MyCV') ?></label>
         <textarea name="talk_aboutme_fr" id="talk_aboutme_fr" class="large-text code"><?php echo $talk_aboutme_fr ?></textarea>
         <?php
     }
@@ -227,7 +227,7 @@ class myprofil_aboutme{
     public static function field_talk_aboutme_en(){
         $talk_aboutme_en = esc_attr(get_option('talk_aboutme_en'));
         ?>
-        <label for="talk_aboutme_en"><?php _e('Parlez de moi', 'mycv') ?></label>
+        <label for="talk_aboutme_en"><?php _e('Parlez de moi', 'MyCV') ?></label>
         <textarea name="talk_aboutme_en" id="talk_aboutme_en" class="large-text code"><?php echo $talk_aboutme_en ?></textarea>
         <?php
     }
@@ -235,7 +235,7 @@ class myprofil_aboutme{
     public static function field_talk_aboutme_it(){
         $talk_aboutme_it = esc_attr(get_option('talk_aboutme_it'));
         ?>
-        <label for="talk_aboutme_it"><?php _e('Parlez de moi', 'mycv') ?></label>
+        <label for="talk_aboutme_it"><?php _e('Parlez de moi', 'MyCV') ?></label>
         <textarea name="talk_aboutme_it" id="talk_aboutme_it" class="large-text code"><?php echo $talk_aboutme_it ?></textarea>
         <?php
     }

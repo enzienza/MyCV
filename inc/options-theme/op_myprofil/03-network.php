@@ -69,9 +69,9 @@ class myprofil_network{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('Mes réseaux sociaux', 'mycv') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e('Mes réseaux sociaux', 'MyCV') ?></h1>
             <p class="description">
-                <?php _e('Sur cette page vous pouvez gérer les url de vos réseaux sociaux', 'mycv') ?>
+                <?php _e('Sur cette page vous pouvez gérer les url de vos réseaux sociaux', 'MyCV') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->
@@ -101,7 +101,7 @@ class myprofil_network{
         // -> créer la section
         add_settings_section(
             self::SECTION_SOCIAL,                 // SLUG_SECTION
-            __('Mes réseaux sociaux', 'mycv'),        // TITLE
+            __('Mes réseaux sociaux', 'MyCV'),        // TITLE
             [self::class, 'display_section_social'],  // CALLBACK
             self::SUB_GROUP                     // SLUG_PAGE
         );
@@ -109,7 +109,7 @@ class myprofil_network{
         // -> Ajouter les éléments du formulaire
         add_settings_field(
             'myfacebook',                          // SLUG_FIELD
-            __('Facebook', 'mycv'),                    // LABEL
+            __('Facebook', 'MyCV'),                    // LABEL
             [self::class,'field_myfacebook'],          // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_SOCIAL                // SLUG_SECTION
@@ -117,7 +117,7 @@ class myprofil_network{
 
         add_settings_field(
             'mytwitter',                          // SLUG_FIELD
-            __('Twitter', 'mycv'),                    // LABEL
+            __('Twitter', 'MyCV'),                    // LABEL
             [self::class,'field_mytwitter'],          // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_SOCIAL                // SLUG_SECTION
@@ -125,7 +125,7 @@ class myprofil_network{
 
         add_settings_field(
             'myinstagram',                          // SLUG_FIELD
-            __('Instagram', 'mycv'),                    // LABEL
+            __('Instagram', 'MyCV'),                    // LABEL
             [self::class,'field_myinstagram'],          // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_SOCIAL                // SLUG_SECTION
@@ -133,7 +133,7 @@ class myprofil_network{
 
         add_settings_field(
             'mylinkedin',                          // SLUG_FIELD
-            __('LinkedIn', 'mycv'),                    // LABEL
+            __('LinkedIn', 'MyCV'),                    // LABEL
             [self::class,'field_mylinkedin'],          // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_SOCIAL                // SLUG_SECTION
@@ -141,7 +141,7 @@ class myprofil_network{
 
         add_settings_field(
             'mybehance',                          // SLUG_FIELD
-            __('Behance', 'mycv'),                    // LABEL
+            __('Behance', 'MyCV'),                    // LABEL
             [self::class,'field_mybehance'],          // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_SOCIAL                // SLUG_SECTION
@@ -149,7 +149,7 @@ class myprofil_network{
 
         add_settings_field(
             'mygithub',                          // SLUG_FIELD
-            __('GitHub', 'mycv'),                    // LABEL
+            __('GitHub', 'MyCV'),                    // LABEL
             [self::class,'field_mygithub'],          // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_SOCIAL                // SLUG_SECTION
@@ -157,7 +157,7 @@ class myprofil_network{
 
         add_settings_field(
             'mysiteweb',                          // SLUG_FIELD
-            __('Site Web', 'mycv'),                    // LABEL
+            __('Site Web', 'MyCV'),                    // LABEL
             [self::class,'field_mysiteweb'],          // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_SOCIAL                // SLUG_SECTION
@@ -187,7 +187,7 @@ class myprofil_network{
     public static function display_section_social(){
         ?>
         <p class="section-description">
-            <?php _e('Cocher et ajouter l\'url de vos réseaux sociaux', 'mycv') ?>
+            <?php _e('Cocher et ajouter l\'url de vos réseaux sociaux', 'MyCV') ?>
         </p>
         <?php
     }
