@@ -30,8 +30,8 @@ class mycv_myprofil{
      *     afin d'evite les fautes de frappe
      */
     // page info - level 1
-    const INFO_TITLE = 'Mon profile';
-    const INFO_MENU  = 'Mon profile';
+    //const INFO_TITLE = 'Mon profile';
+    //const INFO_MENU  = 'Mon profile';
     const PERMITION  = 'manage_options';
     const DASHICON   = 'dashicons-smiley';
     const GROUP      = 'myprofil';
@@ -57,8 +57,8 @@ class mycv_myprofil{
      */
     public static function addMenu(){
         add_menu_page(
-            self::INFO_TITLE,          // TITLE_PAGE
-            self::INFO_MENU,           // TITLE_MENU
+            __('Mon profile', 'MyCV'),       // TITLE_PAGE
+            __('Mon profile', 'MyCV'),        // TITLE_MENU
             self::PERMITION,           // CAPABILITY
             self::GROUP,              // SLUG_PAGE
             [self::class, 'render'],            // CALLBACK
@@ -73,9 +73,9 @@ class mycv_myprofil{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('Mon profile', 'mycv') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e('Mon profile', 'MyCV') ?></h1>
             <p class="description">
-                <?php _e('Sur cette page vous pouvez gérer les informations de votre Curriculum Vitae', 'mycv') ?>
+                <?php _e('Sur cette page vous pouvez gérer les informations de votre Curriculum Vitae', 'MyCV') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->
@@ -105,7 +105,7 @@ class mycv_myprofil{
         // -> créer la section
         add_settings_section(
             self::SECTION_DETAIL,                 // SLUG_SECTION
-            __('Détails personnels', 'mycv'),         // TITLE
+            __('Détails personnels', 'MyCV'),         // TITLE
             [self::class, 'display_section_detail'],  // CALLBACK
             self::GROUP                         // SLUG_PAGE
         ); // Section 1
@@ -113,14 +113,14 @@ class mycv_myprofil{
         // -> Ajouter les éléments du formulaire
         // add_settings_field(
         //     'mylastname',                             // SLUG_FIELD
-        //     __('Nom', 'mycv'),             // LABEL
+        //     __('Nom', 'MyCV'),             // LABEL
         //     [self::class,'field_mylastname'],         // CALLBACK
         //     self::GROUP ,                             // SLUG_PAGE
         //     self::SECTION_DETAIL                      // SLUG_SECTION
         // );
         // add_settings_field(
         //     'myfirstname',                            // SLUG_FIELD
-        //     __('Prénom', 'mycv'),            // LABEL
+        //     __('Prénom', 'MyCV'),            // LABEL
         //     [self::class,'field_myfirstname'],        // CALLBACK
         //     self::GROUP ,                             // SLUG_PAGE
         //     self::SECTION_DETAIL                      // SLUG_SECTION
@@ -128,7 +128,7 @@ class mycv_myprofil{
 
         add_settings_field(
             'myfullname',                            // SLUG_FIELD
-            __('Nom complet', 'mycv'),            // LABEL
+            __('Nom complet', 'MyCV'),            // LABEL
             [self::class,'field_myfullname'],        // CALLBACK
             self::GROUP ,                             // SLUG_PAGE
             self::SECTION_DETAIL                      // SLUG_SECTION
@@ -136,7 +136,7 @@ class mycv_myprofil{
 
         add_settings_field(
             'mybirthday',                           // SLUG_FIELD
-            __('Date de naissance', 'mycv'),            // LABEL
+            __('Date de naissance', 'MyCV'),            // LABEL
             [self::class,'field_mybirthday'],       // CALLBACK
             self::GROUP ,                           // SLUG_PAGE
             self::SECTION_DETAIL                    // SLUG_SECTION
@@ -159,7 +159,7 @@ class mycv_myprofil{
         // -> créer la section
         add_settings_section(
             self::SECTION_LOCATION,                 // SLUG_SECTION
-            __('Mes coordonnés', 'mycv'),         // TITLE
+            __('Mes coordonnées', 'MyCV'),         // TITLE
             [self::class, 'display_section_location'],  // CALLBACK
             self::GROUP                         // SLUG_PAGE
         ); // Section 2
@@ -167,21 +167,21 @@ class mycv_myprofil{
         // -> Ajouter les éléments du formulaire
         add_settings_field(
             'mylocation',                              // SLUG_FIELD
-            __('Localité', 'mycv'),               // LABEL
+            __('Localité', 'MyCV'),               // LABEL
             [self::class,'field_mylocation'],          // CALLBACK
             self::GROUP ,                           // SLUG_PAGE
             self::SECTION_LOCATION                    // SLUG_SECTION
         );
         add_settings_field(
             'myemail',                              // SLUG_FIELD
-            __('Email', 'mycv'),               // LABEL
+            __('Email', 'MyCV'),               // LABEL
             [self::class,'field_myemail'],          // CALLBACK
             self::GROUP ,                           // SLUG_PAGE
             self::SECTION_LOCATION                    // SLUG_SECTION
         );
         add_settings_field(
             'myphone',                              // SLUG_FIELD
-            __('Téléphone', 'mycv'),        // LABEL
+            __('Téléphone', 'MyCV'),        // LABEL
             [self::class,'field_myphone'],          // CALLBACK
             self::GROUP ,                           // SLUG_PAGE
             self::SECTION_LOCATION                    // SLUG_SECTION
@@ -202,7 +202,7 @@ class mycv_myprofil{
         // -> créer la section
         add_settings_section(
             self::SECTION_POST,                 // SLUG_SECTION
-            __('Post', 'mycv'),         // TITLE
+            __('Post', 'MyCV'),         // TITLE
             [self::class, 'display_section_post'],  // CALLBACK
             self::GROUP                         // SLUG_PAGE
         ); // Section 3
@@ -210,7 +210,7 @@ class mycv_myprofil{
         // -> Ajouter les éléments du formulaire
         add_settings_field(
             'job_title',                            // SLUG_FIELD
-            __('Titre du job', 'mycv'),          // LABEL
+            __('Titre du job', 'MyCV'),          // LABEL
             [self::class,'field_job_title'],        // CALLBACK
             self::GROUP ,                           // SLUG_PAGE
             self::SECTION_POST                    // SLUG_SECTION
@@ -229,7 +229,7 @@ class mycv_myprofil{
     public static function display_section_detail(){
         ?>
         <p class="section-description">
-            <?php _e('Section dédiée aux informations personnels', 'mycv') ?>
+            <?php _e('Section dédiée aux informations personnels', 'MyCV') ?>
         </p>
         <?php
     }
@@ -238,14 +238,14 @@ class mycv_myprofil{
     public static function display_section_location(){
     ?>
       <p class="section-description">
-        <?php _e('Section dédiée aux informations de contact', 'mycv') ?>
+        <?php _e('Section dédiée aux informations de contact', 'MyCV') ?>
       </p>
     <?php
     }
     public static function display_section_post(){
     ?>
       <p class="section-description">
-        <?php _e('Section dédiée à la traduction du post', 'mycv') ?>
+        <?php _e('Section dédiée à la traduction du post', 'MyCV') ?>
       </p>
     <?php
     }

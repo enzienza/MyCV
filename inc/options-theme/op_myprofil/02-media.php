@@ -31,8 +31,8 @@ class myprofil_medias{
      *     afin d'evite les fautes de frappe
      */
     // page info - level 1
-    const SUB_TITLE   = 'Mes médias';
-    const SUB_MENU    = 'Mes médias';
+    //const SUB_TITLE   = 'Mes médias';
+    //const SUB_MENU    = 'Mes médias';
     const PERMITION    = 'manage_options';
     const SUB_GROUP   = 'myprofil_medias';
     const NONCE        = '_myprofil_medias';
@@ -55,11 +55,11 @@ class myprofil_medias{
     public static function addMenu(){
         add_submenu_page(
             mycv_myprofil::GROUP,        // slug parent
-            self::SUB_TITLE,                    // page_title
-            self::SUB_MENU,                     // menu_title
-            self::PERMITION,                     // capability
-            self::SUB_GROUP,                    // slug_menu
-            [self::class, 'render']              // CALLBACK
+            __('Mes médias', 'MyCV'),            // page_title
+            __('Mes médias', 'MyCV'),             // menu_title
+            self::PERMITION,              // capability
+            self::SUB_GROUP,             // slug_menu
+            [self::class, 'render']                // CALLBACK
         );
     }
 
@@ -69,9 +69,9 @@ class myprofil_medias{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e('Mes médias', 'mycv') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e('Mes médias', 'MyCV') ?></h1>
             <p class="description">
-                <?php _e('Sur cette page vous pouvez gérer les différents média de votre Curriculum Vitae', 'mycv') ?>
+                <?php _e('Sur cette page vous pouvez gérer les différents média de votre Curriculum Vitae', 'MyCV') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->
@@ -101,7 +101,7 @@ class myprofil_medias{
         // -> créer la section
         add_settings_section(
             self::SECTION_MEDIA,                 // SLUG_SECTION
-            __('Mes photos', 'mycv'),                // TITLE
+            __('Mes photos', 'MyCV'),                // TITLE
             [self::class, 'display_section_media'],  // CALLBACK
             self::SUB_GROUP                        // SLUG_PAGE
         ); // Section 2
@@ -109,7 +109,7 @@ class myprofil_medias{
         // -> Ajouter les éléments du formulaire
         add_settings_field(
             'add_media',                          // SLUG_FIELD
-            __('Ajouter les medias', 'mycv'),         // LABEL
+            __('Ajouter les medias', 'MyCV'),         // LABEL
             [self::class,'field_add_media'],          // CALLBACK
             self::SUB_GROUP ,                   // SLUG_PAGE
             self::SECTION_MEDIA               // SLUG_SECTION
@@ -129,7 +129,7 @@ class myprofil_medias{
     public static function display_section_media(){
         ?>
         <p class="section-description">
-            <?php _e('Ajouter les différentes photo de votre Curriculum Vitae', 'mycv') ?>
+            <?php _e('Ajouter les différentes photo de votre Curriculum Vitae', 'MyCV') ?>
         </p>
         <?php
     }

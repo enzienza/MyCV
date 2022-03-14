@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-26 20:16+0000\n"
+"POT-Creation-Date: 2022-03-14 15:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,18 +16,267 @@ msgstr ""
 "X-Loco-Version: 2.5.5; wp-5.8.2\n"
 "X-Domain: MyCV"
 
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/04-aboutme.php:60
+#: inc/options-theme/op_myprofil/04-aboutme.php:61
+msgid "About me"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/05-curriculum.php:318
+#: inc/options-theme/op_myprofil/05-curriculum.php:356
+#: inc/options-theme/op_myprofil/05-curriculum.php:394
+msgid "Ajouter le bouton \"télécharger mon cv\""
+msgstr ""
+
+#: inc/options-theme/op_myprofil/02-media.php:132
+msgid "Ajouter les différentes photo de votre Curriculum Vitae"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/02-media.php:112
+msgid "Ajouter les medias"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/03-network.php:144
+msgid "Behance"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/03-network.php:190
+msgid "Cocher et ajouter l'url de vos réseaux sociaux"
+msgstr ""
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/05-curriculum.php:59
+#: inc/options-theme/op_myprofil/05-curriculum.php:60
+msgid "Curriculum"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/05-curriculum.php:73
+msgid "Curriculum Vitae"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/01-personalDetails.php:139
+msgid "Date de naissance"
+msgstr ""
+
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/01-personalDetails.php:108
+msgid "Détails personnels"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/01-personalDetails.php:177
+msgid "Email"
+msgstr ""
+
 #. Author of the theme
 msgid "Enza Lombardo"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/05-curriculum.php:119
+#: inc/options-theme/op_myprofil/05-curriculum.php:153
+#: inc/options-theme/op_myprofil/05-curriculum.php:189
+msgid "Exporter mon CV"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/03-network.php:112
+msgid "Facebook"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/05-curriculum.php:217
+#: inc/options-theme/op_myprofil/04-aboutme.php:194
+msgid "Gestion de la section en anglais"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/05-curriculum.php:208
+#: inc/options-theme/op_myprofil/04-aboutme.php:186
+msgid "Gestion de la section en français"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/05-curriculum.php:226
+#: inc/options-theme/op_myprofil/04-aboutme.php:202
+msgid "Gestion de la section en italien"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/03-network.php:152
+msgid "GitHub"
 msgstr ""
 
 #. Author URI of the theme
 msgid "http://www.enzalombardo.be"
 msgstr ""
 
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/05-curriculum.php:112
+#: inc/options-theme/op_myprofil/05-curriculum.php:146
+#: inc/options-theme/op_myprofil/05-curriculum.php:182
+msgid "Importer mon CV"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/03-network.php:128
+msgid "Instagram"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/03-network.php:136
+msgid "LinkedIn"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/01-personalDetails.php:170
+msgid "Localité"
+msgstr ""
+
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/01-personalDetails.php:162
+msgid "Mes coordonnées"
+msgstr ""
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/02-media.php:58
+#: inc/options-theme/op_myprofil/02-media.php:59
+#: inc/options-theme/op_myprofil/02-media.php:72
+msgid "Mes médias"
+msgstr ""
+
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/02-media.php:104
+msgid "Mes photos"
+msgstr ""
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/03-network.php:58
+#: inc/options-theme/op_myprofil/03-network.php:59
+msgid "Mes réseaux"
+msgstr ""
+
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/03-network.php:72
+#: inc/options-theme/op_myprofil/03-network.php:104
+msgid "Mes réseaux sociaux"
+msgstr ""
+
 #. Description of the theme
 msgid "Mon Curriculum Vitae en ligne"
 msgstr ""
 
+#. TITLE_PAGE
+#: inc/options-theme/op_myprofil/01-personalDetails.php:60
+#: inc/options-theme/op_myprofil/01-personalDetails.php:61
+#: inc/options-theme/op_myprofil/01-personalDetails.php:76
+msgid "Mon profile"
+msgstr ""
+
 #. Name of the theme
 msgid "MyCV 2021"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/01-personalDetails.php:131
+msgid "Nom complet"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/04-aboutme.php:222
+#: inc/options-theme/op_myprofil/04-aboutme.php:230
+#: inc/options-theme/op_myprofil/04-aboutme.php:238
+msgid "Parlez de moi"
+msgstr ""
+
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/01-personalDetails.php:205
+msgid "Post"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/04-aboutme.php:114
+#: inc/options-theme/op_myprofil/04-aboutme.php:141
+#: inc/options-theme/op_myprofil/04-aboutme.php:168
+msgid "Qui suis-je ?"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/01-personalDetails.php:241
+msgid "Section dédiée aux informations de contact"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/01-personalDetails.php:232
+msgid "Section dédiée aux informations personnels"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/01-personalDetails.php:248
+msgid "Section dédiée à la traduction du post"
+msgstr ""
+
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/05-curriculum.php:139
+#: inc/options-theme/op_myprofil/04-aboutme.php:133
+msgid "Section en anglais"
+msgstr ""
+
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/05-curriculum.php:105
+#: inc/options-theme/op_myprofil/04-aboutme.php:106
+msgid "Section en français"
+msgstr ""
+
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/05-curriculum.php:175
+#: inc/options-theme/op_myprofil/04-aboutme.php:160
+msgid "Section en italien"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/03-network.php:160
+msgid "Site Web"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/02-media.php:74
+msgid ""
+"Sur cette page vous pouvez gérer les différents média de votre Curriculum "
+"Vitae"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/01-personalDetails.php:78
+msgid ""
+"Sur cette page vous pouvez gérer les informations de votre Curriculum Vitae"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/03-network.php:74
+msgid "Sur cette page vous pouvez gérer les url de vos réseaux sociaux"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/05-curriculum.php:75
+msgid "Sur cette page, vous pouvez gérer l'import / export de votre CV"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/04-aboutme.php:76
+msgid "Sur cette page, vous pouvez parler de vous"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/01-personalDetails.php:213
+msgid "Titre du job"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/03-network.php:120
+msgid "Twitter"
+msgstr ""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_myprofil/01-personalDetails.php:184
+msgid "Téléphone"
+msgstr ""
+
+#: inc/options-theme/op_myprofil/04-aboutme.php:74
+msgid "À propos de moi"
 msgstr ""
