@@ -36,13 +36,13 @@
         <?php get_template_part('template-parts/header/nav/nav-lang'); ?>
 
         <!--  box-user  -->
-        <?php get_template_part('template-parts/header/user/profil'); ?>
+        <?php //get_template_part('template-parts/header/user/profil'); ?>
 
         <!--  Nav-principal  -->
         <?php get_template_part('template-parts/header/nav/nav-principal'); ?>
     </div>
     <div>
         <!--  Social-Network  -->
-        <?php get_template_part('template-parts/header/social/social'); ?>
+        <?php //get_template_part('template-parts/header/social/social'); ?>
     </div>
 </header>

@@ -1,8 +1,8 @@
 <?php
 /**
  * Name file: nav-principal
- * Description:
- * Important:
+ * Description: Display the principal navigation
+ * Important: this navigation is fix
  *
  * @package WordPress
  * @subpackage MyCV
@@ -11,4 +11,16 @@
 ?>
 
 
-<h3>this nav-principal</h3>
+<div class="nav-principal">
+    <?php
+    /**
+     * [navigation principal]
+     */
+    wp_nav_menu(array(
+        'theme_location' => 'aside',
+        'depth'          => 2,
+        'container'      => false,
+        'menu_class'     => 'navbar-nav w-100 flex-column',
+    ));
+    ?>
+</div>
