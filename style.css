@@ -195,7 +195,9 @@ html {
 body {
   line-height: 1.5;
   font-size: calc((1 - 1) * 1.2vw + 1rem);
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Source Sans Pro", sans-serif;
+  overflow-x: hidden;
+  padding-left: 19rem; }
 
 a {
   color: inherit;
@@ -316,5 +318,18 @@ body {
 body.dark {
   background: #242525;
   color: #fafafa; }
+
+header {
+  width: 19rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 2px solid limegreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  height: 100%; }
 
 /*# sourceMappingURL=style.css.map */

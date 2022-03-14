@@ -16,6 +16,8 @@ body{
     //font-size: calc(0.55em + 1vmin);
     font-size: calc((1 - 1) * 1.2vw + 1rem);
     font-family: $font-primary;
+    overflow-x: hidden;
+    padding-left: 19rem;
 }
 
 
