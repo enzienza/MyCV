@@ -31,21 +31,21 @@
 
 <header class="sidebar">
 
-    <div class="sidebar-top">
-        <!--  Nav-lang  -->
-        <?php get_template_part('template-parts/header/nav/nav-lang'); ?>
-    </div>
-    <div class="sidebar-head">
-        <!--  box-user  -->
-        <?php get_template_part('template-parts/header/user/profil'); ?>
-    </div>
-    <div class="sidebar-content">
-        <!--  Nav-principal  -->
-        <?php get_template_part('template-parts/header/nav/nav-principal'); ?>
-    </div>
+
+    <!--  Nav-lang  -->
+    <?php get_template_part('template-parts/header/nav/nav-lang'); ?>
+
+
+    <!--  box-user  -->
+    <?php get_template_part('template-parts/header/user/profil'); ?>
+
+
+    <!--  Nav-principal  -->
+    <?php get_template_part('template-parts/header/nav/nav-principal'); ?>
+
     <div class="sidebar-footer">
         <!--  Social-Network  -->
         <?php get_template_part('template-parts/header/social/social'); ?>
     </div>
-    
+
 </header>

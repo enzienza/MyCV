@@ -9,18 +9,18 @@
  */
 ?>
 
-<div class="profil">
+<div class="sidebar-head">
 
     <img src="<?php echo esc_attr(get_option('myprofil')) ?>"
          alt="<?php echo esc_attr(get_option('mylastname')); ?> <?php echo esc_attr(get_option('myfirstname')); ?>"
-         class=" rounded-full"
+         class="profil rounded-full"
     />
 
-    <h1 class="name">
+    <h1 class="name font-bold tracking-4">
         <?php echo esc_attr(get_option('mylastname')); ?>
         <?php echo esc_attr(get_option('myfirstname')); ?>
     </h1>
-    <p>
+    <p class="font-thin tracking-3">
         <?php echo esc_attr(get_option('title_job_fr')) ?>
     </p>
 </div>

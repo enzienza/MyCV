@@ -1,0 +1,18 @@
+// main: ../_components.scss
+
+.social{
+    &-list{
+        margin-bottom: .5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    &-item{
+        font-family: $font-icon;
+        padding: 0.5rem;
+        color: rgba($color-light, .5);
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}

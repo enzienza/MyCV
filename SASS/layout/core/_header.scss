@@ -5,11 +5,38 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    border: 2px solid limegreen;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
+    justify-content: space-between;
+    flex-flow: column nowrap;
     text-align: center;
     height: 100%;
+    background: $color-dark;
+    color: $color-light;
 }
+
+.sidebar{
+    &-top{
+        height: 3rem;
+    }
+
+    &-head{
+        .name{
+            //font-size: calc(1rem + 1vw);
+            font-size: calc(2em - 0.5vmin);
+        }
+    }
+
+    &-footer{
+        margin: 0 auto;
+    }
+}
+
+
+@include responsive(XL){
+    .sidebar-head{
+
+    }
+}
+@include responsive(MD){}
+@include responsive(SM){}
+@include responsive(XS){}

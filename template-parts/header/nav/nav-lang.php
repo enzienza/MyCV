@@ -11,7 +11,7 @@
 ?>
 
 
-<div class="languages">
+<div class="sidebar-top">
     <?php
     /**
      * [navigation languages]

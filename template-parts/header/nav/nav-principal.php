@@ -11,7 +11,7 @@
 ?>
 
 
-<div class="nav-principal">
+<div class="sidebar-content">
     <?php
     /**
      * [navigation principal]
@@ -20,7 +20,8 @@
         'theme_location' => 'aside',
         'depth'          => 2,
         'container'      => false,
-        'menu_class'     => 'navbar-nav w-100 flex-column',
+        'menu_class'     => 'navbar-nav',
+//        'menu_class'     => 'navbar-nav w-100 flex-column',
     ));
     ?>
 </div>
