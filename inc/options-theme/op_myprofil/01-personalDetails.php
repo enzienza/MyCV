@@ -30,8 +30,8 @@ class mycv_myprofil{
      *     afin d'evite les fautes de frappe
      */
     // page info - level 1
-    const INFO_TITLE = 'Mon profile';
-    const INFO_MENU  = 'Mon profile';
+    //const INFO_TITLE = 'Mon profile';
+    //const INFO_MENU  = 'Mon profile';
     const PERMITION  = 'manage_options';
     const DASHICON   = 'dashicons-smiley';
     const GROUP      = 'myprofil';
@@ -57,8 +57,8 @@ class mycv_myprofil{
      */
     public static function addMenu(){
         add_menu_page(
-            self::INFO_TITLE,          // TITLE_PAGE
-            self::INFO_MENU,           // TITLE_MENU
+            __('Mon profile', 'MyCV'),       // TITLE_PAGE
+            __('Mon profile', 'MyCV'),        // TITLE_MENU
             self::PERMITION,           // CAPABILITY
             self::GROUP,              // SLUG_PAGE
             [self::class, 'render'],            // CALLBACK

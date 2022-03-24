@@ -1,0 +1,42 @@
+// main: ../_layout.scss
+
+header{
+    width: 19rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    text-align: center;
+    height: 100%;
+    background: $color-dark;
+    color: $color-light;
+}
+
+.sidebar{
+    &-top{
+        height: 3rem;
+    }
+
+    &-head{
+        .name{
+            //font-size: calc(1rem + 1vw);
+            font-size: calc(2em - 0.5vmin);
+        }
+    }
+
+    &-footer{
+        margin: 0 auto;
+    }
+}
+
+
+@include responsive(XL){
+    .sidebar-head{
+
+    }
+}
+@include responsive(MD){}
+@include responsive(SM){}
+@include responsive(XS){}

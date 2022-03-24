@@ -30,8 +30,8 @@ class myprofil_curriculum{
      *     afin d'evite les fautes de frappe
      */
     // page info - level 4
-    const SUB_TITLE   = 'Curriculum';
-    const SUB_MENU    = 'Curriculum';
+    //const SUB_TITLE   = 'Curriculum';
+    //const SUB_MENU    = 'Curriculum';
     const PERMITION   = 'manage_options';
     const SUB_GROUP   = 'myprofil_curriculum';
     const NONCE       = '_myprofil_curriculum';
@@ -56,11 +56,11 @@ class myprofil_curriculum{
     public static function addMenu(){
         add_submenu_page(
             mycv_myprofil::GROUP,        // slug parent
-            self::SUB_TITLE,                    // page_title
-            self::SUB_MENU,                     // menu_title
-            self::PERMITION,                     // capability
-            self::SUB_GROUP,                    // slug_menu
-            [self::class, 'render']              // CALLBACK
+            __('Curriculum', 'MyCV'),               // page_title
+            __('Curriculum', 'MyCV'),               // menu_title
+            self::PERMITION,              // capability
+            self::SUB_GROUP,             // slug_menu
+            [self::class, 'render']                // CALLBACK
         );
     }
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-26 20:16+0000\n"
-"PO-Revision-Date: 2022-03-14 13:07+0000\n"
+"POT-Creation-Date: 2022-03-14 15:58+0000\n"
+"PO-Revision-Date: 2022-03-14 16:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -14,6 +14,13 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.0; wp-5.9.2\n"
 "X-Domain: MyCV"
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/04-aboutme.php:60
+#: inc/options-theme/op_myprofil/04-aboutme.php:61
+msgid "About me"
+msgstr "Riguardo a me"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:318
 #: inc/options-theme/op_myprofil/05-curriculum.php:356
@@ -39,6 +46,13 @@ msgstr "Behance"
 msgid "Cocher et ajouter l'url de vos réseaux sociaux"
 msgstr "Controlla e aggiungi l'URL dei tuoi social network"
 
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/05-curriculum.php:59
+#: inc/options-theme/op_myprofil/05-curriculum.php:60
+msgid "Curriculum"
+msgstr "Curriculum"
+
 #: inc/options-theme/op_myprofil/05-curriculum.php:73
 msgid "Curriculum Vitae"
 msgstr "Curriculum vitae"
@@ -51,12 +65,12 @@ msgstr "Data di nascita"
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:108
 msgid "Détails personnels"
-msgstr "Dati personali"
+msgstr "dati personali"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:177
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 #. Author of the theme
 msgid "Enza Lombardo"
@@ -122,9 +136,13 @@ msgstr "località"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:162
-msgid "Mes coordonnés"
-msgstr "Le mie coordinate"
+msgid "Mes coordonnées"
+msgstr "I miei dati di contatto"
 
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/02-media.php:58
+#: inc/options-theme/op_myprofil/02-media.php:59
 #: inc/options-theme/op_myprofil/02-media.php:72
 msgid "Mes médias"
 msgstr "I miei media"
@@ -133,6 +151,13 @@ msgstr "I miei media"
 #: inc/options-theme/op_myprofil/02-media.php:104
 msgid "Mes photos"
 msgstr "Le mie foto"
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/03-network.php:58
+#: inc/options-theme/op_myprofil/03-network.php:59
+msgid "Mes réseaux"
+msgstr "Le mie reti"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/03-network.php:72
@@ -144,6 +169,9 @@ msgstr "I miei social network"
 msgid "Mon Curriculum Vitae en ligne"
 msgstr "Il mio Curriculum Vitae online"
 
+#. TITLE_PAGE
+#: inc/options-theme/op_myprofil/01-personalDetails.php:60
+#: inc/options-theme/op_myprofil/01-personalDetails.php:61
 #: inc/options-theme/op_myprofil/01-personalDetails.php:76
 msgid "Mon profile"
 msgstr "Il mio profilo"
@@ -197,7 +225,7 @@ msgstr "Sezione in inglese"
 #: inc/options-theme/op_myprofil/05-curriculum.php:105
 #: inc/options-theme/op_myprofil/04-aboutme.php:106
 msgid "Section en français"
-msgstr "sezione francese"
+msgstr "sezione in francese"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/05-curriculum.php:175

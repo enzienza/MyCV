@@ -30,8 +30,8 @@ class myprofil_network{
      *     afin d'evite les fautes de frappe
      */
     // page info - level 1
-    const SUB_TITLE   = 'Mes réseaux';
-    const SUB_MENU    = 'Mes réseaux';
+    //const SUB_TITLE   = 'Mes réseaux';
+    //const SUB_MENU    = 'Mes réseaux';
     const PERMITION    = 'manage_options';
     const SUB_GROUP   = 'myprofil_network';
     const NONCE        = '_myprofil_network';
@@ -55,11 +55,11 @@ class myprofil_network{
     public static function addMenu(){
         add_submenu_page(
             mycv_myprofil::GROUP,        // slug parent
-            self::SUB_TITLE,                    // page_title
-            self::SUB_MENU,                     // menu_title
-            self::PERMITION,                     // capability
-            self::SUB_GROUP,                    // slug_menu
-            [self::class, 'render']              // CALLBACK
+            __('Mes réseaux', 'MyCV'),            // page_title
+            __('Mes réseaux', 'MyCV'),             // menu_title
+            self::PERMITION,              // capability
+            self::SUB_GROUP,             // slug_menu
+            [self::class, 'render']                // CALLBACK
         );
     }
 

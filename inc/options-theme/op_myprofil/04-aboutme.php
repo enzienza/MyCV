@@ -30,8 +30,8 @@ class myprofil_aboutme{
      *     afin d'evite les fautes de frappe
      */
     // page info - level 4
-    const SUB_TITLE   = 'About me';
-    const SUB_MENU    = 'About me';
+    //const SUB_TITLE   = 'About me';
+    //const SUB_MENU    = 'About me';
     const PERMITION    = 'manage_options';
     const SUB_GROUP   = 'myprofil_aboutme';
     const NONCE        = '_myprofil_aboutme';
@@ -57,11 +57,11 @@ class myprofil_aboutme{
     public static function addMenu(){
         add_submenu_page(
             mycv_myprofil::GROUP,        // slug parent
-            self::SUB_TITLE,                    // page_title
-            self::SUB_MENU,                     // menu_title
-            self::PERMITION,                     // capability
-            self::SUB_GROUP,                    // slug_menu
-            [self::class, 'render']              // CALLBACK
+            __('About me', 'MyCV'),            // page_title
+            __('About me', 'MyCV'),             // menu_title
+            self::PERMITION,              // capability
+            self::SUB_GROUP,             // slug_menu
+            [self::class, 'render']                // CALLBACK
         );
     }
 

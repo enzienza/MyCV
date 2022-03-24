@@ -31,8 +31,8 @@ class myprofil_medias{
      *     afin d'evite les fautes de frappe
      */
     // page info - level 1
-    const SUB_TITLE   = 'Mes médias';
-    const SUB_MENU    = 'Mes médias';
+    //const SUB_TITLE   = 'Mes médias';
+    //const SUB_MENU    = 'Mes médias';
     const PERMITION    = 'manage_options';
     const SUB_GROUP   = 'myprofil_medias';
     const NONCE        = '_myprofil_medias';
@@ -55,11 +55,11 @@ class myprofil_medias{
     public static function addMenu(){
         add_submenu_page(
             mycv_myprofil::GROUP,        // slug parent
-            self::SUB_TITLE,                    // page_title
-            self::SUB_MENU,                     // menu_title
-            self::PERMITION,                     // capability
-            self::SUB_GROUP,                    // slug_menu
-            [self::class, 'render']              // CALLBACK
+            __('Mes médias', 'MyCV'),            // page_title
+            __('Mes médias', 'MyCV'),             // menu_title
+            self::PERMITION,              // capability
+            self::SUB_GROUP,             // slug_menu
+            [self::class, 'render']                // CALLBACK
         );
     }
 

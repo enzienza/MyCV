@@ -16,6 +16,8 @@ body{
     //font-size: calc(0.55em + 1vmin);
     font-size: calc((1 - 1) * 1.2vw + 1rem);
     font-family: $font-primary;
+    overflow-x: hidden;
+    padding-left: 19rem;
 }
 
 
@@ -45,16 +47,19 @@ h6 {
 }
 
 h1{
+    font-size: calc(2em + 1vmin);
     //font-size: calc(3em + 1vw);
-    font-size: calc((3 - 1) * 1.2vw + 1rem)
+    //font-size: calc((3 - 1) * 1.2vw + 1rem)
 }
 
 h2{
+    font-size: calc(1.5em + 1vmin);
     //font-size: calc(2em + 1vw);
-    font-size: calc((2 - 1) * 1.2vw + 1rem);
+    //font-size: calc((2 - 1) * 1.2vw + 1rem);
 }
 
 h3{
+    font-size: (1.8em + 1em);
     //font-size: calc(1em + 1vw);
     font-size: calc((1.8 - 1) * 1.2vw + 1rem);
 }

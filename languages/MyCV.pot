@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-14 12:13+0000\n"
+"POT-Creation-Date: 2022-03-14 15:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,6 +15,13 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.5.5; wp-5.8.2\n"
 "X-Domain: MyCV"
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/04-aboutme.php:60
+#: inc/options-theme/op_myprofil/04-aboutme.php:61
+msgid "About me"
+msgstr ""
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:318
 #: inc/options-theme/op_myprofil/05-curriculum.php:356
@@ -38,6 +45,13 @@ msgstr ""
 
 #: inc/options-theme/op_myprofil/03-network.php:190
 msgid "Cocher et ajouter l'url de vos réseaux sociaux"
+msgstr ""
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/05-curriculum.php:59
+#: inc/options-theme/op_myprofil/05-curriculum.php:60
+msgid "Curriculum"
 msgstr ""
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:73
@@ -123,9 +137,13 @@ msgstr ""
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:162
-msgid "Mes coordonnés"
+msgid "Mes coordonnées"
 msgstr ""
 
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/02-media.php:58
+#: inc/options-theme/op_myprofil/02-media.php:59
 #: inc/options-theme/op_myprofil/02-media.php:72
 msgid "Mes médias"
 msgstr ""
@@ -133,6 +151,13 @@ msgstr ""
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/02-media.php:104
 msgid "Mes photos"
+msgstr ""
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_myprofil/03-network.php:58
+#: inc/options-theme/op_myprofil/03-network.php:59
+msgid "Mes réseaux"
 msgstr ""
 
 #. SLUG_SECTION
@@ -145,6 +170,9 @@ msgstr ""
 msgid "Mon Curriculum Vitae en ligne"
 msgstr ""
 
+#. TITLE_PAGE
+#: inc/options-theme/op_myprofil/01-personalDetails.php:60
+#: inc/options-theme/op_myprofil/01-personalDetails.php:61
 #: inc/options-theme/op_myprofil/01-personalDetails.php:76
 msgid "Mon profile"
 msgstr ""
