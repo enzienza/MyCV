@@ -21,6 +21,12 @@
         <?php echo esc_attr(get_option('myfirstname')); ?>
     </h1>
     <p class="font-thin tracking-3">
-        <?php echo esc_attr(get_option('title_job_fr')) ?>
+        <?php if (get_locale() === 'fr_FR') : ?>
+            <?php echo esc_attr(get_option('title_job_fr')) ?>
+        <?php elseif(get_locale() === 'en_GB') : ?>
+            <?php echo esc_attr(get_option('title_job_en')) ?>
+        <?php elseif(get_locale() === 'it_IT') : ?>
+            <?php echo esc_attr(get_option('title_job_it')) ?>
+        <?php endif; ?>
     </p>
 </div>

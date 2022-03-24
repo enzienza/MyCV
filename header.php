@@ -43,9 +43,8 @@
     <!--  Nav-principal  -->
     <?php get_template_part('template-parts/header/nav/nav-principal'); ?>
 
-    <div class="sidebar-footer">
-        <!--  Social-Network  -->
-        <?php get_template_part('template-parts/header/social/social'); ?>
-    </div>
+
+    <!--  Social-Network  -->
+    <?php get_template_part('template-parts/header/social/social'); ?>
 
 </header>
