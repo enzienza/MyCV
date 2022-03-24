@@ -26,6 +26,7 @@
  */
 /* customize customtheme */
 require_once('inc/customize/config-theme.php');
+require_once('inc/customize/config-assets.php');
 
 /* customize back-end */
 require_once ('inc/customize/config-admin.php');
