@@ -14,6 +14,27 @@ if(!function_exists('mycv_register_assets')) {
     {
 
         // ===================================================================
+        // CSS
+        // ===================================================================
+
+        // CSS Externe --------------------------------
+        //cdn CSS bootstrap 4.4.1
+        wp_register_style(
+            'bootstrap',
+            'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css',
+            [], '4.4.1'
+        );
+        wp_enqueue_style('bootstrap');
+
+        // CSS Custom  --------------------------------
+        wp_enqueue_style(
+            'style',
+            get_template_directory_uri().'/style.css',
+            [], '1.0.0'
+        );
+
+
+        // ===================================================================
         // JAVASCRIP
         // ===================================================================
 
@@ -33,6 +54,7 @@ if(!function_exists('mycv_register_assets')) {
             [],
             '1.16.0', true
         );
+        wp_enqueue_script('bootstrap');
 
         // CDN jquery-cookie
         wp_register_script(
@@ -64,25 +86,7 @@ if(!function_exists('mycv_register_assets')) {
         );
 
 
-        // ===================================================================
-        // CSS
-        // ===================================================================
 
-        // CSS Externe --------------------------------
-        //cdn CSS bootstrap 4.4.1
-        wp_register_style(
-            'bootstrap',
-            'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css',
-            [], '4.4.1'
-        );
-        wp_enqueue_style('bootstrap');
-
-        // CSS Custom  --------------------------------
-        wp_enqueue_style(
-            'style',
-            get_template_directory_uri().'/style.css',
-            [], '1.0.0'
-        );
     }
 }
 add_action('wp_enqueue_scripts', 'mycv_register_assets');
