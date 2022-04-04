@@ -74,6 +74,13 @@ if(!function_exists('mycv_register_assets')) {
             '1.0',
             true
         );
+        wp_enqueue_script(
+            'btn-menu',
+            get_template_directory_uri().'/assets/js/btn-menu.js',
+            [],
+            '1.0',
+            true
+        );
 
         // CDN jQuery
         wp_deregister_script('jquery');

@@ -5,6 +5,7 @@
 ::before,
 ::after {
     box-sizing: border-box;
+    transition: all .2s linear;
 }
 
 html {
@@ -17,7 +18,6 @@ body{
     font-size: calc((1 - 1) * 1.2vw + 1rem);
     font-family: $font-primary;
     overflow-x: hidden;
-    padding-left: 19rem;
 }
 
 
@@ -68,6 +68,10 @@ img {
     max-width: 100%;
 }
 
+section{
+    padding: 1rem;
+}
+
 
 .visible {
     visibility: visible;
@@ -75,4 +79,26 @@ img {
 
 .invisible {
     visibility: hidden;
+}
+
+@include responsive(XL){
+    body{
+        padding-left: 19rem;
+    }
+}
+@include responsive(LG){
+    body{
+        padding-left: 19rem;
+    }
+}
+@include responsive(MD){}
+@include responsive(SM){
+    section{
+        padding: 3rem;
+    }
+}
+@include responsive(XS){
+    section{
+        padding: 3rem;
+    }
 }

@@ -14,3 +14,65 @@
         }
     }
 }
+
+
+// BTN BURGER
+.btn-menu{
+    background: $color-primary;
+    color: $color-light;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border-radius: 50%;
+    border: 0;
+    left: 1rem;
+    top: 1rem;
+    outline: none !important;
+    line-height: 0;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+// ICON
+.icon-1, .icon-2, .icon-3{
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: $color-light;
+    transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
+}
+
+.icon-1 {
+    transform: translateY(-8px);
+    animation-delay: 100ms;
+}
+
+.icon-3 {
+    transform: translateY(8px);
+    animation-delay: 250ms;
+}
+
+.icon-1.a {
+    transform: rotate(40deg);
+}
+.icon-3.b {
+    transform: rotate(-40deg);
+}
+.icon-2.c {
+    opacity: 0;
+}
+
+
+@include responsive(XL){
+    .btn-menu{
+        display: none;
+    }
+}
+@include responsive(LG){
+    .btn-menu{
+        display: none;
+    }
+}

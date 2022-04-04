@@ -3,7 +3,7 @@
 // switcher
 .switcher-mode{
     position: fixed;
-    top: 3rem;
+    top: 2rem;
     right: 2rem;
 }
 
@@ -57,5 +57,21 @@
         position: absolute;
         left: 5px;
         color: $color-light;
+    }
+}
+
+@include responsive(XL){}
+@include responsive(LG){}
+@include responsive(MD){}
+@include responsive(SM){
+    .switcher-mode{
+        top: 1.5rem;
+        right: 1rem;
+    }
+}
+@include responsive(XS){
+    .switcher-mode{
+        top: 1.5rem;
+        right: 1rem;
     }
 }

@@ -1,7 +1,6 @@
 // main: ../_layout.scss
 
 header{
-    width: 19rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -12,6 +11,7 @@ header{
     height: 100%;
     background: $color-dark;
     color: $color-light;
+    z-index: 999;
 }
 
 .sidebar{
@@ -33,10 +33,33 @@ header{
 
 
 @include responsive(XL){
-    .sidebar-head{
-
+    header{
+        width: 19rem;
+    }
+}
+@include responsive(LG){
+    header{
+        width: 19rem;
     }
 }
 @include responsive(MD){}
-@include responsive(SM){}
-@include responsive(XS){}
+@include responsive(SM){
+    header{
+        width: 100vw;
+        left: -120%;
+    }
+
+    header.toggle{
+        left: 0;
+    }
+}
+@include responsive(XS){
+    header{
+        width: 100vw;
+        left: -120%;
+    }
+
+    header.toggle{
+        left: 0;
+    }
+}
