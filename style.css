@@ -404,6 +404,8 @@ section {
     margin: 0.5rem 0; }
     .navbar-nav .nav-item:hover {
       background: #8f4ec7; }
+  .navbar-nav .current-menu-item, .navbar-nav .current_page_item {
+    background: #8f4ec7; }
 
 .btn-menu {
   background: #8f4ec7;
