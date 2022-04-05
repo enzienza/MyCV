@@ -91,7 +91,12 @@ section{
         padding-left: 19rem;
     }
 }
-@include responsive(MD){}
+
+@include responsive(MD){
+    section{
+        padding: 3rem;
+    }
+}
 @include responsive(SM){
     section{
         padding: 3rem;

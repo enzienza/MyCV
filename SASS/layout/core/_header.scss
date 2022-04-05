@@ -32,17 +32,30 @@ header{
 }
 
 
+// responsivve Portrait ------------------
 @include responsive(XL){
     header{
         width: 19rem;
     }
 }
+
 @include responsive(LG){
     header{
         width: 19rem;
     }
 }
-@include responsive(MD){}
+
+@include responsive(MD){
+    header{
+        width: 100vw;
+        left: -120%;
+    }
+
+    header.toggle{
+        left: 0;
+    }
+}
+
 @include responsive(SM){
     header{
         width: 100vw;
@@ -52,7 +65,14 @@ header{
     header.toggle{
         left: 0;
     }
+
+    .sidebar{
+        &-top{
+            margin-top: 1rem;
+        }
+    }
 }
+
 @include responsive(XS){
     header{
         width: 100vw;
@@ -61,5 +81,65 @@ header{
 
     header.toggle{
         left: 0;
+    }
+
+    .sidebar{
+        &-top{
+            margin-top: 1rem;
+        }
+    }
+}
+
+// Responsive PAYSAGE - landscape -------
+@include landscape(SM){
+    header{
+        display: grid;
+        grid-template-columns: auto 1fr 2fr auto;
+        gap: 0;
+        align-content: center;
+        align-items: center;
+    }
+
+    .sidebar{
+        &-top{
+            width: 5rem;
+        }
+
+        &-head{
+            .profil{
+                width: 9rem;
+                height: 9rem;
+            }
+        }
+        &-footer{
+            width: 50px;
+            margin: auto;
+        }
+    }
+}
+
+@include landscape(XS){
+    header{
+        display: grid;
+        grid-template-columns: auto 1fr 2fr auto;
+        gap: 0;
+        align-content: center;
+        align-items: center;
+    }
+
+    .sidebar{
+        &-top{
+            width: 5rem;
+        }
+        &-head{
+            .profil{
+                width: 9rem;
+                height: 9rem;
+            }
+        }
+        &-footer{
+            width: 50px;
+            margin: auto;
+        }
     }
 }
