@@ -347,6 +347,25 @@ section {
   .switcher-mode {
     top: 1.5rem;
     right: 1rem; } }
+.scrollTop {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 999;
+  display: none; }
+  .scrollTop .flaticon-up-arrow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 10%);
+    font-size: 1.5rem;
+    color: #fafafa; }
+
 .rounded {
   border-radius: 0.25rem; }
   .rounded-sm {

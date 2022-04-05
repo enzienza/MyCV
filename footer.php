@@ -9,6 +9,10 @@
  */
 ?>
 
+
+<?php get_template_part('template-parts/components/scrollTop') ?>
+
+
 <?php wp_footer(); ?>
 
 </body>
