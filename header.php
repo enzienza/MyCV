@@ -48,8 +48,5 @@
 
 <!--  BTN-MOBILE  -->
 <button class="btn-menu" id="btn-menu" type="button">
-    <div class="icon-1" id="a"></div>
-    <div class="icon-2" id="b"></div>
-    <div class="icon-3" id="c"></div>
-    <div class="clear"></div>
+    <div class="btn-menu__burger"></div>
 </button>

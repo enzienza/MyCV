@@ -1,41 +1,27 @@
 /**
  * Name file: BTN-MENU
- * Description:
+ * Description: This script include :
+ *              - animation button burger
+ *              - toggle menu full screen for mobile (open/close)
+ *              - smooth scrolling after click menu item
  *
  * Version: 1.0
  * Author: Enza Lombardo
  */
 
-// ANIMATION BTN BURGER
-// jQuery(document).ready(function($){
-//
-//   $(document).ready(function() {
-//     const btn_menu = document.getElementById("btn-menu");
-//     const icon1 = document.getElementById("a");
-//     const icon2 = document.getElementById("b");
-//     const icon3 = document.getElementById("c");
-//
-//     btn_menu.addEventListener('click', function() {
-//       icon1.classList.toggle('a');
-//       icon2.classList.toggle('c');
-//       icon3.classList.toggle('b');
-//     });
-//   });
-//
-// });
-
 jQuery(document).ready(function ($) {
 
-  // ToggleClass 'toggle'
+  // ToggleClass 'toggle' & open menu
   $(document).ready(function () {
-
     $('#btn-menu').click(function () {
+      $(this).toggleClass('open');
       $('header').toggleClass('toggle');
     })
   });
 
+  // close menu after click
   $(window).on('scroll load',function(){
-
+    $('#btn-menu').removeClass('open');
     $('header').removeClass('toggle');
     // if($(window).scrollTop() > 0){
     //   $('.top').show();
