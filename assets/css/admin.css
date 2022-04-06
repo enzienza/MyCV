@@ -210,6 +210,7 @@ form h2 {
     margin: 2rem auto;
     display: flex;
     justify-content: center;
+    object-fit: cover;
 }
 
 .item-picture-cv, .grid-box{

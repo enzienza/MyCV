@@ -16,3 +16,19 @@
         }
     }
 }
+
+@include landscape(SM){
+    .social{
+        &-list{
+            flex-direction: column;
+        }
+    }
+}
+
+@include landscape(XS){
+    .social{
+        &-list{
+            flex-direction: column;
+        }
+    }
+}

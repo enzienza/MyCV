@@ -14,4 +14,16 @@
         width: 15rem;
         border: 0.7rem solid $color-primary;
     }
+
+    @include responsive(MD){}
+    @include responsive(SM){
+        width: 10rem;
+        height: 10rem;
+        margin-top: 1rem;
+    }
+    @include responsive(XS){
+        width: 10rem;
+        height: 10rem;
+        margin-top: 1rem;
+    }
 }
