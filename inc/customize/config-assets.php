@@ -57,6 +57,7 @@ if(!function_exists('mycv_register_assets')) {
         wp_enqueue_script('bootstrap');
 
         // CDN jquery-cookie
+        // permet d'enregistre les cookie (il est utilise pour le swtich mode)
         wp_register_script(
             'jquery-cookie',
             'https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js',
@@ -67,6 +68,7 @@ if(!function_exists('mycv_register_assets')) {
 
 
         // JS Custom  ---------------------------------
+        // Permet de basculé du mode claire à sombre
         wp_enqueue_script(
             'switch-mode',
             get_template_directory_uri().'/assets/js/switch-mode.js',
@@ -74,6 +76,8 @@ if(!function_exists('mycv_register_assets')) {
             '1.0',
             true
         );
+
+        // Pour le responsive, permet d'afficher le menu + animation du BTN
         wp_enqueue_script(
             'btn-menu',
             get_template_directory_uri().'/assets/js/btn-menu.js',
@@ -81,6 +85,8 @@ if(!function_exists('mycv_register_assets')) {
             '1.0',
             true
         );
+
+        // Permet d'ajouter la classe "current-menu-ancestor" de WordPress
         wp_enqueue_script(
             'ancestor_menu',
             get_template_directory_uri().'/assets/js/ancestor_menu.js',
@@ -88,6 +94,8 @@ if(!function_exists('mycv_register_assets')) {
             '1.0',
             true
         );
+
+        // Permet de remonté la page
         wp_enqueue_script(
             'scrollTop',
             get_template_directory_uri().'/assets/js/scrollTop.js',
