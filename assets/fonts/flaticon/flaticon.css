@@ -157,3 +157,24 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after  {
 .flaticon-download-circular-button:before {
     content: "\f12e";
 }
+.flaticon-youtube:before {
+    content: "\f12f";
+}
+.flaticon-like:before {
+    content: "\f130";
+}
+.flaticon-like-1:before {
+    content: "\f131";
+}
+.flaticon-maison:before {
+    content: "\f132";
+}
+.flaticon-user-2:before {
+    content: "\f133";
+}
+.flaticon-chat:before {
+    content: "\f134";
+}
+.flaticon-download:before {
+    content: "\f135";
+}

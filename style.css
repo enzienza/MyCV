@@ -25,142 +25,163 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
   line-height: 1; }
 
 .flaticon-instagram:before {
-  content: "\f101"; }
+  content: ""; }
 
 .flaticon-heart:before {
-  content: "\f102"; }
+  content: ""; }
 
 .flaticon-facebook:before {
-  content: "\f103"; }
+  content: ""; }
 
 .flaticon-whatsapp:before {
-  content: "\f104"; }
+  content: ""; }
 
 .flaticon-twitter:before {
-  content: "\f105"; }
+  content: ""; }
 
 .flaticon-linkedin:before {
-  content: "\f106"; }
+  content: ""; }
 
 .flaticon-pin:before {
-  content: "\f107"; }
+  content: ""; }
 
 .flaticon-messenger:before {
-  content: "\f108"; }
+  content: ""; }
 
 .flaticon-worldwide:before {
-  content: "\f109"; }
+  content: ""; }
 
 .flaticon-email:before {
-  content: "\f10a"; }
+  content: ""; }
 
 .flaticon-telephone:before {
-  content: "\f10b"; }
+  content: ""; }
 
 .flaticon-github:before {
-  content: "\f10c"; }
+  content: ""; }
 
 .flaticon-user:before {
-  content: "\f10d"; }
+  content: ""; }
 
 .flaticon-behance:before {
-  content: "\f10e"; }
+  content: ""; }
 
 .flaticon-network:before {
-  content: "\f10f"; }
+  content: ""; }
 
 .flaticon-mortarboard:before {
-  content: "\f110"; }
+  content: ""; }
 
 .flaticon-briefcase:before {
-  content: "\f111"; }
+  content: ""; }
 
 .flaticon-skills:before {
-  content: "\f112"; }
+  content: ""; }
 
 .flaticon-personal:before {
-  content: "\f113"; }
+  content: ""; }
 
 .flaticon-down-arrow:before {
-  content: "\f114"; }
+  content: ""; }
 
 .flaticon-up-arrow:before {
-  content: "\f115"; }
+  content: ""; }
 
 .flaticon-cv:before {
-  content: "\f116"; }
+  content: ""; }
 
 .flaticon-resume:before {
-  content: "\f117"; }
+  content: ""; }
 
 .flaticon-progress:before {
-  content: "\f118"; }
+  content: ""; }
 
 .flaticon-magnifying-glass:before {
-  content: "\f119"; }
+  content: ""; }
 
 .flaticon-user-1:before {
-  content: "\f11a"; }
+  content: ""; }
 
 .flaticon-moon:before {
-  content: "\f11b"; }
+  content: ""; }
 
 .flaticon-sun:before {
-  content: "\f11c"; }
+  content: ""; }
 
 .flaticon-telegram:before {
-  content: "\f11d"; }
+  content: ""; }
 
 .flaticon-notification:before {
-  content: "\f11e"; }
+  content: ""; }
 
 .flaticon-star:before {
-  content: "\f11f"; }
+  content: ""; }
 
 .flaticon-placeholder:before {
-  content: "\f120"; }
+  content: ""; }
 
 .flaticon-telegram-1:before {
-  content: "\f121"; }
+  content: ""; }
 
 .flaticon-facebook-1:before {
-  content: "\f122"; }
+  content: ""; }
 
 .flaticon-instagram-1:before {
-  content: "\f123"; }
+  content: ""; }
 
 .flaticon-twitter-1:before {
-  content: "\f124"; }
+  content: ""; }
 
 .flaticon-line:before {
-  content: "\f125"; }
+  content: ""; }
 
 .flaticon-linkedin-1:before {
-  content: "\f126"; }
+  content: ""; }
 
 .flaticon-behance-1:before {
-  content: "\f127"; }
+  content: ""; }
 
 .flaticon-github-1:before {
-  content: "\f128"; }
+  content: ""; }
 
 .flaticon-telegram-2:before {
-  content: "\f129"; }
+  content: ""; }
 
 .flaticon-github-2:before {
-  content: "\f12a"; }
+  content: ""; }
 
 .flaticon-deal:before {
-  content: "\f12b"; }
+  content: ""; }
 
 .flaticon-graduating-student:before {
-  content: "\f12c"; }
+  content: ""; }
 
 .flaticon-experience:before {
-  content: "\f12d"; }
+  content: ""; }
 
 .flaticon-download-circular-button:before {
-  content: "\f12e"; }
+  content: ""; }
+
+.flaticon-youtube:before {
+  content: ""; }
+
+.flaticon-like:before {
+  content: ""; }
+
+.flaticon-like-1:before {
+  content: ""; }
+
+.flaticon-maison:before {
+  content: ""; }
+
+.flaticon-user-2:before {
+  content: ""; }
+
+.flaticon-chat:before {
+  content: ""; }
+
+.flaticon-download:before {
+  content: ""; }
 
 * {
   margin: 0;
