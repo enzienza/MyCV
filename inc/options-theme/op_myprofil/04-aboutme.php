@@ -217,26 +217,74 @@ class myprofil_aboutme{
      */
     // SECTION 1 : SECTION_FR =========================================
     public static function field_talk_aboutme_fr(){
-        $talk_aboutme_fr = esc_attr(get_option('talk_aboutme_fr'));
+        $talk_aboutme_fr = get_option('talk_aboutme_fr');
+
+        // define argument for editor WYSIWYG
+        $args = array(
+            'media_buttons'    => false,
+            'textarea_name'    => 'talk_aboutme_fr',
+            'textarea_rows'    => 20,
+            'teeny'            => true,
+            'tinymce'          => true,
+            'drag_drop_upload' => true,
+        );
+
         ?>
-        <label for="talk_aboutme_fr"><?php _e('Parlez de moi', 'MyCV') ?></label>
-        <textarea name="talk_aboutme_fr" id="talk_aboutme_fr" class="large-text code"><?php echo $talk_aboutme_fr ?></textarea>
+        <label for="talk_aboutme_fr"><?php _e('Parlez de sois', 'MyCV') ?></label>
+
+            <?php
+                $content = wp_editor($talk_aboutme_fr, 'talk_aboutme_fr', $args);
+                        echo $content
+            ?>
+
         <?php
     }
     // SECTION 2 : SECTION_EN =========================================
     public static function field_talk_aboutme_en(){
-        $talk_aboutme_en = esc_attr(get_option('talk_aboutme_en'));
+        $talk_aboutme_en = get_option('talk_aboutme_en');
+
+        // define argument for editor WYSIWYG
+        $args = array(
+            'media_buttons'    => false,
+            'textarea_name'    => 'talk_aboutme_en',
+            'textarea_rows'    => 20,
+            'teeny'            => true,
+            'tinymce'          => true,
+            'drag_drop_upload' => true,
+        );
+
         ?>
-        <label for="talk_aboutme_en"><?php _e('Parlez de moi', 'MyCV') ?></label>
-        <textarea name="talk_aboutme_en" id="talk_aboutme_en" class="large-text code"><?php echo $talk_aboutme_en ?></textarea>
+        <label for="talk_aboutme_en"><?php _e('Parlez de sois', 'MyCV') ?></label>
+
+            <?php
+                $content = wp_editor($talk_aboutme_en, 'talk_aboutme_en', $args);
+                echo $content
+            ?>
+
         <?php
     }
     // SECTION 3 : SECTION_IT =========================================
     public static function field_talk_aboutme_it(){
-        $talk_aboutme_it = esc_attr(get_option('talk_aboutme_it'));
+        $talk_aboutme_it = get_option('talk_aboutme_it');
+
+        // define argument for editor WYSIWYG
+        $args = array(
+            'media_buttons'    => false,
+            'textarea_name'    => 'talk_aboutme_it',
+            'textarea_rows'    => 20,
+            'teeny'            => true,
+            'tinymce'          => true,
+            'drag_drop_upload' => true,
+        );
+
         ?>
-        <label for="talk_aboutme_it"><?php _e('Parlez de moi', 'MyCV') ?></label>
-        <textarea name="talk_aboutme_it" id="talk_aboutme_it" class="large-text code"><?php echo $talk_aboutme_it ?></textarea>
+        <label for="talk_aboutme_it"><?php _e('Parlez de sois', 'MyCV') ?></label>
+
+            <?php
+                $content = wp_editor($talk_aboutme_it, 'talk_aboutme_it', $args);
+                        echo $content
+            ?>
+
         <?php
     }
 
