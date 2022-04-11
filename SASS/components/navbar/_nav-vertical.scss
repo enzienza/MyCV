@@ -1,0 +1,111 @@
+// main: ../_components.scss
+
+
+.navbar-nav{
+    flex-flow: column nowrap;
+    padding: 1rem 3rem;
+
+    .nav-item{
+        background: rgba($color-light, .3);
+        border-radius: 5rem;
+        margin: 0.5rem 0;
+        &:hover{
+            background: $color-primary;
+        }
+    }
+
+    .current-menu-item, .current_page_item{
+        background: $color-primary;
+    }
+}
+
+
+
+// BTN BURGER
+.btn-menu{
+    background: $color-primary;
+    color: $color-light;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border-radius: 50%;
+    border: 0;
+    left: 1rem;
+    top: 1rem;
+    outline: none !important;
+    line-height: 0;
+    transition: all 0.2s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+    &__burger{
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: $color-light;
+        transition: all .5s ease-in-out;
+        //transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
+
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 2px;
+            background-color: $color-light;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255,101,47,.2);
+            transition: all .5s ease-in-out;
+            //transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
+        }
+
+        &::before{
+            //transform: translateY(-10px);
+            transform: translateY(-8px);
+            animation-delay: 100ms;
+        }
+
+        &::after{
+            //transform: translateY(10px);
+            transform: translateY(8px);
+            animation-delay: 250ms;
+        }
+    }
+}
+
+.btn-menu.open{
+    .btn-menu__burger{
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+
+        &::before{
+            transform: rotate(45deg) translate(35px, -35px);
+            //transform: rotate(40deg);
+        }
+
+        &::after{
+            transform: rotate(-45deg) translate(35px, 35px);
+            //transform: rotate(-40deg);
+        }
+    }
+}
+
+
+@include responsive(XL){
+    .btn-menu{
+        display: none;
+    }
+}
+@include responsive(LG){
+    .btn-menu{
+        display: none;
+    }
+}
+//@include responsive(MD){
+//    .btn-menu{
+//        display: none;
+//    }
+//}

@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: config-theme
- * Description:
+ * Description: MyCV functions and definitions
  *
  * @package WordPress
  * @subpackage MyCV
@@ -34,7 +34,7 @@ if(!function_exists('mycv_supports')){
 
         // Enable support for Post Thumbnails on posts and pages.
         add_theme_support('post-thumbnails');
-        
+
         // dimention image
         add_image_size('post-thumbnail', 350, 215, true);
 
@@ -53,8 +53,8 @@ add_action('after_setup_theme','mycv_supports' );
 
 /**
  * 2 - Custom css nav menu
- *     nav_menu_css_class: Filters the CSS classes applied to a menu item’s list item elements.
- *     nav_menu_link_attributes: Filters the HTML attributes applied to a menu item’s anchor elements.
+ *     nav_menu_css_class: Filters the CSS classes applied to a menu item’s list item components.
+ *     nav_menu_link_attributes: Filters the HTML attributes applied to a menu item’s anchor components.
  */
 add_filter(
     "nav_menu_css_class",
@@ -73,70 +73,7 @@ add_filter(
     }
 );
 
-/**
- * 3 - Include Styles and script
- *     Function for runs the scripts and css for customtheme
- */
-// fonction qui vérifie si 'mycv_register_assets' exixte déjà avant de l'initialiser
-if(!function_exists('mycv_register_assets')) {
-    function mycv_register_assets()
-    {
 
-        // ===================================================================
-        // JAVASCRIP
-        // ===================================================================
-
-        // JS Externe ---------------------------------
-        // CDN JS BOOTSTRAP 4.4.1
-        wp_register_script(
-            'bootstrap',
-            'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js',
-            ['popper', 'jquery'],
-            '4.4.1', true
-        );
-
-        // CDN POPPER
-        wp_register_script(
-            'popper',
-            'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
-            [],
-            '1.16.0', true
-        );
-        // CDN jQuery
-        wp_deregister_script('jquery');
-        wp_register_script(
-            'jquery',
-            'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
-            [],
-            '3.5.1',
-            true
-        );
-
-        // JS Custom  ---------------------------------
-
-
-        // ===================================================================
-        // CSS
-        // ===================================================================
-
-        // CSS Externe --------------------------------
-        //cdn CSS bootstrap 4.4.1
-        wp_register_style(
-            'bootstrap',
-            'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css',
-            [], '4.4.1'
-        );
-        wp_enqueue_style('bootstrap');
-
-        // CSS Custom  --------------------------------
-        wp_enqueue_style(
-            'style',
-            get_template_directory_uri().'/style.css',
-            [], '1.0.0'
-        );
-    }
-}
-add_action('wp_enqueue_scripts', 'mycv_register_assets');
 
 /**
  * 4 - Separator Title

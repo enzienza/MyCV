@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: custom-dashboard
- * Description:
+ * Description: MyCV custom components in Dashboard
  *
  * @package WordPress
  * @subpackage MyCV
@@ -20,7 +20,7 @@
 
 /*
  * 1 - Hides menus
- *     Function for hides certain page (elements of menu) of dashboard
+ *     Function for hides certain page (components of menu) of dashboard
  */
 
 if(!function_exists('remove_menus')) {

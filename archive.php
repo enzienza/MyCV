@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: archive
- * Description:
+ * Description: The template for displaying archive pages
  *
  * @package WordPress
  * @subpackage MyCV

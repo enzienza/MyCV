@@ -1,1 +1,16 @@
 // main: ../style.scss
+
+// THEME ==================================================
+@import 'theme/light';
+@import "theme/dark";
+
+// CORE ===================================================
+@import "core/header";
+@import "core/main";
+//@import "core/footer";
+
+// PAGE ===================================================
+//@import "page/";
+
+// SECTION ================================================
+//@import "section/";
