@@ -10,6 +10,6 @@
  */
 ?>
 
-<a href="#about" class="scrollTop">
+<a href="#home" class="scrollTop">
     <i class="icons flaticon-up-arrow"></i>
 </a>

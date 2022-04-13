@@ -70,8 +70,11 @@ img {
 
 section{
     padding: 1rem;
+    min-height: 90vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
-
 
 .visible {
     visibility: visible;
