@@ -51,6 +51,9 @@ require_once('inc/options-theme/op_myprofil/03-network.php');
 require_once('inc/options-theme/op_myprofil/04-aboutme.php');
 require_once('inc/options-theme/op_myprofil/05-curriculum.php');
 
+// OP -> CustomTheme
+require_once('inc/options-theme/op_customtheme/01-custometheme.php');
+
 /** =====================================================
  *  4 - POST-TYPE
  */
