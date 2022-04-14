@@ -86,12 +86,12 @@ class mycv_mycustome{
                 <td class="import-system">
                     <span class="importer-title">Header</span>
                     <span class="importer-action">
-                      <a href="?" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_header" class="install-now">Gérer la section</a>
                     </span>
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      Lien pour gérer l'affichage de l'header'
+                      Lien pour gérer l'affichage de l'header
                     </span>
                 </td>
             </tr>

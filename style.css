@@ -529,6 +529,10 @@ section {
       height: 10rem;
       margin-top: 1rem; } }
 
+.invert {
+  filter: invert(1);
+  border: none; }
+
 body {
   background: #fafafa;
   color: #0b0511; }
