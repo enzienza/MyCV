@@ -12,9 +12,13 @@
 
 <?php get_header() ?>
 <!--    <main>-->
-        <?php get_template_part('template-parts/components/switch-theme') ?>
+    <?php get_template_part('template-parts/components/switch-theme') ?>
 
-        <?php get_template_part('template-parts/content/01-home') ?>
+        <?php if(checked(1, get_option('hero_hidden_section'), false)): else: ?>
+            <?php //get_template_part('template-parts/content/home/home') ?>
+            <?php get_template_part('template-parts/content/home/index', 'home') ?>
+        <?php endif;?>
+
         <?php get_template_part('template-parts/content/02-about') ?>
         <?php get_template_part('template-parts/content/03-resumes') ?>
         <?php get_template_part('template-parts/content/04-formations') ?>
