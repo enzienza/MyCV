@@ -48,21 +48,10 @@
 .big-title{
     span{
         color: $color-primary;
-        //text-shadow:
-        //        0 0 1px $color-light, 0 0 1px $color-light,
-        //        0 0 1px $color-light, 0 0 1px $color-light,
-        //        0 0 1px $color-light, 0 0 1px $color-light,
-        //        0 0 1px $color-light, 0 0 1px $color-light;
     }
 }
 
 .hight{
-    //&-small{
-    //    text-shadow: 0 0 5px $color-primary,0 0 5px $color-primary,
-    //                 0 0 5px $color-primary,0 0 5px $color-primary,
-    //                 0 0 5px $color-primary,0 0 5px $color-primary,
-    //                 0 0 5px $color-primary,0 0 5px $color-primary;
-    //}
     &-small{
         text-shadow: 0 0 3px $color-primary,0 0 3px $color-primary,
                      0 0 3px $color-primary,0 0 3px $color-primary,
@@ -79,81 +68,32 @@
     }
 }
 
-.box-color{
-    &-light{
-        padding: 0 .5rem;
-        text-shadow: 0px 0px 35px $color-primary,0px 0px 35px $color-primary,
-        0px 0px 35px $color-primary,0px 0px 35px $color-primary;
+@include responsive(MD){}
+@include responsive(SM){
+    .big-title{
+        font-size: 1.6rem;
     }
-    &-normal{
-        padding: 0 .5rem;
-        box-shadow: inset 0px 0px 0px 1000px $color-primary;
+    .jumb-content{
+        h2, h3{
+            font-size: 1rem;
+        }
     }
-}
-
-.marked{
-    position: relative;
-    display: inline-block;
-    &:before{
-        content: " ";
-        display: block;
-        height: 90%;
-        width: 100%;
-        margin-left: -3px;
-        margin-right: -3px;
-        position: absolute;
-        background: $color-primary;
-        transform: rotate(2deg);
-        top: -1px;
-        left: -1px;
-        border-radius: 20% 25% 20% 24%;
-        padding: 10px 3px 3px 10px;
-        z-index: -1;
+    .desc{
+        margin-bottom: 1.5rem;
+        font-size: small;
     }
 }
-
-.text-radial{
-    background: radial-gradient( hsl(100, 100%, 60%), hsl(200, 100%, 60%) ) fixed;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+@include responsive(XS){
+    .big-title{
+        font-size: 1.6rem;
+    }
+    .jumb-content{
+        h2, h3{
+            font-size: 1rem;
+        }
+    }
+    .desc{
+        margin-bottom: 1.5rem;
+        font-size: small;
+    }
 }
-.text-linear{
-    background: linear-gradient(to right, hsl(98, 100%, 62%), hsl(204, 100%, 59%)) fixed;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-}
-
-.text-3D{
-    font-weight: 900;
-    text-shadow:
-            -0.0075em 0.0075em 0 mix($color-light, $color-primary, 94%),
-            0.005em 0.005em 0 mix($color-light, $color-primary, 60%),
-            0.01em 0.01em 0 mix($color-light, $color-primary, 62%),
-            0.015em 0.015em mix($color-light, $color-primary, 64%),
-            0.02em 0.02em 0 mix($color-light, $color-primary, 66%),
-            0.025em 0.025em 0 mix($color-light, $color-primary, 68%),
-            0.03em 0.03em 0 mix($color-light, $color-primary, 70%),
-            0.035em 0.035em 0 mix($color-light, $color-primary, 72%);
-}
-
-//.text-typing{
-//    width: 100%;
-//    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-//    white-space: nowrap;
-//    overflow: hidden;
-//}
-//
-//@keyframes typing {
-//    from {
-//        width: 0
-//    }
-//}
-//
-//@keyframes blink {
-//    50% {
-//        border-color: transparent
-//    }
-//}
-

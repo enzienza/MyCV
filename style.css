@@ -719,44 +719,25 @@ header {
   color: #fafafa;
   text-shadow: 0 0 10px #8f4ec7, 0 0 10px #8f4ec7, 0 0 10px #8f4ec7, 0 0 5px #8f4ec7, 0 0 5px #8f4ec7, 0 0 5px #8f4ec7; }
 
-.box-color-light {
-  padding: 0 .5rem;
-  text-shadow: 0px 0px 35px #b300b3, 0px 0px 35px #b300b3, 0px 0px 35px #b300b3, 0px 0px 35px #b300b3; }
-.box-color-normal {
-  padding: 0 .5rem;
-  box-shadow: inset 0px 0px 0px 1000px #b300b3; }
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .big-title {
+    font-size: 1.6rem; }
 
-.marked {
-  position: relative;
-  display: inline-block; }
-  .marked:before {
-    content: " ";
-    display: block;
-    height: 90%;
-    width: 100%;
-    margin-left: -3px;
-    margin-right: -3px;
-    position: absolute;
-    background: #b300b3;
-    transform: rotate(2deg);
-    top: -1px;
-    left: -1px;
-    border-radius: 20% 25% 20% 24%;
-    padding: 10px 3px 3px 10px;
-    z-index: -1; }
+  .jumb-content h2, .jumb-content h3 {
+    font-size: 1rem; }
 
-.text-radial {
-  background: radial-gradient(#77ff33, #33bbff) fixed;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  .desc {
+    margin-bottom: 1.5rem;
+    font-size: small; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .big-title {
+    font-size: 1.6rem; }
 
-.text-linear {
-  background: linear-gradient(to right, #84ff3d, #2eabff) fixed;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  .jumb-content h2, .jumb-content h3 {
+    font-size: 1rem; }
 
-.text-3D {
-  font-weight: 900;
-  text-shadow: -0.0075em 0.0075em 0 #f6ebf6, 0.005em 0.005em 0 #de96de, 0.01em 0.01em 0 #df9bdf, 0.015em 0.015em #e0a0e0, 0.02em 0.02em 0 #e2a5e2, 0.025em 0.025em 0 #e3aae3, 0.03em 0.03em 0 #e5afe5, 0.035em 0.035em 0 #e6b4e6; }
+  .desc {
+    margin-bottom: 1.5rem;
+    font-size: small; } }
 
 /*# sourceMappingURL=style.css.map */
