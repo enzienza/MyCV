@@ -38,6 +38,7 @@ class mycustome_home{
     const SECTION_HERO              = 'section_hero';
     const SECTION_HERO_SALUTATION   = 'section_hero_salutation';
     const SECTION_HERO_JOB          = 'section_hero_job';
+    const SECTION_HERO_ABOUT        = "section_hero_about";
     const SECTION_HERO_CALLTOACTION = 'section_hero_calltoaction';
 
     /**
@@ -158,9 +159,19 @@ class mycustome_home{
         );
 
         // 3. Sauvegarder les champs
+        register_setting(self::SUB_GROUP, 'choose_salutation');
+        // salutation in 1 line
         register_setting(self::SUB_GROUP, 'hero_salutation_fr');
         register_setting(self::SUB_GROUP, 'hero_salutation_en');
         register_setting(self::SUB_GROUP, 'hero_salutation_it');
+        // salutation in 2 lines
+        register_setting(self::SUB_GROUP, 'hero_msg_oneline_fr');
+        register_setting(self::SUB_GROUP, 'hero_msg_twoline_fr');
+        register_setting(self::SUB_GROUP, 'hero_msg_oneline_en');
+        register_setting(self::SUB_GROUP, 'hero_msg_twoline_en');
+        register_setting(self::SUB_GROUP, 'hero_msg_oneline_it');
+        register_setting(self::SUB_GROUP, 'hero_msg_twoline_it');
+        // show name
         register_setting(self::SUB_GROUP, 'hero_show_lastname');
         register_setting(self::SUB_GROUP, 'hero_show_firstname');
 
@@ -188,20 +199,57 @@ class mycustome_home{
             self::SECTION_HERO_JOB          // SLUG_SECTION
         );
 
-        // 3. Sauvegarder les champs
-        register_setting(self::SUB_GROUP, 'hero_msg_job_fr');
-        register_setting(self::SUB_GROUP, 'hero_job_fr');
-        register_setting(self::SUB_GROUP, 'hero_show_msg_fr');
-        register_setting(self::SUB_GROUP, 'hero_msg_job_en');
-        register_setting(self::SUB_GROUP, 'hero_job_en');
-        register_setting(self::SUB_GROUP, 'hero_show_msg_en');
-        register_setting(self::SUB_GROUP, 'hero_msg_job_it');
-        register_setting(self::SUB_GROUP, 'hero_job_it');
-        register_setting(self::SUB_GROUP, 'hero_show_msg_it');
+        add_settings_field(
+            'hero_job_element',                     // SLUG_FIELD
+            __("Ce qui doit être présent", 'MyCV'),                  // LABEL
+            [self::class,'field_hero_job_element'],     // CALLBACK
+            self::SUB_GROUP ,                 // SLUG_PAGE
+            self::SECTION_HERO_JOB          // SLUG_SECTION
+        );
 
+        // 3. Sauvegarder les champs
+        //fr
+        register_setting(self::SUB_GROUP, 'hero_show_msg_fr');
+        register_setting(self::SUB_GROUP, 'hero_msg_job_fr');
+        //en
+        register_setting(self::SUB_GROUP, 'hero_show_msg_en');
+        register_setting(self::SUB_GROUP, 'hero_msg_job_en');
+        //it
+        register_setting(self::SUB_GROUP, 'hero_show_msg_it');
+        register_setting(self::SUB_GROUP, 'hero_msg_job_it');
+        // all
+        register_setting(self::SUB_GROUP, 'hero_add_job');
 
         /**
-         * SECTION 4 : SECTION_HERO_CALLTOACTION ==============================
+         * SECTION 4 : SECTION_HERO_ABOUT =====================================
+         *           1. créer la section
+         *           2. ajouter les éléments du formulaire
+         *           3. Sauvegarder les champs
+         */
+        // 1. créer la section
+        add_settings_section(
+            self::SECTION_HERO_ABOUT,                 // SLUG_SECTION
+            __("About", 'MyCV'),                 // TITLE
+            [self::class, 'display_section_hero_about'],  // CALLBACK
+            self::SUB_GROUP                         // SLUG_PAGE
+        );
+
+        // 2. Ajouter les éléments du formulaire
+        add_settings_field(
+            'hero_about_element',                     // SLUG_FIELD
+            __("Ce qui doit être présent", 'MyCV'),                  // LABEL
+            [self::class,'field_hero_about_element'],     // CALLBACK
+            self::SUB_GROUP ,                 // SLUG_PAGE
+            self::SECTION_HERO_ABOUT          // SLUG_SECTION
+        );
+
+        // 3. Sauvegarder les champs
+        register_setting(self::SUB_GROUP, 'hero_about_fr');
+        register_setting(self::SUB_GROUP, 'hero_about_en');
+        register_setting(self::SUB_GROUP, 'hero_about_it');
+
+        /**
+         * SECTION 5 : SECTION_HERO_CALLTOACTION ==============================
          *           1. créer la section
          *           2. ajouter les éléments du formulaire
          *           3. Sauvegarder les champs
@@ -279,7 +327,16 @@ class mycustome_home{
         <?php
     }
 
-    // SECTION 4 : SECTION_HERO_CALLTOACTION ==============================
+    // SECTION 4 : SECTION_HERO_ABOUT =====================================
+    public static function display_section_hero_about(){
+        ?>
+            <p class="section-description">
+                <?php _e('Cette partie vous permet de gérer l\'affichage de "Qui je suis ?"', "MyCV"); ?>
+            </p>
+        <?php
+    }
+
+    // SECTION 5 : SECTION_HERO_CALLTOACTION ==============================
     public static function display_section_hero_colltoaction(){
         ?>
             <p class="section-description">
@@ -354,45 +411,131 @@ class mycustome_home{
 
     // SECTION 2 : SECTION_HERO_SALUTATION ================================
     public static function field_hero_salutation(){
+        $choose_salutation = get_option('choose_salutation');
+        // salutation in 1 line
         $hero_salutation_fr = esc_attr(get_option('hero_salutation_fr'));
         $hero_salutation_en = esc_attr(get_option('hero_salutation_en'));
         $hero_salutation_it = esc_attr(get_option('hero_salutation_it'));
+        // salutation in 2 lines
+        $hero_msg_oneline_fr = esc_attr(get_option('hero_msg_oneline_fr'));
+        $hero_msg_twoline_fr = esc_attr(get_option('hero_msg_twoline_fr'));
+        $hero_msg_oneline_en = esc_attr(get_option('hero_msg_oneline_en'));
+        $hero_msg_twoline_en = esc_attr(get_option('hero_msg_twoline_en'));
+        $hero_msg_oneline_it = esc_attr(get_option('hero_msg_oneline_it'));
+        $hero_msg_twoline_it = esc_attr(get_option('hero_msg_twoline_it'));
         ?>
-            <p class="description"><?php _e("Définir le texte de salutation", "MyCV"); ?></p>
-            <div class="grid-cols-3">
-                <div class="grid-box">
-                    <p class="box-title"><?php _e("Français", "mycv") ?></p>
-                    <div>
-                        <input type="text"
-                               id="hero_salutation_fr"
-                               name="hero_salutation_fr"
-                               value="<?php echo $hero_salutation_fr ?>"
-                               placeholder="<?php _e("Salutation en français", "mycv") ?>"
-                        />
+            <div class="">
+                <label for="">
+                    <input type="radio" name="choose_salutation" value="1" <?php checked(1, $choose_salutation, true) ?> />
+                    <?php _e("Salutation en 1 ligne", 'MyCV'); ?>
+                </label>
+                <div class="grid-cols-3">
+                    <div class="grid-box">
+                        <p class="box-title"><?php _e("Français", "mycv") ?></p>
+                        <div>
+                            <input type="text"
+                                   id="hero_salutation_fr"
+                                   name="hero_salutation_fr"
+                                   value="<?php echo $hero_salutation_fr ?>"
+                                   placeholder="<?php _e("Salutation en français", "mycv") ?>"
+                            />
+                        </div>
+                    </div>
+                    <div class="grid-box">
+                        <p class="box-title"><?php _e("Anglais", "mycv") ?></p>
+                        <div>
+                            <input type="text"
+                                   id="hero_salutation_en"
+                                   name="hero_salutation_en"
+                                   value="<?php echo $hero_salutation_en ?>"
+                                   placeholder="<?php _e("Salutation en anglais", "mycv") ?>"
+                            />
+                        </div>
+                    </div>
+                    <div class="grid-box">
+                        <p class="box-title"><?php _e("Italien", "mycv") ?></p>
+                        <div>
+                            <input type="text"
+                                   id="hero_salutation_it"
+                                   name="hero_salutation_it"
+                                   value="<?php echo $hero_salutation_it ?>"
+                                   placeholder="<?php _e("Salutation en italien", "mycv") ?>"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div class="grid-box">
-                    <p class="box-title"><?php _e("Anglais", "mycv") ?></p>
-                    <div>
-                        <input type="text"
-                               id="hero_salutation_en"
-                               name="hero_salutation_en"
-                               value="<?php echo $hero_salutation_en ?>"
-                               placeholder="<?php _e("Salutation en anglais", "mycv") ?>"
-                        />
+            </div>
+            <div class="separation">
+                <label for="">
+                    <input type="radio" name="choose_salutation" value="2" <?php checked(2, $choose_salutation, true) ?> />
+                    <?php _e("Salutation en 2 lignes", 'MyCV'); ?>
+                </label>
+                <div class="grid-cols-3">
+                    <div class="grid-box">
+                        <p class="box-title"><?php _e("Français", "mycv") ?></p>
+                        <div>
+                            <p><?php _e("Ligne 1", "MyCV"); ?></p>
+                            <input type="text"
+                                   id="hero_msg_oneline_fr"
+                                   name="hero_msg_oneline_fr"
+                                   value="<?php echo $hero_msg_oneline_fr ?>"
+                                   placeholder="<?php _e("Texte en français", "mycv") ?>"
+                            />
+                        </div>
+                        <div class="space-y-4">
+                            <p><?php _e("Ligne 2", "MyCV"); ?></p>
+                            <input type="text"
+                                   id="hero_msg_twoline_fr"
+                                   name="hero_msg_twoline_fr"
+                                   value="<?php echo $hero_msg_twoline_fr ?>"
+                                   placeholder="<?php _e("Texte en français", "mycv") ?>"
+                            />
+                        </div>
+                    </div>
+                    <div class="grid-box">
+                        <p class="box-title"><?php _e("Anglais", "mycv") ?></p>
+                        <div>
+                            <p><?php _e("Ligne 1", "MyCV"); ?></p>
+                            <input type="text"
+                                   id="hero_msg_oneline_en"
+                                   name="hero_msg_oneline_en"
+                                   value="<?php echo $hero_msg_oneline_en ?>"
+                                   placeholder="<?php _e("Texte en anglais", "mycv") ?>"
+                            />
+                        </div>
+                        <div class="space-y-4">
+                            <p><?php _e("Ligne 2", "MyCV"); ?></p>
+                            <input type="text"
+                                   id="hero_msg_twoline_en"
+                                   name="hero_msg_twoline_en"
+                                   value="<?php echo $hero_msg_twoline_en ?>"
+                                   placeholder="<?php _e("Texte en anglais", "mycv") ?>"
+                            />
+                        </div>
+                    </div>
+                    <div class="grid-box">
+                        <p class="box-title"><?php _e("Italien", "mycv") ?></p>
+                        <div>
+                            <p><?php _e("Ligne 1", "MyCV"); ?></p>
+                            <input type="text"
+                                   id="hero_msg_oneline_it"
+                                   name="hero_msg_oneline_it"
+                                   value="<?php echo $hero_msg_oneline_it ?>"
+                                   placeholder="<?php _e("Texte en italien", "mycv") ?>"
+                            />
+                        </div>
+                        <div class="space-y-4">
+                            <p><?php _e("Ligne 2", "MyCV"); ?></p>
+                            <input type="text"
+                                   id="hero_msg_twoline_it"
+                                   name="hero_msg_twoline_it"
+                                   value="<?php echo $hero_msg_twoline_it ?>"
+                                   placeholder="<?php _e("Texte en italien", "mycv") ?>"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div class="grid-box">
-                    <p class="box-title"><?php _e("Italien", "mycv") ?></p>
-                    <div>
-                        <input type="text"
-                               id="hero_salutation_it"
-                               name="hero_salutation_it"
-                               value="<?php echo $hero_salutation_it ?>"
-                               placeholder="<?php _e("Salutation en italien", "mycv") ?>"
-                        />
-                    </div>
-                </div>
+
             </div>
         <?php
     }
@@ -416,23 +559,24 @@ class mycustome_home{
     // SECTION 3 : SECTION_HERO_JOB =======================================
     public static function field_hero_msg_job(){
         // FR
-        $hero_msg_job_fr  = esc_attr(get_option('hero_msg_job_fr'));
-        $hero_job_fr      = esc_attr(get_option('hero_job_fr'));
         $hero_show_msg_fr = esc_attr(get_option('hero_show_msg_fr'));
+        $hero_msg_job_fr  = esc_attr(get_option('hero_msg_job_fr'));
         // EN
-        $hero_msg_job_en  = esc_attr(get_option('hero_msg_job_en'));
-        $hero_job_en      = esc_attr(get_option('hero_job_en'));
         $hero_show_msg_en = esc_attr(get_option('hero_show_msg_en'));
+        $hero_msg_job_en  = esc_attr(get_option('hero_msg_job_en'));
         // IT
-        $hero_msg_job_it  = esc_attr(get_option('hero_msg_job_it'));
-        $hero_job_it      = esc_attr(get_option('hero_job_it'));
         $hero_show_msg_it = esc_attr(get_option('hero_show_msg_it'));
+        $hero_msg_job_it  = esc_attr(get_option('hero_msg_job_it'));
         ?>
             <p class="description"><?php _e("Définir le texte d'introduction au job visé", "MyCV"); ?></p>
             <div class="grid-cols-3">
                 <div class="grid-box">
                     <p class="box-title"><?php _e("Français", "mycv") ?></p>
-                    <div>
+                    <div class="mt-1">
+                        <input type="checkbox" id="hero_show_msg_fr" name="hero_show_msg_fr" value="1" <?php checked(1, $hero_show_msg_fr, true) ?> />
+                        <?php _e('Ajouter un message', 'MyCV'); ?>
+                    </div>
+                    <div class="mt-1">
                         <input type="text"
                                id="hero_msg_job_fr"
                                name="hero_msg_job_fr"
@@ -440,21 +584,14 @@ class mycustome_home{
                                placeholder="<?php _e("Texte en français", "mycv") ?>"
                         />
                     </div>
-                    <div class="space-y-4">
-                        <p>
-                            <input type="checkbox" id="hero_job_fr" name="hero_job_fr" value="1" <?php checked(1, $hero_job_fr, true) ?> />
-                            <label for=""><?php _e('Ajouter le nom du job visé', 'MyCV'); ?></label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="hero_show_msg_fr" name="hero_show_msg_fr" value="1" <?php checked(1, $hero_show_msg_fr, true) ?> />
-                            <label for=""><?php _e('Ajouter "Parler de sois"', "MyCV"); ?></label>
-                        </p>
-                        <p class="space-x-8"><a href="?page=myprofil_aboutme"><?php _e('Modifier le texte "Parler de sois"', 'MyCV'); ?></a></p>
-                    </div>
                 </div>
                 <div class="grid-box">
                     <p class="box-title"><?php _e("Anglais", "mycv") ?></p>
-                    <div>
+                    <div class="mt-1">
+                        <input type="checkbox" id="hero_show_msg_en" name="hero_show_msg_en" value="1" <?php checked(1, $hero_show_msg_en, true) ?> />
+                        <?php _e('Ajouter un message', 'MyCV'); ?>
+                    </div>
+                    <div class="mt-1">
                         <input type="text"
                                id="hero_msg_job_en"
                                name="hero_msg_job_en"
@@ -462,21 +599,14 @@ class mycustome_home{
                                placeholder="<?php _e("Texte en anglais", "mycv") ?>"
                         />
                     </div>
-                    <div class="space-y-4">
-                        <p>
-                            <input type="checkbox" id="hero_job_en" name="hero_job_en" value="1" <?php checked(1, $hero_job_en, true) ?> />
-                            <label for=""><?php _e('Ajouter le nom du job visé', 'MyCV'); ?></label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="hero_show_msg_en" name="hero_show_msg_en" value="1" <?php checked(1, $hero_show_msg_en, true) ?> />
-                            <label for=""><?php _e('Ajouter "Parler de sois"', "MyCV"); ?></label>
-                        </p>
-                        <p class="space-x-8"><a href="?page=myprofil_aboutme"><?php _e('Modifier le texte "Parler de sois"', 'MyCV'); ?></a></p>
-                    </div>
                 </div>
                 <div class="grid-box">
                     <p class="box-title"><?php _e("Italien", "mycv") ?></p>
-                    <div>
+                    <div class="mt-1">
+                        <input type="checkbox" id="hero_show_msg_it" name="hero_show_msg_it" value="1" <?php checked(1, $hero_show_msg_it, true) ?> />
+                        <?php _e('Ajouter un message', 'MyCV'); ?>
+                    </div>
+                    <div class="mt-1">
                         <input type="text"
                                id="hero_msg_job_it"
                                name="hero_msg_job_it"
@@ -484,23 +614,65 @@ class mycustome_home{
                                placeholder="<?php _e("Texte en italien", "mycv") ?>"
                         />
                     </div>
-                    <div class="space-y-4">
-                        <p>
-                            <input type="checkbox" id="hero_job_it" name="hero_job_it" value="1" <?php checked(1, $hero_job_it, true) ?> />
-                            <label for=""><?php _e('Ajouter le nom du job visé', 'MyCV'); ?></label>
-                        </p>
-                        <p>
-                            <input type="checkbox" id="hero_show_msg_it" name="hero_show_msg_it" value="1" <?php checked(1, $hero_show_msg_it, true) ?> />
-                            <label for=""><?php _e('Ajouter "Parler de sois"', "MyCV"); ?></label>
-                        </p>
-                        <p class="space-x-8"><a href="?page=myprofil_aboutme"><?php _e('Modifier le texte "Parler de sois"', 'MyCV'); ?></a></p>
-                    </div>
                 </div>
             </div>
         <?php
     }
 
-    // SECTION 4 : SECTION_HERO_CALLTOACTION ==============================
+    public static function field_hero_job_element(){
+        $hero_add_job = get_option('hero_add_job');
+        ?>
+            <p class="description"><?php _e("Cocher ce qui doit être présent", "MyCV") ?></p>
+            <p>
+                <input type="checkbox" id="hero_add_job" name="hero_add_job" value="1" <?php checked(1, $hero_add_job, true) ?> />
+                <label for=""><?php _e('Ajouter le nom du job visé', 'MyCV'); ?></label>
+            </p>
+        <?php
+    }
+
+    // SECTION 4 : SECTION_HERO_ABOUT =====================================
+    public static function field_hero_about_element(){
+        $hero_about_fr = get_option('hero_about_fr');
+        $hero_about_en = get_option('hero_about_en');
+        $hero_about_it = get_option('hero_about_it');
+        ?>
+        <p class="description"><?php _e("Cocher ce qui doit être présent", "MyCV") ?></p>
+        <div class="grid-cols-3">
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Français", "mycv") ?></p>
+                <div class="mt-1">
+                    <input type="checkbox" id="hero_about_fr" name="hero_about_fr" value="1" <?php checked(1, $hero_about_fr, true); ?> />
+                    <label for=""><?php _e('Ajouter "Parler de sois"', "MyCV"); ?></label>
+                </div>
+                <div class="mt-1">
+                    <a href="?page=myprofil_aboutme"><?php _e('Modifier le texte "Parler de sois"', 'MyCV'); ?></a>
+                </div>
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Anglais", "mycv") ?></p>
+                <div class="mt-1">
+                    <input type="checkbox" id="hero_about_en" name="hero_about_en" value="1" <?php checked(1, $hero_about_en, true); ?> />
+                    <label for=""><?php _e('Ajouter "Parler de sois"', "MyCV"); ?></label>
+                </div>
+                <div class="mt-1">
+                    <a href="?page=myprofil_aboutme"><?php _e('Modifier le texte "Parler de sois"', 'MyCV'); ?></a>
+                </div>
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Italien", "mycv") ?></p>
+                <div class="mt-1">
+                    <input type="checkbox" id="hero_about_it" name="hero_about_it" value="1" <?php checked(1, $hero_about_it, true); ?> />
+                    <label for=""><?php _e('Ajouter "Parler de sois"', "MyCV"); ?></label>
+                </div>
+                <div class="mt-1">
+                    <a href="?page=myprofil_aboutme"><?php _e('Modifier le texte "Parler de sois"', 'MyCV'); ?></a>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+
+    // SECTION 5 : SECTION_HERO_CALLTOACTION ==============================
     public static function field_hero_show_btn_about(){
         $hero_add_btn_about = esc_attr(get_option('hero_add_btn_about'));
         $hero_show_icon_about = esc_attr(get_option('hero_show_icon_about'));

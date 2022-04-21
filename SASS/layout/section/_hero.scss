@@ -1,0 +1,159 @@
+// main: ../_layout.scss
+
+.hero-wrap{
+    min-height: calc(100vh - (1rem + 5vmin));
+    position: relative;
+    @include bg-paralax;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: #000;
+    opacity: .7;
+    z-index: 0;
+}
+
+.jumb-content{
+    color: $color-light;
+    z-index: 1;
+    margin: 0 calc(15% - (1rem + 5vmin));
+    text-shadow: 4px 2px 4px rgba(9,9,9,0.9);
+
+    h3{
+        font-size: x-large;
+        letter-spacing: 3px;
+        margin-bottom: .5rem;
+    }
+
+    h2{
+        line-height: 2;
+        text-transform: uppercase;
+        font-size: larger;
+        margin-top: .5rem;
+    }
+}
+
+.desc{
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.big-title{
+    span{
+        color: $color-primary;
+        //text-shadow:
+        //        0 0 1px $color-light, 0 0 1px $color-light,
+        //        0 0 1px $color-light, 0 0 1px $color-light,
+        //        0 0 1px $color-light, 0 0 1px $color-light,
+        //        0 0 1px $color-light, 0 0 1px $color-light;
+    }
+}
+
+.hight{
+    //&-small{
+    //    text-shadow: 0 0 5px $color-primary,0 0 5px $color-primary,
+    //                 0 0 5px $color-primary,0 0 5px $color-primary,
+    //                 0 0 5px $color-primary,0 0 5px $color-primary,
+    //                 0 0 5px $color-primary,0 0 5px $color-primary;
+    //}
+    &-small{
+        text-shadow: 0 0 3px $color-primary,0 0 3px $color-primary,
+                     0 0 3px $color-primary,0 0 3px $color-primary,
+                     0 0 3px $color-primary,0 0 3px $color-primary,
+                     0 0 3px $color-primary,0 0 3px $color-primary;
+    }
+    &-normal{
+        text-shadow: -5px -5px 5px $color-primary,-5px 5px 5px $color-primary,
+        5px -5px 5px $color-primary,5px 5px 5px $color-primary;
+    }
+    &-large{
+        color: $color-light;
+        text-shadow: 0 0 10px hsl(272.2, 51.9%, 54.3%), 0 0 10px hsl(272.2, 51.9%, 54.3%), 0 0 10px hsl(272.2, 51.9%, 54.3%), 0 0 5px hsl(272.2, 51.9%, 54.3%), 0 0 5px hsl(272.2, 51.9%, 54.3%), 0 0 5px hsl(272.2, 51.9%, 54.3%);
+    }
+}
+
+.box-color{
+    &-light{
+        padding: 0 .5rem;
+        text-shadow: 0px 0px 35px $color-primary,0px 0px 35px $color-primary,
+        0px 0px 35px $color-primary,0px 0px 35px $color-primary;
+    }
+    &-normal{
+        padding: 0 .5rem;
+        box-shadow: inset 0px 0px 0px 1000px $color-primary;
+    }
+}
+
+.marked{
+    position: relative;
+    display: inline-block;
+    &:before{
+        content: " ";
+        display: block;
+        height: 90%;
+        width: 100%;
+        margin-left: -3px;
+        margin-right: -3px;
+        position: absolute;
+        background: $color-primary;
+        transform: rotate(2deg);
+        top: -1px;
+        left: -1px;
+        border-radius: 20% 25% 20% 24%;
+        padding: 10px 3px 3px 10px;
+        z-index: -1;
+    }
+}
+
+.text-radial{
+    background: radial-gradient( hsl(100, 100%, 60%), hsl(200, 100%, 60%) ) fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+.text-linear{
+    background: linear-gradient(to right, hsl(98, 100%, 62%), hsl(204, 100%, 59%)) fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.text-3D{
+    font-weight: 900;
+    text-shadow:
+            -0.0075em 0.0075em 0 mix($color-light, $color-primary, 94%),
+            0.005em 0.005em 0 mix($color-light, $color-primary, 60%),
+            0.01em 0.01em 0 mix($color-light, $color-primary, 62%),
+            0.015em 0.015em mix($color-light, $color-primary, 64%),
+            0.02em 0.02em 0 mix($color-light, $color-primary, 66%),
+            0.025em 0.025em 0 mix($color-light, $color-primary, 68%),
+            0.03em 0.03em 0 mix($color-light, $color-primary, 70%),
+            0.035em 0.035em 0 mix($color-light, $color-primary, 72%);
+}
+
+//.text-typing{
+//    width: 100%;
+//    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+//    white-space: nowrap;
+//    overflow: hidden;
+//}
+//
+//@keyframes typing {
+//    from {
+//        width: 0
+//    }
+//}
+//
+//@keyframes blink {
+//    50% {
+//        border-color: transparent
+//    }
+//}
+

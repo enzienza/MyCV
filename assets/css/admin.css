@@ -101,6 +101,29 @@ Tags:
     gap: 1rem;
 }
 
+
+.mt-1{
+    margin-top: .5rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mb-1{
+    margin-bottom: .5rem;
+}
+
+.mb-2{
+    margin-bottom: 2rem;
+}
+
+.separation{
+    margin-top: 2rem;
+    border-top: 1px solid var(--lighten-grey);
+    padding-top: 1rem;
+}
+
 /** ==============================================
      2 - STYLE FOR THE LOGIN PAGE
  */
