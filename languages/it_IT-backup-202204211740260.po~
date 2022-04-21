@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-03-14 16:01+0000\n"
+"PO-Revision-Date: 2022-04-14 22:15+0000\n"
 "Last-Translator: \n"
-"Language-Team: English (UK)\n"
-"Language: en_GB\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,124 +20,188 @@ msgstr ""
 #: inc/options-theme/op_myprofil/04-aboutme.php:60
 #: inc/options-theme/op_myprofil/04-aboutme.php:61
 msgid "About me"
-msgstr ""
+msgstr "Riguardo a me"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:318
 #: inc/options-theme/op_myprofil/05-curriculum.php:356
 #: inc/options-theme/op_myprofil/05-curriculum.php:394
 msgid "Ajouter le bouton \"télécharger mon cv\""
-msgstr ""
+msgstr "Aggiungi il pulsante \"carica il mio CV\"."
 
 #: inc/options-theme/op_myprofil/02-media.php:132
 msgid "Ajouter les différentes photo de votre Curriculum Vitae"
-msgstr ""
+msgstr "Aggiungi le diverse foto del tuo Curriculum Vitae"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/02-media.php:112
 msgid "Ajouter les medias"
-msgstr ""
+msgstr "Aggiungi media"
+
+#: inc/options-theme/op_customtheme/02-header.php:248
+msgid "Avatar"
+msgstr "Avatar"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:144
 msgid "Behance"
-msgstr ""
+msgstr "Behance"
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/02-header.php:109
+#: inc/options-theme/op_customtheme/02-header.php:157
+msgid "Cacher la section"
+msgstr "Nascondere la sezione"
+
+#: inc/options-theme/op_customtheme/02-header.php:206
+#: inc/options-theme/op_customtheme/02-header.php:280
+msgid "Cacher la section utilisateur de la sidebar"
+msgstr "Nascondi la sezione utente dalla barra laterale"
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/02-header.php:117
+msgid "Ce qui doit être présent"
+msgstr "Cosa deve essere presente"
+
+#: inc/options-theme/op_customtheme/02-header.php:240
+msgid "Choisir l'imafe à afficher"
+msgstr "Scegli l'immagine da visualizzare"
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/02-header.php:125
+msgid "Choisir l'image"
+msgstr "Scegli l'immagine"
+
+#: inc/options-theme/op_customtheme/02-header.php:217
+msgid "Cocher ce qui doit être présent"
+msgstr "Spunta chi deve essere presente"
 
 #: inc/options-theme/op_myprofil/03-network.php:190
 msgid "Cocher et ajouter l'url de vos réseaux sociaux"
-msgstr ""
+msgstr "Controlla e aggiungi l'URL dei tuoi social network"
 
 #. slug parent
 #. page_title
 #: inc/options-theme/op_myprofil/05-curriculum.php:59
 #: inc/options-theme/op_myprofil/05-curriculum.php:60
 msgid "Curriculum"
-msgstr ""
+msgstr "Curriculum"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:73
 msgid "Curriculum Vitae"
+msgstr "Curriculum vitae"
+
+#: inc/options-theme/op_customtheme/02-header.php:174
+msgid ""
+"Dans cette section, vous pourrez définir les différent éléments de la partie "
+"utilisateur de la sidebar"
 msgstr ""
+"In questa sezione puoi definire i diversi elementi della parte utente della "
+"barra laterale"
+
+#: inc/options-theme/op_customtheme/02-header.php:183
+msgid ""
+"Dans cette section, vous pourriez définir les différent éléments de la "
+"partie social"
+msgstr ""
+"In questa sezione è possibile definire i diversi elementi della parte sociale"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:139
 msgid "Date de naissance"
-msgstr ""
+msgstr "Data di nascita"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:108
 msgid "Détails personnels"
-msgstr ""
+msgstr "dati personali"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:177
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #. Author of the theme
 msgid "Enza Lombardo"
-msgstr ""
+msgstr "Enza Lombardo"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/05-curriculum.php:119
 #: inc/options-theme/op_myprofil/05-curriculum.php:153
 #: inc/options-theme/op_myprofil/05-curriculum.php:189
 msgid "Exporter mon CV"
-msgstr ""
+msgstr "Esporta il mio CV"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:112
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:217
 #: inc/options-theme/op_myprofil/04-aboutme.php:194
 msgid "Gestion de la section en anglais"
-msgstr ""
+msgstr "Gestione della sezione inglese"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:208
 #: inc/options-theme/op_myprofil/04-aboutme.php:186
 msgid "Gestion de la section en français"
-msgstr ""
+msgstr "Gestione della sezione francese"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:226
 #: inc/options-theme/op_myprofil/04-aboutme.php:202
 msgid "Gestion de la section en italien"
-msgstr ""
+msgstr "Gestione della sezione in lingua italiana"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:152
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_customtheme/02-header.php:56
+#: inc/options-theme/op_customtheme/02-header.php:57
+msgid "Header"
+msgstr "Header"
 
 #. Author URI of the theme
 msgid "http://www.enzalombardo.be"
-msgstr ""
+msgstr "http://www.enzalombardo.be"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/05-curriculum.php:112
 #: inc/options-theme/op_myprofil/05-curriculum.php:146
 #: inc/options-theme/op_myprofil/05-curriculum.php:182
 msgid "Importer mon CV"
-msgstr ""
+msgstr "Importa il mio curriculum"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:128
 msgid "Instagram"
-msgstr ""
+msgstr "Instagram"
+
+#: inc/options-theme/op_customtheme/02-header.php:228
+msgid "Job"
+msgstr "Job"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:136
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:170
 msgid "Localité"
-msgstr ""
+msgstr "località"
+
+#: inc/options-theme/op_customtheme/02-header.php:264
+msgid "logo"
+msgstr "logo"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:162
-msgid "Mes coordonnées"
-msgstr ""
+#| msgid "Mes coordonnées"
+msgid "Mes coordonnés"
+msgstr "I miei dati di contatto"
 
 #. slug parent
 #. page_title
@@ -145,137 +209,186 @@ msgstr ""
 #: inc/options-theme/op_myprofil/02-media.php:59
 #: inc/options-theme/op_myprofil/02-media.php:72
 msgid "Mes médias"
-msgstr ""
+msgstr "I miei media"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/02-media.php:104
 msgid "Mes photos"
-msgstr ""
+msgstr "Le mie foto"
 
 #. slug parent
 #. page_title
 #: inc/options-theme/op_myprofil/03-network.php:58
 #: inc/options-theme/op_myprofil/03-network.php:59
 msgid "Mes réseaux"
-msgstr ""
+msgstr "Le mie reti"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/03-network.php:72
 #: inc/options-theme/op_myprofil/03-network.php:104
 msgid "Mes réseaux sociaux"
-msgstr ""
+msgstr "I miei social network"
 
 #. Description of the theme
 msgid "Mon Curriculum Vitae en ligne"
-msgstr ""
+msgstr "Il mio Curriculum Vitae online"
 
 #. TITLE_PAGE
 #: inc/options-theme/op_myprofil/01-personalDetails.php:60
 #: inc/options-theme/op_myprofil/01-personalDetails.php:61
 #: inc/options-theme/op_myprofil/01-personalDetails.php:76
 msgid "Mon profile"
-msgstr ""
+msgstr "Il mio profilo"
 
 #. Name of the theme
 msgid "MyCV 2021"
-msgstr ""
+msgstr "MyCV 2021"
+
+#: inc/options-theme/op_customtheme/02-header.php:220
+msgid "Nom"
+msgstr "Cognome"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:131
 msgid "Nom complet"
-msgstr ""
+msgstr "Nome e cognome"
 
-#: inc/options-theme/op_myprofil/04-aboutme.php:222
-#: inc/options-theme/op_myprofil/04-aboutme.php:230
-#: inc/options-theme/op_myprofil/04-aboutme.php:238
-msgid "Parlez de moi"
-msgstr ""
+#: inc/options-theme/op_customtheme/01-custometheme.php:76
+msgid "Page d'option du theme"
+msgstr "Pagina delle opzioni del tema"
+
+#: inc/options-theme/op_myprofil/04-aboutme.php:233
+#: inc/options-theme/op_myprofil/04-aboutme.php:257
+#: inc/options-theme/op_myprofil/04-aboutme.php:281
+#| msgid "Parlez de moi"
+msgid "Parlez de sois"
+msgstr "Parla di sé"
+
+#: inc/options-theme/op_customtheme/02-header.php:70
+msgid "Personnaliser le header"
+msgstr "Personalizza il header"
+
+#: inc/options-theme/op_customtheme/02-header.php:232
+msgid "Photo"
+msgstr "Foto"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:205
 msgid "Post"
-msgstr ""
+msgstr "Post"
+
+#: inc/options-theme/op_customtheme/02-header.php:256
+msgid "Profile"
+msgstr "profilo"
+
+#: inc/options-theme/op_customtheme/02-header.php:224
+msgid "Prénom"
+msgstr "Nome"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/04-aboutme.php:114
 #: inc/options-theme/op_myprofil/04-aboutme.php:141
 #: inc/options-theme/op_myprofil/04-aboutme.php:168
 msgid "Qui suis-je ?"
-msgstr ""
+msgstr "Chi sono ?"
 
 #: inc/options-theme/op_myprofil/01-personalDetails.php:241
 msgid "Section dédiée aux informations de contact"
-msgstr ""
+msgstr "Sezione dedicata alle informazioni di contatto"
 
 #: inc/options-theme/op_myprofil/01-personalDetails.php:232
 msgid "Section dédiée aux informations personnels"
-msgstr ""
+msgstr "Sezione dedicata alle informazioni personali"
 
 #: inc/options-theme/op_myprofil/01-personalDetails.php:248
 msgid "Section dédiée à la traduction du post"
-msgstr ""
+msgstr "Sezione dedicata alla traduzione del post"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/05-curriculum.php:139
 #: inc/options-theme/op_myprofil/04-aboutme.php:133
 msgid "Section en anglais"
-msgstr ""
+msgstr "Sezione in inglese"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/05-curriculum.php:105
 #: inc/options-theme/op_myprofil/04-aboutme.php:106
 msgid "Section en français"
-msgstr ""
+msgstr "sezione in francese"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/05-curriculum.php:175
 #: inc/options-theme/op_myprofil/04-aboutme.php:160
 msgid "Section en italien"
-msgstr ""
+msgstr "Sezione in italiano"
+
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/02-header.php:149
+msgid "Section social"
+msgstr "Sezione sociale"
+
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/02-header.php:101
+msgid "Section utilisateur"
+msgstr "Sezione utente"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:160
 msgid "Site Web"
-msgstr ""
+msgstr "Sito web"
+
+#: inc/options-theme/op_customtheme/02-header.php:72
+msgid "Sur cette page vous pouvez gérer le header du site"
+msgstr "In questa pagina puoi gestire l'header del sito"
 
 #: inc/options-theme/op_myprofil/02-media.php:74
 msgid ""
 "Sur cette page vous pouvez gérer les différents média de votre Curriculum "
 "Vitae"
-msgstr ""
+msgstr "In questa pagina puoi gestire i diversi media del tuo Curriculum Vitae"
+
+#: inc/options-theme/op_customtheme/01-custometheme.php:78
+msgid "Sur cette page vous pouvez gérer les différents éléments de notre theme"
+msgstr "In questa pagina puoi gestire i diversi elementi del nostro tema"
 
 #: inc/options-theme/op_myprofil/01-personalDetails.php:78
 msgid ""
 "Sur cette page vous pouvez gérer les informations de votre Curriculum Vitae"
-msgstr ""
+msgstr "In questa pagina puoi gestire le informazioni del tuo Curriculum Vitae"
 
 #: inc/options-theme/op_myprofil/03-network.php:74
 msgid "Sur cette page vous pouvez gérer les url de vos réseaux sociaux"
-msgstr ""
+msgstr "In questa pagina puoi gestire gli URL dei tuoi social network"
 
 #: inc/options-theme/op_myprofil/05-curriculum.php:75
 msgid "Sur cette page, vous pouvez gérer l'import / export de votre CV"
-msgstr ""
+msgstr "In questa pagina puoi gestire l'import/export del tuo CV"
 
 #: inc/options-theme/op_myprofil/04-aboutme.php:76
 msgid "Sur cette page, vous pouvez parler de vous"
-msgstr ""
+msgstr "In questa pagina puoi parlare di te"
+
+#. TITLE_PAGE
+#: inc/options-theme/op_customtheme/01-custometheme.php:60
+#: inc/options-theme/op_customtheme/01-custometheme.php:61
+msgid "Theme Options"
+msgstr "Opzioni del Tema"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:213
 msgid "Titre du job"
-msgstr ""
+msgstr "titolo di lavoro"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:120
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:184
 msgid "Téléphone"
-msgstr ""
+msgstr "Telefono"
 
 #: inc/options-theme/op_myprofil/04-aboutme.php:74
 msgid "À propos de moi"
-msgstr ""
+msgstr "Riguardo a me"

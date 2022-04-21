@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-04-14 22:15+0000\n"
+"PO-Revision-Date: 2022-04-21 17:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -15,6 +15,11 @@ msgstr ""
 "X-Loco-Version: 2.6.0; wp-5.9.2\n"
 "X-Domain: MyCV"
 
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/03-home.php:232
+msgid "About"
+msgstr "Riguardo"
+
 #. slug parent
 #. page_title
 #: inc/options-theme/op_myprofil/04-aboutme.php:60
@@ -22,11 +27,40 @@ msgstr ""
 msgid "About me"
 msgstr "Riguardo a me"
 
+#. slug parent
+#. page_title
+#: inc/options-theme/op_customtheme/03-home.php:59
+#: inc/options-theme/op_customtheme/03-home.php:60
+msgid "Accueil"
+msgstr "Home page"
+
+#: inc/options-theme/op_customtheme/03-home.php:686
+#: inc/options-theme/op_customtheme/03-home.php:701
+#: inc/options-theme/op_customtheme/03-home.php:716
+msgid "Afficher l'îcone"
+msgstr "Mostra icona"
+
+#: inc/options-theme/op_customtheme/03-home.php:682
+#: inc/options-theme/op_customtheme/03-home.php:697
+#: inc/options-theme/op_customtheme/03-home.php:712
+msgid "Afficher le bouton"
+msgstr "Mostra il pulsante"
+
+#: inc/options-theme/op_customtheme/03-home.php:645
+#: inc/options-theme/op_customtheme/03-home.php:655
+#: inc/options-theme/op_customtheme/03-home.php:665
+msgid "Ajouter \"Parler de sois\""
+msgstr "Aggiungi \"Parlare di essere\""
+
 #: inc/options-theme/op_myprofil/05-curriculum.php:318
 #: inc/options-theme/op_myprofil/05-curriculum.php:356
 #: inc/options-theme/op_myprofil/05-curriculum.php:394
 msgid "Ajouter le bouton \"télécharger mon cv\""
 msgstr "Aggiungi il pulsante \"carica il mio CV\"."
+
+#: inc/options-theme/op_customtheme/03-home.php:628
+msgid "Ajouter le nom du job visé"
+msgstr "Aggiungi il nome del lavoro di destinazione"
 
 #: inc/options-theme/op_myprofil/02-media.php:132
 msgid "Ajouter les différentes photo de votre Curriculum Vitae"
@@ -37,9 +71,24 @@ msgstr "Aggiungi le diverse foto del tuo Curriculum Vitae"
 msgid "Ajouter les medias"
 msgstr "Aggiungi media"
 
+#: inc/options-theme/op_customtheme/03-home.php:577
+#: inc/options-theme/op_customtheme/03-home.php:592
+#: inc/options-theme/op_customtheme/03-home.php:607
+msgid "Ajouter un message"
+msgstr "Aggiungi un messaggio"
+
+#: inc/options-theme/op_customtheme/03-home.php:392
+msgid "Ajouter une image comme arrière plan"
+msgstr "Aggiungi un'immagine come sfondo"
+
 #: inc/options-theme/op_customtheme/02-header.php:248
 msgid "Avatar"
 msgstr "Avatar"
+
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/03-home.php:104
+msgid "Bannière"
+msgstr "Aggiungi un'immagine come sfondo"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:144
@@ -47,6 +96,22 @@ msgid "Behance"
 msgstr "Behance"
 
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/03-home.php:284
+msgid "Bouton \"Contact\""
+msgstr "Pulsante \"Contatto\""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/03-home.php:276
+msgid "Bouton \"Télecharger CV\""
+msgstr "Pulsante \"Carica CV\""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/03-home.php:268
+msgid "Bouton \"à propos\""
+msgstr "pulsante \"informazioni\""
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/03-home.php:112
 #: inc/options-theme/op_customtheme/02-header.php:109
 #: inc/options-theme/op_customtheme/02-header.php:157
 msgid "Cacher la section"
@@ -57,10 +122,42 @@ msgstr "Nascondere la sezione"
 msgid "Cacher la section utilisateur de la sidebar"
 msgstr "Nascondi la sezione utente dalla barra laterale"
 
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/03-home.php:260
+msgid "Call To Action"
+msgstr "chiamare all'azione"
+
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/03-home.php:155
+#: inc/options-theme/op_customtheme/03-home.php:204
+#: inc/options-theme/op_customtheme/03-home.php:240
 #: inc/options-theme/op_customtheme/02-header.php:117
 msgid "Ce qui doit être présent"
 msgstr "Cosa deve essere presente"
+
+#: inc/options-theme/op_customtheme/03-home.php:334
+msgid "Cette partie vous permet de gérer l'affichage de \"Qui je suis ?\""
+msgstr ""
+"Questa parte permette di gestire la visualizzazione di \"Chi sono io?\""
+
+#: inc/options-theme/op_customtheme/03-home.php:325
+msgid "Cette partie vous permet de gérer l'affichage du métier visé"
+msgstr ""
+"Questa parte permette di gestire la visualizzazione della professione target"
+
+#: inc/options-theme/op_customtheme/03-home.php:343
+msgid ""
+"Cette partie vous permet de gérer les call-to-action présent dans la section"
+msgstr ""
+"Questa parte permette di gestire le call to action presenti nella sezione"
+
+#: inc/options-theme/op_customtheme/03-home.php:316
+msgid "Cette partie vous permet de gérer les salutations de la section"
+msgstr "Questa parte permette di gestire i saluti della sezione"
+
+#: inc/options-theme/op_customtheme/03-home.php:307
+msgid "Cette section vous permettre de gérer l'affichage de la bannière"
+msgstr "Questa sezione permette di gestire la visualizzazione del banner"
 
 #: inc/options-theme/op_customtheme/02-header.php:240
 msgid "Choisir l'imafe à afficher"
@@ -71,6 +168,9 @@ msgstr "Scegli l'immagine da visualizzare"
 msgid "Choisir l'image"
 msgstr "Scegli l'immagine"
 
+#: inc/options-theme/op_customtheme/03-home.php:547
+#: inc/options-theme/op_customtheme/03-home.php:625
+#: inc/options-theme/op_customtheme/03-home.php:639
 #: inc/options-theme/op_customtheme/02-header.php:217
 msgid "Cocher ce qui doit être présent"
 msgstr "Spunta chi deve essere presente"
@@ -78,6 +178,12 @@ msgstr "Spunta chi deve essere presente"
 #: inc/options-theme/op_myprofil/03-network.php:190
 msgid "Cocher et ajouter l'url de vos réseaux sociaux"
 msgstr "Controlla e aggiungi l'URL dei tuoi social network"
+
+#: template-parts/content/home/translate/it-home.php:93
+#: template-parts/content/home/translate/en-home.php:89
+#: template-parts/content/home/translate/fr-home.php:91
+msgid "Contactez moi"
+msgstr "Immagine di sfondo"
 
 #. slug parent
 #. page_title
@@ -109,6 +215,10 @@ msgstr ""
 #: inc/options-theme/op_myprofil/01-personalDetails.php:139
 msgid "Date de naissance"
 msgstr "Data di nascita"
+
+#: inc/options-theme/op_customtheme/03-home.php:571
+msgid "Définir le texte d'introduction au job visé"
+msgstr "Definire il testo introduttivo al lavoro di destinazione"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:108
@@ -168,6 +278,11 @@ msgid "http://www.enzalombardo.be"
 msgstr "http://www.enzalombardo.be"
 
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/03-home.php:120
+msgid "Image en arrière plan"
+msgstr "Immagine di sfondo"
+
+#. SLUG_FIELD
 #: inc/options-theme/op_myprofil/05-curriculum.php:112
 #: inc/options-theme/op_myprofil/05-curriculum.php:146
 #: inc/options-theme/op_myprofil/05-curriculum.php:182
@@ -179,9 +294,23 @@ msgstr "Importa il mio curriculum"
 msgid "Instagram"
 msgstr "Instagram"
 
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/03-home.php:188
 #: inc/options-theme/op_customtheme/02-header.php:228
 msgid "Job"
 msgstr "Job"
+
+#: inc/options-theme/op_customtheme/03-home.php:477
+#: inc/options-theme/op_customtheme/03-home.php:498
+#: inc/options-theme/op_customtheme/03-home.php:519
+msgid "Ligne 1"
+msgstr "Linea 1"
+
+#: inc/options-theme/op_customtheme/03-home.php:486
+#: inc/options-theme/op_customtheme/03-home.php:507
+#: inc/options-theme/op_customtheme/03-home.php:528
+msgid "Ligne 2"
+msgstr "Linea 2"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:136
@@ -196,6 +325,10 @@ msgstr "località"
 #: inc/options-theme/op_customtheme/02-header.php:264
 msgid "logo"
 msgstr "logo"
+
+#: inc/options-theme/op_customtheme/03-home.php:381
+msgid "Masquer la section home du theme"
+msgstr "Nascondi la sezione home del tema"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:162
@@ -229,6 +362,18 @@ msgstr "Le mie reti"
 msgid "Mes réseaux sociaux"
 msgstr "I miei social network"
 
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/03-home.php:148
+#: inc/options-theme/op_customtheme/03-home.php:196
+msgid "Message"
+msgstr "Messaggio"
+
+#: inc/options-theme/op_customtheme/03-home.php:648
+#: inc/options-theme/op_customtheme/03-home.php:658
+#: inc/options-theme/op_customtheme/03-home.php:668
+msgid "Modifier le texte \"Parler de sois\""
+msgstr "Modifica il testo \"Parla dell'essere\""
+
 #. Description of the theme
 msgid "Mon Curriculum Vitae en ligne"
 msgstr "Il mio Curriculum Vitae online"
@@ -244,6 +389,7 @@ msgstr "Il mio profilo"
 msgid "MyCV 2021"
 msgstr "MyCV 2021"
 
+#: inc/options-theme/op_customtheme/03-home.php:550
 #: inc/options-theme/op_customtheme/02-header.php:220
 msgid "Nom"
 msgstr "Cognome"
@@ -264,6 +410,10 @@ msgstr "Pagina delle opzioni del tema"
 msgid "Parlez de sois"
 msgstr "Parla di sé"
 
+#: inc/options-theme/op_customtheme/03-home.php:73
+msgid "Personnaliser l'accueil"
+msgstr "Personalizza l'home page"
+
 #: inc/options-theme/op_customtheme/02-header.php:70
 msgid "Personnaliser le header"
 msgstr "Personalizza il header"
@@ -281,6 +431,7 @@ msgstr "Post"
 msgid "Profile"
 msgstr "profilo"
 
+#: inc/options-theme/op_customtheme/03-home.php:554
 #: inc/options-theme/op_customtheme/02-header.php:224
 msgid "Prénom"
 msgstr "Nome"
@@ -291,6 +442,19 @@ msgstr "Nome"
 #: inc/options-theme/op_myprofil/04-aboutme.php:168
 msgid "Qui suis-je ?"
 msgstr "Chi sono ?"
+
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/03-home.php:140
+msgid "Salutation"
+msgstr "Saluto"
+
+#: inc/options-theme/op_customtheme/03-home.php:430
+msgid "Salutation en 1 ligne"
+msgstr "Saluto in 1 righa"
+
+#: inc/options-theme/op_customtheme/03-home.php:471
+msgid "Salutation en 2 lignes"
+msgstr "Saluto in 2 righe"
 
 #: inc/options-theme/op_myprofil/01-personalDetails.php:241
 msgid "Section dédiée aux informations de contact"
@@ -336,6 +500,10 @@ msgstr "Sezione utente"
 #: inc/options-theme/op_myprofil/03-network.php:160
 msgid "Site Web"
 msgstr "Sito web"
+
+#: inc/options-theme/op_customtheme/03-home.php:75
+msgid "Sur cette page vous pouvez gérer la section accueil du site"
+msgstr "In questa pagina puoi gestire la sezione home del sito"
 
 #: inc/options-theme/op_customtheme/02-header.php:72
 msgid "Sur cette page vous pouvez gérer le header du site"
@@ -384,10 +552,22 @@ msgstr "titolo di lavoro"
 msgid "Twitter"
 msgstr "Twitter"
 
+#: template-parts/content/home/translate/it-home.php:84
+#: template-parts/content/home/translate/en-home.php:80
+#: template-parts/content/home/translate/fr-home.php:82
+msgid "Télécharger mon CV"
+msgstr "Scarica il mio CV"
+
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:184
 msgid "Téléphone"
 msgstr "Telefono"
+
+#: template-parts/content/home/translate/it-home.php:75
+#: template-parts/content/home/translate/en-home.php:71
+#: template-parts/content/home/translate/fr-home.php:73
+msgid "À propos"
+msgstr "Scarica il mio CV"
 
 #: inc/options-theme/op_myprofil/04-aboutme.php:74
 msgid "À propos de moi"

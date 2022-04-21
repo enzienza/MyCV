@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-04-21 17:42+0000\n"
+"PO-Revision-Date: 2022-04-21 17:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.1; wp-5.9.3\n"
+"X-Loco-Version: 2.6.0; wp-5.9.3\n"
 "X-Domain: MyCV"
 
 #. SLUG_SECTION
@@ -410,7 +410,7 @@ msgstr "Talk about be"
 
 #: inc/options-theme/op_customtheme/03-home.php:73
 msgid "Personnaliser l'accueil"
-msgstr "Customize the home"
+msgstr "Personalize the welcome"
 
 #: inc/options-theme/op_customtheme/02-header.php:70
 msgid "Personnaliser le header"
