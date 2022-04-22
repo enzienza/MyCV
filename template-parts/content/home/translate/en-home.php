@@ -55,11 +55,11 @@
     <?php endif; ?>
 </h2>
 
-<p class="desc font-thin">
-    <?php if(checked(1, get_option('hero_about_fr'), false)): ?>
+<?php if(checked(1, get_option('hero_about_fr'), false)): ?>
+    <p class="desc font-thin">
         <?php echo get_option('talk_aboutme_en', "MyCV") ?>
-    <?php endif; ?>
-</p>
+    </p>
+<?php endif; ?>
 
 
 <div class="group-btn">
