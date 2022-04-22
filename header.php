@@ -35,15 +35,17 @@
     <!--  Nav-lang  -->
     <?php get_template_part('template-parts/header/nav/nav-lang'); ?>
 
-    <!--  box-user  -->
-    <?php get_template_part('template-parts/header/user/profil'); ?>
-
+    <?php if(checked(1, get_option('sidebar_hidden_user'), false)): else: ?>
+        <!--  box-user  -->
+        <?php get_template_part('template-parts/header/user/profil'); ?>
+    <?php endif; ?>
     <!--  Nav-principal  -->
     <?php get_template_part('template-parts/header/nav/nav-principal'); ?>
 
-    <!--  Social-Network  -->
-    <?php get_template_part('template-parts/header/social/social'); ?>
-
+    <?php if(checked(1, get_option('sidebar_hidden_social'), false)): else: ?>
+        <!--  Social-Network  -->
+        <?php get_template_part('template-parts/header/social/social'); ?>
+    <?php endif; ?>
 </header>
 
 <!--  BTN-MOBILE  -->

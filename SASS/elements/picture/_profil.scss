@@ -10,9 +10,9 @@
     border: 0.5rem solid $color-primary;
 
     @include responsive(XL){
-        height: 15rem;
-        width: 15rem;
-        border: 0.7rem solid $color-primary;
+        height: 13rem;
+        width: 13rem;
+        border: 0.5rem solid $color-primary;
     }
 
     @include responsive(MD){}
@@ -26,4 +26,9 @@
         height: 10rem;
         margin-top: 1rem;
     }
+}
+
+.invert{
+    filter: invert(1);
+    border: none;
 }

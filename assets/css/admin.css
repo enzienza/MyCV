@@ -10,9 +10,9 @@ Tags:
 */
 
 
-/*
-  TABLE OF CONTENTS:
-
+/* ---------------------------------------------------------
+>>>  TABLE OF CONTENTS:
+------------------------------------------------------------
 0 - ROOT
 1 - GENERAL
 2 - STYLE FOR THE LOGIN PAGE
@@ -22,10 +22,10 @@ Tags:
 6 - CUSTOM  METABOXES
 7 - RESPONSIVE
 
-*/
+----------------------------------------------------------*/
 
-/* ==============================================
- *      0 - ROOT
+/** ==============================================
+    0 - ROOT
  */
 :root{
     --bg-login: #232634;
@@ -38,8 +38,8 @@ Tags:
 
 }
 
-/* ==============================================
- *      1 - GENERAL
+/** ==============================================
+    1 - GENERAL
  */
 .flex {
     display: -webkit-box;
@@ -58,6 +58,18 @@ Tags:
     -ms-flex-pack: center;
     justify-content: center;
 }
+
+/* Space between */
+.space-x-4{
+    margin-left: 1rem;
+}
+.space-x-8{
+    margin-left: 2rem;
+}
+.space-y-4{
+    margin-top: 1rem;
+}
+
 
 /* SIZING */
 .w-50{
@@ -89,8 +101,31 @@ Tags:
     gap: 1rem;
 }
 
-/* ==============================================
- *      2 - STYLE FOR THE LOGIN PAGE
+
+.mt-1{
+    margin-top: .5rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mb-1{
+    margin-bottom: .5rem;
+}
+
+.mb-2{
+    margin-bottom: 2rem;
+}
+
+.separation{
+    margin-top: 2rem;
+    border-top: 1px solid var(--lighten-grey);
+    padding-top: 1rem;
+}
+
+/** ==============================================
+     2 - STYLE FOR THE LOGIN PAGE
  */
 /* fond */
 body.login {
@@ -127,8 +162,8 @@ body.login {
     box-shadow: 1px 1px 1px 4px rgba(85, 85, 85, 0.7);
 }
 
-/* ==============================================
- *      3 - STYLE FOR ALL DASHBOARD
+/** ==============================================
+    3 - STYLE FOR ALL DASHBOARD
  */
 input[type="color"],
 input[type="date"],
@@ -157,6 +192,10 @@ input[type="checkbox"]{
     margin: auto 5px;
 }
 
+.grid-box input[type="text"] {
+    width: 100%;
+}
+
 ::placeholder{
     color: var(--color-border);
 }
@@ -176,8 +215,17 @@ form h2 {
     font-size: 1.3em;
 }
 
-/* ==============================================
- *      4 - STYLE FOR THE MYOPTIONS (Form)
+
+.img-hero{
+    width: 40%;
+    object-fit: cover;
+    max-height: 200px;
+    border-radius: 5px;
+}
+
+
+/** ==============================================
+    4 - STYLE FOR THE MYOPTIONS (Form)
  */
 /* Title */
 .myoptions h2{
@@ -215,7 +263,12 @@ form h2 {
 
 .item-picture-cv, .grid-box{
     border-right: 1px solid var(--lighten-grey);
-    padding: 0 .5rem;
+    padding-left: .5rem;
+    padding-right: 1rem;
+}
+
+.item-picture-cv:first-child, .grid-box:first-child{
+    padding-left: 0;
 }
 
 .item-picture-cv:last-child, .grid-box:last-child{
@@ -240,37 +293,45 @@ form h2 {
     border:1px solid var(--lighten-grey);
 }
 
-/* ==============================================
- *      5 - STYLE FOR COLUMNS ADMIN OF CPT
+.bg-input-file input[type="file"]{
+    background: var(--color-white);
+    width: 40%;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid var(--lighten-grey);
+}
+
+/** ==============================================
+    5 - STYLE FOR COLUMNS ADMIN OF CPT
  */
 
 
-/* ==============================================
- *      6 - CUSTOM  METABOXES
+/** ==============================================
+    6 - CUSTOM  METABOXES
  */
 
 
 
-/* ==============================================
- *      7 - RESPONSIVE
+/** ==============================================
+    7 - RESPONSIVE
  */
 
-/* XS */
+/* --- XS --- */
 @media only screen and (min-width: 320px) and (max-width: 479px) {
 
 }
 
-/* SM */
+/* --- SM --- */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
 }
 
-/* MD */
+/* --- MD --- */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
 }
 
-/* LG */
+/* --- LG --- */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .grid-cols-3{
         -ms-grid-columns: 1fr .5rem 1fr .5em 1fr;
@@ -281,7 +342,7 @@ form h2 {
     }
 }
 
-/* XL */
+/* --- XL --- */
 @media only screen and (min-width: 1200px){
     .grid-cols-3{
         -ms-grid-columns: 1fr .5rem 1fr .5em 1fr;
