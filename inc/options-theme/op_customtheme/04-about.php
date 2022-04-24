@@ -308,7 +308,7 @@ class mycustome_about{
         </p>
         <p>
             <input type="checkbox" id="about_show_age" name="about_show_age" value="1" <?php checked(1, $about_show_age, true) ?> />
-            <label for=""><?php _e("Age", "MyCV"); ?></label>
+            <label for=""><?php _e("Âge", "MyCV"); ?></label>
         </p>
         <p>
             <input type="checkbox" id="about_show_country" name="about_show_country" value="1" <?php checked(1, $about_show_country, true) ?> />

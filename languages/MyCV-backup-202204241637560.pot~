@@ -1,18 +1,19 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-04-24 17:39+0000\n"
-"Last-Translator: \n"
-"Language-Team: Français\n"
-"Language: fr_FR\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"POT-Creation-Date: 2022-04-24 16:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.0; wp-5.9.2\n"
+"X-Loco-Version: 2.5.5; wp-5.8.2\n"
 "X-Domain: MyCV"
 
 #. slug parent
@@ -21,13 +22,14 @@ msgstr ""
 #: inc/options-theme/op_customtheme/04-about.php:57
 #: inc/options-theme/op_customtheme/04-about.php:58
 #: inc/options-theme/op_customtheme/03-home.php:232
-msgid "About"
+msgid "Error, duplicate 1: À propos"
 msgstr ""
 
 #. slug parent
 #. page_title
 #: inc/options-theme/op_myprofil/04-aboutme.php:60
 #: inc/options-theme/op_myprofil/04-aboutme.php:61
+msgctxt "À propos de moi"
 msgid "About me"
 msgstr ""
 
@@ -56,6 +58,10 @@ msgstr ""
 msgid "Afficher le bouton"
 msgstr ""
 
+#: inc/options-theme/op_customtheme/04-about.php:311
+msgid "Error, duplicate 1: Âge"
+msgstr ""
+
 #: inc/options-theme/op_customtheme/03-home.php:645
 #: inc/options-theme/op_customtheme/03-home.php:655
 #: inc/options-theme/op_customtheme/03-home.php:665
@@ -78,7 +84,7 @@ msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/02-media.php:112
-msgid "Ajouter les medias"
+msgid "Ajouter les médias"
 msgstr ""
 
 #: inc/options-theme/op_customtheme/03-home.php:577
@@ -195,6 +201,10 @@ msgstr ""
 msgid "Cette section vous permettre de gérer l'affichage de la bannière"
 msgstr ""
 
+#: inc/options-theme/op_customtheme/02-header.php:240
+msgid "Error, duplicate 1: Choisir l'image à afficher"
+msgstr ""
+
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/04-about.php:151
 #: inc/options-theme/op_customtheme/02-header.php:125
@@ -202,7 +212,6 @@ msgid "Choisir l'image"
 msgstr ""
 
 #: inc/options-theme/op_customtheme/04-about.php:327
-#: inc/options-theme/op_customtheme/02-header.php:240
 msgid "Choisir l'image à afficher"
 msgstr ""
 
@@ -498,8 +507,6 @@ msgstr ""
 msgid "Photo"
 msgstr ""
 
-#. SLUG_SECTION
-#: inc/options-theme/op_myprofil/01-personalDetails.php:205
 #: template-parts/content/about/translate/en-about.php:40
 #: template-parts/content/about/translate/it-about.php:40
 #: template-parts/content/about/translate/fr-about.php:40
@@ -669,7 +676,6 @@ msgstr ""
 msgid "À propos de moi"
 msgstr ""
 
-#: inc/options-theme/op_customtheme/04-about.php:311
 #: template-parts/content/about/translate/en-about.php:21
 #: template-parts/content/about/translate/it-about.php:21
 #: template-parts/content/about/translate/fr-about.php:21

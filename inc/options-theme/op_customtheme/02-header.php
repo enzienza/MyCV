@@ -237,7 +237,7 @@ class mycustome_header{
     public static function field_sidebar_choose_picture(){
         $sidebar_choose_picture = esc_attr(get_option('sidebar_choose_picture'));
         ?>
-        <p class="description"><?php _e("Choisir l'imafe à afficher", "MyCV"); ?></p>
+        <p class="description"><?php _e("Choisir l'image à afficher", "MyCV"); ?></p>
 
         <p class="">
             <input type="radio"

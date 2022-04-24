@@ -202,7 +202,7 @@ class mycv_myprofil{
         // -> créer la section
         add_settings_section(
             self::SECTION_POST,                 // SLUG_SECTION
-            __('Post', 'MyCV'),         // TITLE
+            __('Poste', 'MyCV'),         // TITLE
             [self::class, 'display_section_post'],  // CALLBACK
             self::GROUP                         // SLUG_PAGE
         ); // Section 3

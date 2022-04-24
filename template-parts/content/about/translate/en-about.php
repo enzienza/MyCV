@@ -18,7 +18,7 @@
 
     <?php if(checked(1, get_option('about_show_age'), false)) : ?>
         <li>
-            <span><?php _e('Age', "MyCV"); ?> : </span>
+            <span><?php _e('Âge', "MyCV"); ?> : </span>
             <?php
             $dateOfBirth = new DateTime(get_option('myBirthday'));
             $myAge = $dateOfBirth -> diff(new DateTime);
