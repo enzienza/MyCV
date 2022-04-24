@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: it-home
- * Description:
+ * Description:  display this part if get_locale() is same as 'it_IT'
  *
  * @package WordPress
  * @subpackage MyCV
@@ -81,7 +81,7 @@
             <?php if(checked(1, get_option('hero_show_icon_download'), false)) : ?>
                 <i class="icons flaticon-download"></i>
             <?php endif; ?>
-            <?php _e("Télécharger mon CV", "MyCV"); ?>
+            <?php _e("Télécharger CV", "MyCV"); ?>
         </a>
     <?php endif; ?>
 
