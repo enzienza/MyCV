@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-04-24 17:38+0000\n"
+"PO-Revision-Date: 2022-04-25 13:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -233,7 +233,7 @@ msgstr "Controlla e aggiungi l'URL dei tuoi social network"
 #: template-parts/content/about/translate/it-about.php:70
 #: template-parts/content/about/translate/fr-about.php:70
 msgid "Contactez moi"
-msgstr "Immagine di sfondo"
+msgstr "contattarmi"
 
 #. slug parent
 #. page_title
@@ -678,7 +678,7 @@ msgstr "città"
 #: template-parts/content/home/translate/en-home.php:71
 #: template-parts/content/home/translate/fr-home.php:73
 msgid "À propos"
-msgstr "Scarica il mio CV"
+msgstr "A rigardo"
 
 #: inc/options-theme/op_myprofil/04-aboutme.php:74
 msgid "À propos de moi"
