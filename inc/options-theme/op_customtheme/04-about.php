@@ -118,12 +118,20 @@ class mycustome_about{
             self::SUB_GROUP ,                     // SLUG_PAGE
             self::SECTION_ABOUT                   // SLUG_SECTION
         );
+        add_settings_field(
+            'about_design_section',                  // SLUG_FIELD
+            __("Définir le design", 'MyCV'),            // LABEL
+            [self::class,'field_about_design_section'],  // CALLBACK
+            self::SUB_GROUP ,                     // SLUG_PAGE
+            self::SECTION_ABOUT                   // SLUG_SECTION
+        );
 
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'about_hidden_section');
         register_setting(self::SUB_GROUP, 'about_title_fr');
         register_setting(self::SUB_GROUP, 'about_title_en');
         register_setting(self::SUB_GROUP, 'about_title_it');
+        register_setting(self::SUB_GROUP, 'about_design_section');
 
         /**
          * SECTION 2 : SECTION_ABOUT_INFO =================================
@@ -291,6 +299,25 @@ class mycustome_about{
             </div>
         </div>
 
+        <?php
+    }
+
+    public static function field_about_design_section(){
+        $about_design_section = get_option('about_design_section');
+        ?>
+            <p class="description"><?php _e("Cocher la disposition des éléments", "MyCV") ?></p>
+            <p>
+                <input type="radio" name="about_design_section" value="1" <?php checked(1, $about_design_section, true); ?> />
+                <label for=""><?php _e('Afficher "Qui suis-je" long ', "MyCV"); ?></label>
+            </p>
+            <p>
+                <input type="radio" name="about_design_section" value="2" <?php checked(2, $about_design_section, true); ?> />
+                <label for=""><?php _e('Afficher "Mes infos"', "MyCV"); ?></label>
+            </p>
+            <p>
+                <input type="radio" name="about_design_section" value="3" <?php checked(3, $about_design_section, true); ?> />
+                <label for=""><?php _e('Afficher les deux', "MyCV"); ?></label>
+            </p>
         <?php
     }
 

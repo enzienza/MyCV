@@ -173,6 +173,13 @@ class mycv_myprofil{
             self::SECTION_LOCATION                    // SLUG_SECTION
         );
         add_settings_field(
+            'mycountry',                              // SLUG_FIELD
+            __('Pays', 'MyCV'),               // LABEL
+            [self::class,'field_mycountry'],          // CALLBACK
+            self::GROUP ,                           // SLUG_PAGE
+            self::SECTION_LOCATION                    // SLUG_SECTION
+        );
+        add_settings_field(
             'myemail',                              // SLUG_FIELD
             __('Email', 'MyCV'),               // LABEL
             [self::class,'field_myemail'],          // CALLBACK
@@ -189,6 +196,7 @@ class mycv_myprofil{
 
         // -> Sauvegarder les champs
         register_setting(self::GROUP, 'mylocation');
+        register_setting(self::GROUP, 'mycountry');
         register_setting(self::GROUP, 'myemail');
         register_setting(self::GROUP, 'myphone');
 
@@ -322,7 +330,7 @@ class mycv_myprofil{
         <?php
     }
     public static function field_mylocation(){
-        $mylocation = esc_attr(get_option('mylocation'))
+        $mylocation = esc_attr(get_option('mylocation'));
         ?>
         <input type="text"
                id="mylocation"
@@ -331,6 +339,23 @@ class mycv_myprofil{
                class="regular-text"
                placeholder="La localité"
         />
+        <?php
+    }
+
+    public static function field_mycountry(){
+        $mycountry = get_option('mycountry');
+        ?>
+        <p>
+            <input type="checkbox" id="mycountry" name="mycountry" value="1" <?php checked(1, $mycountry, true) ?> />
+            <label for=""><?php _e("Belgique", "MyCV"); ?></label>
+        </p>
+<!--        <input type="text"-->
+<!--               id="mycountry"-->
+<!--               name="mycountry"-->
+<!--               value="--><?php //echo $mycountry  ?><!--"-->
+<!--               class="regular-text"-->
+<!--               placeholder="Le pays"-->
+<!--        />-->
         <?php
     }
 

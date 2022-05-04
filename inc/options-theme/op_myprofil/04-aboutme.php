@@ -95,83 +95,107 @@ class myprofil_aboutme{
     public static function registerSettings(){
     /**
      * SECTION 1 : SECTION_FR =========================================
-     *             -> Créer la section
-     *             -> Ajouter les éléments du formulaire
-     *             -> Sauvegarder les champs
+     *             1. Créer la section
+     *             2. Ajouter les éléments du formulaire
+     *             3. Sauvegarder les champs
      *
      */
-    // -> créer la section
+    // 1. créer la section
         add_settings_section(
             self::SECTION_FR,                   // SLUG_SECTION
-            __('Section en français', 'MyCV'),      // TITLE
+            __('Qui suis-je ? (en français)', 'MyCV'),      // TITLE
             [self::class, 'display_section_fr'],    // CALLBACK
             self:: SUB_GROUP                  // SLUG_PAGE
         );
 
-    // -> créer la section
+    // 2. créer la section
+        add_settings_field(
+            'talk_short_aboutme_fr',                     // SLUG_FIELD
+            __('Petit intro:', 'MyCV'),               // LABEL
+            [self::class,'field_talk_short_aboutme_fr'],     // CALLBACK
+            self::SUB_GROUP ,                    // SLUG_PAGE
+            self::SECTION_FR                   // SLUG_SECTION
+        );
         add_settings_field(
             'talk_aboutme_fr',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'MyCV'),               // LABEL
+            __('Parlez de sois', 'MyCV'),               // LABEL
             [self::class,'field_talk_aboutme_fr'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_FR                   // SLUG_SECTION
         );
 
-    // -> Sauvegarder les champs
+    // 3. Sauvegarder les champs
+        register_setting(self::SUB_GROUP, 'talk_short_aboutme_fr');
         register_setting(self::SUB_GROUP, 'talk_aboutme_fr');
 
     /**
      * SECTION 2 : SECTION_EN =========================================
-     *             -> Créer la section
-     *             -> Ajouter les éléments du formulaire
-     *             -> Sauvegarder les champs
+     *             1. Créer la section
+     *             2. Ajouter les éléments du formulaire
+     *             3. Sauvegarder les champs
      *
      */
-    // -> créer la section
+    // 1. créer la section
         add_settings_section(
             self::SECTION_EN,                   // SLUG_SECTION
-            __('Section en anglais', 'MyCV'),       // TITLE
+            __('Qui suis-je ? (en anglais)', 'MyCV'),       // TITLE
             [self::class, 'display_section_en'],    // CALLBACK
             self:: SUB_GROUP                  // SLUG_PAGE
         );
 
-    // -> créer la section
+    // 2. créer la section
+        add_settings_field(
+            'talk_short_aboutme_en',                     // SLUG_FIELD
+            __('Petit intro:', 'MyCV'),               // LABEL
+            [self::class,'field_talk_short_aboutme_en'],     // CALLBACK
+            self::SUB_GROUP ,                    // SLUG_PAGE
+            self::SECTION_EN                   // SLUG_SECTION
+        );
         add_settings_field(
             'talk_aboutme_en',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'MyCV'),               // LABEL
+            __('Parlez de sois', 'MyCV'),               // LABEL
             [self::class,'field_talk_aboutme_en'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_EN                   // SLUG_SECTION
         );
 
-    // -> Sauvegarder les champs
+    // 3. Sauvegarder les champs
+        register_setting(self::SUB_GROUP, 'talk_show_aboutme_en');
         register_setting(self::SUB_GROUP, 'talk_aboutme_en');
 
     /**
      * SECTION 3 : SECTION_IT =========================================
-     *             -> Créer la section
-     *             -> Ajouter les éléments du formulaire
-     *             -> Sauvegarder les champs
+     *             1. Créer la section
+     *             2. Ajouter les éléments du formulaire
+     *             3. Sauvegarder les champs
      *
      */
-    // -> créer la section
+    // 1. créer la section
         add_settings_section(
             self::SECTION_IT,                   // SLUG_SECTION
-            __('Section en italien', 'MyCV'),      // TITLE
+            __('Qui suis-je ? (en italien)', 'MyCV'),      // TITLE
             [self::class, 'display_section_it'],   // CALLBACK
             self:: SUB_GROUP                // SLUG_PAGE
         );
 
-    // -> créer la section
+    // 2. créer la section
+        add_settings_field(
+            'talk_short_aboutme_it',                     // SLUG_FIELD
+            __('Petit intro:', 'MyCV'),               // LABEL
+            [self::class,'field_talk_short_aboutme_it'],     // CALLBACK
+            self::SUB_GROUP ,                    // SLUG_PAGE
+            self::SECTION_IT                   // SLUG_SECTION
+        );
         add_settings_field(
             'talk_aboutme_it',                     // SLUG_FIELD
-            __('Qui suis-je ?', 'MyCV'),               // LABEL
+            __('Parlez de sois', 'MyCV'),               // LABEL
             [self::class,'field_talk_aboutme_it'],     // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_IT                   // SLUG_SECTION
         );
 
-    // -> Sauvegarder les champs
+    // 3. Sauvegarder les champs
+        register_setting(self::SUB_GROUP, 'talk_short_aboutme_it');
         register_setting(self::SUB_GROUP, 'talk_aboutme_it');
 
     }
@@ -216,6 +240,26 @@ class myprofil_aboutme{
      * 8 - DEFINIR LES CHAMPS POUR RECUPERER LES INFOS
      */
     // SECTION 1 : SECTION_FR =========================================
+    public static function field_talk_short_aboutme_fr(){
+        $talk_short_aboutme_fr = get_option('talk_short_aboutme_fr');
+
+        // define argument for editor WYSIWYG
+        $args = array(
+            'media_buttons'    => false,
+            'textarea_name'    => 'talk_short_aboutme_fr',
+            'textarea_rows'    => 20,
+            'teeny'            => true,
+            'tinymce'          => true,
+            'drag_drop_upload' => true,
+        );
+        ?>
+        <?php
+        $content = wp_editor($talk_short_aboutme_fr, 'talk_short_aboutme_fr', $args);
+        echo $content
+        ?>
+        <?php
+    }
+
     public static function field_talk_aboutme_fr(){
         $talk_aboutme_fr = get_option('talk_aboutme_fr');
 
@@ -230,7 +274,7 @@ class myprofil_aboutme{
         );
 
         ?>
-        <label for="talk_aboutme_fr"><?php _e('Parlez de sois', 'MyCV') ?></label>
+<!--        <label for="talk_aboutme_fr">--><?php //_e('Parlez de sois', 'MyCV') ?><!--</label>-->
 
             <?php
                 $content = wp_editor($talk_aboutme_fr, 'talk_aboutme_fr', $args);
@@ -240,6 +284,26 @@ class myprofil_aboutme{
         <?php
     }
     // SECTION 2 : SECTION_EN =========================================
+    public static function field_talk_short_aboutme_en(){
+        $talk_short_aboutme_en = get_option('talk_short_aboutme_en');
+
+        // define argument for editor WYSIWYG
+        $args = array(
+            'media_buttons'    => false,
+            'textarea_name'    => 'talk_short_aboutme_en',
+            'textarea_rows'    => 20,
+            'teeny'            => true,
+            'tinymce'          => true,
+            'drag_drop_upload' => true,
+        );
+        ?>
+        <?php
+        $content = wp_editor($talk_short_aboutme_en, 'talk_short_aboutme_en', $args);
+        echo $content
+        ?>
+        <?php
+    }
+
     public static function field_talk_aboutme_en(){
         $talk_aboutme_en = get_option('talk_aboutme_en');
 
@@ -254,7 +318,6 @@ class myprofil_aboutme{
         );
 
         ?>
-        <label for="talk_aboutme_en"><?php _e('Parlez de sois', 'MyCV') ?></label>
 
             <?php
                 $content = wp_editor($talk_aboutme_en, 'talk_aboutme_en', $args);
@@ -264,6 +327,25 @@ class myprofil_aboutme{
         <?php
     }
     // SECTION 3 : SECTION_IT =========================================
+    public static function field_talk_short_aboutme_it(){
+        $talk_short_aboutme_it = get_option('talk_short_aboutme_it');
+
+        // define argument for editor WYSIWYG
+        $args = array(
+            'media_buttons'    => false,
+            'textarea_name'    => 'talk_short_aboutme_it',
+            'textarea_rows'    => 20,
+            'teeny'            => true,
+            'tinymce'          => true,
+            'drag_drop_upload' => true,
+        );
+        ?>
+        <?php
+        $content = wp_editor($talk_short_aboutme_it, 'talk_short_aboutme_it', $args);
+        echo $content
+        ?>
+        <?php
+    }
     public static function field_talk_aboutme_it(){
         $talk_aboutme_it = get_option('talk_aboutme_it');
 
@@ -278,7 +360,6 @@ class myprofil_aboutme{
         );
 
         ?>
-        <label for="talk_aboutme_it"><?php _e('Parlez de sois', 'MyCV') ?></label>
 
             <?php
                 $content = wp_editor($talk_aboutme_it, 'talk_aboutme_it', $args);
