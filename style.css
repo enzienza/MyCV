@@ -432,7 +432,7 @@ img {
   padding: 0.5rem;
   color: rgba(250, 250, 250, 0.5); }
   .social-item:hover {
-    color: #b300b3; }
+    color: #e600e6; }
 
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) and (orientation: landscape) {
   .social-list {
@@ -448,12 +448,12 @@ img {
     border-radius: 5rem;
     margin: 0.5rem 0; }
     .navbar-nav .nav-item:hover {
-      background: #b300b3; }
+      background: purple; }
   .navbar-nav .current-menu-item, .navbar-nav .current_page_item {
-    background: #b300b3; }
+    background: purple; }
 
 .btn-menu {
-  background: #b300b3;
+  background: purple;
   color: #fafafa;
   width: 40px;
   height: 40px;
@@ -577,9 +577,10 @@ img {
   overflow: hidden;
   width: 13rem;
   height: 13rem;
+  object-fit: cover;
   border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
   animation: morph 3.75s linear infinite;
-  border: 0.6rem solid #b300b3; }
+  border: 0.6rem solid purple; }
   @media only screen and (min-width: 1200px) {
     .morph {
       width: 21rem;
@@ -633,12 +634,12 @@ img {
   height: 11rem;
   width: 11rem;
   margin-bottom: 1.5rem;
-  border: 0.5rem solid #b300b3; }
+  border: 0.5rem solid purple; }
   @media only screen and (min-width: 1200px) {
     .profil {
       height: 13rem;
       width: 13rem;
-      border: 0.5rem solid #b300b3; } }
+      border: 0.5rem solid purple; } }
   @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
     .profil {
       width: 10rem;
@@ -661,6 +662,16 @@ body {
 body.dark {
   background: #242525;
   color: #fafafa; }
+  body.dark .navbar-nav .nav-item:hover,
+  body.dark .navbar-nav .current-menu-item,
+  body.dark .navbar-nav .current_page_item,
+  body.dark .btn-menu {
+    background: #b300b3; }
+  body.dark .profil, body.dark .morph, body.dark .title-section {
+    border-color: #b300b3; }
+  body.dark .detail-title {
+    color: #b300b3;
+    text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
 
 header {
   position: fixed;

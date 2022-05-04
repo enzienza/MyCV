@@ -3,4 +3,22 @@
 body.dark{
     background: $color-night;
     color: $color-light;
+
+
+    .navbar-nav .nav-item:hover,
+    .navbar-nav .current-menu-item,
+    .navbar-nav .current_page_item,
+    .btn-menu{
+        background: $color-primary;
+    }
+
+    .profil, .morph, .title-section{
+        border-color: $color-primary;
+    }
+
+    .detail-title{
+        color: $color-primary;
+        text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+    }
+
 }
