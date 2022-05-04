@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-04-24 17:10+0000\n"
+"PO-Revision-Date: 2022-04-25 13:32+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -14,6 +14,15 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.1; wp-5.9.3\n"
 "X-Domain: MyCV"
+
+#. slug parent
+#. page_title
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/04-about.php:57
+#: inc/options-theme/op_customtheme/04-about.php:58
+#: inc/options-theme/op_customtheme/03-home.php:232
+msgid "About"
+msgstr "About"
 
 #. slug parent
 #. page_title
@@ -69,8 +78,8 @@ msgstr "Add the different photos of your Curriculum Vitae"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/02-media.php:112
-#| msgid "Ajouter les medias"
-msgid "Ajouter les médias"
+#| msgid "Ajouter les médias"
+msgid "Ajouter les medias"
 msgstr "Add media"
 
 #: inc/options-theme/op_customtheme/03-home.php:577
@@ -107,7 +116,7 @@ msgstr "\"Contact\" button"
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/04-about.php:188
 msgid "Bouton \"Portfolio\""
-msgstr ""
+msgstr "\"Portfolio\" button"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/03-home.php:276
@@ -117,7 +126,7 @@ msgstr "\"Upload CV\" button"
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/04-about.php:181
 msgid "Bouton \"Télécharger CV\""
-msgstr ""
+msgstr "\"Download CV\" button"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/03-home.php:268
@@ -158,17 +167,19 @@ msgstr "This part allows you to manage the display of \"Who am I?\""
 
 #: inc/options-theme/op_customtheme/04-about.php:224
 msgid "Cette partie vous permet de gérer l'affichage de la section"
-msgstr ""
+msgstr "This part allows you to manage the display of the section"
 
 #: inc/options-theme/op_customtheme/04-about.php:233
 msgid "Cette partie vous permet de gérer l'affichage de vos information"
-msgstr ""
+msgstr "This part allows you to manage the display of your information"
 
 #: inc/options-theme/op_customtheme/04-about.php:242
 msgid ""
 "Cette partie vous permet de gérer l'affichage des call-to-action présent "
 "dans la section"
 msgstr ""
+"This part allows you to manage the display of calls-to-action present in the "
+"section"
 
 #: inc/options-theme/op_customtheme/03-home.php:325
 msgid "Cette partie vous permet de gérer l'affichage du métier visé"
@@ -195,6 +206,7 @@ msgid "Choisir l'image"
 msgstr "Choose the image"
 
 #: inc/options-theme/op_customtheme/04-about.php:327
+#: inc/options-theme/op_customtheme/02-header.php:240
 #| msgid "Choisir l'imafe à afficher"
 msgid "Choisir l'image à afficher"
 msgstr "Choose the image to display"
@@ -218,7 +230,7 @@ msgstr "Check and add the url of your social networks"
 #: template-parts/content/about/translate/it-about.php:70
 #: template-parts/content/about/translate/fr-about.php:70
 msgid "Contactez moi"
-msgstr "contact me"
+msgstr "Contact me"
 
 #. slug parent
 #. page_title
@@ -257,7 +269,7 @@ msgstr "Define the introductory text to the targeted job"
 
 #: inc/options-theme/op_customtheme/04-about.php:263
 msgid "Définir le titre de la section"
-msgstr ""
+msgstr "Define section title"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:108
@@ -272,10 +284,6 @@ msgstr "Email"
 #. Author of the theme
 msgid "Enza Lombardo"
 msgstr "Enza Lombardo"
-
-#: inc/options-theme/op_customtheme/02-header.php:240
-msgid "Error, duplicate 1: Choisir l'image à afficher"
-msgstr ""
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/05-curriculum.php:119
@@ -312,12 +320,12 @@ msgstr "GitHub"
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/04-about.php:102
 msgid "Gérer la section"
-msgstr ""
+msgstr "Manage section"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/04-about.php:137
 msgid "Gérer les éléments"
-msgstr ""
+msgstr "Manage items"
 
 #. slug parent
 #. page_title
@@ -384,7 +392,7 @@ msgstr "logo"
 
 #: inc/options-theme/op_customtheme/04-about.php:255
 msgid "Masquer la section about du theme"
-msgstr ""
+msgstr "Hide the about section of the theme"
 
 #: inc/options-theme/op_customtheme/03-home.php:381
 msgid "Masquer la section home du theme"
@@ -442,7 +450,7 @@ msgstr "My Curriculum Vitae online"
 #: template-parts/content/about/translate/it-about.php:61
 #: template-parts/content/about/translate/fr-about.php:61
 msgid "Mon portfolio"
-msgstr ""
+msgstr "My portfolio"
 
 #. TITLE_PAGE
 #: inc/options-theme/op_myprofil/01-personalDetails.php:60
@@ -457,7 +465,7 @@ msgstr "MyCV 2021"
 
 #: inc/options-theme/op_customtheme/04-about.php:319
 msgid "Métier"
-msgstr ""
+msgstr "Job"
 
 #: inc/options-theme/op_customtheme/03-home.php:550
 #: inc/options-theme/op_customtheme/02-header.php:220
@@ -490,7 +498,7 @@ msgstr "Customize the home"
 
 #: inc/options-theme/op_customtheme/04-about.php:71
 msgid "Personnaliser la section \"about\""
-msgstr ""
+msgstr "Customize the \"about\" section"
 
 #: inc/options-theme/op_customtheme/02-header.php:70
 msgid "Personnaliser le header"
@@ -500,6 +508,8 @@ msgstr "Customize the header"
 msgid "Photo"
 msgstr "Picture"
 
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/01-personalDetails.php:205
 #: template-parts/content/about/translate/en-about.php:40
 #: template-parts/content/about/translate/it-about.php:40
 #: template-parts/content/about/translate/fr-about.php:40
@@ -584,7 +594,7 @@ msgstr "Website"
 
 #: inc/options-theme/op_customtheme/04-about.php:73
 msgid "Sur cette page vous pouvez gérer la section about du site"
-msgstr ""
+msgstr "On this page you can manage the about section of the site"
 
 #: inc/options-theme/op_customtheme/03-home.php:75
 msgid "Sur cette page vous pouvez gérer la section accueil du site"
@@ -636,7 +646,7 @@ msgstr "job title"
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/04-about.php:116
 msgid "Titre section"
-msgstr ""
+msgstr "section title"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:120
@@ -660,7 +670,7 @@ msgstr "Phone"
 
 #: inc/options-theme/op_customtheme/04-about.php:315
 msgid "Ville"
-msgstr ""
+msgstr "City"
 
 #: template-parts/content/home/translate/it-home.php:75
 #: template-parts/content/home/translate/en-home.php:71
@@ -672,8 +682,9 @@ msgstr "About me"
 msgid "À propos de moi"
 msgstr "About me"
 
+#: inc/options-theme/op_customtheme/04-about.php:311
 #: template-parts/content/about/translate/en-about.php:21
 #: template-parts/content/about/translate/it-about.php:21
 #: template-parts/content/about/translate/fr-about.php:21
 msgid "Âge"
-msgstr ""
+msgstr "Age"
