@@ -1,0 +1,15 @@
+// main: ../_elements.scss
+
+.morph{
+    overflow: hidden;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    animation: morph 3.75s linear infinite;
+    border: 0.6rem solid #b300b3;
+
+    @include responsive(XL){
+        width: 21rem;
+        height: 21rem;
+    }
+}

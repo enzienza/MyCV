@@ -1,0 +1,51 @@
+// main: ../_latout.scss
+
+.about{
+    &-grid{
+        //-ms-grid-columns: 1fr 1fr;
+        //grid-template-columns: repeat(2, 1fr);
+        //grid-auto-rows: calc(50vh - .5vmin);
+    }
+    &-content{
+        //border: 2px solid lightsalmon;
+        //font-size: calc(0.7rem + 1vmin);
+        //display: flex;
+        //flex-flow: column nowrap;
+    }
+    &-detail{
+        margin-top: 2rem;
+        font-size: calc(1rem + .1vmin);
+        h3{
+            padding-bottom: .5rem;
+        }
+        //ul{
+        //    margin-bottom: 2rem;
+        //}
+    }
+    &-image {
+        //border: 2px solid deepskyblue;
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+}
+
+.detail{
+    &-title{
+        color: $color-primary-dark;
+        font-weight: 600;
+        text-transform: capitalize;
+        display: inline-block;
+        width: 20%;
+    }
+    &-separater::before{
+        content:":";
+        padding-right: 5px;
+    }
+}
+
+
+
+
+

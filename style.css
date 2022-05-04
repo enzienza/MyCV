@@ -183,6 +183,13 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
 .flaticon-download:before {
   content: ""; }
 
+@keyframes morph {
+  0%, 100% {
+    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%; }
+  33% {
+    border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%; }
+  66% {
+    border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%; } }
 * {
   margin: 0;
   padding: 0; }
@@ -251,13 +258,6 @@ h3 {
 
 img {
   max-width: 100%; }
-
-section {
-  padding: 1rem;
-  min-height: 90vh;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center; }
 
 .visible {
   visibility: visible; }
@@ -548,6 +548,85 @@ section {
 .group-btn {
   margin-top: 1rem; }
 
+.my-container {
+  padding-right: 4rem;
+  padding-left: 4rem; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.grid {
+  display: -ms-grid;
+  display: grid; }
+
+.grid-cols-2 {
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr); }
+
+.grid-cols-3 {
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr); }
+
+.grid-cols-4 {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr); }
+
+.morph {
+  overflow: hidden;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+  animation: morph 3.75s linear infinite;
+  border: 0.6rem solid #b300b3; }
+  @media only screen and (min-width: 1200px) {
+    .morph {
+      width: 21rem;
+      height: 21rem; } }
+
+.img-poly {
+  object-fit: cover;
+  width: 20rem;
+  height: 20rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+
+.trapezoid {
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
+
+.parallegrame {
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); }
+
+.losange {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+
+.pentagone {
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); }
+
+.hexagone {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+
+.heptagone {
+  -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); }
+
+.octogone {
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+
+.decagone {
+  -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%); }
+
+.bevel {
+  -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); }
+
 .profil {
   border-radius: 100%;
   object-fit: cover;
@@ -668,6 +747,22 @@ header {
   .sidebar-footer {
     width: 50px;
     margin: auto; } }
+section {
+  padding: 1rem;
+  min-height: 90vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center; }
+  section:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1); }
+
+.title-section {
+  text-align: center;
+  text-transform: capitalize;
+  border-bottom: 2px solid purple;
+  margin-bottom: 3rem;
+  padding-bottom: 1em; }
+
 .hero-wrap {
   min-height: calc(100vh - (1rem + 5vmin));
   position: relative;
@@ -739,5 +834,25 @@ header {
   .desc {
     margin-bottom: 1.5rem;
     font-size: small; } }
+.about-detail {
+  margin-top: 2rem;
+  font-size: calc(1rem + .1vmin); }
+  .about-detail h3 {
+    padding-bottom: .5rem; }
+.about-image {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center; }
+
+.detail-title {
+  color: purple;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 20%; }
+.detail-separater::before {
+  content: ":";
+  padding-right: 5px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,48 +1,14 @@
 <?php
 /**
- * Name file: en-about
- * Description:  display this part if get_locale() is same as 'en_GB'
+ * Name file: fr-btn
+ * Description: display this part if get_locale() is same as 'en_GB'
  *
  * @package WordPress
  * @subpackage MyCV
  * @since 1.0.0
  */
 ?>
-<ul>
-    <?php if(checked(1, get_option('about_show_fullname'), false)) : ?>
-        <li>
-            <span><?php _e('Nom', "MyCV");?> : </span>
-            <?php echo get_option('mylastname'); ?> <?php echo get_option('myfirstname'); ?>
-        </li>
-    <?php endif; ?>
 
-    <?php if(checked(1, get_option('about_show_age'), false)) : ?>
-        <li>
-            <span><?php _e('Âge', "MyCV"); ?> : </span>
-            <?php
-            $dateOfBirth = new DateTime(get_option('myBirthday'));
-            $myAge = $dateOfBirth -> diff(new DateTime);
-            echo $myAge -> y;
-            ?>
-        </li>
-    <?php endif; ?>
-
-
-    <?php if(checked(1, get_option('about_show_country'), false)) : ?>
-        <li>
-            <span><?php _e('Localité', "MyCV"); ?> : </span>
-            <?php echo get_option('mylocation'); ?>
-        </li>
-    <?php endif; ?>
-
-    <?php if(checked(1, get_option('about_show_job'), false)) : ?>
-        <li>
-            <span><?php _e('Poste', "MyCV"); ?> : </span>
-            <?php echo get_option('title_job_en'); ?>
-        </li>
-    <?php endif; ?>
-
-</ul>
 <div class="group-btn">
     <?php if(checked(1, get_option('about_add_btn_download'), false)): ?>
         <a href="<?php echo get_option('import_cv_en') ?>" class="btn btn-simple" target="_blank">

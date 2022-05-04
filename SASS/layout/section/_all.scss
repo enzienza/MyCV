@@ -1,0 +1,27 @@
+// main: ../_layout.scss
+
+section{
+    padding: 1rem;
+    min-height: 90vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    &:nth-child(even){
+        background-color: rgba(0,0,0,.1);
+    }
+}
+
+.title-section{
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 2px solid $color-primary-dark;
+    margin-bottom: 3rem;
+    padding-bottom: 1em;
+}
+
+@include responsive(XL){}
+@include responsive(LG){}
+@include responsive(MD){}
+@include responsive(SM){}
+@include responsive(XS){}

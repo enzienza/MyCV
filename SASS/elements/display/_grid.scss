@@ -1,0 +1,20 @@
+// main: ../_elements.scss
+
+.grid{
+    display: -ms-grid;
+    display: grid
+}
+
+.grid-cols-2{
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3{
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-cols-4{
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+}
