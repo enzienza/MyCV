@@ -118,12 +118,20 @@ class mycustome_about{
             self::SUB_GROUP ,                     // SLUG_PAGE
             self::SECTION_ABOUT                   // SLUG_SECTION
         );
+        add_settings_field(
+            'about_design_section',                  // SLUG_FIELD
+            __("Définir le design", 'MyCV'),            // LABEL
+            [self::class,'field_about_design_section'],  // CALLBACK
+            self::SUB_GROUP ,                     // SLUG_PAGE
+            self::SECTION_ABOUT                   // SLUG_SECTION
+        );
 
-         // 3. Sauvegarder les champs
+        // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'about_hidden_section');
         register_setting(self::SUB_GROUP, 'about_title_fr');
         register_setting(self::SUB_GROUP, 'about_title_en');
         register_setting(self::SUB_GROUP, 'about_title_it');
+        register_setting(self::SUB_GROUP, 'about_design_section');
 
         /**
          * SECTION 2 : SECTION_ABOUT_INFO =================================
@@ -199,7 +207,7 @@ class mycustome_about{
             self::SECTION_ABOUT_CALLTOACTION        // SLUG_SECTION
         );
 
-         // 3. Sauvegarder les champs
+        // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP,'about_add_btn_download');
         register_setting(self::SUB_GROUP,'about_show_icon_download');
         register_setting(self::SUB_GROUP,'about_add_btn_portfolio');
@@ -212,7 +220,7 @@ class mycustome_about{
      * 6 - DEFINIR LES SECTIONS DE LA PAGE
      */
 
-    
+
     /**
      * 7 - DEFINIR LE TELECHARGEMENT DES FICHIER
      *     le fichier sera stocké dans le dossier upload
@@ -220,9 +228,9 @@ class mycustome_about{
     // SECTION 1 : SECTION_ABOUT ======================================
     public static function display_section_about(){
         ?>
-            <p class="section-description">
-                <?php _e("Cette partie vous permet de gérer l'affichage de la section", "MyCV"); ?>
-            </p>
+        <p class="section-description">
+            <?php _e("Cette partie vous permet de gérer l'affichage de la section", "MyCV"); ?>
+        </p>
         <?php
     }
 
@@ -238,9 +246,9 @@ class mycustome_about{
     // SECTION 3 : SECTION_ABOUT_CALLTOACTION =========================
     public static function display_section_about_colltoaction(){
         ?>
-            <p class="section-description">
-                <?php _e("Cette partie vous permet de gérer l'affichage des call-to-action présent dans la section", "MyCV"); ?>
-            </p>
+        <p class="section-description">
+            <?php _e("Cette partie vous permet de gérer l'affichage des call-to-action présent dans la section", "MyCV"); ?>
+        </p>
         <?php
     }
 
@@ -294,6 +302,25 @@ class mycustome_about{
         <?php
     }
 
+    public static function field_about_design_section(){
+        $about_design_section = get_option('about_design_section');
+        ?>
+            <p class="description"><?php _e("Cocher la disposition des éléments", "MyCV") ?></p>
+            <p>
+                <input type="radio" name="about_design_section" value="1" <?php checked(1, $about_design_section, true); ?> />
+                <label for=""><?php _e('Afficher "Qui suis-je" long ', "MyCV"); ?></label>
+            </p>
+            <p>
+                <input type="radio" name="about_design_section" value="2" <?php checked(2, $about_design_section, true); ?> />
+                <label for=""><?php _e('Afficher "Mes infos"', "MyCV"); ?></label>
+            </p>
+            <p>
+                <input type="radio" name="about_design_section" value="3" <?php checked(3, $about_design_section, true); ?> />
+                <label for=""><?php _e('Afficher les deux', "MyCV"); ?></label>
+            </p>
+        <?php
+    }
+
     // SECTION 2 : SECTION_ABOUT_INFO =================================
     public static function field_about_info_element(){
         $about_show_fullname = get_option('about_show_fullname');
@@ -308,7 +335,7 @@ class mycustome_about{
         </p>
         <p>
             <input type="checkbox" id="about_show_age" name="about_show_age" value="1" <?php checked(1, $about_show_age, true) ?> />
-            <label for=""><?php _e("Age", "MyCV"); ?></label>
+            <label for=""><?php _e("Âge", "MyCV"); ?></label>
         </p>
         <p>
             <input type="checkbox" id="about_show_country" name="about_show_country" value="1" <?php checked(1, $about_show_country, true) ?> />

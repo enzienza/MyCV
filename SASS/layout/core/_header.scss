@@ -106,6 +106,12 @@ header{
         }
 
         &-head{
+            .name{
+                font-size: x-large;
+            }
+            p{
+                font-size: small;
+            }
             .profil{
                 width: 9rem;
                 height: 9rem;
@@ -132,6 +138,12 @@ header{
             width: 5rem;
         }
         &-head{
+            .name{
+                font-size: x-large;
+            }
+            p{
+                font-size: small;
+            }
             .profil{
                 width: 9rem;
                 height: 9rem;

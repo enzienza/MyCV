@@ -10,6 +10,7 @@
 
 
 // CONTAINER ===============================================
+ @import "container/my-container";
 // @import "container/";
 
 
@@ -20,13 +21,15 @@
 // CORE ====================================================
 // @import "core/";
 
+// DISPLAY =================================================
+@import "display/flex";
+@import "display/grid";
+//@import "display/";
 
 // EFFECTS =================================================
 //@import "effects/";
 
 
-// FLEXBOX AND GRID ========================================
-//@import "flex-grid/";
 
 
 // ICON ====================================================
@@ -42,7 +45,9 @@
 
 
 // PICTURE =================================================
- @import "picture/profil";
+ @import "picture/box";
+ @import "picture/polygone";
+@import "picture/profil";
 // @import "picture/";
 
 
@@ -64,3 +69,6 @@
 
 // FLIP ====================================================
 // @import "flip/";
+
+// SCROLLBAR ===============================================
+//@import "scrollbar/scrollbar";

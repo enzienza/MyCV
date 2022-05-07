@@ -10,12 +10,12 @@
         border-radius: 5rem;
         margin: 0.5rem 0;
         &:hover{
-            background: $color-primary;
+            background: $color-primary-dark;
         }
     }
 
     .current-menu-item, .current_page_item{
-        background: $color-primary;
+        background: $color-primary-dark;
     }
 }
 
@@ -23,7 +23,7 @@
 
 // BTN BURGER
 .btn-menu{
-    background: $color-primary;
+    background: $color-primary-dark;
     color: $color-light;
     width: 40px;
     height: 40px;
@@ -109,3 +109,26 @@
 //        display: none;
 //    }
 //}
+
+
+@include responsive(MD){}
+@include responsive(SM){
+    .navbar-nav{
+        .nav-item{
+            margin: .2rem 0;
+        }
+        .nav-link{
+            padding: .5rem;
+        }
+    }
+}
+@include responsive(XS){
+    .navbar-nav{
+        .nav-item{
+            margin: .2rem 0;
+        }
+        .nav-link{
+            padding: .5rem;
+        }
+    }
+}
