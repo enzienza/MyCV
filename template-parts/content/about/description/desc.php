@@ -13,7 +13,7 @@
 <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
     <?php require_once ('fr-desc.php');?>
 <?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
-    <?php //require_once ('en-desc.php');?>
+    <?php require_once ('en-desc.php');?>
 <?php elseif(get_locale() === 'it_IT') : // Partie EN =========== ?>
-    <?php //require_once ('it-desc.php');?>
+    <?php require_once ('it-desc.php');?>
 <?php endif; ?>

@@ -33,14 +33,14 @@
     <h1 class="big-title">
         <?php echo esc_attr(get_option('hero_msg_twoline_it')); ?>
         <span class="higt">
-        <?php if(checked(1, get_option('hero_show_firstname'), false)): ?>
-            <?php echo get_option('myfirstname'); ?>
-        <?php endif; ?>
+            <?php if(checked(1, get_option('hero_show_firstname'), false)): ?>
+                <?php echo get_option('myfirstname'); ?>
+            <?php endif; ?>
 
-        <?php if(checked(1, get_option('hero_show_lastname'), false)): ?>
-            <?php echo get_option('mylastname'); ?>
-        <?php endif; ?>
-    </span>
+            <?php if(checked(1, get_option('hero_show_lastname'), false)): ?>
+                <?php echo get_option('mylastname'); ?>
+            <?php endif; ?>
+        </span>
     </h1>
 <?php endif; ?>
 
