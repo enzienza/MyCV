@@ -3,4 +3,16 @@
 .my-container{
     padding-right: 4rem;
     padding-left: 4rem;
+
+    @include responsive(XL){}
+    @include responsive(LG){}
+    @include responsive(MD){}
+    @include responsive(SM){
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    @include responsive(XS){
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 }

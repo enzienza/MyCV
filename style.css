@@ -507,6 +507,16 @@ img {
 @media only screen and (min-width: 992px) and (max-width: calc(1200px - 1px)) {
   .btn-menu {
     display: none; } }
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .navbar-nav .nav-item {
+    margin: .2rem 0; }
+  .navbar-nav .nav-link {
+    padding: .5rem; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .navbar-nav .nav-item {
+    margin: .2rem 0; }
+  .navbar-nav .nav-link {
+    padding: .5rem; } }
 .btn {
   border-radius: 5rem;
   padding: .5rem 1rem;
@@ -548,9 +558,31 @@ img {
 .group-btn {
   margin-top: 1rem; }
 
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .btn {
+    width: 100%;
+    margin-bottom: .5rem; }
+
+  .group-btn {
+    margin-top: 1.5rem; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .btn {
+    width: 100%;
+    margin-bottom: .5rem; }
+
+  .group-btn {
+    margin-top: 1.5rem; } }
 .my-container {
   padding-right: 4rem;
   padding-left: 4rem; }
+  @media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+    .my-container {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
+  @media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+    .my-container {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
 
 .flex {
   display: -webkit-box;
@@ -573,6 +605,12 @@ img {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
   grid-template-columns: repeat(4, 1fr); }
 
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: 1fr; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: 1fr; } }
 .morph {
   overflow: hidden;
   width: 13rem;
@@ -736,6 +774,10 @@ header {
 
   .sidebar-top {
     width: 5rem; }
+  .sidebar-head .name {
+    font-size: x-large; }
+  .sidebar-head p {
+    font-size: small; }
   .sidebar-head .profil {
     width: 9rem;
     height: 9rem; }
@@ -752,6 +794,10 @@ header {
 
   .sidebar-top {
     width: 5rem; }
+  .sidebar-head .name {
+    font-size: x-large; }
+  .sidebar-head p {
+    font-size: small; }
   .sidebar-head .profil {
     width: 9rem;
     height: 9rem; }
@@ -865,5 +911,26 @@ section {
 .detail-separater::before {
   content: ":";
   padding-right: 5px; }
+
+@media only screen and (min-width: 480px) and (max-width: calc(768px - 1px)) {
+  .about-content {
+    margin-bottom: 3rem;
+    order: 9999; }
+  .about-image {
+    order: 1;
+    padding-bottom: 2rem; }
+
+  .detail-title {
+    width: 30%; } }
+@media only screen and (min-width: 320px) and (max-width: calc(480px - 1px)) {
+  .about-content {
+    margin-bottom: 3rem;
+    order: 9999; }
+  .about-image {
+    order: 1;
+    padding-bottom: 2rem; }
+
+  .detail-title {
+    width: 30%; } }
 
 /*# sourceMappingURL=style.css.map */

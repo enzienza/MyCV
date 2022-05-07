@@ -22,7 +22,7 @@
         //    margin-bottom: 2rem;
         //}
     }
-    &-image {
+    &-image{
         //border: 2px solid deepskyblue;
         display: flex;
         justify-content: center;
@@ -47,5 +47,37 @@
 
 
 
-
+@include responsive(XL){}
+@include responsive(LG){}
+@include responsive(MD){}
+@include responsive(SM){
+    .about{
+        &-content{
+            margin-bottom: 3rem;
+            order: 9999;
+        }
+        &-image{
+            order: 1;
+            padding-bottom: 2rem;
+        }
+    }
+    .detail-title{
+        width: 30%;
+    }
+}
+@include responsive(XS){
+    .about{
+        &-content{
+            margin-bottom: 3rem;
+            order: 9999;
+        }
+        &-image{
+            order: 1;
+            padding-bottom: 2rem;
+        }
+    }
+    .detail-title{
+        width: 30%;
+    }
+}
 

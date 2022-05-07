@@ -109,3 +109,26 @@
 //        display: none;
 //    }
 //}
+
+
+@include responsive(MD){}
+@include responsive(SM){
+    .navbar-nav{
+        .nav-item{
+            margin: .2rem 0;
+        }
+        .nav-link{
+            padding: .5rem;
+        }
+    }
+}
+@include responsive(XS){
+    .navbar-nav{
+        .nav-item{
+            margin: .2rem 0;
+        }
+        .nav-link{
+            padding: .5rem;
+        }
+    }
+}
