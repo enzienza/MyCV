@@ -10,13 +10,7 @@
 ?>
 <section id="about" class="my-container">
     <div class="title-section">
-        <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
-            <h1><?php echo get_option('about_title_fr') ?></h1>
-        <?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
-            <h1><?php echo get_option('about_title_en') ?></h1>
-        <?php elseif(get_locale() === 'it_IT') : // Partie EN =========== ?>
-            <h1><?php echo get_option('about_title_it') ?></h1>
-        <?php endif; ?>
+        <?php require_once("title/title.php"); ?>
     </div>
     <div class="grid grid-cols-2 about-grid">
         <div class="about-content">
