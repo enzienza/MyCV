@@ -23,7 +23,7 @@
             <?php get_template_part('template-parts/content/about/index', 'about') ?>
         <?php endif; ?>
 
-        <?php get_template_part('template-parts/content/03-resumes') ?>
+        <?php get_template_part('template-parts/content/resumes/index', 'resumes') ?>
         <?php get_template_part('template-parts/content/04-formations') ?>
         <?php get_template_part('template-parts/content/05-skills') ?>
         <?php get_template_part('template-parts/content/06-contact') ?>
