@@ -122,7 +122,7 @@ class mycustome_resume{
 
         add_settings_field(
             'resume_show_desc_section',                  // SLUG_FIELD
-            __("Titre section", 'MyCV'),            // LABEL
+            __("Description section", 'MyCV'),            // LABEL
             [self::class,'field_resume_show_desc_section'],  // CALLBACK
             self::SUB_GROUP ,                     // SLUG_PAGE
             self::SECTION_RESUME                   // SLUG_SECTION
@@ -153,7 +153,7 @@ class mycustome_resume{
         // 2. ajouter les éléments du formulaire
         add_settings_field(
             'resume_desc_fr',                  // SLUG_FIELD
-            __("Description", 'MyCV'),             // LABEL
+            __("Message pour la description", 'MyCV'), // LABEL
             [self::class,'field_resume_desc_fr'],  // CALLBACK
             self::SUB_GROUP ,                // SLUG_PAGE
             self::SECTION_RESUME_FR        // SLUG_SECTION
@@ -161,7 +161,7 @@ class mycustome_resume{
 
         add_settings_field(
             'resume_else_msg_fr',                  // SLUG_FIELD
-            __("Message boucle", 'MyCV'),                 // LABEL
+            __("Message pour la boucle", 'MyCV'),      // LABEL
             [self::class,'field_resume_else_msg_fr'],  // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_RESUME_FR            // SLUG_SECTION
@@ -179,24 +179,24 @@ class mycustome_resume{
          */
         // 1. créer la section
         add_settings_section(
-            self::SECTION_RESUME_EN,                 // SLUG_SECTION
-            __('Gérer les messages (en anglais)', 'MyCV'),                 // TITLE
-            [self::class, 'display_section_resume_en'],  // CALLBACK
-            self::SUB_GROUP                   // SLUG_PAGE
+            self::SECTION_RESUME_EN,                   // SLUG_SECTION
+            __('Gérer les messages (en anglais)', 'MyCV'), // TITLE
+            [self::class, 'display_section_resume_en'],    // CALLBACK
+            self::SUB_GROUP                         // SLUG_PAGE
         );
 
         // 2. ajouter les éléments du formulaire
         add_settings_field(
-            'resume_desc_en',                  // SLUG_FIELD
-            __("Description", 'MyCV'),             // LABEL
-            [self::class,'field_resume_desc_en'],  // CALLBACK
-            self::SUB_GROUP ,                // SLUG_PAGE
-            self::SECTION_RESUME_EN        // SLUG_SECTION
+            'resume_desc_en',                      // SLUG_FIELD
+            __("Message pour la description", 'MyCV'), // LABEL
+            [self::class,'field_resume_desc_en'],      // CALLBACK
+            self::SUB_GROUP ,                   // SLUG_PAGE
+            self::SECTION_RESUME_EN            // SLUG_SECTION
         );
 
         add_settings_field(
             'resume_else_msg_en',                  // SLUG_FIELD
-            __("Message boucle", 'MyCV'),                 // LABEL
+            __("Message pour la boucle", 'MyCV'),      // LABEL
             [self::class,'field_resume_else_msg_en'],  // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_RESUME_EN            // SLUG_SECTION
@@ -216,7 +216,7 @@ class mycustome_resume{
         // 1. créer la section
         add_settings_section(
             self::SECTION_RESUME_IT,                 // SLUG_SECTION
-            __('Gérer les messages (en italien)', 'MyCV'),                 // TITLE
+            __('Gérer les messages (en italien)', 'MyCV'),  // TITLE
             [self::class, 'display_section_resume_it'],  // CALLBACK
             self::SUB_GROUP                   // SLUG_PAGE
         );
@@ -224,7 +224,7 @@ class mycustome_resume{
         // 2. ajouter les éléments du formulaire
         add_settings_field(
             'resume_desc_it',                  // SLUG_FIELD
-            __("Description", 'MyCV'),             // LABEL
+            __("Message pour la description", 'MyCV'), // LABEL
             [self::class,'field_resume_desc_it'],  // CALLBACK
             self::SUB_GROUP ,                // SLUG_PAGE
             self::SECTION_RESUME_IT        // SLUG_SECTION
@@ -232,7 +232,7 @@ class mycustome_resume{
 
         add_settings_field(
             'resume_else_msg_it',                  // SLUG_FIELD
-            __("Message boucle", 'MyCV'),                 // LABEL
+            __("Message pour la boucle", 'MyCV'),      // LABEL
             [self::class,'field_resume_else_msg_it'],  // CALLBACK
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_RESUME_IT            // SLUG_SECTION
