@@ -820,10 +820,19 @@ section {
   margin-bottom: 3rem;
   padding-bottom: 1em; }
 
+.desc-section {
+  text-align: justify; }
+
 .no-result {
   text-align: center;
   line-height: 2; }
 
+@media only screen and (min-width: 1200px) {
+  .desc-section {
+    text-align: center; } }
+@media only screen and (min-width: 992px) and (max-width: calc(1200px - 1px)) {
+  .desc-section {
+    text-align: center; } }
 .hero-wrap {
   min-height: calc(100vh - (1rem + 5vmin));
   position: relative;

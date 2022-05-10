@@ -9,6 +9,6 @@
  */
 ?>
 
-<div class="font-light text-center mb-4">
+<div class="font-light mb-4">
     <?php echo get_option('resume_desc_fr') ?>
 </div>

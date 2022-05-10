@@ -20,13 +20,25 @@ section{
     padding-bottom: 1em;
 }
 
+.desc-section{
+    text-align: justify;
+}
+
 .no-result{
     text-align: center;
     line-height: 2;
 }
 
-@include responsive(XL){}
-@include responsive(LG){}
+@include responsive(XL){
+    .desc-section{
+        text-align: center;
+    }
+}
+@include responsive(LG){
+    .desc-section{
+        text-align: center;
+    }
+}
 @include responsive(MD){}
 @include responsive(SM){}
 @include responsive(XS){}
