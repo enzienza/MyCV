@@ -20,6 +20,11 @@ section{
     padding-bottom: 1em;
 }
 
+.no-result{
+    text-align: center;
+    line-height: 2;
+}
+
 @include responsive(XL){}
 @include responsive(LG){}
 @include responsive(MD){}

@@ -10,4 +10,10 @@
  */
 ?>
 
-<h1>Mes experience</h1>
+<?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
+    <?php require_once('fr-title.php');?>
+<?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
+    <?php require_once ('en-title.php');?>
+<?php elseif(get_locale() === 'it_IT') : // Partie EN =========== ?>
+    <?php require_once ('it-title.php');?>
+<?php endif; ?>

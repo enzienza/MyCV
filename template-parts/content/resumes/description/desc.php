@@ -10,9 +10,10 @@
  */
 ?>
 
-<p class="font-light">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Adipisci commodi consectetur culpa eos error eveniet expedita,
-    fugit ipsum libero mollitia nesciunt nobis obcaecati odit omnis
-    quidem quis sequi sunt temporibus!
-</p>
+<?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
+    <?php require_once ('fr-desc.php');?>
+<?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
+    <?php require_once ('en-desc.php');?>
+<?php elseif(get_locale() === 'it_IT') : // Partie EN =========== ?>
+    <?php require_once ('it-desc.php');?>
+<?php endif; ?>
