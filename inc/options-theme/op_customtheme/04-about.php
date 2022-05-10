@@ -280,16 +280,16 @@ class mycustome_about{
                 />
             </div>
             <div class="grid-box">
-                <p class="box-title"><?php _e("Anglais", "mycv") ?></p>
+                <p class="box-title"><?php _e("Anglais", "myCV") ?></p>
                 <input type="text"
                        id="about_title_en"
                        name="about_title_en"
                        value="<?php echo $about_title_en ?>"
-                       placeholder="<?php _e("Texte en anglais", "mycv") ?>"
+                       placeholder="<?php _e("Texte en anglais", "myCV") ?>"
                 />
             </div>
             <div class="grid-box">
-                <p class="box-title"><?php _e("Italien", "mycv") ?></p>
+                <p class="box-title"><?php _e("Italien", "myCV") ?></p>
                 <input type="text"
                        id="about_title_it"
                        name="about_title_it"

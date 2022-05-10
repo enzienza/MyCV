@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-05-04 15:55+0000\n"
+"PO-Revision-Date: 2022-05-10 16:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -68,6 +68,10 @@ msgstr "show button"
 msgid "Afficher les deux"
 msgstr "Show Both"
 
+#: inc/options-theme/op_customtheme/05-resume.php:345
+msgid "Afficher une description à la section"
+msgstr "Display a description in the section"
+
 #: inc/options-theme/op_customtheme/03-home.php:645
 #: inc/options-theme/op_customtheme/03-home.php:655
 #: inc/options-theme/op_customtheme/03-home.php:665
@@ -104,6 +108,10 @@ msgstr "Add message"
 msgid "Ajouter une image comme arrière plan"
 msgstr "Add an image as background"
 
+#: inc/options-theme/op_customtheme/05-resume.php:321
+msgid "Anglais"
+msgstr "English"
+
 #: inc/options-theme/op_customtheme/04-about.php:357
 #: inc/options-theme/op_customtheme/02-header.php:248
 msgid "Avatar"
@@ -135,12 +143,8 @@ msgid "Bouton \"Portfolio\""
 msgstr "\"Portfolio\" button"
 
 #. SLUG_FIELD
-#: inc/options-theme/op_customtheme/03-home.php:276
-msgid "Bouton \"Télecharger CV\""
-msgstr "\"Upload CV\" button"
-
-#. SLUG_FIELD
 #: inc/options-theme/op_customtheme/04-about.php:189
+#: inc/options-theme/op_customtheme/03-home.php:276
 msgid "Bouton \"Télécharger CV\""
 msgstr "\"Download CV\" button"
 
@@ -150,6 +154,7 @@ msgid "Bouton \"à propos\""
 msgstr "\"about\" button"
 
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/05-resume.php:110
 #: inc/options-theme/op_customtheme/04-about.php:109
 #: inc/options-theme/op_customtheme/03-home.php:112
 #: inc/options-theme/op_customtheme/02-header.php:109
@@ -168,6 +173,12 @@ msgstr "Hide user section from sidebar"
 msgid "Call To Action"
 msgstr "call-to-action"
 
+#: inc/options-theme/op_customtheme/05-resume.php:376
+#: inc/options-theme/op_customtheme/05-resume.php:413
+#: inc/options-theme/op_customtheme/05-resume.php:452
+msgid "Ce message sera présent si la boucle est vide"
+msgstr "This message will be present if the loop is empty"
+
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/04-about.php:152
 #: inc/options-theme/op_customtheme/03-home.php:155
@@ -181,6 +192,7 @@ msgstr "Hide user section from sidebar"
 msgid "Cette partie vous permet de gérer l'affichage de \"Qui je suis ?\""
 msgstr "This part allows you to manage the display of \"Who am I?\""
 
+#: inc/options-theme/op_customtheme/05-resume.php:254
 #: inc/options-theme/op_customtheme/04-about.php:232
 msgid "Cette partie vous permet de gérer l'affichage de la section"
 msgstr "This part allows you to manage the display of the section"
@@ -206,6 +218,19 @@ msgid ""
 "Cette partie vous permet de gérer les call-to-action présent dans la section"
 msgstr ""
 "This part allows you to manage the call-to-action present in the section"
+
+#: inc/options-theme/op_customtheme/05-resume.php:272
+msgid "Cette partie vous permet de gérer les messages de la section en anglais"
+msgstr "This part allows you to manage the messages of the section in English"
+
+#: inc/options-theme/op_customtheme/05-resume.php:263
+msgid ""
+"Cette partie vous permet de gérer les messages de la section en français"
+msgstr "This part allows you to manage the messages of the section in French"
+
+#: inc/options-theme/op_customtheme/05-resume.php:281
+msgid "Cette partie vous permet de gérer les messages de la section en italien"
+msgstr "This part allows you to manage the messages of the section in Italian"
 
 #: inc/options-theme/op_customtheme/03-home.php:316
 msgid "Cette partie vous permet de gérer les salutations de la section"
@@ -284,6 +309,11 @@ msgid "Date de naissance"
 msgstr "Date of Birth"
 
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/05-resume.php:125
+msgid "Description section"
+msgstr "Description section"
+
+#. SLUG_FIELD
 #: inc/options-theme/op_customtheme/04-about.php:123
 msgid "Définir le design"
 msgstr "Define the design"
@@ -292,18 +322,16 @@ msgstr "Define the design"
 msgid "Définir le texte d'introduction au job visé"
 msgstr "Define the introductory text to the targeted job"
 
+#: inc/options-theme/op_customtheme/05-resume.php:309
 #: inc/options-theme/op_customtheme/04-about.php:271
 msgid "Définir le titre de la section"
 msgstr "Define section title"
 
+#. SLUG_SECTION
+#: inc/options-theme/op_myprofil/01-personalDetails.php:108
 #: template-parts/content/about/details/it-list.php:13
 #: template-parts/content/about/details/en-list.php:13
 #: template-parts/content/about/details/fr-list.php:13
-msgid "Détail personnels"
-msgstr "Personal details"
-
-#. SLUG_SECTION
-#: inc/options-theme/op_myprofil/01-personalDetails.php:108
 msgid "Détails personnels"
 msgstr "personal details"
 
@@ -328,6 +356,10 @@ msgstr "Exporter mon CV"
 msgid "Facebook"
 msgstr "Facebook"
 
+#: inc/options-theme/op_customtheme/05-resume.php:312
+msgid "Français"
+msgstr "French"
+
 #: inc/options-theme/op_myprofil/05-curriculum.php:217
 #: inc/options-theme/op_myprofil/04-aboutme.php:218
 msgid "Gestion de la section en anglais"
@@ -349,9 +381,25 @@ msgid "GitHub"
 msgstr "GitHub"
 
 #. SLUG_SECTION
+#: inc/options-theme/op_customtheme/05-resume.php:103
 #: inc/options-theme/op_customtheme/04-about.php:102
 msgid "Gérer la section"
 msgstr "Manage section"
+
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/05-resume.php:183
+msgid "Gérer les messages (en anglais)"
+msgstr "Manage messages (in English)"
+
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/05-resume.php:148
+msgid "Gérer les messages (en français)"
+msgstr "Manage messages (in French)"
+
+#. SLUG_SECTION
+#: inc/options-theme/op_customtheme/05-resume.php:219
+msgid "Gérer les messages (en italien)"
+msgstr "Manage messages (in Italian)"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/04-about.php:145
@@ -385,6 +433,10 @@ msgstr "Import my CV"
 #: inc/options-theme/op_myprofil/03-network.php:128
 msgid "Instagram"
 msgstr "Instagram"
+
+#: inc/options-theme/op_customtheme/05-resume.php:330
+msgid "Italien"
+msgstr "Italian"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/03-home.php:188
@@ -421,6 +473,7 @@ msgstr "locality"
 msgid "logo"
 msgstr "logo"
 
+#: inc/options-theme/op_customtheme/05-resume.php:301
 #: inc/options-theme/op_customtheme/04-about.php:263
 msgid "Masquer la section about du theme"
 msgstr "Hide the about section of the theme"
@@ -466,6 +519,26 @@ msgstr "My social networks"
 #: inc/options-theme/op_customtheme/03-home.php:196
 msgid "Message"
 msgstr "Message"
+
+#: inc/options-theme/op_customtheme/05-resume.php:381
+#: inc/options-theme/op_customtheme/05-resume.php:418
+#: inc/options-theme/op_customtheme/05-resume.php:457
+msgid "Message court"
+msgstr "Short message"
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/05-resume.php:164
+#: inc/options-theme/op_customtheme/05-resume.php:199
+#: inc/options-theme/op_customtheme/05-resume.php:235
+msgid "Message pour la boucle"
+msgstr "Message for the loop"
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/05-resume.php:156
+#: inc/options-theme/op_customtheme/05-resume.php:191
+#: inc/options-theme/op_customtheme/05-resume.php:227
+msgid "Message pour la description"
+msgstr "Message for the description"
 
 #: inc/options-theme/op_customtheme/03-home.php:648
 #: inc/options-theme/op_customtheme/03-home.php:658
@@ -537,6 +610,10 @@ msgstr "Customize the home"
 msgid "Personnaliser la section \"about\""
 msgstr "Customize the \"about\" section"
 
+#: inc/options-theme/op_customtheme/05-resume.php:72
+msgid "Personnaliser la section \"expérience\""
+msgstr "Customise the experience section"
+
 #: inc/options-theme/op_customtheme/02-header.php:70
 msgid "Personnaliser le header"
 msgstr "Customize the header"
@@ -585,6 +662,13 @@ msgstr "Who am I ? (in French)"
 #: inc/options-theme/op_myprofil/04-aboutme.php:176
 msgid "Qui suis-je ? (en italien)"
 msgstr "Who am I ? (in Italian)"
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_customtheme/05-resume.php:58
+#: inc/options-theme/op_customtheme/05-resume.php:59
+msgid "Resume"
+msgstr "Resume"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/03-home.php:140
@@ -649,6 +733,10 @@ msgstr "On this page you can manage the about section of the site"
 msgid "Sur cette page vous pouvez gérer la section accueil du site"
 msgstr "On this page you can manage the home section of the site"
 
+#: inc/options-theme/op_customtheme/05-resume.php:74
+msgid "Sur cette page vous pouvez gérer la section des expériences du site"
+msgstr "On this page you can manage the experience section of the site"
+
 #: inc/options-theme/op_customtheme/02-header.php:72
 msgid "Sur cette page vous pouvez gérer le header du site"
 msgstr "On this page you can manage the header of the site"
@@ -681,6 +769,18 @@ msgstr "On this page you can manage the import / export of your CV"
 msgid "Sur cette page, vous pouvez parler de vous"
 msgstr "On this page you can talk about yourself"
 
+#: inc/options-theme/op_customtheme/05-resume.php:326
+msgid "Texte en anglais"
+msgstr "Text in English"
+
+#: inc/options-theme/op_customtheme/05-resume.php:317
+msgid "Texte en français"
+msgstr "Text in French"
+
+#: inc/options-theme/op_customtheme/05-resume.php:335
+msgid "Texte en italien"
+msgstr "Text in Italian"
+
 #. TITLE_PAGE
 #: inc/options-theme/op_customtheme/01-custometheme.php:60
 #: inc/options-theme/op_customtheme/01-custometheme.php:61
@@ -693,6 +793,7 @@ msgid "Titre du job"
 msgstr "job title"
 
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/05-resume.php:117
 #: inc/options-theme/op_customtheme/04-about.php:116
 msgid "Titre section"
 msgstr "section title"
