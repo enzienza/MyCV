@@ -273,7 +273,7 @@ class mycustome_home{
 
         add_settings_field(
             'hero_show_btn_download',                   // SLUG_FIELD
-            __('Bouton "Télecharger CV"', 'MyCV'),          // LABEL
+            __('Bouton "Télécharger CV"', 'MyCV'),          // LABEL
             [self::class,'field_hero_show_btn_download'],   // CALLBACK
             self::SUB_GROUP ,                         // SLUG_PAGE
             self::SECTION_HERO_CALLTOACTION         // SLUG_SECTION
