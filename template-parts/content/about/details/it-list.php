@@ -10,7 +10,7 @@
 ?>
 
 <div class="about-detail">
-    <h3><?php _e("Détail personnels", "MyCV"); ?></h3>
+    <h3><?php _e("Détails personnels", "MyCV"); ?></h3>
     <ul>
         <?php if(checked(1, get_option('about_show_fullname'), false)) : ?>
             <li>

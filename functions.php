@@ -56,6 +56,7 @@ require_once('inc/options-theme/op_customtheme/01-custometheme.php');
 require_once('inc/options-theme/op_customtheme/02-header.php');
 require_once('inc/options-theme/op_customtheme/03-home.php');
 require_once('inc/options-theme/op_customtheme/04-about.php');
+require_once('inc/options-theme/op_customtheme/05-resume.php');
 
 /** =====================================================
  *  4 - POST-TYPE
