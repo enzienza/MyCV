@@ -128,7 +128,7 @@ class mycv_mycustome{
                 <td class="import-system">
                     <span class="importer-title">Expérience</span>
                     <span class="importer-action">
-                      <a href="?" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_resume" class="install-now">Gérer la section</a>
                     </span>
                 </td>
                 <td class="desc">
@@ -142,7 +142,7 @@ class mycv_mycustome{
                 <td class="import-system">
                     <span class="importer-title">Formation</span>
                     <span class="importer-action">
-                      <a href="?" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_education" class="install-now">Gérer la section</a>
                     </span>
                 </td>
                 <td class="desc">
