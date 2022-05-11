@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-05-10 16:39+0000\n"
+"PO-Revision-Date: 2022-05-11 14:53+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -69,6 +69,7 @@ msgid "Afficher les deux"
 msgstr "Mostra entrambi"
 
 #: inc/options-theme/op_customtheme/05-resume.php:345
+#: inc/options-theme/op_customtheme/06-education.php:345
 msgid "Afficher une description à la section"
 msgstr "Visualizza una descrizione nella sezione"
 
@@ -109,6 +110,7 @@ msgid "Ajouter une image comme arrière plan"
 msgstr "Aggiungi un'immagine come sfondo"
 
 #: inc/options-theme/op_customtheme/05-resume.php:321
+#: inc/options-theme/op_customtheme/06-education.php:321
 msgid "Anglais"
 msgstr "Inglese"
 
@@ -156,6 +158,7 @@ msgstr "pulsante \"informazioni\""
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/05-resume.php:110
 #: inc/options-theme/op_customtheme/04-about.php:109
+#: inc/options-theme/op_customtheme/06-education.php:110
 #: inc/options-theme/op_customtheme/03-home.php:112
 #: inc/options-theme/op_customtheme/02-header.php:109
 #: inc/options-theme/op_customtheme/02-header.php:157
@@ -176,6 +179,9 @@ msgstr "chiamare all'azione"
 #: inc/options-theme/op_customtheme/05-resume.php:376
 #: inc/options-theme/op_customtheme/05-resume.php:413
 #: inc/options-theme/op_customtheme/05-resume.php:452
+#: inc/options-theme/op_customtheme/06-education.php:376
+#: inc/options-theme/op_customtheme/06-education.php:413
+#: inc/options-theme/op_customtheme/06-education.php:452
 msgid "Ce message sera présent si la boucle est vide"
 msgstr "Questo messaggio sarà presente se il ciclo è vuoto"
 
@@ -195,6 +201,7 @@ msgstr ""
 
 #: inc/options-theme/op_customtheme/05-resume.php:254
 #: inc/options-theme/op_customtheme/04-about.php:232
+#: inc/options-theme/op_customtheme/06-education.php:254
 msgid "Cette partie vous permet de gérer l'affichage de la section"
 msgstr "Questa parte permette di gestire la visualizzazione della sezione"
 
@@ -223,15 +230,18 @@ msgstr ""
 "Questa parte permette di gestire le call to action presenti nella sezione"
 
 #: inc/options-theme/op_customtheme/05-resume.php:272
+#: inc/options-theme/op_customtheme/06-education.php:272
 msgid "Cette partie vous permet de gérer les messages de la section en anglais"
 msgstr "Questa parte permette di gestire i messaggi della sezione in inglese"
 
 #: inc/options-theme/op_customtheme/05-resume.php:263
+#: inc/options-theme/op_customtheme/06-education.php:263
 msgid ""
 "Cette partie vous permet de gérer les messages de la section en français"
 msgstr "Questa parte permette di gestire i messaggi della sezione in francese"
 
 #: inc/options-theme/op_customtheme/05-resume.php:281
+#: inc/options-theme/op_customtheme/06-education.php:281
 msgid "Cette partie vous permet de gérer les messages de la section en italien"
 msgstr "Questa parte permette di gestire i messaggi della sezione in italiano"
 
@@ -313,6 +323,7 @@ msgstr "Data di nascita"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/05-resume.php:125
+#: inc/options-theme/op_customtheme/06-education.php:125
 msgid "Description section"
 msgstr "Descrizione della sezione"
 
@@ -327,6 +338,7 @@ msgstr "Definire il testo introduttivo al lavoro di destinazione"
 
 #: inc/options-theme/op_customtheme/05-resume.php:309
 #: inc/options-theme/op_customtheme/04-about.php:271
+#: inc/options-theme/op_customtheme/06-education.php:309
 msgid "Définir le titre de la section"
 msgstr "Imposta il titolo della sezione"
 
@@ -337,6 +349,13 @@ msgstr "Imposta il titolo della sezione"
 #: template-parts/content/about/details/fr-list.php:13
 msgid "Détails personnels"
 msgstr "dati personali"
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_customtheme/06-education.php:58
+#: inc/options-theme/op_customtheme/06-education.php:59
+msgid "Education"
+msgstr "Formazione"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/01-personalDetails.php:184
@@ -360,6 +379,7 @@ msgid "Facebook"
 msgstr "Facebook"
 
 #: inc/options-theme/op_customtheme/05-resume.php:312
+#: inc/options-theme/op_customtheme/06-education.php:312
 msgid "Français"
 msgstr "Francese"
 
@@ -386,21 +406,25 @@ msgstr "GitHub"
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/05-resume.php:103
 #: inc/options-theme/op_customtheme/04-about.php:102
+#: inc/options-theme/op_customtheme/06-education.php:103
 msgid "Gérer la section"
 msgstr "Gestisci sezione"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/05-resume.php:183
+#: inc/options-theme/op_customtheme/06-education.php:183
 msgid "Gérer les messages (en anglais)"
 msgstr "Gestire i messaggi (in inglese)"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/05-resume.php:148
+#: inc/options-theme/op_customtheme/06-education.php:148
 msgid "Gérer les messages (en français)"
 msgstr "Gestire i messaggi (in francese)"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/05-resume.php:219
+#: inc/options-theme/op_customtheme/06-education.php:219
 msgid "Gérer les messages (en italien)"
 msgstr "Gestire i messaggi (in italiano)"
 
@@ -438,6 +462,7 @@ msgid "Instagram"
 msgstr "Instagram"
 
 #: inc/options-theme/op_customtheme/05-resume.php:330
+#: inc/options-theme/op_customtheme/06-education.php:330
 msgid "Italien"
 msgstr "Italiano"
 
@@ -480,6 +505,10 @@ msgstr "logo"
 #: inc/options-theme/op_customtheme/04-about.php:263
 msgid "Masquer la section about du theme"
 msgstr "Nascondi la sezione Informazioni del tema"
+
+#: inc/options-theme/op_customtheme/06-education.php:301
+msgid "Masquer la section education du theme"
+msgstr "Nascondere la sezione formazione del tema"
 
 #: inc/options-theme/op_customtheme/03-home.php:381
 msgid "Masquer la section home du theme"
@@ -526,6 +555,9 @@ msgstr "Messaggio"
 #: inc/options-theme/op_customtheme/05-resume.php:381
 #: inc/options-theme/op_customtheme/05-resume.php:418
 #: inc/options-theme/op_customtheme/05-resume.php:457
+#: inc/options-theme/op_customtheme/06-education.php:381
+#: inc/options-theme/op_customtheme/06-education.php:418
+#: inc/options-theme/op_customtheme/06-education.php:457
 msgid "Message court"
 msgstr "Messaggio breve"
 
@@ -533,6 +565,9 @@ msgstr "Messaggio breve"
 #: inc/options-theme/op_customtheme/05-resume.php:164
 #: inc/options-theme/op_customtheme/05-resume.php:199
 #: inc/options-theme/op_customtheme/05-resume.php:235
+#: inc/options-theme/op_customtheme/06-education.php:164
+#: inc/options-theme/op_customtheme/06-education.php:199
+#: inc/options-theme/op_customtheme/06-education.php:235
 msgid "Message pour la boucle"
 msgstr "Messaggio per la loop"
 
@@ -540,6 +575,9 @@ msgstr "Messaggio per la loop"
 #: inc/options-theme/op_customtheme/05-resume.php:156
 #: inc/options-theme/op_customtheme/05-resume.php:191
 #: inc/options-theme/op_customtheme/05-resume.php:227
+#: inc/options-theme/op_customtheme/06-education.php:156
+#: inc/options-theme/op_customtheme/06-education.php:191
+#: inc/options-theme/op_customtheme/06-education.php:227
 msgid "Message pour la description"
 msgstr "Messaggio per la descrizione"
 
@@ -616,6 +654,10 @@ msgstr "Personalizza la sezione \"informazioni\"."
 #: inc/options-theme/op_customtheme/05-resume.php:72
 msgid "Personnaliser la section \"expérience\""
 msgstr "Personalizzare la sezione esperienza"
+
+#: inc/options-theme/op_customtheme/06-education.php:72
+msgid "Personnaliser la section \"Éducation\""
+msgstr "Personalizzate la sezione formazione"
 
 #: inc/options-theme/op_customtheme/02-header.php:70
 msgid "Personnaliser le header"
@@ -741,6 +783,12 @@ msgstr "In questa pagina puoi gestire la sezione home del sito"
 msgid "Sur cette page vous pouvez gérer la section des expériences du site"
 msgstr "In questa pagina puoi gestire la sezione esperienza del sito"
 
+#: inc/options-theme/op_customtheme/06-education.php:74
+msgid "Sur cette page vous pouvez gérer la section des éducations du site"
+msgstr ""
+"In questa pagina è possibile gestire la sezione del sito dedicata alla "
+"formazione."
+
 #: inc/options-theme/op_customtheme/02-header.php:72
 msgid "Sur cette page vous pouvez gérer le header du site"
 msgstr "In questa pagina puoi gestire l'header del sito"
@@ -773,14 +821,17 @@ msgid "Sur cette page, vous pouvez parler de vous"
 msgstr "In questa pagina puoi parlare di te"
 
 #: inc/options-theme/op_customtheme/05-resume.php:326
+#: inc/options-theme/op_customtheme/06-education.php:326
 msgid "Texte en anglais"
 msgstr "Testo in inglese"
 
 #: inc/options-theme/op_customtheme/05-resume.php:317
+#: inc/options-theme/op_customtheme/06-education.php:317
 msgid "Texte en français"
 msgstr "Testo in francese"
 
 #: inc/options-theme/op_customtheme/05-resume.php:335
+#: inc/options-theme/op_customtheme/06-education.php:335
 msgid "Texte en italien"
 msgstr "Testo in italiano"
 
@@ -798,6 +849,7 @@ msgstr "titolo di lavoro"
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/05-resume.php:117
 #: inc/options-theme/op_customtheme/04-about.php:116
+#: inc/options-theme/op_customtheme/06-education.php:117
 msgid "Titre section"
 msgstr "In questa pagina puoi gestire la sezione about del sito"
 
