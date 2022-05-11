@@ -1,7 +1,7 @@
 <?php
 /**
- * Name file: resumes
- * Description: display resumes section
+ * Name file: education
+ * Description: display education section
  *
  * @package WordPress
  * @subpackage MyCV
@@ -9,19 +9,19 @@
  */
 ?>
 
-<section id="resumes" class="my-container">
+<section id="educations" class="my-container">
     <div class="title-section">
         <?php require_once("title/title.php"); ?>
     </div>
 
-    <?php if(checked(1, get_option('resume_show_desc'), false)) : ?>
+    <?php if(checked(1, get_option('education_show_desc'), false)) : ?>
         <div class="desc-section">
             <?php require_once("description/desc.php"); ?>
         </div>
     <?php endif; ?>
 
-    <div class="timeline">
-        <?php require_once("timeline/experience.php"); ?>
+    <div class="formation">
+        <?php require_once("formations/formations.php"); ?>
         <?php //get_template_part('template-parts/') ?>
     </div>
 </section>
