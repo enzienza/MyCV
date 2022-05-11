@@ -156,7 +156,7 @@ class mycv_mycustome{
                 <td class="import-system">
                     <span class="importer-title">Compétence</span>
                     <span class="importer-action">
-                      <a href="?" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_skill" class="install-now">Gérer la section</a>
                     </span>
                 </td>
                 <td class="desc">
