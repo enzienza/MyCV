@@ -17,8 +17,29 @@
     }
 }
 
+.network{
+    &-list{
+        margin-bottom: .5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    &-item{
+        font-family: $font-icon;
+        padding: 0.5rem;
+        &:hover{
+        }
+    }
+}
+
 @include landscape(SM){
     .social{
+        &-list{
+            flex-direction: column;
+        }
+    }
+    .network{
         &-list{
             flex-direction: column;
         }
@@ -27,6 +48,11 @@
 
 @include landscape(XS){
     .social{
+        &-list{
+            flex-direction: column;
+        }
+    }
+    .network{
         &-list{
             flex-direction: column;
         }
