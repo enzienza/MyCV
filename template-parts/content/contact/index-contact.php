@@ -24,7 +24,7 @@
         <div class="content"></div>
 
         <?php if(checked(1, get_option('contact_show_network'), false)) : ?>
-            <div class="desc-section">
+            <div class="contact-social">
                 <?php require_once("social/network.php"); ?>
             </div>
         <?php endif; ?>
