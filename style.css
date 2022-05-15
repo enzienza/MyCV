@@ -434,6 +434,16 @@ img {
   .social-item:hover {
     color: #e600e6; }
 
+.network-list {
+  margin-bottom: .5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; }
+.network-item {
+  font-family: "flaticon";
+  padding: 0.5rem; }
+
 @media only screen and (min-width: 768px) and (max-width: calc(992px - 1px)) and (orientation: landscape) {
   .social-list {
     flex-direction: column; } }

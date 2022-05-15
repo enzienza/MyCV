@@ -35,6 +35,9 @@
             <?php get_template_part('template-parts/content/skills/index', 'skill') ?>
         <?php endif; ?>
 
-        <?php get_template_part('template-parts/content/06-contact') ?>
+        <?php if(checked(1, get_option('contact_hidden_section'), false)) : else : ?>
+            <?php get_template_part('template-parts/content/contact/index', 'contact') ?>
+        <?php endif; ?>
+
 <!--    </main>-->
 <?php get_footer() ?>
