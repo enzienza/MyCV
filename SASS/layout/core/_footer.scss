@@ -1,0 +1,16 @@
+// main: ../_layout.scss
+
+.footer{
+    text-align: center;
+    line-height: 2em;
+    //border-top: .001em solid;
+    color: rgba($color-dark, .5);
+
+    a{
+        color: #5e5e5e;
+        transition: color 350ms ease;
+        &:hover{
+            color: $color-primary-light;
+        }
+    }
+}

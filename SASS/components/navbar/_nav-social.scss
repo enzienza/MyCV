@@ -11,6 +11,7 @@
         font-family: $font-icon;
         padding: 0.5rem;
         color: rgba($color-light, .5);
+        transition: color 350ms ease;
         &:hover{
             color: $color-primary-light;
         }

@@ -9,7 +9,7 @@
  */
 ?>
 
-<section id="skills" class="container">
+<section id="skills" class="my-container">
     <div class="title-section">
         <?php require_once("title/title.php"); ?>
     </div>
