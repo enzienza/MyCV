@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: 404
- * Description: The template for displaying the 404 template in the MyCV
+ * Description: The template for displaying 404 pages (not found)
  *
  * @package WordPress
  * @subpackage MyCV

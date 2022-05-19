@@ -25,8 +25,8 @@
 
         <?php if(checked(1, get_option('errorpage_btn_homepage'), false)) : ?>
             <div class="btn-container">
-                <a href="<?php echo esc_url( site_url( '/it' ) ); ?>">
-                    <?php _e("Retour à l'accueil", "MyCV"); ?>
+                <a href="<?php echo esc_url( site_url( '/it' ) ); ?>" class="btn btn-outline-simple">
+                <?php _e("Retour à l'accueil", "MyCV"); ?>
                 </a>
             </div>
         <?php endif; ?>

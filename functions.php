@@ -59,7 +59,7 @@ require_once('inc/options-theme/op_customtheme/04-about.php');
 require_once('inc/options-theme/op_customtheme/05-resume.php');
 require_once('inc/options-theme/op_customtheme/06-education.php');
 require_once('inc/options-theme/op_customtheme/07-skills.php');
-require_once('inc/options-theme/op_customtheme/08-contanct.php');
+require_once('inc/options-theme/op_customtheme/08-contact.php');
 require_once('inc/options-theme/op_customtheme/09-errorpage.php');
 
 /** =====================================================
