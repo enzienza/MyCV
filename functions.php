@@ -66,6 +66,8 @@ require_once('inc/options-theme/op_customtheme/09-errorpage.php');
  *  4 - POST-TYPE
  */
 
+require_once('inc/post-type/cpt_experience.php');
+
 
 /** =====================================================
  *  5 - TAXONOMIES
