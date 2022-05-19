@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: 09-errorpage
- * Description: This file is manage the errorpage section
+ * Description: This file is manage the error page (404 error)
  *
  * @package WordPress
  * @subpackage MyCV
@@ -69,9 +69,9 @@ class mycustome_errorpage{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e( 'Personnaliser la section error page', 'MyCV') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e( 'Personnaliser la page d\'erreur 404', 'MyCV') ?></h1>
             <p class="description">
-                <?php _e('Sur cette page vous pouvez gérer la section de error page du site', 'MyCV') ?>
+                <?php _e('Sur cette page vous pouvez gérer la page d\'error 404 du site', 'MyCV') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->
