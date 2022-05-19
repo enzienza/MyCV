@@ -12,27 +12,12 @@
 
 <?php get_header() ?>
 <section class="error" id="error-page">
-    <div class="error container">
-        <div class="error-code">
-            404
-        </div><!--//error-code-->
-
-        <h1 class="text-hightlight">
-            Nous n'avons pas pu trouver la page ...
-        </h1><!--//text-hightlight-->
-
-        <div class="error-desc">
-            <p>
-                Désolé, mais la page que vous recherchez est introuvable ou n'existe pas.
-                Essayez d'actualiser la page ou cliquez sur le bouton ci-dessous
-                pour revenir à la page d'accueil.
-            </p>
-            <div>
-                <a href="<?php echo esc_url( site_url( '/' ) ); ?>">
-                    Retour à la page d'accueil
-                </a>
-            </div>
-        </div><!--//error-desc-->
-    </div><!--//error-->
+    <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
+        <?php get_template_part('template-parts/error/fr', 'error') ?>
+    <?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
+        <?php get_template_part('template-parts/error/en', 'error') ?>
+    <?php elseif(get_locale() === 'it_IT') : // Partie IT =========== ?>
+        <?php get_template_part('template-parts/error/it', 'error') ?>
+    <?php endif; // ================================================= ?>
 </section>
 <?php get_footer() ?>
