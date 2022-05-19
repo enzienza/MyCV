@@ -24,7 +24,7 @@
         </p>
 
         <?php if(checked(1, get_option('errorpage_btn_homepage'), false)) : ?>
-            <div>
+            <div class="btn-container">
                 <a href="<?php echo esc_url( site_url( '/en' ) ); ?>">
                     <?php _e("Retour à l'accueil", "MyCV"); ?>
                 </a>
