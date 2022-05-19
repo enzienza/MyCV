@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-05-15 17:17+0000\n"
+"PO-Revision-Date: 2022-05-19 14:04+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -163,6 +163,10 @@ msgstr "Pulsante \"Scarica curriculum\""
 msgid "Bouton \"à propos\""
 msgstr "pulsante \"informazioni\""
 
+#: inc/options-theme/op_customtheme/09-errorpage.php:297
+msgid "Button page d'accueil"
+msgstr "Pulsante home page"
+
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/08-contanct.php:110
 #: inc/options-theme/op_customtheme/05-resume.php:110
@@ -199,6 +203,7 @@ msgid "Ce message sera présent si la boucle est vide"
 msgstr "Questo messaggio sarà presente se il ciclo è vuoto"
 
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/09-errorpage.php:111
 #: inc/options-theme/op_customtheme/04-about.php:152
 #: inc/options-theme/op_customtheme/03-home.php:155
 #: inc/options-theme/op_customtheme/03-home.php:204
@@ -214,6 +219,7 @@ msgstr ""
 
 #: inc/options-theme/op_customtheme/08-contanct.php:236
 #: inc/options-theme/op_customtheme/05-resume.php:254
+#: inc/options-theme/op_customtheme/09-errorpage.php:251
 #: inc/options-theme/op_customtheme/04-about.php:232
 #: inc/options-theme/op_customtheme/06-education.php:254
 #: inc/options-theme/op_customtheme/07-skills.php:254
@@ -286,6 +292,7 @@ msgstr "Scegli l'immagine"
 msgid "Choisir l'image à afficher"
 msgstr "Scegli l'immagine da visualizzare"
 
+#: inc/options-theme/op_customtheme/09-errorpage.php:294
 #: inc/options-theme/op_customtheme/04-about.php:331
 #: inc/options-theme/op_customtheme/03-home.php:547
 #: inc/options-theme/op_customtheme/03-home.php:625
@@ -366,6 +373,12 @@ msgstr "Definire il design"
 msgid "Définir le texte d'introduction au job visé"
 msgstr "Definire il testo introduttivo al lavoro di destinazione"
 
+#: inc/options-theme/op_customtheme/09-errorpage.php:311
+#: inc/options-theme/op_customtheme/09-errorpage.php:346
+#: inc/options-theme/op_customtheme/09-errorpage.php:381
+msgid "Définir le texte principal"
+msgstr "Impostare il testo principale"
+
 #: inc/options-theme/op_customtheme/08-contanct.php:291
 #: inc/options-theme/op_customtheme/05-resume.php:309
 #: inc/options-theme/op_customtheme/04-about.php:271
@@ -397,6 +410,25 @@ msgstr "Email"
 #. Author of the theme
 msgid "Enza Lombardo"
 msgstr "Enza Lombardo"
+
+#: inc/options-theme/op_customtheme/09-errorpage.php:305
+#: inc/options-theme/op_customtheme/09-errorpage.php:340
+#: inc/options-theme/op_customtheme/09-errorpage.php:375
+msgid "Erreur 404"
+msgstr "Errore 404"
+
+#. slug parent
+#. page_title
+#: inc/options-theme/op_customtheme/09-errorpage.php:58
+#: inc/options-theme/op_customtheme/09-errorpage.php:59
+msgid "Error Page"
+msgstr "Pagina di errore"
+
+#: inc/options-theme/op_customtheme/09-errorpage.php:317
+#: inc/options-theme/op_customtheme/09-errorpage.php:352
+#: inc/options-theme/op_customtheme/09-errorpage.php:387
+msgid "Ex: Oups! Une erreur s'est produite"
+msgstr "Es: Oops! Si è verificato un errore"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/05-curriculum.php:119
@@ -432,6 +464,18 @@ msgstr "Gestione della sezione francese"
 msgid "Gestion de la section en italien"
 msgstr "Gestione della sezione in lingua italiana"
 
+#: inc/options-theme/op_customtheme/09-errorpage.php:268
+msgid "Gestion du message d'erreur en anglais"
+msgstr "Gestione del messaggio di errore in inglese"
+
+#: inc/options-theme/op_customtheme/09-errorpage.php:259
+msgid "Gestion du message d'erreur en français"
+msgstr "Gestione dei messaggi di errore in francese"
+
+#: inc/options-theme/op_customtheme/09-errorpage.php:277
+msgid "Gestion du message d'erreur en italien"
+msgstr "Gestione dei messaggi di errore in italiano"
+
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:152
 msgid "GitHub"
@@ -440,6 +484,7 @@ msgstr "GitHub"
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/08-contanct.php:103
 #: inc/options-theme/op_customtheme/05-resume.php:103
+#: inc/options-theme/op_customtheme/09-errorpage.php:103
 #: inc/options-theme/op_customtheme/04-about.php:102
 #: inc/options-theme/op_customtheme/06-education.php:103
 #: inc/options-theme/op_customtheme/07-skills.php:103
@@ -449,6 +494,7 @@ msgstr "Gestisci sezione"
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/08-contanct.php:183
 #: inc/options-theme/op_customtheme/05-resume.php:183
+#: inc/options-theme/op_customtheme/09-errorpage.php:170
 #: inc/options-theme/op_customtheme/06-education.php:183
 #: inc/options-theme/op_customtheme/07-skills.php:183
 msgid "Gérer les messages (en anglais)"
@@ -457,6 +503,7 @@ msgstr "Gestire i messaggi (in inglese)"
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/08-contanct.php:157
 #: inc/options-theme/op_customtheme/05-resume.php:148
+#: inc/options-theme/op_customtheme/09-errorpage.php:129
 #: inc/options-theme/op_customtheme/06-education.php:148
 #: inc/options-theme/op_customtheme/07-skills.php:148
 msgid "Gérer les messages (en français)"
@@ -465,6 +512,7 @@ msgstr "Gestire i messaggi (in francese)"
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/08-contanct.php:210
 #: inc/options-theme/op_customtheme/05-resume.php:219
+#: inc/options-theme/op_customtheme/09-errorpage.php:211
 #: inc/options-theme/op_customtheme/06-education.php:219
 #: inc/options-theme/op_customtheme/07-skills.php:219
 msgid "Gérer les messages (en italien)"
@@ -617,6 +665,13 @@ msgid "Message court"
 msgstr "Messaggio breve"
 
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/09-errorpage.php:151
+#: inc/options-theme/op_customtheme/09-errorpage.php:192
+#: inc/options-theme/op_customtheme/09-errorpage.php:233
+msgid "Message d'erreur"
+msgstr "Messaggio di errore"
+
+#. SLUG_FIELD
 #: inc/options-theme/op_customtheme/05-resume.php:164
 #: inc/options-theme/op_customtheme/05-resume.php:199
 #: inc/options-theme/op_customtheme/05-resume.php:235
@@ -711,6 +766,10 @@ msgstr "Paese"
 msgid "Personnaliser l'accueil"
 msgstr "Personalizza l'home page"
 
+#: inc/options-theme/op_customtheme/09-errorpage.php:72
+msgid "Personnaliser la page d'erreur 404"
+msgstr "Personalizzare la pagina di errore 404"
+
 #: inc/options-theme/op_customtheme/04-about.php:71
 msgid "Personnaliser la section \"about\""
 msgstr "Personalizza la sezione \"informazioni\"."
@@ -788,6 +847,11 @@ msgstr "Chi sono (in italiano)"
 msgid "Resume"
 msgstr "Resume"
 
+#: template-parts/error/fr-error.php:29 template-parts/error/en-error.php:29
+#: template-parts/error/it-error.php:29
+msgid "Retour à l'accueil"
+msgstr "Torna alla home page"
+
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/08-contanct.php:133
 msgid "Réseaux sociaux"
@@ -854,6 +918,10 @@ msgstr "Sito web"
 #: inc/options-theme/op_customtheme/07-skills.php:59
 msgid "Skill"
 msgstr "Competenza"
+
+#: inc/options-theme/op_customtheme/09-errorpage.php:74
+msgid "Sur cette page vous pouvez gérer la page d'error 404 du site"
+msgstr "In questa pagina è possibile gestire la pagina di errore 404 del sito"
 
 #: inc/options-theme/op_customtheme/04-about.php:73
 msgid "Sur cette page vous pouvez gérer la section about du site"
@@ -935,6 +1003,13 @@ msgstr "Testo in francese"
 msgid "Texte en italien"
 msgstr "Testo in italiano"
 
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/09-errorpage.php:144
+#: inc/options-theme/op_customtheme/09-errorpage.php:185
+#: inc/options-theme/op_customtheme/09-errorpage.php:226
+msgid "Texte principal"
+msgstr "Testo principale"
+
 #. TITLE_PAGE
 #: inc/options-theme/op_customtheme/01-custometheme.php:60
 #: inc/options-theme/op_customtheme/01-custometheme.php:61
@@ -959,6 +1034,13 @@ msgstr "In questa pagina puoi gestire la sezione about del sito"
 #: inc/options-theme/op_myprofil/03-network.php:120
 msgid "Twitter"
 msgstr "Twitter"
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/09-errorpage.php:137
+#: inc/options-theme/op_customtheme/09-errorpage.php:178
+#: inc/options-theme/op_customtheme/09-errorpage.php:219
+msgid "Type d'erreur"
+msgstr "Tipo di errore"
 
 #: template-parts/content/home/translate/it-home.php:84
 #: template-parts/content/home/translate/en-home.php:80

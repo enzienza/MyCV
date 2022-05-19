@@ -184,7 +184,7 @@ class mycv_mycustome{
                 <td class="import-system">
                     <span class="importer-title">Erreur 404</span>
                     <span class="importer-action">
-                      <a href="?" class="install-now">Gérer la page</a>
+                      <a href="?page=mycustome_errorpage" class="install-now">Gérer la page</a>
                     </span>
                 </td>
                 <td class="desc">
