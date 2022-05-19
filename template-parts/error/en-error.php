@@ -26,7 +26,7 @@
         <?php if(checked(1, get_option('errorpage_btn_homepage'), false)) : ?>
             <div>
                 <a href="<?php echo esc_url( site_url( '/en' ) ); ?>">
-                    <?php _e("Retour à la page d'accueil", "MyCV"); ?>
+                    <?php _e("Retour à l'accueil", "MyCV"); ?>
                 </a>
             </div>
         <?php endif; ?>
