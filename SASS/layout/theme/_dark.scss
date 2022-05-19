@@ -12,6 +12,17 @@ body.dark{
         background: $color-primary;
     }
 
+    .footer{
+        color: rgba($color-light, .5);
+        a{
+            color: #5e5e5e;
+            text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+            &:hover{
+                color: $color-primary-light;
+            }
+        }
+    }
+
     .profil, .morph, .title-section{
         border-color: $color-primary;
     }
