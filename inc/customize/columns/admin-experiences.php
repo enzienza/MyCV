@@ -18,8 +18,8 @@ add_filter(
         return[
             'cb'                => '<input type="checkbox" />',
             'title'             => $columns['title'],
-            'year'              => __('Année', 'MyCV'),
             'name_company'      => __('Établissement', 'MyCV'),
+            'year'              => __('Année', 'MyCV'),
             'language_fr'       => '',
             'language_en'       => '',
             'language_it'       => '',
@@ -35,22 +35,22 @@ add_filter(
 add_filter(
     'manage_experiences_posts_custom_column',
     function($column, $postId){
-        if ($column === 'year'){
-            if(!empty(get_post_meta($postId, 'year', true))){
+        if ($column === 'name_company'){
+            if(!empty(get_post_meta($postId, 'name_company', true))){
                 ?>
                 <p>
-                    <?php echo get_post_meta(get_the_ID(), 'year', true) ?>
+                    <?php echo get_post_meta(get_the_ID(), 'name_company', true) ?>
                 </p>
                 <?php
             } else {
                 echo "";
             }
         }
-        if ($column === 'name_company'){
-            if(!empty(get_post_meta($postId, 'name_company', true))){
+        if ($column === 'year'){
+            if(!empty(get_post_meta($postId, 'year', true))){
                 ?>
                 <p>
-                    <?php echo get_post_meta(get_the_ID(), 'name_company', true) ?>
+                    <?php echo get_post_meta(get_the_ID(), 'year', true) ?>
                 </p>
                 <?php
             } else {
