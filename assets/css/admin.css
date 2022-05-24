@@ -309,7 +309,28 @@ form h2 {
 /** ==============================================
     6 - CUSTOM  METABOXES
  */
+.components-base-control__field div{
+    margin: 1rem auto;
+}
+.components-base-control__field label{
+    line-height: 2;
+}
+.components-base-control__field .desc {
+    color: var(--color-border);
+}
+.meta-box-sortables input::placeholder {
+    font-weight: 300;
+    color: var(--color-border);
+}
 
+/* CUSTOM PLUGIN "POLYLANG" */
+.meta-box-sortables input[type="text"]{
+    width: 100%;
+}
+
+.postbox select {
+    width: 85%;
+}
 
 
 /** ==============================================

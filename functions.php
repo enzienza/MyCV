@@ -31,6 +31,7 @@ require_once('inc/customize/config-assets.php');
 /* customize back-end */
 require_once ('inc/customize/config-admin.php');
 require_once ('inc/customize/custom-dashboard.php');
+require_once ('inc/customize/columns/admin-experiences.php');
 
 
 /* customize front-end */
@@ -39,7 +40,8 @@ require_once ('inc/customize/custom-dashboard.php');
 /** =====================================================
  *  2 - METABOXES
  */
-
+require_once('inc/metaboxes/MB_year.php');
+require_once('inc/metaboxes/MB_company.php');
 
 /** =====================================================
  *  3 - OPTIONS-THEME
