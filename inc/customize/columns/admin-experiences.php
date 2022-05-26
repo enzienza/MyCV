@@ -65,13 +65,21 @@ add_filter(
 
         // this column displays if the experiment is still in progress
         if ($column === 'current_experience'){
-            $internship = get_post_meta($postId, 'current_experience', true);
+            $currect = get_post_meta($postId, 'current_experience', true);
 
             if(!empty(get_post_meta($postId, 'current_experience', true))){
-                if(checked(1, $internship, false)){
-                    _e("C'est en cours", "MyCV");
-                } elseif(checked(2, $internship, false)){
-                    _e("Travail fini", "MyCV");
+                if(checked(1, $currect, false)){
+                    ?>
+                        <p class="is-current">
+                            <?php _e("C'est en cours", "MyCV"); ?>
+                        </p>
+                    <?php
+                } elseif(checked(2, $currect, false)){
+                    ?>
+                        <p class="no-current">
+                            <?php _e("Travail fini", "MyCV"); ?>
+                        </p>
+                    <?php
                 }
 
             } else {
@@ -85,9 +93,17 @@ add_filter(
 
             if(!empty(get_post_meta($postId, 'is_internship', true))){
                 if(checked(1, $internship, false)){
-                    _e("C'est un stage", "MyCV");
+                    ?>
+                    <p class="is-stage">
+                        <?_e("C'est un stage", "MyCV");?>
+                    </p>
+                    <?php
                 } elseif(checked(2, $internship, false)){
-                    _e("Non", "MyCV");
+                    ?>
+                    <p class="no-stage">
+                        <?_e("Non", "MyCV");?>
+                    </p>
+                    <?php
                 }
 
             } else {

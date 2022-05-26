@@ -35,6 +35,8 @@ Tags:
     --color-light: #f1f1f1;
     --color-border: #7e8993;
     --lighten-grey: #cecece;
+    --color-succes: green;
+    --color-danger: red;
 
 }
 
@@ -353,6 +355,18 @@ input[type="radio"]{
     width: 85%;
 }
 
+.is-current{
+    color: var(--color-succes) !important;
+    font-weight: 700;
+}
+
+.is-stage{
+    font-weight: 700;
+}
+
+.no-current, .no-stage{
+    color: var(--color-border) !important;
+}
 
 /** ==============================================
     7 - RESPONSIVE
