@@ -59,6 +59,10 @@ Tags:
     justify-content: center;
 }
 
+.no-align{
+    vertical-align: inherit;
+}
+
 /* Space between */
 .space-x-4{
     margin-left: 1rem;
@@ -70,6 +74,14 @@ Tags:
     margin-top: 1rem;
 }
 
+
+/* Font-Weight */
+.font-light{
+    font-weight: 300;
+}
+.font-bold{
+    font-weight: 800;
+}
 
 /* SIZING */
 .w-50{
@@ -116,6 +128,10 @@ Tags:
 
 .mb-2{
     margin-bottom: 2rem;
+}
+
+.mr-1{
+    margin-right: .5rem;
 }
 
 .separation{
@@ -321,6 +337,11 @@ form h2 {
 .meta-box-sortables input::placeholder {
     font-weight: 300;
     color: var(--color-border);
+}
+
+input[type="radio"]{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* CUSTOM PLUGIN "POLYLANG" */
