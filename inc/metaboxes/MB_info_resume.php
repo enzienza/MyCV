@@ -2,7 +2,7 @@
 /**
  * Name file: MB_info_resume
  * Description: File creating a MetaBox for completing informations the Custom Post Type
- *              -> this Metabox adding the year for CPT_experience
+ *              -> this Metabox add additional information on the job occupied for the CPT_experience
  *
  * @package WordPress
  * @subpackage MyCV

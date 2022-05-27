@@ -1,7 +1,10 @@
 <?php
 /**
  * Name file: admin-experiences
- * Description:
+ * Description: This file allows you to customize the administration columns of the chosen Custom Post type
+ *              use hooks : manage_{$post-type}_posts_columns() && manage_{$post-type}_posts_custom_column()
+ *
+ * @Post-Type experiences
  *
  * @package WordPress
  * @subpackage MyCV
@@ -39,12 +42,10 @@ add_filter(
     function($column, $postId){
         // this column displays the name of the company
         if ($column === 'name_company'){
-            if(!empty(get_post_meta($postId, 'name_company', true))){
-                ?>
-                <p>
-                    <?php echo get_post_meta(get_the_ID(), 'name_company', true) ?>
-                </p>
-                <?php
+            $name_company = get_post_meta($postId, 'name_company', true);
+
+            if(!empty($name_company)){
+                echo $name_company;
             } else {
                 echo "";
             }
@@ -52,12 +53,10 @@ add_filter(
 
         // this column displays the year
         if ($column === 'year'){
-            if(!empty(get_post_meta($postId, 'year', true))){
-                ?>
-                <p>
-                    <?php echo get_post_meta(get_the_ID(), 'year', true) ?>
-                </p>
-                <?php
+            $year = get_post_meta(get_the_ID(), 'year', true);
+
+            if(!empty($year)){
+                echo $year;
             } else {
                 echo "";
             }
@@ -67,7 +66,7 @@ add_filter(
         if ($column === 'current_experience'){
             $currect = get_post_meta($postId, 'current_experience', true);
 
-            if(!empty(get_post_meta($postId, 'current_experience', true))){
+            if(!empty($currect)){
                 if(checked(1, $currect, false)){
                     ?>
                         <p class="is-current">
@@ -91,7 +90,7 @@ add_filter(
         if ($column === 'is_internship'){
             $internship = get_post_meta($postId, 'is_internship', true);
 
-            if(!empty(get_post_meta($postId, 'is_internship', true))){
+            if(!empty($internship)){
                 if(checked(1, $internship, false)){
                     ?>
                     <p class="is-stage">
