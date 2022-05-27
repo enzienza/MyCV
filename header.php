@@ -27,7 +27,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?> data-spy="scroll" data-target="#btn-menu">
+<body <?php body_class(); ?>>
 
 
 <header class="sidebar">
