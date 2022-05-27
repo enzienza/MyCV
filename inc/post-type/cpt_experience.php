@@ -28,7 +28,7 @@ if(!function_exists('CPT_experiences')){
             'edit_item'          => __('Modifier l\'expérience', 'MyCV'),
             'view_item'          => __('Afficher l\'expérience', 'MyCV'),
             'view_items'         => __('Afficher les expériences', 'MyCV'),
-            'search_items'       => __('Chercher dans les expérience', 'MyCV'),
+            'search_items'       => __('Chercher dans les expériences', 'MyCV'),
             'not_found'          => __('Aucune expérience trouvée', 'MyCV'),
             'not_fount_in_trash' => __('Aucune expérience trouvée dans la corbeille', 'MyCV'),
             'filter_items_list'  => __('Filtrer la liste des expériences', 'MyCV'),
