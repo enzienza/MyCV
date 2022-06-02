@@ -713,80 +713,6 @@ img {
   filter: invert(1);
   border: none; }
 
-.timeline {
-  margin: auto; }
-  .timeline-card {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding-left: 1rem;
-    position: relative;
-    margin-bottom: 2rem; }
-    .timeline-card:before {
-      content: "";
-      width: 2px;
-      height: 100%;
-      position: absolute;
-      background: purple;
-      opacity: .2;
-      top: 5px;
-      bottom: 0; }
-  .timeline-dot {
-    width: 15px;
-    height: 15px;
-    background: purple;
-    position: absolute;
-    top: 5px;
-    border-radius: 500%;
-    left: -7px;
-    border: 3px solid #e1e1e1; }
-  .timeline-date {
-    font-size: large; }
-  .timeline-item, .timeline .collapse-card {
-    padding: 1rem;
-    background: #fafafa;
-    border-radius: 5px;
-    max-width: 450px; }
-  .timeline-content {
-    display: flex;
-    flex-flow: column wrap; }
-  .timeline-title {
-    margin-bottom: 1rem; }
-    .timeline-title h2 {
-      font-size: xx-large;
-      padding-top: .5rem;
-      padding-bottom: 1rem; }
-    .timeline-title h3 {
-      color: #b300b3;
-      font-weight: normal;
-      font-size: large; }
-    .timeline-title p {
-      margin-top: 0.5rem;
-      font-weight: 300;
-      letter-spacing: 1px;
-      margin-bottom: 0; }
-  .timeline .detail-link {
-    line-height: 2;
-    letter-spacing: 1px;
-    cursor: pointer;
-    color: purple;
-    text-align: right; }
-    .timeline .detail-link:hover, .timeline .detail-link:focus {
-      color: #e600e6; }
-
-.collapse-title h4 {
-  font-size: large;
-  line-height: 2; }
-.collapse-body ul {
-  margin-left: 2rem; }
-.collapse-body li {
-  list-style: disc; }
-.collapse-footer {
-  text-align: right;
-  font-size: smaller;
-  font-weight: 100;
-  padding: 0 .5rem; }
-
 body {
   background: #fafafa;
   color: black; }
@@ -819,11 +745,6 @@ body.dark {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     border-color: rgba(250, 250, 250, 0.5);
     color: rgba(250, 250, 250, 0.5); }
-  body.dark .timeline-dot {
-    background: #b300b3;
-    border-color: rgba(36, 37, 37, 0.7); }
-  body.dark .timeline-item, body.dark .timeline .collapse-card {
-    background: rgba(0, 0, 0, 0.3); }
 
 header {
   position: fixed;

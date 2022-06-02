@@ -26,14 +26,14 @@
 ?>
 <div class="timeline-card">
     <div class="timeline-dot"></div>
-    <div class="timeline-date">
+    <div class="titmeline-date">
         <?php echo get_post_meta(get_the_ID(), 'year', true); ?>
         <?php if(checked(1, get_post_meta(get_the_ID(), 'current_experience', true), false)) : ?>
             <?php _e("à aujourd'hui", "MyCV") ?>
         <?php endif; ?>
     </div>
 
-    <div class="timeline-item shadow">
+    <div class="timeline-item">
         <div class="timeline-content">
             <div class="timeline-title">
                 <h2><?php the_title(); ?></h2>
@@ -54,17 +54,15 @@
                 <?php _e("Detail", "MyCV"); ?>
             </a>
         </div>
-    </div>
 
-    <div class="timeline-collapse shadow collapse" id="detail-<?php echo the_ID() ?>">
-        <div class="collapse-card">
-            <div class="collapse-title">
-                <h4><?php _e("Mes tâches", "MyCV"); ?></h4>
+        <div class="timeline-collapse collapse" id="detail-<?php echo the_ID() ?>">
+            <div class="title">
+                <?php _e("Mes tâches", "MyCV"); ?>
             </div>
-            <div class="collapse-body">
+            <div class="body">
                 <?php the_content(); ?>
             </div>
-            <div class="collapse-footer">
+            <div class="footer">
                 <?php echo get_post_meta(get_the_ID(), 'locality_company', true); ?>
                 (<?php echo get_post_meta(get_the_ID(), 'country_company', true); ?>)
             </div>
