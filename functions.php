@@ -31,6 +31,7 @@ require_once('inc/customize/config-assets.php');
 /* customize back-end */
 require_once ('inc/customize/config-admin.php');
 require_once ('inc/customize/custom-dashboard.php');
+require_once ('inc/customize/columns/admin-experiences.php');
 
 
 /* customize front-end */
@@ -39,7 +40,9 @@ require_once ('inc/customize/custom-dashboard.php');
 /** =====================================================
  *  2 - METABOXES
  */
-
+require_once('inc/metaboxes/MB_year.php');
+require_once('inc/metaboxes/MB_company.php');
+require_once('inc/metaboxes/MB_info_resume.php');
 
 /** =====================================================
  *  3 - OPTIONS-THEME
@@ -65,6 +68,8 @@ require_once('inc/options-theme/op_customtheme/09-errorpage.php');
 /** =====================================================
  *  4 - POST-TYPE
  */
+
+require_once('inc/post-type/cpt_experience.php');
 
 
 /** =====================================================
