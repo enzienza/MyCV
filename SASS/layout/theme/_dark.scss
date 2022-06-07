@@ -4,7 +4,7 @@ body.dark{
     background: $color-night;
     color: $color-light;
 
-
+    // Navigation
     .navbar-nav .nav-item:hover,
     .navbar-nav .current-menu-item,
     .navbar-nav .current_page_item,
@@ -12,6 +12,7 @@ body.dark{
         background: $color-primary;
     }
 
+    // Footer
     .footer{
         color: rgba($color-light, .5);
         a{
@@ -23,10 +24,13 @@ body.dark{
         }
     }
 
+
+    // Profil
     .profil, .morph, .title-section{
         border-color: $color-primary;
     }
 
+    // GENERAL
     .detail-title{
         color: $color-primary;
         text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
@@ -36,6 +40,8 @@ body.dark{
         text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
     }
 
+
+    // Button
     .btn{
         &-outline-primary{
             //text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
@@ -45,6 +51,36 @@ body.dark{
             //text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             border-color: rgba($color-light, .5);
+            color: rgba($color-light, .5);
+        }
+    }
+
+    // Timeline
+    .timeline{
+        &:before{
+            background: $color-primary;
+        }
+
+        &-card{
+            text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+        }
+
+        &-item, &-collapse{
+            background: rgba($color-dark, .3);
+        }
+
+        &-title p{
+            color: rgba($color-light, .5);
+        }
+
+        &-date::before{
+            //border-color: rgba($color-dark, .3);
+            border-color: lighten($color-dark, 5);
+            background: $color-primary;
+        }
+    }
+    .collapse{
+        &-footer{
             color: rgba($color-light, .5);
         }
     }
