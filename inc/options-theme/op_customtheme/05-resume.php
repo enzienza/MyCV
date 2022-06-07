@@ -35,10 +35,11 @@ class mycustome_resume{
     const NONCE        = '_mycustome_resume';
 
     //definir les sections de la page d'option
-    const SECTION_RESUME = "section_resume";
-    const SECTION_RESUME_FR = "section_resume_fr";
-    const SECTION_RESUME_EN = "section_resume_en";
-    const SECTION_RESUME_IT = "section_resume_it";
+    const SECTION_RESUME      = "section_resume";
+    const SECTION_RESUME_TABS = "section_resume_tabs";
+    const SECTION_RESUME_FR   = "section_resume_fr";
+    const SECTION_RESUME_EN   = "section_resume_en";
+    const SECTION_RESUME_IT   = "section_resume_it";
 
     /**
      * 2 - DEFINIR LES HOOKS ACTIONS
@@ -69,9 +70,9 @@ class mycustome_resume{
     public static function render(){
         ?>
         <div class="wrap">
-            <h1 class="wp-heagin-inline"><?php _e( 'Personnaliser la section "expérience"', 'MyCV') ?></h1>
+            <h1 class="wp-heagin-inline"><?php _e( 'Personnaliser la section resume', 'MyCV') ?></h1>
             <p class="description">
-                <?php _e('Sur cette page vous pouvez gérer la section des expériences du site', 'MyCV') ?>
+                <?php _e('Sur cette page vous pouvez gérer la section des resumes du site', 'MyCV') ?>
             </p><!--./description-->
             <?php settings_errors(); ?>
         </div><!--./wrap-->
@@ -135,9 +136,46 @@ class mycustome_resume{
         register_setting(self::SUB_GROUP, 'resume_title_it');
         register_setting(self::SUB_GROUP, 'resume_show_desc');
 
+        /**
+         * SECTION 2 : SECTION_RESUME_TABS ====================================
+         *      1. créer la section
+         *      2. ajouter les éléments du formulaire
+         *      3. Sauvegarder les champs
+         */
+        // 1. créer la section
+        add_settings_section(
+            self::SECTION_RESUME_TABS,                    // SLUG_SECTION
+            __('Gérer les onglets', 'MyCV'), // TITLE
+            [self::class, 'display_section_resume_tabs'],     // CALLBACK
+            self::SUB_GROUP                          // SLUG_PAGE
+        );
+
+        // 2. ajouter les éléments du formulaire
+        add_settings_field(
+            'resume_tab_one',                  // SLUG_FIELD
+            __("Titre onglet 1", 'MyCV'), // LABEL
+            [self::class,'field_resume_tab_one'],  // CALLBACK
+            self::SUB_GROUP ,                // SLUG_PAGE
+            self::SECTION_RESUME_TABS        // SLUG_SECTION
+        );
+        add_settings_field(
+            'resume_tab_two',                  // SLUG_FIELD
+            __("Titre onglet 2", 'MyCV'), // LABEL
+            [self::class,'field_resume_tab_two'],  // CALLBACK
+            self::SUB_GROUP ,                // SLUG_PAGE
+            self::SECTION_RESUME_TABS        // SLUG_SECTION
+        );
+
+        // 3. Sauvegarder les champs
+        register_setting(self::SUB_GROUP, 'resume_tab_one_fr');
+        register_setting(self::SUB_GROUP, 'resume_tab_one_en');
+        register_setting(self::SUB_GROUP, 'resume_tab_one_it');
+        register_setting(self::SUB_GROUP, 'resume_tab_two_fr');
+        register_setting(self::SUB_GROUP, 'resume_tab_two_en');
+        register_setting(self::SUB_GROUP, 'resume_tab_two_it');
 
         /**
-         * SECTION 2 : SECTION_RESUME_FR ======================================
+         * SECTION 3 : SECTION_RESUME_FR ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -166,13 +204,13 @@ class mycustome_resume{
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_RESUME_FR            // SLUG_SECTION
         );
-        
+
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'resume_desc_fr');
         register_setting(self::SUB_GROUP, 'resume_else_msg_fr');
 
         /**
-         * SECTION 3 : SECTION_RESUME_EN ======================================
+         * SECTION 4 : SECTION_RESUME_EN ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -201,14 +239,14 @@ class mycustome_resume{
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_RESUME_EN            // SLUG_SECTION
         );
-        
+
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'resume_desc_en');
         register_setting(self::SUB_GROUP, 'resume_else_msg_en');
 
 
         /**
-         * SECTION 4 : SECTION_RESUME_IT ======================================
+         * SECTION 5 : SECTION_RESUME_IT ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -256,7 +294,16 @@ class mycustome_resume{
         <?php
     }
 
-    // SECTION 2 : SECTION_RESUME_FR ======================================
+    // SECTION 2 : SECTION_RESUME_TABS ====================================
+    public static function display_section_resume_tabs(){
+        ?>
+        <p class="section-description">
+            <?php _e("Cette parite cous permet de gérer les titres (intitulé) des onglets", "MyCV"); ?>
+        </p>
+        <?php
+    }
+
+    // SECTION 3 : SECTION_RESUME_FR ======================================
     public static function display_section_resume_fr(){
         ?>
         <p class="section-description">
@@ -265,7 +312,7 @@ class mycustome_resume{
         <?php
     }
 
-    // SECTION 3 : SECTION_RESUME_EN ======================================
+    // SECTION 4 : SECTION_RESUME_EN ======================================
     public static function display_section_resume_en(){
         ?>
         <p class="section-description">
@@ -274,7 +321,7 @@ class mycustome_resume{
         <?php
     }
 
-    // SECTION 4 : SECTION_RESUME_IT ======================================
+    // SECTION 5 : SECTION_RESUME_IT ======================================
     public static function display_section_resume_it(){
         ?>
         <p class="section-description">
@@ -346,7 +393,83 @@ class mycustome_resume{
         <?php
     }
 
-    // SECTION 2 : SECTION_RESUME_FR ======================================
+    // SECTION 2 : SECTION_RESUME_TABS ====================================
+    public static function field_resume_tab_one(){
+        $resume_tab_one_fr = esc_attr(get_option('resume_tab_one_fr'));
+        $resume_tab_one_en = esc_attr(get_option('resume_tab_one_en'));
+        $resume_tab_one_it = esc_attr(get_option('resume_tab_one_it'));
+        ?>
+        <p class="description"><?php _e("Définir le titre de l'onget", "MyCV"); ?></p>
+        <div class="grid-cols-3">
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Français", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_tab_one_fr"
+                       name="resume_tab_one_fr"
+                       value="<?php echo $resume_tab_one_fr ?>"
+                       placeholder="<?php _e("Texte en français", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Anglais", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_tab_one_en"
+                       name="resume_tab_one_en"
+                       value="<?php echo $resume_tab_one_en ?>"
+                       placeholder="<?php _e("Texte en anglais", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Italien", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_tab_one_it"
+                       name="resume_tab_one_it"
+                       value="<?php echo $resume_tab_one_it ?>"
+                       placeholder="<?php _e("Texte en italien", "MyCV") ?>"
+                />
+            </div>
+        </div>
+        <?php
+    }
+    public static function field_resume_tab_two(){
+        $resume_tab_two_fr = esc_attr(get_option('resume_tab_two_fr'));
+        $resume_tab_two_en = esc_attr(get_option('resume_tab_two_en'));
+        $resume_tab_two_it = esc_attr(get_option('resume_tab_two_it'));
+        ?>
+        <p class="description"><?php _e("Définir le titre de l'onget", "MyCV"); ?></p>
+        <div class="grid-cols-3">
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Français", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_tab_two_fr"
+                       name="resume_tab_two_fr"
+                       value="<?php echo $resume_tab_two_fr ?>"
+                       placeholder="<?php _e("Texte en français", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Anglais", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_tab_two_en"
+                       name="resume_tab_two_en"
+                       value="<?php echo $resume_tab_two_en ?>"
+                       placeholder="<?php _e("Texte en anglais", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Italien", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_tab_two_it"
+                       name="resume_tab_two_it"
+                       value="<?php echo $resume_tab_two_it ?>"
+                       placeholder="<?php _e("Texte en italien", "MyCV") ?>"
+                />
+            </div>
+        </div>
+        <?php
+    }
+
+    // SECTION 3 : SECTION_RESUME_FR ======================================
     public static function field_resume_desc_fr(){
         // define register settings
         $resume_desc_fr = esc_attr(get_option('resume_desc_fr'));
@@ -384,7 +507,7 @@ class mycustome_resume{
         <?php
     }
 
-    // SECTION 3 : SECTION_RESUME_EN ======================================
+    // SECTION 4 : SECTION_RESUME_EN ======================================
     public static function field_resume_desc_en(){
         $resume_desc_en = esc_attr(get_option('resume_desc_en'));
         // define argument for editor WYSIWYG
@@ -421,7 +544,7 @@ class mycustome_resume{
         <?php
     }
     
-    // SECTION 4 : SECTION_RESUME_IT ======================================
+    // SECTION 5 : SECTION_RESUME_IT ======================================
     public static function field_resume_desc_it(){
         // define register settings
         $resume_desc_it = esc_attr(get_option('resume_desc_it'));
