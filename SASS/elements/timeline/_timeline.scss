@@ -1,0 +1,285 @@
+// main: ../_elements.scss
+
+.timeline{
+    margin: auto;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &::before{
+        content: "";
+        height: 100%;
+        width: 2px;
+        position: absolute;
+        background: $color-primary-dark;
+        z-index: 1;
+    }
+
+    &-card{
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 1.5rem;
+        max-width: 600px;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+
+    &-item{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 0;
+        border-radius: 5px;
+    }
+
+    &-date{
+        width: 110px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-flow: column wrap;
+        position: relative;
+        border-right: 2px solid rgba($color-grey, .3);
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: purple;
+            border-radius: 100%;
+            left: -6px;
+            border: 3px solid $color-light;
+            z-index: 2;
+        }
+    }
+
+    &-content{
+        padding: 1rem;
+    }
+
+    &-title{
+        padding-left: .5rem;
+        h2{
+            font-size: xx-large;
+            padding-top: .5rem;
+            padding-bottom: 1rem;
+        }
+        h3{
+            color: $color-primary;
+            font-weight: 500;
+            font-size: large;
+        }
+        p{
+            margin-top: 0.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 0;
+        }
+    }
+
+    .detail-link{
+        letter-spacing: 1px;
+        cursor: pointer;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding-right: 1rem;
+
+        &::after{
+            flex-shrink: 0;
+            font-size: 1.25rem;
+            color: $color-grey;
+            font-family: $font-icon;
+            content: "\f114";
+            font-weight: 500;
+            transition: transform .2s ease-in-out;
+        }
+
+        &:not(.collapsed):after{
+            transform: rotate(-180deg);
+        }
+
+    }
+
+    &-collapse{
+        padding: 1rem;
+        padding-top: 1.5rem;
+        border-top: 2px solid rgba($color-grey, .3);
+        transition: all .5s ease-in-out;
+    }
+}
+
+.timeline-item, .timeline-collapse{
+    background: $color-light;
+}
+
+.collapse{
+    &-card{}
+    &-title{
+        h4{
+            font-size: large;
+            line-height: 2;
+        }
+    }
+    &-body{
+        ul{
+            margin-left: 2rem;
+        }
+        li{
+            list-style: disc;
+        }
+    }
+    &-footer{
+        text-align: right;
+        font-size: smaller;
+        font-weight: 100;
+        padding: 0 .5rem;
+    }
+}
+
+@include responsive(XL){}
+@include responsive(LG){}
+@include responsive(MD){}
+@include responsive(SM){
+    .timeline{
+        margin: 0;
+        margin-bottom: 1rem;
+
+        &-item{
+            //grid-template-columns: 55px 1fr auto;
+            //grid-template-columns: 80px 1fr auto;
+            grid-template-columns: 1fr;
+        }
+
+        &-date{
+            width: auto;
+            height: 3rem;
+            font-size: smaller;
+            border-right: none;
+            border-bottom: 2px solid rgba($color-grey, .3);
+
+            span{
+                line-height: 1;
+                text-align: left;
+                padding-left: 1rem;
+                font-weight: 500;
+            }
+        }
+
+        &-title{
+            padding: 0;
+
+            h2{
+                font-size: x-large;
+            }
+            h3{
+                font-size: medium;
+                line-height: 1;
+            }
+
+            p{
+                font-size: smaller;
+            }
+        }
+
+        .detail-link{
+            //padding-right: .5rem;
+            position: relative;
+            &::after{
+                font-size: large;
+                font-weight: normal;
+                position: absolute;
+                right: .5rem;
+                bottom: 1.5rem;
+            }
+        }
+    }
+
+    .collapse{
+        &-title{}
+        &-body{
+            ul{
+                margin-left: 1rem;
+            }
+            li{
+                padding-bottom: 10px;
+                line-height: 1;
+                font-size: small;
+            }
+        }
+    }
+}
+@include responsive(XS){
+    .timeline{
+        margin: 0;
+        margin-bottom: 1rem;
+
+        &-item{
+            //grid-template-columns: 55px 1fr auto;
+            //grid-template-columns: 80px 1fr auto;
+            grid-template-columns: 1fr;
+        }
+
+        &-date{
+            width: auto;
+            height: 3rem;
+            font-size: smaller;
+            border-right: none;
+            border-bottom: 2px solid rgba($color-grey, .3);
+            align-content: flex-start;
+
+            span{
+                line-height: 1;
+                text-align: left;
+                padding-left: 1rem;
+                font-weight: 500;
+            }
+        }
+
+        &-title{
+            padding: 0;
+
+            h2{
+                font-size: x-large;
+            }
+            h3{
+                font-size: medium;
+                line-height: 1;
+            }
+
+            p{
+                font-size: smaller;
+            }
+        }
+
+        .detail-link{
+            //padding-right: .5rem;
+            position: relative;
+            &::after{
+                font-size: large;
+                font-weight: normal;
+                position: absolute;
+                right: .5rem;
+                bottom: 1.5rem;
+            }
+        }
+    }
+
+    .collapse{
+        &-title{}
+        &-body{
+            ul{
+                margin-left: 1rem;
+            }
+            li{
+                padding-bottom: 10px;
+                line-height: 1;
+                font-size: small;
+            }
+        }
+    }
+}

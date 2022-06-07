@@ -24,45 +24,44 @@
     $my_query = new WP_query($args);
     if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
 ?>
-<div class="timeline-card">
-    <div class="timeline-dot"></div>
-    <div class="titmeline-date">
-        <?php echo get_post_meta(get_the_ID(), 'year', true); ?>
-        <?php if(checked(1, get_post_meta(get_the_ID(), 'current_experience', true), false)) : ?>
-            <?php _e("à aujourd'hui", "MyCV") ?>
-        <?php endif; ?>
-    </div>
-
+<div class="timeline-card shadow">
     <div class="timeline-item">
+        <div class="timeline-date">
+            <span>
+                <?php echo get_post_meta(get_the_ID(), 'year', true); ?>
+                <?php if(checked(1, get_post_meta(get_the_ID(), 'current_experience', true), false)) : ?>
+                    <?php _e("à aujourd'hui", "MyCV") ?>
+                <?php endif; ?>
+            </span>
+        </div>
         <div class="timeline-content">
             <div class="timeline-title">
                 <h2><?php the_title(); ?></h2>
                 <h3><?php echo get_post_meta(get_the_ID(), 'name_company', true); ?></h3>
-
                 <?php if(checked(1, get_post_meta(get_the_ID(), 'is_internship', true), false)) : ?>
                     <p><?php _e("Stage", "MyCV") ?></p>
                 <?php endif; ?>
             </div>
-            <a class="detail-link collapsed"
-               href="#detail-<?php echo the_ID() ?>"
-               type="button"
-               data-toggle="collapse"
-               data-target="#detail-<?php echo the_ID() ?>"
-               aria-expanded="false"
-               aria-controls="detail-<?php echo the_ID() ?>"
-            >
-                <?php _e("Detail", "MyCV"); ?>
-            </a>
         </div>
-
-        <div class="timeline-collapse collapse" id="detail-<?php echo the_ID() ?>">
-            <div class="title">
-                <?php _e("Mes tâches", "MyCV"); ?>
+        <a class="detail-link collapsed"
+           href="#detail-<?php echo the_ID() ?>"
+           type="button"
+           data-toggle="collapse"
+           data-target="#detail-<?php echo the_ID() ?>"
+           aria-expanded="false"
+           aria-controls="detail-<?php echo the_ID() ?>"
+        >
+        </a>
+    </div>
+    <div class="timeline-collapse collapse" id="detail-<?php echo the_ID() ?>">
+        <div class="collapse-card">
+            <div class="collapse-title">
+                <h4><?php _e("Mes tâches", "MyCV"); ?></h4>
             </div>
-            <div class="body">
+            <div class="collapse-body">
                 <?php the_content(); ?>
             </div>
-            <div class="footer">
+            <div class="collapse-footer">
                 <?php echo get_post_meta(get_the_ID(), 'locality_company', true); ?>
                 (<?php echo get_post_meta(get_the_ID(), 'country_company', true); ?>)
             </div>
