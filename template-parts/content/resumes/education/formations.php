@@ -1,7 +1,7 @@
 <?php
 /**
- * Name file: experience
- * Description: show all CPT_formation of education section
+ * Name file: formation
+ * Description: show all CPT_formation of resume section
  * important :
  *
  * @package WordPress

@@ -2,6 +2,7 @@
 /**
  * Name file: resumes
  * Description: display resumes section
+ * Important: navigation tabs between experiences and formations
  *
  * @package WordPress
  * @subpackage MyCV
