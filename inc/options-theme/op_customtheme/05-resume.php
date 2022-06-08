@@ -37,6 +37,7 @@ class mycustome_resume{
     //definir les sections de la page d'option
     const SECTION_RESUME      = "section_resume";
     const SECTION_RESUME_TABS = "section_resume_tabs";
+    const SECTION_RESUME_LOOP = "section_resume_loop";
     const SECTION_RESUME_FR   = "section_resume_fr";
     const SECTION_RESUME_EN   = "section_resume_en";
     const SECTION_RESUME_IT   = "section_resume_it";
@@ -175,7 +176,53 @@ class mycustome_resume{
         register_setting(self::SUB_GROUP, 'resume_tab_two_it');
 
         /**
-         * SECTION 3 : SECTION_RESUME_FR ======================================
+         * SECTION 3 : SECTION_RESUME_LOOP ======================================
+         *      1. créer la section
+         *      2. ajouter les éléments du formulaire
+         *      3. Sauvegarder les champs
+         */
+        // 1. créer la section
+        add_settings_section(
+            self::SECTION_RESUME_LOOP,                    // SLUG_SECTION
+            __('Gérer la boucle', 'MyCV'), // TITLE
+            [self::class, 'display_section_resume_loop'],     // CALLBACK
+            self::SUB_GROUP                          // SLUG_PAGE
+        );
+
+        // 2. ajouter les éléments du formulaire
+        add_settings_field(
+            'resume_empji_loop',                  // SLUG_FIELD
+            __("Émoji", 'MyCV'), // LABEL
+            [self::class,'field_resume_empji_loop'],  // CALLBACK
+            self::SUB_GROUP ,                // SLUG_PAGE
+            self::SECTION_RESUME_LOOP        // SLUG_SECTION
+        );
+        add_settings_field(
+            'resume_msg_loop_1',                  // SLUG_FIELD
+            __("Message boucle 1er", 'MyCV'), // LABEL
+            [self::class,'field_resume_msg_loop_1'],  // CALLBACK
+            self::SUB_GROUP ,                // SLUG_PAGE
+            self::SECTION_RESUME_LOOP        // SLUG_SECTION
+        );
+        add_settings_field(
+            'resume_msg_loop_2',                  // SLUG_FIELD
+            __("Message boucle 2ème", 'MyCV'), // LABEL
+            [self::class,'field_resume_msg_loop_2'],  // CALLBACK
+            self::SUB_GROUP ,                // SLUG_PAGE
+            self::SECTION_RESUME_LOOP        // SLUG_SECTION
+        );
+        register_setting(self::SUB_GROUP, 'resume_empji_loop');
+        // 1st Loop
+        register_setting(self::SUB_GROUP, 'resume_loop1_fr');
+        register_setting(self::SUB_GROUP, 'resume_loop1_en');
+        register_setting(self::SUB_GROUP, 'resume_loop1_it');
+        // 2nd Loop
+        register_setting(self::SUB_GROUP, 'resume_loop2_fr');
+        register_setting(self::SUB_GROUP, 'resume_loop2_en');
+        register_setting(self::SUB_GROUP, 'resume_loop2_it');
+
+        /**
+         * SECTION 4 : SECTION_RESUME_FR ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -197,20 +244,11 @@ class mycustome_resume{
             self::SECTION_RESUME_FR        // SLUG_SECTION
         );
 
-        add_settings_field(
-            'resume_else_msg_fr',                  // SLUG_FIELD
-            __("Message pour la boucle", 'MyCV'),      // LABEL
-            [self::class,'field_resume_else_msg_fr'],  // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_RESUME_FR            // SLUG_SECTION
-        );
-
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'resume_desc_fr');
-        register_setting(self::SUB_GROUP, 'resume_else_msg_fr');
 
         /**
-         * SECTION 4 : SECTION_RESUME_EN ======================================
+         * SECTION 5 : SECTION_RESUME_EN ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -232,21 +270,12 @@ class mycustome_resume{
             self::SECTION_RESUME_EN            // SLUG_SECTION
         );
 
-        add_settings_field(
-            'resume_else_msg_en',                  // SLUG_FIELD
-            __("Message pour la boucle", 'MyCV'),      // LABEL
-            [self::class,'field_resume_else_msg_en'],  // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_RESUME_EN            // SLUG_SECTION
-        );
-
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'resume_desc_en');
-        register_setting(self::SUB_GROUP, 'resume_else_msg_en');
 
 
         /**
-         * SECTION 5 : SECTION_RESUME_IT ======================================
+         * SECTION 6 : SECTION_RESUME_IT ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -268,17 +297,8 @@ class mycustome_resume{
             self::SECTION_RESUME_IT        // SLUG_SECTION
         );
 
-        add_settings_field(
-            'resume_else_msg_it',                  // SLUG_FIELD
-            __("Message pour la boucle", 'MyCV'),      // LABEL
-            [self::class,'field_resume_else_msg_it'],  // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_RESUME_IT            // SLUG_SECTION
-        );
-
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'resume_desc_it');
-        register_setting(self::SUB_GROUP, 'resume_else_msg_it');
 
     }
 
@@ -298,12 +318,21 @@ class mycustome_resume{
     public static function display_section_resume_tabs(){
         ?>
         <p class="section-description">
-            <?php _e("Cette parite cous permet de gérer les titres (intitulé) des onglets", "MyCV"); ?>
+            <?php _e("Cette parite vous permet de gérer les titres (intitulé) des onglets", "MyCV"); ?>
         </p>
         <?php
     }
 
-    // SECTION 3 : SECTION_RESUME_FR ======================================
+    // SECTION 3 : SECTION_RESUME_LOOP ====================================
+    public static function display_section_resume_loop(){
+        ?>
+        <p class="section-description">
+            <?php _e("Cette parite vous permet de gérer la boucle", "MyCV"); ?>
+        </p>
+        <?php
+    }
+
+    // SECTION 4 : SECTION_RESUME_FR ======================================
     public static function display_section_resume_fr(){
         ?>
         <p class="section-description">
@@ -312,7 +341,7 @@ class mycustome_resume{
         <?php
     }
 
-    // SECTION 4 : SECTION_RESUME_EN ======================================
+    // SECTION 5 : SECTION_RESUME_EN ======================================
     public static function display_section_resume_en(){
         ?>
         <p class="section-description">
@@ -321,7 +350,7 @@ class mycustome_resume{
         <?php
     }
 
-    // SECTION 5 : SECTION_RESUME_IT ======================================
+    // SECTION 6 : SECTION_RESUME_IT ======================================
     public static function display_section_resume_it(){
         ?>
         <p class="section-description">
@@ -469,7 +498,90 @@ class mycustome_resume{
         <?php
     }
 
-    // SECTION 3 : SECTION_RESUME_FR ======================================
+    // SECTION 3 : SECTION_RESUME_LOOP ====================================
+    public static function field_resume_empji_loop(){
+        $resume_empji_loop = get_option('resume_empji_loop');
+        ?>
+        <input type="checkbox" name="resume_empji_loop" id="resume_empji_loop" value="1" <?php checked(1, $resume_empji_loop, true) ?> />
+        <label for=""><?php _e("Afficher un émoji", "MyCV"); ?> &#128549;</label>
+        <?php
+    }
+    public static function field_resume_msg_loop_1(){
+        $resume_loop1_fr = esc_attr(get_option('resume_loop1_fr'));
+        $resume_loop1_en = esc_attr(get_option('resume_loop1_en'));
+        $resume_loop1_it = esc_attr(get_option('resume_loop1_it'));
+        ?>
+        <p class="description"><?php _e("Ce message sera présent si la boucle 1er est vide", "MyCV"); ?></p>
+        <div class="grid-cols-3">
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Français", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_loop1_fr"
+                       name="resume_loop1_fr"
+                       value="<?php echo $resume_loop1_fr ?>"
+                       placeholder="<?php _e("Texte en français", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Anglais", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_loop1_en"
+                       name="resume_loop1_en"
+                       value="<?php echo $resume_loop1_en ?>"
+                       placeholder="<?php _e("Texte en anglais", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Italien", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_loop1_it"
+                       name="resume_loop1_it"
+                       value="<?php echo $resume_loop1_it ?>"
+                       placeholder="<?php _e("Texte en italien", "MyCV") ?>"
+                />
+            </div>
+        </div>
+        <?php
+    }
+    public static function field_resume_msg_loop_2(){
+        $resume_loop2_fr = esc_attr(get_option('resume_loop2_fr'));
+        $resume_loop2_en = esc_attr(get_option('resume_loop2_en'));
+        $resume_loop2_it = esc_attr(get_option('resume_loop2_it'));
+        ?>
+        <p class="description"><?php _e("Ce message sera présent si la boucle 2ème est vide", "MyCV"); ?></p>
+        <div class="grid-cols-3">
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Français", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_loop2_fr"
+                       name="resume_loop2_fr"
+                       value="<?php echo $resume_loop2_fr ?>"
+                       placeholder="<?php _e("Texte en français", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Anglais", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_loop2_en"
+                       name="resume_loop2_en"
+                       value="<?php echo $resume_loop2_en ?>"
+                       placeholder="<?php _e("Texte en anglais", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Italien", "MyCV") ?></p>
+                <input type="text"
+                       id="resume_loop2_it"
+                       name="resume_loop2_it"
+                       value="<?php echo $resume_loop2_it ?>"
+                       placeholder="<?php _e("Texte en italien", "MyCV") ?>"
+                />
+            </div>
+        </div>
+        <?php
+    }
+
+    // SECTION 4 : SECTION_RESUME_FR ======================================
     public static function field_resume_desc_fr(){
         // define register settings
         $resume_desc_fr = esc_attr(get_option('resume_desc_fr'));
@@ -493,21 +605,8 @@ class mycustome_resume{
             </div>
         <?php
     }
-    public static function field_resume_else_msg_fr(){
-        $resume_else_msg_fr = esc_attr(get_option('resume_else_msg_fr'));
-        ?>
-        <p class="description"><?php _e("Ce message sera présent si la boucle est vide", "MyCV") ?></p>
-        <input type="text"
-               id="resume_else_msg_fr"
-               name="resume_else_msg_fr"
-               value="<?php echo $resume_else_msg_fr ?>"
-               placeholder="<?php _e("Message court", "MyCV"); ?>"
-               class="large-text"
-        />
-        <?php
-    }
 
-    // SECTION 4 : SECTION_RESUME_EN ======================================
+    // SECTION 5 : SECTION_RESUME_EN ======================================
     public static function field_resume_desc_en(){
         $resume_desc_en = esc_attr(get_option('resume_desc_en'));
         // define argument for editor WYSIWYG
@@ -530,21 +629,8 @@ class mycustome_resume{
         </div>
         <?php
     }
-    public static function field_resume_else_msg_en(){
-        $resume_else_msg_en = esc_attr(get_option('resume_else_msg_en'));
-        ?>
-        <p class="description"><?php _e("Ce message sera présent si la boucle est vide", "MyCV") ?></p>
-        <input type="text"
-               id="resume_else_msg_en"
-               name="resume_else_msg_en"
-               value="<?php echo $resume_else_msg_en ?>"
-               placeholder="<?php _e("Message court", "MyCV"); ?>"
-               class="large-text"
-        />
-        <?php
-    }
-    
-    // SECTION 5 : SECTION_RESUME_IT ======================================
+
+    // SECTION 6 : SECTION_RESUME_IT ======================================
     public static function field_resume_desc_it(){
         // define register settings
         $resume_desc_it = esc_attr(get_option('resume_desc_it'));
@@ -569,20 +655,7 @@ class mycustome_resume{
         </div>
         <?php
     }
-    public static function field_resume_else_msg_it(){
-        $resume_else_msg_it = esc_attr(get_option('resume_else_msg_it'));
-        ?>
-        <p class="description"><?php _e("Ce message sera présent si la boucle est vide", "MyCV") ?></p>
-        <input type="text"
-               id="resume_else_msg_it"
-               name="resume_else_msg_it"
-               value="<?php echo $resume_else_msg_it ?>"
-               placeholder="<?php _e("Message court", "MyCV"); ?>"
-               class="large-text"
-        />
-        <?php
-    }
-    
+
     /**
      * 9 - AJOUT STYLE ET SCRIPT
      */
