@@ -70,7 +70,7 @@ add_filter(
                 if(checked(1, $currect, false)){
                     ?>
                         <p class="is-current">
-                            <?php _e("C'est en cours", "MyCV"); ?>
+                            <?php _e("En cours", "MyCV"); ?>
                         </p>
                     <?php
                 } elseif(checked(2, $currect, false)){
