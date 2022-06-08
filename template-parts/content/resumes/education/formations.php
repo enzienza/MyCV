@@ -15,18 +15,21 @@
 <div class="timeline"></div>
 
 <div class="no-result">
-    <p class="display-1">&#128549;</p>
+    <?php if(checked(1, get_option('resume_empji_loop'), false)) : ?>
+        <p class="display-1">&#128549;</p>
+    <?php endif; ?>
+
     <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
         <p class="no-result-msg">
-            <?php echo get_option('education_else_msg_fr'); ?>
+            <?php echo get_option('resume_loop2_fr'); ?>
         </p>
     <?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
         <p class="no-result-msg">
-            <?php echo get_option('education_else_msg_en'); ?>
+            <?php echo get_option('resume_loop2_en'); ?>
         </p>
     <?php elseif(get_locale() === 'it_IT') : // Partie EN =========== ?>
         <p class="no-result-msg">
-            <?php echo get_option('education_else_msg_it'); ?>
+            <?php echo get_option('resume_loop2_it'); ?>
         </p>
     <?php endif; ?>
 </div>
