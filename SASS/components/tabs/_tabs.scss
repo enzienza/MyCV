@@ -1,0 +1,44 @@
+// main: ../_components.scss
+
+// ==================
+// = TABS-CONTAINER =
+// ==================
+.tabs-container{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+// ============
+// = NAV-TABS =
+// ============
+.nav-tabs{
+    justify-content: center;
+    border: none;
+    margin-bottom: 2em;
+
+    .nav-item {
+        margin-bottom: 0;
+        margin-right: .5rem;
+    }
+
+    .nav-link{
+        border-radius: .5rem;
+    }
+
+    .nav-link.active,
+    .nav-item.show, .nav-link:hover,
+    .nav-link:focus, .nav-link:focus-visible{
+        background: inherit;
+        border-color: $color-dark;
+        border-style: dotted;
+        filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+        /*box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2)*/
+    }
+    p{
+        margin: 0;
+    }
+}
+
+// ===============
+// = TAB-CONTENT =
+// ===============

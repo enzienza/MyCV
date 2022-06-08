@@ -31,7 +31,7 @@ jQuery(document).ready(function ($) {
   });
 
   // smooth scrolling
-  $('ul li a[href*="#"]').on('click',function(e){
+  $('.navbar-nav li a[href*="#"]').on('click',function(e){
     e.preventDefault();
     $('html, body').animate({
         scrollTop : $($(this).attr('href')).offset().top,
