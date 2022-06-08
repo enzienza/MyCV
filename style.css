@@ -1125,7 +1125,13 @@ section {
 
 .no-result {
   text-align: center;
-  line-height: 2; }
+  line-height: 2;
+  min-height: 50vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center; }
+  .no-result-msg {
+    font-size: large; }
 
 @media only screen and (min-width: 1200px) {
   .desc-section {

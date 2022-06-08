@@ -10,18 +10,23 @@
  */
 ?>
 
-<!--  if loop -> ok  [Post-type  => 'experiences']  -->
 
-<!--  else  -->
+
+<div class="timeline"></div>
+
 <div class="no-result">
-    <!--  PROVISOIR  -->
-
+    <p class="display-1">&#128549;</p>
     <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
-        <?php echo get_option('education_else_msg_fr'); ?>
+        <p class="no-result-msg">
+            <?php echo get_option('education_else_msg_fr'); ?>
+        </p>
     <?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
-        <?php echo get_option('education_else_msg_en'); ?>
+        <p class="no-result-msg">
+            <?php echo get_option('education_else_msg_en'); ?>
+        </p>
     <?php elseif(get_locale() === 'it_IT') : // Partie EN =========== ?>
-        <?php echo get_option('education_else_msg_it'); ?>
+        <p class="no-result-msg">
+            <?php echo get_option('education_else_msg_it'); ?>
+        </p>
     <?php endif; ?>
 </div>
-<!--  endif  -->

@@ -24,13 +24,13 @@
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a
-                        class="nav-link active"
-                        id="tab-experience<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
-                        data-toggle="tab"
-                        href="#experience<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
-                        role="tab"
-                        aria-controls="experience<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
-                        aria-selected="true"
+                    class="nav-link active"
+                    id="tab-experience"
+                    data-toggle="tab"
+                    href="#experience"
+                    role="tab"
+                    aria-controls="experience"
+                    aria-selected="true"
                 >
                     <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
                         <p><?php echo esc_attr(get_option('resume_tab_one_fr')); ?></p>
@@ -43,13 +43,13 @@
             </li>
             <li class="nav-item">
                 <a
-                        class="nav-link"
-                        id="tab-formation<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
-                        data-toggle="tab"
-                        href="#formation<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
-                        role="tab"
-                        aria-controls="formation<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
-                        aria-selected="true"
+                    class="nav-link"
+                    id="tab-formation"
+                    data-toggle="tab"
+                    href="#formation"
+                    role="tab"
+                    aria-controls="formation"
+                    aria-selected="true"
                 >
                     <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
                         <p><?php echo esc_attr(get_option('resume_tab_two_fr')); ?></p>
@@ -64,27 +64,22 @@
 
         <div class="tab-content" id="myTabContent">
             <div
-                    class="tab-pane fade show active"
-                    id="experience<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
-                    role="tabpanel"
-                    aria-labelledby="tab-experience<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
+                class="tab-pane fade show active"
+                id="experience"
+                role="tabpanel"
+                aria-labelledby="tab-experience"
             >
-                <div class="timeline">
-                    <?php require_once("work/experience.php"); ?>
-                </div>
+                <?php require_once("work/experience.php"); ?>
             </div>
             <div
-                    class="tab-pane fade"
-                    id="formation<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
-                    role="tabpanel"
-                    aria-labelledby="tab-formation<?php //$title = sanitize_title(get_the_title()); echo $title;?>"
+                class="tab-pane fade"
+                id="formation"
+                role="tabpanel"
+                aria-labelledby="tab-formation"
             >
-                <div class="timeline">
-                    <?php require_once("education/formations.php"); ?>
-                </div>
+                <?php require_once("education/formations.php"); ?>
             </div>
         </div>
     </div>
-
 
 </section>
