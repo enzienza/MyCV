@@ -4,7 +4,7 @@ body.dark{
     background: $color-night;
     color: $color-light;
 
-    // Navigation
+    // NAVIGATION
     .navbar-nav .nav-item:hover,
     .navbar-nav .current-menu-item,
     .navbar-nav .current_page_item,
@@ -12,7 +12,7 @@ body.dark{
         background: $color-primary;
     }
 
-    // Footer
+    // FOOTER
     .footer{
         color: rgba($color-light, .5);
         a{
@@ -25,7 +25,7 @@ body.dark{
     }
 
 
-    // Profil
+    // PROFIL
     .profil, .morph, .title-section{
         border-color: $color-primary;
     }
@@ -41,7 +41,7 @@ body.dark{
     }
 
 
-    // Button
+    // BUTTON
     .btn{
         &-outline-primary{
             //text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
@@ -55,7 +55,22 @@ body.dark{
         }
     }
 
-    // Timeline
+    // TABS
+    .nav-tabs {
+        .nav-link {
+            color: rgba($color-light, .4);
+        }
+
+        .nav-link.active,
+        .nav-item.show, .nav-link:hover,
+        .nav-link:focus, .nav-link:focus-visible {
+            color: $color-light;
+            border-color: rgba($color-light, .6);
+            box-shadow: 0 0 10px rgba(255, 255, 255, .3);
+        }
+    }
+
+    // TIMELINE
     .timeline{
         &:before{
             background: $color-primary;
@@ -77,6 +92,9 @@ body.dark{
             //border-color: rgba($color-dark, .3);
             border-color: lighten($color-dark, 5);
             background: $color-primary;
+        }
+        &-date, &-collapse{
+            border-color:rgba($color-light, .1);
         }
     }
     .collapse{
