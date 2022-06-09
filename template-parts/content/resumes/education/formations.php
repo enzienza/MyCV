@@ -37,17 +37,38 @@
                         <h3><?php echo get_post_meta(get_the_ID(), 'name_company', true); ?></h3>
                     </div>
                 </div>
-<!--                <a class="detail-link collapsed"-->
-<!--                   href="#detail---><?php //echo the_ID() ?><!--"-->
-<!--                   type="button"-->
-<!--                   data-toggle="collapse"-->
-<!--                   data-target="#detail---><?php //echo the_ID() ?><!--"-->
-<!--                   aria-expanded="false"-->
-<!--                   aria-controls="detail---><?php //echo the_ID() ?><!--"-->
-<!--                >-->
-<!--                </a>-->
+                <?php if(checked(1, get_post_meta(get_the_ID(), 'view_details', true), false)) : ?>
+                    <a class="detail-link collapsed"
+                       href="#detail-<?php echo the_ID() ?>"
+                       type="button"
+                       data-toggle="collapse"
+                       data-target="#detail-<?php echo the_ID() ?>"
+                       aria-expanded="false"
+                       aria-controls="detail-<?php echo the_ID() ?>"
+                    >
+                    </a>
+                <?php endif; ?>
             </div>
+
+            <?php if(checked(1, get_post_meta(get_the_ID(), 'view_details', true), false)) : ?>
+                <div class="timeline-collapse collapse" id="detail-<?php echo the_ID() ?>">
+                    <div class="collapse-card">
+                        <div class="collapse-title">
+                            <h4><?php //_e("Mes tâches", "MyCV"); ?></h4>
+                        </div>
+                        <div class="collapse-body">
+                            <?php the_content(); ?>
+                        </div>
+                        <!--                    <div class="collapse-footer">-->
+                        <!--                        --><?php //echo get_post_meta(get_the_ID(), 'locality_company', true); ?>
+                        <!--                        (--><?php //echo get_post_meta(get_the_ID(), 'country_company', true); ?><!--)-->
+                        <!--                    </div>-->
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
+
+
     </div>
 <?php endwhile; else: ?>
     <div class="no-result">
