@@ -69,6 +69,7 @@ require_once('inc/options-theme/op_customtheme/09-errorpage.php');
  */
 
 require_once('inc/post-type/cpt_experience.php');
+require_once('inc/post-type/cpt_formation.php');
 
 
 /** =====================================================
