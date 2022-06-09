@@ -26,7 +26,7 @@ class MB_Year{
     //const TITLE_MB = "Information";
     const META_KEY = 'year_info';
     const NONCE    = '_year_info';
-    const SCREEN = array('experiences');
+    const SCREEN = array('experiences', 'formations');
 
     /**
      *2 - DEFINIR LES HOOKS ACTIONS
