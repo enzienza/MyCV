@@ -44,6 +44,7 @@ require_once ('inc/customize/columns/admin-formations.php');
 require_once('inc/metaboxes/MB_year.php');
 require_once('inc/metaboxes/MB_company.php');
 require_once('inc/metaboxes/MB_info_resume.php');
+require_once('inc/metaboxes/MB_info_formation.php');
 
 /** =====================================================
  *  3 - OPTIONS-THEME
