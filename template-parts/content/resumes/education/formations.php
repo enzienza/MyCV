@@ -53,16 +53,16 @@
             <?php if(checked(1, get_post_meta(get_the_ID(), 'view_details', true), false)) : ?>
                 <div class="timeline-collapse collapse" id="detail-<?php echo the_ID() ?>">
                     <div class="collapse-card">
-                        <div class="collapse-title">
-                            <h4><?php //_e("Mes tâches", "MyCV"); ?></h4>
-                        </div>
+                        <!--<div class="collapse-title">-->
+                            <!--<h4><?php //_e("Mes tâches", "MyCV"); ?></h4>-->
+                        <!--</div>-->
                         <div class="collapse-body">
                             <?php the_content(); ?>
                         </div>
-                        <!--                    <div class="collapse-footer">-->
-                        <!--                        --><?php //echo get_post_meta(get_the_ID(), 'locality_company', true); ?>
-                        <!--                        (--><?php //echo get_post_meta(get_the_ID(), 'country_company', true); ?><!--)-->
-                        <!--                    </div>-->
+                        <!--<div class="collapse-footer">-->
+                        <!--<?php //echo get_post_meta(get_the_ID(), 'locality_company', true); ?>-->
+                        <!--(--><?php //echo get_post_meta(get_the_ID(), 'country_company', true); ?><!--)-->
+                        <!--</div>-->
                     </div>
                 </div>
             <?php endif; ?>

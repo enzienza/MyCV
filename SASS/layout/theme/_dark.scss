@@ -72,8 +72,11 @@ body.dark{
 
     // TIMELINE
     .timeline{
-        &:before{
+        &::before{
             background: $color-primary;
+        }
+        &::after{
+            border-color: $color-primary;
         }
 
         &-card{

@@ -2,22 +2,33 @@
 
 .timeline{
     margin: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
 
-    &::before{
+    &::before, &::after{
         content: "";
-        height: 100%;
-        width: 2px;
         position: absolute;
+        width: 2px;
+    }
+
+    &::before{
+        height: 100%;
         background: $color-primary-dark;
         z-index: 1;
+    }
+
+    &::after{
+        height: 1.5rem;
+        border: 1px dashed $color-primary-dark;
+        opacity: .7;
+    }
+    &:last-child::after{
+        border: none;
     }
 
     &-card{
         display: flex;
         flex-flow: column nowrap;
-        margin-bottom: 1.5rem;
         max-width: 600px;
 
         &:last-of-type{
