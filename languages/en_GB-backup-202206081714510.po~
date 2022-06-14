@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-05-27 16:19+0000\n"
+"PO-Revision-Date: 2022-05-27 16:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -12,12 +12,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.6.1; wp-5.9.3\n"
+"X-Loco-Version: 2.6.2; wp-6.0\n"
 "X-Domain: MyCV"
 
 #: inc/metaboxes/MB_year.php:70
 msgid "2000"
-msgstr ""
+msgstr "2000"
 
 #. slug parent
 #. page_title
@@ -52,7 +52,7 @@ msgstr "Show \"Who am I\" long"
 
 #: inc/post-type/cpt_experience.php:29
 msgid "Afficher l'expérience"
-msgstr ""
+msgstr "View experience"
 
 #: inc/options-theme/op_customtheme/04-about.php:378
 #: inc/options-theme/op_customtheme/04-about.php:393
@@ -78,7 +78,7 @@ msgstr "Show Both"
 
 #: inc/post-type/cpt_experience.php:30
 msgid "Afficher les expériences"
-msgstr ""
+msgstr "View Experiences"
 
 #: inc/options-theme/op_customtheme/08-contact.php:334
 msgid "Afficher les réseaux sociaux dans la section contact"
@@ -93,7 +93,7 @@ msgstr "Display a description in the section"
 
 #: inc/post-type/cpt_experience.php:25
 msgid "Ajouter"
-msgstr ""
+msgstr "Add"
 
 #: inc/options-theme/op_customtheme/03-home.php:645
 #: inc/options-theme/op_customtheme/03-home.php:655
@@ -133,7 +133,7 @@ msgstr "Add an image as background"
 
 #: inc/post-type/cpt_experience.php:26
 msgid "Ajouter une nouvelle expérience"
-msgstr ""
+msgstr "Add new experience"
 
 #: inc/options-theme/op_customtheme/05-resume.php:321
 #: inc/options-theme/op_customtheme/06-education.php:321
@@ -145,19 +145,19 @@ msgstr "English"
 #. ID_META_BOX
 #: inc/metaboxes/MB_year.php:46 inc/customize/columns/admin-experiences.php:25
 msgid "Année"
-msgstr ""
+msgstr "Year"
 
 #: inc/post-type/cpt_experience.php:35
 msgid "Attributs de l'expérience"
-msgstr ""
+msgstr "Experience attributes"
 
 #: inc/post-type/cpt_experience.php:32
 msgid "Aucune expérience trouvée"
-msgstr ""
+msgstr "No experiences found"
 
 #: inc/post-type/cpt_experience.php:33
 msgid "Aucune expérience trouvée dans la corbeille"
-msgstr ""
+msgstr "No experiences found in Trash"
 
 #: inc/options-theme/op_customtheme/04-about.php:357
 #: inc/options-theme/op_customtheme/02-header.php:248
@@ -206,11 +206,11 @@ msgstr "Button home page"
 
 #: inc/customize/columns/admin-experiences.php:73
 msgid "C'est en cours"
-msgstr ""
+msgstr "It is in progress"
 
 #: inc/customize/columns/admin-experiences.php:97
 msgid "C'est un stage"
-msgstr ""
+msgstr "It is an internship"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/05-resume.php:110
@@ -323,8 +323,8 @@ msgid "Cette section vous permettre de gérer l'affichage de la bannière"
 msgstr "This section allows you to manage the display of the banner"
 
 #: inc/post-type/cpt_experience.php:31
-msgid "Chercher dans les expérience"
-msgstr ""
+msgid "Chercher dans les expériences"
+msgstr "Search experiences"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/04-about.php:159
@@ -357,7 +357,7 @@ msgstr "Check element layout"
 
 #: inc/metaboxes/MB_company.php:66
 msgid "Compléter avec les informations de l'entreprise"
-msgstr ""
+msgstr "Complete with company information"
 
 #. slug parent
 #. page_title
@@ -460,7 +460,7 @@ msgstr "Email"
 #. ID_META_BOX
 #: inc/metaboxes/MB_company.php:46
 msgid "Entreprise"
-msgstr ""
+msgstr "Company"
 
 #. Author of the theme
 msgid "Enza Lombardo"
@@ -494,7 +494,7 @@ msgstr "Exporter mon CV"
 
 #: inc/post-type/cpt_experience.php:23
 msgid "Expérience"
-msgstr ""
+msgstr "Experience"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:112
@@ -503,7 +503,7 @@ msgstr "Facebook"
 
 #: inc/post-type/cpt_experience.php:34
 msgid "Filtrer la liste des expériences"
-msgstr ""
+msgstr "Filter experiences list"
 
 #: inc/options-theme/op_customtheme/05-resume.php:312
 #: inc/options-theme/op_customtheme/06-education.php:312
@@ -612,7 +612,7 @@ msgstr "Import my CV"
 #. ID_META_BOX
 #: inc/metaboxes/MB_info_resume.php:46
 msgid "Information expérience"
-msgstr ""
+msgstr "Experience information"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:128
@@ -634,7 +634,7 @@ msgstr "Job"
 
 #: inc/metaboxes/MB_info_resume.php:65
 msgid "Le poste est-il toujours en cours ?"
-msgstr ""
+msgstr "Is the job still open?"
 
 #: inc/options-theme/op_customtheme/03-home.php:477
 #: inc/options-theme/op_customtheme/03-home.php:498
@@ -775,7 +775,7 @@ msgstr "Message for the description"
 
 #: inc/post-type/cpt_experience.php:28
 msgid "Modifier l'expérience"
-msgstr ""
+msgstr "Edit Experience"
 
 #: inc/options-theme/op_customtheme/03-home.php:648
 #: inc/options-theme/op_customtheme/03-home.php:658
@@ -826,15 +826,15 @@ msgstr "Full Name"
 #: inc/metaboxes/MB_info_resume.php:67 inc/metaboxes/MB_info_resume.php:72
 #: inc/customize/columns/admin-experiences.php:103
 msgid "Non"
-msgstr ""
+msgstr "No"
 
 #: inc/post-type/cpt_experience.php:27
 msgid "Nouvelle expérience"
-msgstr ""
+msgstr "New Experience"
 
 #: inc/metaboxes/MB_info_resume.php:66 inc/metaboxes/MB_info_resume.php:71
 msgid "Oui"
-msgstr ""
+msgstr "Yes"
 
 #: inc/options-theme/op_customtheme/01-custometheme.php:76
 msgid "Page d'option du theme"
@@ -913,7 +913,7 @@ msgstr "Profile"
 
 #: inc/metaboxes/MB_year.php:64
 msgid "Préciser l'année"
-msgstr ""
+msgstr "Specify year"
 
 #: inc/options-theme/op_customtheme/03-home.php:554
 #: inc/options-theme/op_customtheme/02-header.php:224
@@ -1016,7 +1016,7 @@ msgstr "Skill"
 
 #: inc/customize/columns/admin-experiences.php:27
 msgid "Stage"
-msgstr ""
+msgstr "Internship"
 
 #: inc/options-theme/op_customtheme/09-errorpage.php:74
 msgid "Sur cette page vous pouvez gérer la page d'error 404 du site"
@@ -1128,11 +1128,11 @@ msgstr "section title"
 
 #: inc/post-type/cpt_experience.php:24
 msgid "Toutes les expériences"
-msgstr ""
+msgstr "All experiences"
 
 #: inc/customize/columns/admin-experiences.php:79
 msgid "Travail fini"
-msgstr ""
+msgstr "Finished work"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/03-network.php:120
@@ -1184,12 +1184,12 @@ msgstr "Age"
 
 #: inc/customize/columns/admin-experiences.php:24
 msgid "Établissement"
-msgstr ""
+msgstr "Institution"
 
 #: inc/metaboxes/MB_info_resume.php:70
 msgid "Était-ce un stage ?"
-msgstr ""
+msgstr "Was it an internship?"
 
 #: inc/customize/columns/admin-experiences.php:26
 msgid "État"
-msgstr ""
+msgstr "Status"

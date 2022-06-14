@@ -84,112 +84,110 @@ class mycv_mycustome{
 
             <tr class="importer-item">
                 <td class="import-system">
-                    <span class="importer-title">Header</span>
+                    <span class="importer-title"><?php _e('Header', "MyCV")?></span>
                     <span class="importer-action">
-                      <a href="?page=mycustome_header" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_header" class="install-now">
+                          <?php _e("Gérer la section", "MyCV"); ?>
+                      </a>
                     </span>
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      Lien pour gérer l'affichage de l'header
+                      <?php _e("Lien pour gérer l'affichage de l'header", "MyCV"); ?>
                     </span>
                 </td>
             </tr>
 
             <tr class="importer-item">
                 <td class="import-system">
-                    <span class="importer-title">Accueil</span>
+                    <span class="importer-title"><?php _e("Accueil", "MyCV"); ?></span>
                     <span class="importer-action">
-                      <a href="?page=mycustome_home" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_home" class="install-now">
+                          <?php _e("Gérer la section", "MyCV"); ?>
+                      </a>
                     </span>
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      Lien pour gérer l'affichage de la section accueil
+                      <?php _e("Lien pour gérer l'affichage de la section accueil", "MyCV"); ?>
                     </span>
                 </td>
             </tr>
 
             <tr class="importer-item">
                 <td class="import-system">
-                    <span class="importer-title">À propos</span>
+                    <span class="importer-title"><?php _e("About", "MyCV"); ?></span>
                     <span class="importer-action">
-                      <a href="?page=mycustome_about" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_about" class="install-now">
+                          <?php _e("Gérer la section", "MyCV"); ?>
+                      </a>
                     </span>
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      Lien pour gérer l'affichage de la section è propos
+                      <?php _e("Lien pour gérer l'affichage de la section è propos", "MyCV"); ?>
                     </span>
                 </td>
             </tr>
 
             <tr class="importer-item">
                 <td class="import-system">
-                    <span class="importer-title">Expérience</span>
+                    <span class="importer-title"><?php _e("Resume", "MyCV"); ?></span>
                     <span class="importer-action">
-                      <a href="?page=mycustome_resume" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_about" class="install-now"><?php _e("Gérer la section", "MyCV"); ?></a>
                     </span>
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      Lien pour gérer l'affichage de la section expérience
+                      <?php _e("Lien pour gérer l'affichage de la section resume", "MyCV"); ?>
                     </span>
                 </td>
             </tr>
 
             <tr class="importer-item">
                 <td class="import-system">
-                    <span class="importer-title">Formation</span>
+                    <span class="importer-title"><?php _e("Skill", "MyCV"); ?></span>
                     <span class="importer-action">
-                      <a href="?page=mycustome_education" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_skill" class="install-now">
+                          <?php _e("Gérer la section", "MyCV"); ?>
+                      </a>
                     </span>
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      Lien pour gérer l'affichage de la section formation
+                      <?php _e("Lien pour gérer l'affichage de la section compétence", "MyCV"); ?>
                     </span>
                 </td>
             </tr>
 
             <tr class="importer-item">
                 <td class="import-system">
-                    <span class="importer-title">Compétence</span>
+                    <span class="importer-title"><?php _e("Contact", "MyCV"); ?></span>
                     <span class="importer-action">
-                      <a href="?page=mycustome_skill" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_contact" class="install-now">
+                          <?php _e("Gérer la section", "MyCV"); ?>
+                      </a>
                     </span>
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      Lien pour gérer l'affichage de la section compétence
+                      <?php _e("Lien pour gérer l'affichage de la section contact", "MyCV"); ?>
                     </span>
                 </td>
             </tr>
 
             <tr class="importer-item">
                 <td class="import-system">
-                    <span class="importer-title">Contact</span>
+                    <span class="importer-title"><?php _e("Error Page", "MyCV"); ?></span>
                     <span class="importer-action">
-                      <a href="?page=mycustome_contact" class="install-now">Gérer la section</a>
+                      <a href="?page=mycustome_errorpage" class="install-now">
+                          <?php _e("Gérer la page", "MyCV"); ?>
+                      </a>
                     </span>
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      Lien pour gérer l'affichage de la section contact
-                    </span>
-                </td>
-            </tr>
-
-            <tr class="importer-item">
-                <td class="import-system">
-                    <span class="importer-title">Erreur 404</span>
-                    <span class="importer-action">
-                      <a href="?page=mycustome_errorpage" class="install-now">Gérer la page</a>
-                    </span>
-                </td>
-                <td class="desc">
-                    <span class="importer-desc">
-                      Lien pour gérer l'affichage de la la page d'erreur
+                      <?php _e("Lien pour gérer l'affichage de la la page d'erreu", "MyCV"); ?>r
                     </span>
                 </td>
             </tr>

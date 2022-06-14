@@ -27,6 +27,14 @@ section{
 .no-result{
     text-align: center;
     line-height: 2;
+    min-height: 50vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+    &-msg{
+        font-size: large;
+    }
 }
 
 @include responsive(XL){

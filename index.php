@@ -27,10 +27,6 @@
             <?php get_template_part('template-parts/content/resumes/index', 'resumes') ?>
         <?php endif; ?>
 
-        <?php if(checked(1, get_option('education_hidden_section'), false)) : else : ?>
-            <?php get_template_part('template-parts/content/educations/index', 'educations') ?>
-        <?php endif; ?>
-
         <?php if(checked(1, get_option('skill_hidden_section'), false)) : else : ?>
             <?php get_template_part('template-parts/content/skills/index', 'skill') ?>
         <?php endif; ?>

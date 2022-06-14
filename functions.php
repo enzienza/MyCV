@@ -32,6 +32,7 @@ require_once('inc/customize/config-assets.php');
 require_once ('inc/customize/config-admin.php');
 require_once ('inc/customize/custom-dashboard.php');
 require_once ('inc/customize/columns/admin-experiences.php');
+require_once ('inc/customize/columns/admin-formations.php');
 
 
 /* customize front-end */
@@ -43,6 +44,7 @@ require_once ('inc/customize/columns/admin-experiences.php');
 require_once('inc/metaboxes/MB_year.php');
 require_once('inc/metaboxes/MB_company.php');
 require_once('inc/metaboxes/MB_info_resume.php');
+require_once('inc/metaboxes/MB_info_formation.php');
 
 /** =====================================================
  *  3 - OPTIONS-THEME
@@ -60,7 +62,6 @@ require_once('inc/options-theme/op_customtheme/02-header.php');
 require_once('inc/options-theme/op_customtheme/03-home.php');
 require_once('inc/options-theme/op_customtheme/04-about.php');
 require_once('inc/options-theme/op_customtheme/05-resume.php');
-require_once('inc/options-theme/op_customtheme/06-education.php');
 require_once('inc/options-theme/op_customtheme/07-skills.php');
 require_once('inc/options-theme/op_customtheme/08-contact.php');
 require_once('inc/options-theme/op_customtheme/09-errorpage.php');
@@ -70,6 +71,7 @@ require_once('inc/options-theme/op_customtheme/09-errorpage.php');
  */
 
 require_once('inc/post-type/cpt_experience.php');
+require_once('inc/post-type/cpt_formation.php');
 
 
 /** =====================================================

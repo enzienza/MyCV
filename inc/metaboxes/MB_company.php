@@ -26,7 +26,7 @@ class MB_company{
     //const TITLE_MB = "Information";
     const META_KEY = 'company_info';
     const NONCE    = '_company_info';
-    const SCREEN = array('experiences');
+    const SCREEN = array('experiences', 'formations');
 
     /**
      *2 - DEFINIR LES HOOKS ACTIONS
