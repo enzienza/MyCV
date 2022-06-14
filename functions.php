@@ -33,6 +33,7 @@ require_once ('inc/customize/config-admin.php');
 require_once ('inc/customize/custom-dashboard.php');
 require_once ('inc/customize/columns/admin-experiences.php');
 require_once ('inc/customize/columns/admin-formations.php');
+require_once ('inc/customize/columns/admin-competences.php');
 
 
 /* customize front-end */
