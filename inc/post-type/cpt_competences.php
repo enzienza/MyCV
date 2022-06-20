@@ -51,7 +51,7 @@ if(!function_exists('CPT_competences')){
          */
         $supports = array(
             'title',           // titre
-            'editor',          // editeur
+            //'editor',          // editeur
             //'thumbnail',       // image à la une
             //'author',          // auteur du post
             //'excerpt',         // extrait
@@ -82,8 +82,8 @@ if(!function_exists('CPT_competences')){
             //'hierarchical'      => true,              // parent / child
             //'has_archive'       => true,              // c'est une archive => archive-{$post-type}
             'has_archive'       => false,               // c'est une page => page-{$post-type}
-            'show_in_rest'      => true,              // oui => afficher editeur Gutemberg
-            //'show_in_rest'      => false,               // non => afficher editeur Gutemberg
+            //'show_in_rest'      => true,              // oui => afficher editeur Gutemberg
+            'show_in_rest'      => false,               // non => afficher editeur Gutemberg
             'show_in_menu'      => true,
             'show_in_nav_menus' => false,
             'query_var'         => true,

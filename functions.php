@@ -46,6 +46,7 @@ require_once('inc/metaboxes/MB_year.php');
 require_once('inc/metaboxes/MB_company.php');
 require_once('inc/metaboxes/MB_info_resume.php');
 require_once('inc/metaboxes/MB_info_formation.php');
+require_once('inc/metaboxes/MB_skills.php');
 
 /** =====================================================
  *  3 - OPTIONS-THEME
