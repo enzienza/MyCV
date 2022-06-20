@@ -64,7 +64,7 @@ class MB_skill{
                 $('#add-row').on('click', function () {
                   let row = $('.empty-row.screen-reader-text').clone(true);
                   row.removeClass('empty-row screen-reader-text');
-                  row.insertBefore('#repeatable-fieldset-one tbody>tr:last');
+                  row.insertBefore('#list_skills tbody>tr:last');
                   console.log("Add empty");
                   return false;
                 });
@@ -82,7 +82,7 @@ class MB_skill{
                 <?php _e("Compléter avec le nom des langages/programmes ainsi que le niveau de maîtrise", "MyCV") ?>
             </p>
 
-            <table id="repeatable-fieldset-one" width="100%">
+            <table id="list_skills" width="100%">
                 <thead>
                     <tr>
                         <td width="30%"><?php _e('Nom', "MyCV"); ?></td>

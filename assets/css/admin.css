@@ -15,11 +15,11 @@ Tags:
 ------------------------------------------------------------
 0 - ROOT
 1 - GENERAL
-2 - STYLE FOR THE LOGIN PAGE
-3 - STYLE FOR ALL DASHBOARD
-4 - STYLE FOR THE MYOPTIONS
-5 - STYLE FOR COLUMNS ADMIN OF CPT
-6 - CUSTOM  METABOXES
+2 - LOGIN PAGE
+3 - ALL DASHBOARD
+4 - MYOPTIONS [API - Options-Theme]
+5 - COLUMNS ADMIN [Custom-Post-Type]
+6 - METABOXES
 7 - RESPONSIVE
 
 ----------------------------------------------------------*/
@@ -143,7 +143,7 @@ Tags:
 }
 
 /** ==============================================
-     2 - STYLE FOR THE LOGIN PAGE
+     2 - LOGIN PAGE
  */
 /* fond */
 body.login {
@@ -181,7 +181,7 @@ body.login {
 }
 
 /** ==============================================
-    3 - STYLE FOR ALL DASHBOARD
+    3 - ALL DASHBOARD
  */
 input[type="color"],
 input[type="date"],
@@ -243,7 +243,7 @@ form h2 {
 
 
 /** ==============================================
-    4 - STYLE FOR THE MYOPTIONS (Form)
+    4 - MYOPTIONS [API - Options-Theme]
  */
 /* Title */
 .myoptions h2{
@@ -320,12 +320,22 @@ form h2 {
 }
 
 /** ==============================================
-    5 - STYLE FOR COLUMNS ADMIN OF CPT
+    5 - COLUMNS ADMIN [Custom-Post-Type]
  */
-
+/* admin-experiences */
+.is-current{
+    color: var(--color-succes) !important;
+    font-weight: 700;
+}
+.is-stage{
+    font-weight: 700;
+}
+.no-current, .no-stage{
+    color: var(--color-border) !important;
+}
 
 /** ==============================================
-    6 - CUSTOM  METABOXES
+    6 - METABOXES
  */
 .components-base-control__field div{
     margin: 1rem auto;
@@ -346,26 +356,35 @@ input[type="radio"]{
     margin-right: 5px;
 }
 
+/* MB_skills */
+#list_skills .remove-row{
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+    background: inherit;
+}
+
+#list_skills .remove-row:hover{
+    background: var(--color-danger);
+    color: var(--color-light);
+}
+
+#add-row{
+    color: var(--color-succes);
+    border-color: var(--color-succes);
+    background: inherit;
+}
+
+#add-row:hover{
+    background: var(--color-succes);
+    color: var(--color-light);
+}
+
 /* CUSTOM PLUGIN "POLYLANG" */
 .meta-box-sortables input[type="text"]{
     width: 100%;
 }
-
 .postbox select {
     width: 85%;
-}
-
-.is-current{
-    color: var(--color-succes) !important;
-    font-weight: 700;
-}
-
-.is-stage{
-    font-weight: 700;
-}
-
-.no-current, .no-stage{
-    color: var(--color-border) !important;
 }
 
 /** ==============================================
