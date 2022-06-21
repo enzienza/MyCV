@@ -21,9 +21,8 @@
 
     &-grid{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* gap: 2rem; */
-        gap: 1rem 4rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     &-title{
@@ -95,3 +94,22 @@
     }
 }
 
+@include responsive(XL){
+    .skill{
+        &-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 4rem;
+        }
+    }
+}
+@include responsive(LG){
+    .skill{
+        &-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 4rem;
+        }
+    }
+}
+@include responsive(MD){}
+@include responsive(SM){}
+@include responsive(XS){}

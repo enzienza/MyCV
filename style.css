@@ -1301,9 +1301,8 @@ section {
     margin-bottom: 0; }
 .skill-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* gap: 2rem; */
-  gap: 1rem 4rem; }
+  grid-template-columns: 1fr;
+  gap: 1rem; }
 .skill-title {
   line-height: 30px;
   letter-spacing: .5px;
@@ -1358,5 +1357,14 @@ section {
         font-weight: 600;
         letter-spacing: 0px;
         font-size: 15px; }
+
+@media only screen and (min-width: 1200px) {
+  .skill-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 4rem; } }
+@media only screen and (min-width: 992px) and (max-width: calc(1200px - 1px)) {
+  .skill-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 4rem; } }
 
 /*# sourceMappingURL=style.css.map */
