@@ -22,16 +22,29 @@
     $my_query = new WP_query($args);
     if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
 ?>
-    <div>
-        <?php the_title(); ?>
 
-        <?php
-            $list_skill = get_post_meta($post->ID, 'list_skill', true);
-            foreach ($list_skill as $field) :
-        ?>
-            <?php echo $field['name']; ?>
-            <?php echo $field['percent']; ?>
-        <?php endforeach; ?>
+    <div class="skill-group fadeInUp">
+        <h2 class="skill-title"><?php the_title(); ?></h2>
+
+        <div class="skill-grid">
+            <?php
+                $list_skill = get_post_meta($post->ID, 'list_skill', true);
+                foreach ($list_skill as $field) :
+            ?>
+                <div class="skill-item">
+                    <div class="info">
+                        <p class="name"><?php echo $field['name']; ?></p>
+                    </div>
+                    <div class="progressBar">
+                       <div class="percentagem" style="width: <?php echo $field['percent']; ?>%">
+                           <div class="percentagem-num"><?php echo $field['percent']; ?>%</div>
+                       </div>
+                    </div>
+                </div>
+
+
+            <?php endforeach; ?>
+        </div>
     </div>
 
 <?php endwhile; else: ?>
