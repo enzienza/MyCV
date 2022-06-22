@@ -35,10 +35,11 @@ class mycustome_skill{
     const NONCE        = '_mycustome_skill';
 
     //definir les sections de la page d'option
-    const SECTION_SKILL    = "section_skill";
-    const SECTION_SKILL_FR = "section_skill_fr";
-    const SECTION_SKILL_EN = "section_skill_en";
-    const SECTION_SKILL_IT = "section_skill_it";
+    const SECTION_SKILL      = "section_skill";
+    const SECTION_SKILL_LOOP = "section_skill_loop";
+    const SECTION_SKILL_FR   = "section_skill_fr";
+    const SECTION_SKILL_EN   = "section_skill_en";
+    const SECTION_SKILL_IT   = "section_skill_it";
 
     /**
      * 2 - DEFINIR LES HOOKS ACTIONS
@@ -137,7 +138,42 @@ class mycustome_skill{
 
 
         /**
-         * SECTION 2 : SECTION_SKILL_FR ======================================
+         * SECTION 2 : SECTION_SKILL_LOOP =====================================
+         *      1. créer la section
+         *      2. ajouter les éléments du formulaire
+         *      3. Sauvegarder les champs
+         */
+        // 1. créer la section
+        add_settings_section(
+            self::SECTION_SKILL_LOOP,                    // SLUG_SECTION
+            __('Gérer la boucle', 'MyCV'), // TITLE
+            [self::class, 'display_section_skill_loop'],     // CALLBACK
+            self::SUB_GROUP                          // SLUG_PAGE
+        );
+        // 2. ajouter les éléments du formulaire
+        add_settings_field(
+            'skill_emoji_loop',                  // SLUG_FIELD
+            __("Émoji", 'MyCV'), // LABEL
+            [self::class,'field_skill_emoji_loop'],  // CALLBACK
+            self::SUB_GROUP ,                // SLUG_PAGE
+            self::SECTION_SKILL_LOOP        // SLUG_SECTION
+        );
+        add_settings_field(
+            'skill_msg_loop',                  // SLUG_FIELD
+            __("Message boucle", 'MyCV'), // LABEL
+            [self::class,'field_skill_msg_loop'],  // CALLBACK
+            self::SUB_GROUP ,                // SLUG_PAGE
+            self::SECTION_SKILL_LOOP        // SLUG_SECTION
+        );
+        
+        // 3. Sauvegarder les champs
+        register_setting(self::SUB_GROUP, 'skill_emoji_loop');
+        register_setting(self::SUB_GROUP, 'skill_loop_fr');
+        register_setting(self::SUB_GROUP, 'skill_loop_en');
+        register_setting(self::SUB_GROUP, 'skill_loop_it');
+
+        /**
+         * SECTION 3 : SECTION_SKILL_FR ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -159,20 +195,11 @@ class mycustome_skill{
             self::SECTION_SKILL_FR        // SLUG_SECTION
         );
 
-        add_settings_field(
-            'skill_else_msg_fr',                  // SLUG_FIELD
-            __("Message pour la boucle", 'MyCV'),      // LABEL
-            [self::class,'field_skill_else_msg_fr'],  // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_SKILL_FR            // SLUG_SECTION
-        );
-        
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'skill_desc_fr');
-        register_setting(self::SUB_GROUP, 'skill_else_msg_fr');
 
         /**
-         * SECTION 3 : SECTION_SKILL_EN ======================================
+         * SECTION 4 : SECTION_SKILL_EN ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -194,21 +221,13 @@ class mycustome_skill{
             self::SECTION_SKILL_EN            // SLUG_SECTION
         );
 
-        add_settings_field(
-            'skill_else_msg_en',                  // SLUG_FIELD
-            __("Message pour la boucle", 'MyCV'),      // LABEL
-            [self::class,'field_skill_else_msg_en'],  // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_SKILL_EN            // SLUG_SECTION
-        );
-        
+
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'skill_desc_en');
-        register_setting(self::SUB_GROUP, 'skill_else_msg_en');
 
 
         /**
-         * SECTION 4 : SECTION_SKILL_IT ======================================
+         * SECTION 5 : SECTION_SKILL_IT ======================================
          *      1. créer la section
          *      2. ajouter les éléments du formulaire
          *      3. Sauvegarder les champs
@@ -230,17 +249,8 @@ class mycustome_skill{
             self::SECTION_SKILL_IT        // SLUG_SECTION
         );
 
-        add_settings_field(
-            'skill_else_msg_it',                  // SLUG_FIELD
-            __("Message pour la boucle", 'MyCV'),      // LABEL
-            [self::class,'field_skill_else_msg_it'],  // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_SKILL_IT            // SLUG_SECTION
-        );
-
         // 3. Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'skill_desc_it');
-        register_setting(self::SUB_GROUP, 'skill_else_msg_it');
 
     }
 
@@ -256,7 +266,16 @@ class mycustome_skill{
         <?php
     }
 
-    // SECTION 2 : SECTION_SKILL_FR ======================================
+    // SECTION 2 : SECTION_SKILL_LOOP =====================================
+    public static function display_section_skill_loop(){
+        ?>
+        <p class="section-description">
+            <?php _e("Cette parite vous permet de gérer la boucle", "MyCV"); ?>
+        </p>
+        <?php
+    }
+
+    // SECTION 3 : SECTION_SKILL_FR ======================================
     public static function display_section_skill_fr(){
         ?>
         <p class="section-description">
@@ -265,7 +284,7 @@ class mycustome_skill{
         <?php
     }
 
-    // SECTION 3 : SECTION_SKILL_EN ======================================
+    // SECTION 4 : SECTION_SKILL_EN ======================================
     public static function display_section_skill_en(){
         ?>
         <p class="section-description">
@@ -274,7 +293,7 @@ class mycustome_skill{
         <?php
     }
 
-    // SECTION 4 : SECTION_SKILL_IT ======================================
+    // SECTION 5 : SECTION_SKILL_IT ======================================
     public static function display_section_skill_it(){
         ?>
         <p class="section-description">
@@ -346,7 +365,53 @@ class mycustome_skill{
         <?php
     }
 
-    // SECTION 2 : SECTION_SKILL_FR ======================================
+    // SECTION 2 : SECTION_SKILL_LOOP =====================================
+    public static function field_skill_emoji_loop(){
+        $skill_emoji_loop = get_option('skill_emoji_loop');
+        ?>
+        <input type="checkbox" id="skill_emoji_loop" name="skill_emoji_loop" value="1" <?php checked(1, $skill_emoji_loop, true) ?> />
+        <label for=""><?php _e("Afficher un émoji", "MyCV"); ?> &#128549;</label>
+        <?php
+    }
+    public static function field_skill_msg_loop(){
+        $skill_loop_fr = esc_attr(get_option('skill_loop_fr'));
+        $skill_loop_en = esc_attr(get_option('skill_loop_en'));
+        $skill_loop_it = esc_attr(get_option('skill_loop_it'));
+        ?>
+        <p class="description"><?php _e("Ce message sera présent si la boucle est vide", "MyCV"); ?></p>
+        <div class="grid-cols-3">
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Français", "MyCV") ?></p>
+                <input type="text"
+                       id="skill_loop_fr"
+                       name="skill_loop_fr"
+                       value="<?php echo $skill_loop_fr ?>"
+                       placeholder="<?php _e("Texte en français", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Anglais", "MyCV") ?></p>
+                <input type="text"
+                       id="skill_loop_en"
+                       name="skill_loop_en"
+                       value="<?php echo $skill_loop_en ?>"
+                       placeholder="<?php _e("Texte en anglais", "MyCV") ?>"
+                />
+            </div>
+            <div class="grid-box">
+                <p class="box-title"><?php _e("Italien", "MyCV") ?></p>
+                <input type="text"
+                       id="skill_loop_it"
+                       name="skill_loop_it"
+                       value="<?php echo $skill_loop_it ?>"
+                       placeholder="<?php _e("Texte en italien", "MyCV") ?>"
+                />
+            </div>
+        </div>
+        <?php
+    }
+
+    // SECTION 3 : SECTION_SKILL_FR ======================================
     public static function field_skill_desc_fr(){
         // define register settings
         $skill_desc_fr = esc_attr(get_option('skill_desc_fr'));
@@ -370,21 +435,8 @@ class mycustome_skill{
             </div>
         <?php
     }
-    public static function field_skill_else_msg_fr(){
-        $skill_else_msg_fr = esc_attr(get_option('skill_else_msg_fr'));
-        ?>
-        <p class="description"><?php _e("Ce message sera présent si la boucle est vide", "MyCV") ?></p>
-        <input type="text"
-               id="skill_else_msg_fr"
-               name="skill_else_msg_fr"
-               value="<?php echo $skill_else_msg_fr ?>"
-               placeholder="<?php _e("Message court", "MyCV"); ?>"
-               class="large-text"
-        />
-        <?php
-    }
 
-    // SECTION 3 : SECTION_SKILL_EN ======================================
+    // SECTION 4 : SECTION_SKILL_EN ======================================
     public static function field_skill_desc_en(){
         $skill_desc_en = esc_attr(get_option('skill_desc_en'));
         // define argument for editor WYSIWYG
@@ -407,21 +459,8 @@ class mycustome_skill{
         </div>
         <?php
     }
-    public static function field_skill_else_msg_en(){
-        $skill_else_msg_en = esc_attr(get_option('skill_else_msg_en'));
-        ?>
-        <p class="description"><?php _e("Ce message sera présent si la boucle est vide", "MyCV") ?></p>
-        <input type="text"
-               id="skill_else_msg_en"
-               name="skill_else_msg_en"
-               value="<?php echo $skill_else_msg_en ?>"
-               placeholder="<?php _e("Message court", "MyCV"); ?>"
-               class="large-text"
-        />
-        <?php
-    }
-    
-    // SECTION 4 : SECTION_SKILL_IT ======================================
+
+    // SECTION 5 : SECTION_SKILL_IT ======================================
     public static function field_skill_desc_it(){
         // define register settings
         $skill_desc_it = esc_attr(get_option('skill_desc_it'));
@@ -446,20 +485,7 @@ class mycustome_skill{
         </div>
         <?php
     }
-    public static function field_skill_else_msg_it(){
-        $skill_else_msg_it = esc_attr(get_option('skill_else_msg_it'));
-        ?>
-        <p class="description"><?php _e("Ce message sera présent si la boucle est vide", "MyCV") ?></p>
-        <input type="text"
-               id="skill_else_msg_it"
-               name="skill_else_msg_it"
-               value="<?php echo $skill_else_msg_it ?>"
-               placeholder="<?php _e("Message court", "MyCV"); ?>"
-               class="large-text"
-        />
-        <?php
-    }
-    
+
     /**
      * 9 - AJOUT STYLE ET SCRIPT
      */

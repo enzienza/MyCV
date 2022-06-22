@@ -10,17 +10,54 @@
  */
 ?>
 
-<!--  if loop -> ok  [Post-type  => 'experiences']  -->
+<?php
+    wp_reset_postdata();
 
-<!--  else  -->
-<div class="no-result">
-    <!--  PROVISOIR  -->
-    <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
-        <?php echo get_option('skill_else_msg_fr'); ?>
-    <?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
-        <?php echo get_option('skill_else_msg_en'); ?>
-    <?php elseif(get_locale() === 'it_IT') : // Partie EN =========== ?>
-        <?php echo get_option('skill_else_msg_it'); ?>
-    <?php endif; ?>
-</div>
-<!--  endif  -->
+    $args = array(
+        'post_type'      => 'competences',
+        'posts_per_page' => -1,
+        'orderby'        => 'id',
+        'order'          => 'ASC'
+    );
+    $my_query = new WP_query($args);
+    if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
+?>
+
+    <div class="skill-group fadeInUp">
+        <h2 class="skill-title"><?php the_title(); ?></h2>
+
+        <div class="skill-grid">
+            <?php
+                $list_skill = get_post_meta($post->ID, 'list_skill', true);
+                foreach ($list_skill as $field) :
+            ?>
+                <div class="skill-item">
+                    <div class="info">
+                        <p class="name"><?php echo $field['name']; ?></p>
+                    </div>
+                    <div class="progressBar">
+                       <div class="percentagem" style="width: <?php echo $field['percent']; ?>%">
+                           <div class="percentagem-num"><?php echo $field['percent']; ?>%</div>
+                       </div>
+                    </div>
+                </div>
+
+            <?php endforeach; ?>
+        </div>
+    </div>
+
+<?php endwhile; else: ?>
+    <div class="no-result">
+        <?php if(checked(1, get_option('skill_emoji_loop'), false)) :  ?>
+            <p class="display-1">&#128549;</p>
+        <?php endif; ?>
+
+        <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
+            <p class="no-result-msg"><?php echo get_option('skill_loop_fr'); ?></p>
+        <?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
+            <p class="no-result-msg"><?php echo get_option('skill_loop_en'); ?></p>
+        <?php elseif(get_locale() === 'it_IT') : // Partie IT =========== ?>
+            <p class="no-result-msg"><?php echo get_option('skill_loop_it'); ?></p>
+        <?php endif; ?>
+    </div>
+<?php endif;  wp_reset_postdata(); ?>

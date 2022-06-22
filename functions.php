@@ -33,6 +33,7 @@ require_once ('inc/customize/config-admin.php');
 require_once ('inc/customize/custom-dashboard.php');
 require_once ('inc/customize/columns/admin-experiences.php');
 require_once ('inc/customize/columns/admin-formations.php');
+require_once ('inc/customize/columns/admin-competences.php');
 
 
 /* customize front-end */
@@ -45,6 +46,7 @@ require_once('inc/metaboxes/MB_year.php');
 require_once('inc/metaboxes/MB_company.php');
 require_once('inc/metaboxes/MB_info_resume.php');
 require_once('inc/metaboxes/MB_info_formation.php');
+require_once('inc/metaboxes/MB_skills.php');
 
 /** =====================================================
  *  3 - OPTIONS-THEME
@@ -72,6 +74,7 @@ require_once('inc/options-theme/op_customtheme/09-errorpage.php');
 
 require_once('inc/post-type/cpt_experience.php');
 require_once('inc/post-type/cpt_formation.php');
+require_once('inc/post-type/cpt_competences.php');
 
 
 /** =====================================================
