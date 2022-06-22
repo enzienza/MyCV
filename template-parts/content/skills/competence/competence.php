@@ -42,22 +42,22 @@
                     </div>
                 </div>
 
-
             <?php endforeach; ?>
         </div>
     </div>
 
 <?php endwhile; else: ?>
     <div class="no-result">
-
-        <p class="display-1">&#128549;</p>
+        <?php if(checked(1, get_option('skill_emoji_loop'), false)) :  ?>
+            <p class="display-1">&#128549;</p>
+        <?php endif; ?>
 
         <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
-            <p class="no-result-msg"><?php echo get_option('skill_else_msg_fr'); ?></p>
+            <p class="no-result-msg"><?php echo get_option('skill_loop_fr'); ?></p>
         <?php elseif(get_locale() === 'en_GB') : // Partie EN =========== ?>
-            <p class="no-result-msg"><?php echo get_option('skill_else_msg_en'); ?></p>
-        <?php elseif(get_locale() === 'it_IT') : // Partie EN =========== ?>
-            <p class="no-result-msg"><?php echo get_option('skill_else_msg_it'); ?></p>
+            <p class="no-result-msg"><?php echo get_option('skill_loop_en'); ?></p>
+        <?php elseif(get_locale() === 'it_IT') : // Partie IT =========== ?>
+            <p class="no-result-msg"><?php echo get_option('skill_loop_it'); ?></p>
         <?php endif; ?>
     </div>
 <?php endif;  wp_reset_postdata(); ?>
