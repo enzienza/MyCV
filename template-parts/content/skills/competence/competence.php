@@ -17,7 +17,7 @@
         'post_type'      => 'competences',
         'posts_per_page' => -1,
         'orderby'        => 'id',
-        'order'          => 'DESC'
+        'order'          => 'ASC'
     );
     $my_query = new WP_query($args);
     if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();

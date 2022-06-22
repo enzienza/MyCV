@@ -2,7 +2,7 @@
 /**
  * Name file: MB_skill
  * Description: File creating a MetaBox for completing informations the Custom Post Type
- *              -> this Metabox adding the year for CPT_experience
+ *              -> this Metabox adding a array for listing skill so level
  *
  * @package WordPress
  * @subpackage MyCV
@@ -43,7 +43,7 @@ class MB_skill{
         if (current_user_can('publish_posts', $POST)) {
             add_meta_box(
                 self::META_KEY,             // ID_META_BOX
-                __('Liste des compétences', 'MyCV'),            // TITLE_META_BOX
+                __('Listez vos compétences', 'MyCV'),            // TITLE_META_BOX
                 [self::class, 'render'],        // CALLBACK
                 self::SCREEN,            // WP_SCREEN
                 'advanced',             // CONTEXT [ normal | advanced | side ]
@@ -65,13 +65,11 @@ class MB_skill{
                   let row = $('.empty-row.screen-reader-text').clone(true);
                   row.removeClass('empty-row screen-reader-text');
                   row.insertBefore('#list_skills tbody>tr:last');
-                  console.log("Add empty");
                   return false;
                 });
 
                 $('.remove-row').on('click', function () {
                   $(this).parents('tr').remove();
-                  console.log("Remove empty");
                   return false;
                 });
               });
@@ -142,53 +140,57 @@ class MB_skill{
      */
     public static function save($POST_ID){
         if( current_user_can('publish_posts', $POST_ID)){
+            // Check if our nonce is set.
+            if ( ! isset( $_POST[self::NONCE] ) ) {
+                return $POST_ID;
+            }
 
-        // Check if our nonce is set.
-        if ( ! isset( $_POST[self::NONCE] ) )
-            return $POST_ID;
+            $nonce = $_POST[self::NONCE];
 
-        $nonce = $_POST[self::NONCE];
+            // Verify that the nonce is valid.
+            if ( !wp_verify_nonce( $nonce, self::NONCE ) ) {
+                return $POST_ID;
+            }
 
-        // Verify that the nonce is valid.
-        if ( !wp_verify_nonce( $nonce, self::NONCE ) )
-            return $POST_ID;
+            // If this is an autosave, our form has not been submitted, so we don't want to do anything.
+            if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
+                return $POST_ID;
+            }
 
-        // If this is an autosave, our form has not been submitted, so we don't want to do anything.
-        if(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-            return $POST_ID;
+            // Check the user's permissions.
+            if(!current_user_can('edit_post', $POST_ID)) {
+                return $POST_ID;
+            }
 
-        // Check the user's permissions.
-        if(!current_user_can('edit_post', $POST_ID))
-            return $POST_ID;
+            // Recovery the array get_post_meta() & define a new array
+            $old = get_post_meta($POST_ID, 'list_skill', true);
+            $new = array();
 
-        $old = get_post_meta($POST_ID, 'list_skill', true);
-        $new = array();
+            // define namespace
+            $names = $_POST['name'];
+            $percents = $_POST['percent'];
 
-        $names = $_POST['name'];
-        $percents = $_POST['percent'];
+            // counts all elements in array
+            $count = count($names);
 
-        $count = count($names);
+            // define loop for()
+            for ($i = 0; $i < $count; $i++) {
 
+                if ($names[$i] != '') {
+                    $new[$i]['name'] = $names[$i];
 
-        for ($i = 0; $i < $count; $i++) {
+                    if ($percents[$i] != '') {
+                        $new[$i]['percent'] = $percents[$i];
+                    };
+                }
 
-            if ($names[$i] != '') :
-                $new[$i]['name'] = $names[$i];
-
-                if ($percents[$i] != '') {
-                    $new[$i]['percent'] = $percents[$i];
-                };
-            endif;
-
-
-            if (!empty($new) && $new != $old)
-                update_post_meta($POST_ID, 'list_skill', $new);
-            elseif (empty($new) && $old)
-                delete_post_meta($POST_ID, 'list_skill', $old);
+                if (!empty($new) && $new != $old)
+                    update_post_meta($POST_ID, 'list_skill', $new);
+                elseif (empty($new) && $old)
+                    delete_post_meta($POST_ID, 'list_skill', $old);
+            }
         }
-
-
-        }
+        return $POST_ID;
     }
 }
 if(class_exists('MB_skill')){
