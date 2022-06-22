@@ -105,4 +105,19 @@ body.dark{
             color: rgba($color-light, .5);
         }
     }
+
+    // PROGRESS-BAR
+    .skill{
+        &-title{
+            text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+        }
+        &-item{
+            .info .name,{
+                text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+            }
+            .percentagem, .percentagem-num{
+                background: $color-primary;
+            }
+        }
+    }
 }

@@ -20,7 +20,7 @@
         </div>
     <?php endif; ?>
 
-    <div class="timeline">
+    <div class="skill-content">
         <?php require_once("competence/competence.php"); ?>
         <?php //get_template_part('template-parts/') ?>
     </div>

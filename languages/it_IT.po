@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-06-14 15:52+0000\n"
+"PO-Revision-Date: 2022-06-22 08:33+0000\n"
 "Last-Translator: \n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
@@ -65,6 +65,10 @@ msgstr "Visualizzare l'esperienza"
 msgid "Afficher l'îcone"
 msgstr "Mostra icona"
 
+#: inc/post-type/cpt_competences.php:29
+msgid "Afficher la compétence"
+msgstr "Mostra la competenza"
+
 #: inc/post-type/cpt_formation.php:29
 msgid "Afficher la formation"
 msgstr "Visualizza il corso"
@@ -81,6 +85,10 @@ msgstr "Mostra il pulsante"
 #: inc/metaboxes/MB_info_formation.php:64
 msgid "Afficher le détail du diplôme"
 msgstr "Mostra i dettagli del diploma"
+
+#: inc/post-type/cpt_competences.php:30
+msgid "Afficher les compétences"
+msgstr "Visualizza le competenze"
 
 #: inc/options-theme/op_customtheme/04-about.php:319
 msgid "Afficher les deux"
@@ -109,6 +117,7 @@ msgid "Afficher une description à la section"
 msgstr "Visualizza una descrizione nella sezione"
 
 #: inc/post-type/cpt_experience.php:25 inc/post-type/cpt_formation.php:25
+#: inc/post-type/cpt_competences.php:25 inc/metaboxes/MB_skills.php:134
 msgid "Ajouter"
 msgstr "Aggiungere"
 
@@ -148,6 +157,10 @@ msgstr "Aggiungi un messaggio"
 msgid "Ajouter une image comme arrière plan"
 msgstr "Aggiungi un'immagine come sfondo"
 
+#: inc/post-type/cpt_competences.php:26
+msgid "Ajouter une nouvelle compétence"
+msgstr "Aggiungere una nuova competenza"
+
 #: inc/post-type/cpt_experience.php:26
 msgid "Ajouter une nouvelle expérience"
 msgstr "Aggiungi una nuova esperienza"
@@ -176,9 +189,21 @@ msgstr "Anno"
 msgid "Attributs de l'expérience"
 msgstr "Attributi dell'esperienza"
 
+#: inc/post-type/cpt_competences.php:35
+msgid "Attributs de la compétence"
+msgstr "Attributi della competenza"
+
 #: inc/post-type/cpt_formation.php:35
 msgid "Attributs de la formation"
 msgstr "Attributi del corso"
+
+#: inc/post-type/cpt_competences.php:32
+msgid "Aucune compétence trouvée"
+msgstr "Nessuna competenza trovata"
+
+#: inc/post-type/cpt_competences.php:33
+msgid "Aucune compétence trouvée dans la corbeille"
+msgstr "Nessuna competenza trovata nel cestino"
 
 #: inc/post-type/cpt_experience.php:32
 msgid "Aucune expérience trouvée"
@@ -363,6 +388,10 @@ msgstr "Questa parte permette di gestire i saluti della sezione"
 msgid "Cette section vous permettre de gérer l'affichage de la bannière"
 msgstr "Questa sezione permette di gestire la visualizzazione del banner"
 
+#: inc/post-type/cpt_competences.php:31
+msgid "Chercher dans les compétences"
+msgstr "Cerca tra le competenze"
+
 #: inc/post-type/cpt_experience.php:31
 msgid "Chercher dans les expériences"
 msgstr "Ricerca nelle esperienze"
@@ -400,9 +429,18 @@ msgstr "Controlla e aggiungi l'URL dei tuoi social network"
 msgid "Cocher la disposition des éléments"
 msgstr "Spunta la disposizione degli elementi"
 
+#: inc/metaboxes/MB_skills.php:82
+msgid ""
+"Compléter avec le nom des langages/programmes ainsi que le niveau de maîtrise"
+msgstr "Compilare il nome delle lingue/programmi e il livello di competenza"
+
 #: inc/metaboxes/MB_company.php:66
 msgid "Compléter avec les informations de l'entreprise"
 msgstr "Completo di informazioni sull'azienda"
+
+#: inc/post-type/cpt_competences.php:23
+msgid "Compétence"
+msgstr "Competenza"
 
 #. slug parent
 #. page_title
@@ -547,6 +585,10 @@ msgstr "Esperienza"
 #: inc/options-theme/op_myprofil/03-network.php:112
 msgid "Facebook"
 msgstr "Facebook"
+
+#: inc/post-type/cpt_competences.php:34
+msgid "Filtrer la liste des compétences"
+msgstr "Filtrare l'elenco delle competenze"
 
 #: inc/post-type/cpt_experience.php:34
 msgid "Filtrer la liste des expériences"
@@ -766,6 +808,11 @@ msgstr "Linea 2"
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
+#. ID_META_BOX
+#: inc/metaboxes/MB_skills.php:46
+msgid "Liste des compétences"
+msgstr "Elenco delle competenze"
+
 #. SLUG_FIELD
 #: inc/metaboxes/MB_company.php:78
 #: inc/options-theme/op_myprofil/01-personalDetails.php:170
@@ -885,6 +932,10 @@ msgstr "Messaggio per la descrizione"
 msgid "Modifier l'expérience"
 msgstr "Moddificare l'esperienza"
 
+#: inc/post-type/cpt_competences.php:28
+msgid "Modifier la compétence"
+msgstr "Modificare la competenza"
+
 #: inc/post-type/cpt_formation.php:28
 msgid "Modifier la formation"
 msgstr "Modificare il corso"
@@ -920,7 +971,7 @@ msgstr "MyCV 2021"
 msgid "Métier"
 msgstr "Lavoro"
 
-#: inc/metaboxes/MB_company.php:69
+#: inc/metaboxes/MB_skills.php:88 inc/metaboxes/MB_company.php:69
 #: inc/options-theme/op_customtheme/03-home.php:550
 #: inc/options-theme/op_customtheme/02-header.php:220
 #: template-parts/content/about/details/it-list.php:17
@@ -940,6 +991,10 @@ msgstr "Nome e cognome"
 #: inc/customize/columns/admin-experiences.php:103
 msgid "Non"
 msgstr "No"
+
+#: inc/post-type/cpt_competences.php:27
+msgid "Nouvelle compétence"
+msgstr "Nuova competenza"
 
 #: inc/post-type/cpt_experience.php:27
 msgid "Nouvelle expérience"
@@ -1024,6 +1079,10 @@ msgstr "Posto"
 #: inc/options-theme/op_customtheme/02-header.php:256
 msgid "Profile"
 msgstr "profilo"
+
+#: inc/metaboxes/MB_skills.php:89
+msgid "Proucent"
+msgstr "Percentuale"
 
 #: inc/metaboxes/MB_year.php:64
 msgid "Préciser l'année"
@@ -1135,6 +1194,11 @@ msgstr "Competenza"
 #: template-parts/content/resumes/work/experience.php:43
 msgid "Stage"
 msgstr "Tirocinio"
+
+#: inc/metaboxes/MB_skills.php:112 inc/metaboxes/MB_skills.php:120
+#: inc/metaboxes/MB_skills.php:128
+msgid "Supprimer"
+msgstr "Cancellare"
 
 #: inc/options-theme/op_customtheme/09-errorpage.php:74
 msgid "Sur cette page vous pouvez gérer la page d'error 404 du site"
@@ -1261,6 +1325,10 @@ msgstr "Titolo seconda scheda"
 #: inc/options-theme/op_customtheme/08-contact.php:117
 msgid "Titre section"
 msgstr "In questa pagina puoi gestire la sezione about del sito"
+
+#: inc/post-type/cpt_competences.php:24
+msgid "Toutes les compétences"
+msgstr "Tutte le competenze"
 
 #: inc/post-type/cpt_experience.php:24
 msgid "Toutes les expériences"
