@@ -120,4 +120,33 @@ body.dark{
             }
         }
     }
+
+    #my-form{
+        .frm_form_field{
+            label{
+                color: $color-light;
+                text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+            }
+            input[type="text"],
+            input[type="email"],
+            textarea{
+                background-color: #252A2E;
+                border: none;
+                color: $color-light;
+                box-shadow: 0px 18px 18px 0 rgba(0, 0, 0, 0.2);
+                &:focus{
+                    border-color: $color-primary;
+                }
+            }
+        }
+        .frm_button_submit {
+            border-color: 1px solid $color-primary;
+            color: $color-primary;
+
+            &:hover, &:active, &:focus{
+                background-color: $color-primary;
+                color: $color-light;
+            }
+        }
+    }
 }
