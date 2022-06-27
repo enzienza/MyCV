@@ -1,8 +1,7 @@
 <?php
 /**
  * Name file: OP_about
- * Description: File for the manage CV Settings.
- *              [information general]
+ * Description: this is a submenu for the CPT_competences for managing languages mastery
  *
  * @package WordPress
  * @subpackage MyCV

@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: en-lang
- * Description: display this part if get_locale() is same as 'en_GB'
+ * Description: display the block for english language
  *
  * @package WordPress
  * @subpackage MyCV

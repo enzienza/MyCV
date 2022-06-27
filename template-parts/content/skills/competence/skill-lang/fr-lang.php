@@ -1,7 +1,7 @@
 <?php
 /**
  * Name file: fr-lang
- * Description: display this part if get_locale() is same as 'fr_FR'
+ * Description: display the block for french language
  *
  * @package WordPress
  * @subpackage MyCV
