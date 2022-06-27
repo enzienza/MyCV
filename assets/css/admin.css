@@ -43,6 +43,17 @@ Tags:
 /** ==============================================
     1 - GENERAL
  */
+.sub-title{
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: larger;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--lighten-bluegray);
+    letter-spacing: .5px;
+    padding-bottom: 1rem;
+}
+
 .flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -115,7 +126,7 @@ Tags:
     gap: 1rem;
 }
 
-
+/* MARGIN */
 .mt-1{
     margin-top: .5rem;
 }
@@ -279,17 +290,17 @@ form h2 {
     object-fit: cover;
 }
 
-.item-picture-cv, .grid-box{
+.item-picture-cv, .grid-box, .group-languages{
     border-right: 1px solid var(--lighten-grey);
     padding-left: .5rem;
     padding-right: 1rem;
 }
 
-.item-picture-cv:first-child, .grid-box:first-child{
+.item-picture-cv:first-child, .grid-box:first-child, .group-languages:first-child{
     padding-left: 0;
 }
 
-.item-picture-cv:last-child, .grid-box:last-child{
+.item-picture-cv:last-child, .grid-box:last-child, .group-languages:last-child{
     border-right: none;
 }
 
@@ -332,6 +343,62 @@ form h2 {
 }
 .no-current, .no-stage{
     color: var(--color-border) !important;
+}
+
+/* PAGE - SKILL-LANGUAGES */
+.box-note{
+    border: dashed 1px var(--color-border);
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 15px;
+}
+.level-group{
+    margin-left: 2rem;
+}
+.level-item{
+    list-style: disc;
+}
+
+.control{
+    font-weight: 800;
+
+}
+.control::after{
+    content: " : ";
+}
+/* footnotes */
+.footnote-mark a{
+    font-size: x-small;
+    vertical-align: top;
+    text-decoration: none;
+    padding-left: 1px;
+    color: var(--darken-bluegray);
+    /*font-weight: 900;*/
+}
+.footnote-mark a::before{
+    content: "[";
+}
+.footnote-mark a::after{
+    content: "]";
+}
+
+.footnotes::before{
+    content: "Footnotes";
+    text-transform: uppercase;
+    color: #909090;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    display: block;
+    margin: 2rem 0 .5rem;
+}
+
+.footnotes{
+    font-size: x-small;
+    color: var(--lighten-bluegray);
+}
+
+.footnotes li::marker{
+    font-weight: 700;
 }
 
 /** ==============================================
