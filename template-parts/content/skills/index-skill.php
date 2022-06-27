@@ -22,6 +22,7 @@
 
     <div class="skill-content">
         <?php require_once("competence/competence.php"); ?>
+        <?php require_once("competence/languages.php"); ?>
         <?php //get_template_part('template-parts/') ?>
     </div>
 </section>

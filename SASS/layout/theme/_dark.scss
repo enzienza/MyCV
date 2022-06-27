@@ -121,6 +121,36 @@ body.dark{
         }
     }
 
+    .language{
+        &-item{
+            text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+            &::before{
+                background: $color-night;
+            }
+        }
+    }
+
+    .bg-conic{
+        &-16{
+            background: conic-gradient($color-primary 16.50%, transparent 0);
+        }
+        &-33{
+            background: conic-gradient($color-primary 33%, transparent 0);
+        }
+        &-49{
+            background: conic-gradient($color-primary 49.50%, transparent 0);
+        }
+        &-66{
+            background: conic-gradient($color-primary 66%, transparent 0);
+        }
+        &-82{
+            background: conic-gradient($color-primary 82.50%, transparent 0);
+        }
+        &-99{
+            background: conic-gradient($color-primary 99%, transparent 0);
+        }
+    }
+
     #my-form{
         .frm_form_field{
             label{
