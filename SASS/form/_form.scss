@@ -13,13 +13,13 @@
     }
 
     .frm_fields_container {
-        display: flex;
-        flex-flow: column wrap;
+        @include flex;
+        @include flex-flow(column wrap);
     }
 
     .frm_form_field {
-        display: flex;
-        flex-flow: column wrap;
+        @include flex;
+        @include flex-flow(column wrap);
         margin-bottom: 1.5rem;
         width: 100%;
         clear: both;
@@ -78,13 +78,13 @@
     }
 
     .frm_submit {
-        display: flex;
+        @include flex;
         margin-top: 1rem;
     }
 
     .frm_button_submit {
         cursor: pointer;
-        box-shadow: none;
+        @include box-shadow(none);
         font-size: 16px;
         border: 1px solid $color-primary-dark;
         padding: 10px 22px;
@@ -95,7 +95,7 @@
         display: inline;
         text-transform: uppercase;
         border-radius: 5px;
-        transition: all 0.5s ease;
+        @include transition(all 0.5s ease);
 
         &:hover, &:active, &:focus{
             background-color: $color-primary-dark;

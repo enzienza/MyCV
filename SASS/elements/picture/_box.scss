@@ -4,8 +4,9 @@
     overflow: hidden;
     width: 13rem;
     height: 13rem;
-    object-fit: cover;
+    @include object-fit(cover);
     border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
+    -webkit-animation:  morph 3.75s linear infinite;
     animation: morph 3.75s linear infinite;
     border: 0.6rem solid $color-primary-dark;
 

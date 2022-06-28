@@ -3,16 +3,16 @@
 
 .nav-lang {
     margin-bottom: 0;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
+    @include flex;
+    @include flex-flow(row nowrap);
+    @include justify-content(flex-end);
+    @include align-items(center);
 
     @include landscape(SM){
-        flex-direction: column;
+        @include flex-direction(column);
     }
 
     @include landscape(XS){
-        flex-direction: column;
+        @include flex-direction(column);
     }
 }

@@ -24,10 +24,10 @@
     }
     &-image{
         //border: 2px solid deepskyblue;
-        display: flex;
-        justify-content: center;
-        flex-flow: column nowrap;
-        align-items: center;
+        @include flex;
+        @include justify-content(center);
+        @include flex-flow(column nowrap);
+        @include align-items(center);
     }
 }
 

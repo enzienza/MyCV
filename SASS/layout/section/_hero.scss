@@ -4,8 +4,8 @@
     min-height: calc(100vh - (1rem + 5vmin));
     position: relative;
     @include bg-paralax;
-    display: flex;
-    flex-flow: column nowrap;
+    @include flex;
+    @include flex-flow(column nowrap);
 }
 
 .overlay{
@@ -53,14 +53,10 @@
 
 .hight{
     &-small{
-        text-shadow: 0 0 3px $color-primary,0 0 3px $color-primary,
-                     0 0 3px $color-primary,0 0 3px $color-primary,
-                     0 0 3px $color-primary,0 0 3px $color-primary,
-                     0 0 3px $color-primary,0 0 3px $color-primary;
+        text-shadow: 0 0 3px $color-primary,0 0 3px $color-primary, 0 0 3px $color-primary,0 0 3px $color-primary, 0 0 3px $color-primary,0 0 3px $color-primary, 0 0 3px $color-primary,0 0 3px $color-primary;
     }
     &-normal{
-        text-shadow: -5px -5px 5px $color-primary,-5px 5px 5px $color-primary,
-        5px -5px 5px $color-primary,5px 5px 5px $color-primary;
+        text-shadow: -5px -5px 5px $color-primary,-5px 5px 5px $color-primary, 5px -5px 5px $color-primary,5px 5px 5px $color-primary;
     }
     &-large{
         color: $color-light;

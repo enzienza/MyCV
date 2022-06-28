@@ -4,9 +4,9 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: column nowrap;
+    @include flex;
+    @include justify-content(space-between);
+    @include flex-flow(column nowrap);
     text-align: center;
     height: 100%;
     background: $color-dark;
@@ -93,11 +93,11 @@ header{
 // Responsive PAYSAGE - landscape -------
 @include landscape(SM){
     header{
-        display: grid;
-        grid-template-columns: auto 1fr 2fr auto;
+        @include grid;
+        @include grid-template-columns(auto 1fr 2fr auto);
         gap: 0;
-        align-content: center;
-        align-items: center;
+        @include align-content(center);
+        @include align-items(center);
     }
 
     .sidebar{
@@ -126,11 +126,11 @@ header{
 
 @include landscape(XS){
     header{
-        display: grid;
-        grid-template-columns: auto 1fr 2fr auto;
+        @include grid;
+        @include grid-template-columns(auto 1fr 2fr auto);
         gap: 0;
-        align-content: center;
-        align-items: center;
+        @include align-content(center);
+        @include align-items(center);
     }
 
     .sidebar{

@@ -3,9 +3,9 @@
 .social{
     &-list{
         margin-bottom: .5rem;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
+        @include flex;
+        @include flex-flow(row nowrap);
+        @include justify-content(space-between);
     }
     &-item{
         font-family: $font-icon;
@@ -21,10 +21,7 @@
 .network{
     &-list{
         margin-bottom: .5rem;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
+        @include flex-row-center;
     }
     &-item{
         font-family: $font-icon;
@@ -37,12 +34,12 @@
 @include landscape(SM){
     .social{
         &-list{
-            flex-direction: column;
+            @include flex-direction(column);
         }
     }
     .network{
         &-list{
-            flex-direction: column;
+            @include flex-direction(column);
         }
     }
 }
@@ -50,12 +47,12 @@
 @include landscape(XS){
     .social{
         &-list{
-            flex-direction: column;
+            @include flex-direction(column);
         }
     }
     .network{
         &-list{
-            flex-direction: column;
+            @include flex-direction(column);
         }
     }
 }

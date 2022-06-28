@@ -3,9 +3,9 @@
 section{
     padding: 1rem;
     min-height: 90vh;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    @include flex;
+    @include flex-flow(column nowrap);
+    @include justify-content(center);
 
     &:nth-child(even){
         background-color: rgba(0,0,0,.03);
@@ -28,9 +28,9 @@ section{
     text-align: center;
     line-height: 2;
     min-height: 50vh;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    @include flex;
+    @include flex-flow(column wrap);
+    @include justify-content(center);
 
     &-msg{
         font-size: large;

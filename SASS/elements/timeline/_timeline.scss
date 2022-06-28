@@ -27,8 +27,8 @@
     }
 
     &-card{
-        display: flex;
-        flex-flow: column nowrap;
+        @include flex;
+        @include flex-flow(column nowrap);
         max-width: 600px;
 
         &:last-of-type{
@@ -37,8 +37,8 @@
     }
 
     &-item{
-        display: grid;
-        grid-template-columns: auto 1fr auto;
+        @include grid;
+        @include grid-template-columns(auto 1fr auto);
         gap: 0;
         border-radius: 5px;
     }
@@ -46,10 +46,7 @@
     &-date{
         width: 110px;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-flow: column wrap;
+        @include flew-col-wrap-center;
         position: relative;
         border-right: 2px solid rgba($color-grey, .3);
 
@@ -93,21 +90,19 @@
     .detail-link{
         letter-spacing: 1px;
         cursor: pointer;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-content: center;
+        @include flex-column-center;
         text-align: center;
         padding-right: 1rem;
 
         &::after{
+            -ms-flex-negative: 0;
             flex-shrink: 0;
             font-size: 1.25rem;
             color: $color-grey;
             font-family: $font-icon;
             content: "\f114";
             font-weight: 500;
-            transition: transform .2s ease-in-out;
+            @include transition(transform .2s ease-in-out);
         }
 
         &:not(.collapsed):after{
@@ -120,7 +115,7 @@
         padding: 1rem;
         padding-top: 1.5rem;
         border-top: 2px solid rgba($color-grey, .3);
-        transition: all .5s ease-in-out;
+        @include transition(all .5s ease-in-out);
     }
 }
 
@@ -163,6 +158,7 @@
         &-item{
             //grid-template-columns: 55px 1fr auto;
             //grid-template-columns: 80px 1fr auto;
+            -ms-grid-columns: 1fr;
             grid-template-columns: 1fr;
         }
 
@@ -232,6 +228,7 @@
         &-item{
             //grid-template-columns: 55px 1fr auto;
             //grid-template-columns: 80px 1fr auto;
+            -ms-grid-columns: 1fr;
             grid-template-columns: 1fr;
         }
 
@@ -241,7 +238,7 @@
             font-size: smaller;
             border-right: none;
             border-bottom: 2px solid rgba($color-grey, .3);
-            align-content: flex-start;
+            @include align-content(flex-start);
 
             span{
                 line-height: 1;

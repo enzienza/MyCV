@@ -1,7 +1,7 @@
 // main: ../_layout.scss
 
 #skill{
-    justify-content: start;
+    @include justify-content(start);
     margin-bottom: 2rem;
 }
 
@@ -20,8 +20,8 @@
     }
 
     &-grid{
-        display: grid;
-        grid-template-columns: 1fr;
+        @include grid;
+        @include grid-template-columns(1fr);
         gap: 1rem;
     }
 
@@ -65,20 +65,15 @@
                 top: 0;
                 left: 0;
                 height: 7px;
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
-                border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
+                border-radius: 10px;
                 background: $color-primary-dark;
-                -webkit-transition: 3s all;
-                -webkit-animation-duration: 3s;
-                -webkit-animation-name: animationProgress;
+                @include transition(3s all);
+                @include animation(3s animationProgress);
 
                 &-num{
                     position: absolute;
                     top: -17px;
                     right: -15px;
-                    font-weight: normal;
                     width: 40px;
                     height: 40px;
                     background: $color-primary-dark;
@@ -98,8 +93,8 @@
 
 .language{
     &-grid{
-        display: grid;
-        grid-template-columns: 1fr;
+        @include grid;
+        @include grid-template-columns(1fr);
         place-items: center;
         gap: 2rem;
     }
@@ -118,7 +113,7 @@
         //box-shadow: 5px 5px 20px rgba(0,0,0, .3), -5px -5px 20px rgba(0,0,0, .3);
         border-radius: 50%;
         position: relative;
-        display: grid;
+        @include grid;
         place-items: center;
 
         &::before{
@@ -134,8 +129,8 @@
         font-size: large;
         z-index: 1;
         text-align: center;
-        display: flex;
-        flex-direction: column;
+        @include flex;
+        @include flex-direction(column);
     }
     &-name{
         font-size: medium;
@@ -175,13 +170,13 @@
 @include responsive(XL){
     .skill{
         &-grid{
-            grid-template-columns: 1fr 1fr;
+            @include grid-template-columns(1fr 1fr);
             gap: 1rem 4rem;
         }
     }
     .language{
         &-grid{
-            grid-template-columns: repeat(3, 1fr);
+            @include grid-template-columns(repeat(3, 1fr));
             gap: 1rem;
         }
     }
@@ -189,13 +184,13 @@
 @include responsive(LG){
     .skill{
         &-grid{
-            grid-template-columns: 1fr 1fr;
+            @include grid-template-columns(1fr 1fr);
             gap: 1rem 4rem;
         }
     }
     .language{
         &-grid{
-            grid-template-columns: repeat(3, 1fr);
+            @include grid-template-columns(repeat(3, 1fr));
             gap: 1rem;
         }
     }

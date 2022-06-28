@@ -3,7 +3,7 @@
 // picture profil in sidebar
 .profil{
     border-radius: 100%;
-    object-fit: cover;
+    @include object-fit(cover);
     height: 11rem;
     width: 11rem;
     margin-bottom: 1.5rem;
@@ -29,6 +29,7 @@
 }
 
 .invert{
+    -webkit-filter: invert(1);
     filter: invert(1);
     border: none;
 }

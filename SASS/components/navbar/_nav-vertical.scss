@@ -2,7 +2,7 @@
 
 
 .navbar-nav{
-    flex-flow: column nowrap;
+    @include flex-flow(column nowrap);
     padding: 1rem 3rem;
 
     .nav-item{
@@ -34,10 +34,12 @@
     top: 1rem;
     outline: none !important;
     line-height: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @include inline-flex;
+    @include align-items(center);
+    @include justify-content(center);
     z-index: 1000;
 
     &__burger{
@@ -45,7 +47,7 @@
         width: 20px;
         height: 2px;
         background-color: $color-light;
-        transition: all .5s ease-in-out;
+        @include transition(all .5s ease-in-out);
         //transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
 
         &::before, &::after{
@@ -56,20 +58,20 @@
             height: 2px;
             background-color: $color-light;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(255,101,47,.2);
-            transition: all .5s ease-in-out;
+            @inclu box-shadow(0 2px 5px rgba(255,101,47,.2));
+            @include transition(all .5s ease-in-out);
             //transition: all 400ms cubic-bezier(.84,.06,.52,1.8);
         }
 
         &::before{
             //transform: translateY(-10px);
-            transform: translateY(-8px);
+            @include translateY(-8px);
             animation-delay: 100ms;
         }
 
         &::after{
             //transform: translateY(10px);
-            transform: translateY(8px);
+            @include translateY(8px);
             animation-delay: 250ms;
         }
     }
@@ -77,16 +79,20 @@
 
 .btn-menu.open{
     .btn-menu__burger{
-        transform: translateX(-50px);
+        @include translateX(-50px);
         background: transparent;
         box-shadow: none;
 
         &::before{
+            -webkit-transform: rotate(45deg) translate(35px, -35px);
+            -ms-transform: rotate(45deg) translate(35px, -35px);
             transform: rotate(45deg) translate(35px, -35px);
             //transform: rotate(40deg);
         }
 
         &::after{
+            -webkit-transform: rotate(-45deg) translate(35px, 35px);
+            -ms-transform: rotate(-45deg) translate(35px, 35px);
             transform: rotate(-45deg) translate(35px, 35px);
             //transform: rotate(-40deg);
         }
