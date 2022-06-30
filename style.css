@@ -233,13 +233,11 @@ h6 {
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear; }
+  box-sizing: border-box; }
 
 html {
-  font-size: 100%; }
+  font-size: 100%;
+  scroll-behavior: smooth; }
 
 body {
   line-height: 1.5;
@@ -1449,9 +1447,30 @@ section {
 .title-section {
   text-align: center;
   text-transform: capitalize;
-  border-bottom: 2px solid purple;
   margin-bottom: 3rem;
-  padding-bottom: 1em; }
+  padding-bottom: 1em;
+  padding-top: 1rem;
+  position: relative; }
+  .title-section::before {
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid purple;
+    width: 80px;
+    bottom: 8px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    display: table; }
+  .title-section::after {
+    position: absolute;
+    content: "";
+    border-bottom: 1px solid purple;
+    width: 40px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    display: table; }
 
 .desc-section {
   text-align: justify; }

@@ -15,9 +15,34 @@ section{
 .title-section{
     text-align: center;
     text-transform: capitalize;
-    border-bottom: 2px solid $color-primary-dark;
+    //border-bottom: 2px solid $color-primary-dark;
     margin-bottom: 3rem;
     padding-bottom: 1em;
+    padding-top: 1rem;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: "";
+        border-bottom: 1px solid $color-primary-dark;
+        width: 80px;
+        bottom: 8px;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        display: table;
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        border-bottom: 1px solid $color-primary-dark;
+        width: 40px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin: 0 auto;
+        display: table;
+    }
 }
 
 .desc-section{
