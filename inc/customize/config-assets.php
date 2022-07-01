@@ -67,6 +67,24 @@ if(!function_exists('mycv_register_assets')) {
         wp_enqueue_script('jquery-cookie');
 
 
+        /**
+         * SCROLL-REVEAL
+         *
+         * Permet d'utiliser la librairie ScroolReveal
+         *
+         * @category CDN
+         * @package scroll-reveal
+         * @author  jlmakes
+         * @version 4.0.0
+         */
+        wp_register_script(
+            'scroll-reveal',
+            'https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"',
+            ['jquery'],
+            '4.0.0', true
+        );
+        wp_enqueue_script('scroll-reveal');
+
         // JS Custom  ---------------------------------
         // Permet de basculé du mode claire à sombre
         wp_enqueue_script(
@@ -103,6 +121,21 @@ if(!function_exists('mycv_register_assets')) {
             '1.0',
             true
         );
+
+        /**
+         * SCROLL-SHOW
+         *
+         * permet de visualise l'element au fure et a mesure du scroll
+         *
+         */
+        wp_enqueue_script(
+            'scroll-show',
+            get_template_directory_uri().'/assets/js/scroll-show.js',
+            ['scroll-reveal'],
+            '1.0',
+            true
+        );
+
 
         // CDN jQuery
         wp_deregister_script('jquery');
