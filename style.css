@@ -190,26 +190,15 @@ i[class^="flaticon-"]:after, i[class*=" flaticon-"]:after {
     border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%; }
   66% {
     border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%; } }
-@keyframes fadeInDown {
-  0% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1; } }
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 30%, 0);
-    -ms-transform: translate3d(0, 30%, 0);
-    transform: translate3d(0, 30%, 0); }
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px); }
   100% {
     opacity: 1;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none; } }
+    -webkit-transform: translateY(0);
+    transform: translateY(0); } }
 @-webkit-keyframes animationProgress {
   from {
     width: 0; } }
@@ -435,15 +424,15 @@ img {
 
 .scroll {
   opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
   transition: opacity 500ms; }
   .scroll .scrolled {
     opacity: 1; }
 
-.scrolled.fadeInDown {
-  animation: fadeInDown 1s ease-in-out both; }
-
 .scrolled.fadeInUp {
-  animation: fadeInUp 1s ease-in-out both; }
+  -webkit-animation: fadeInUp 1500ms ease-in-out both;
+  animation: fadeInUp 1500ms ease-in-out both; }
 
 .rounded {
   border-radius: 0.25rem; }
