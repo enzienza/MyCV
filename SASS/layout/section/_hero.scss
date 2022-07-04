@@ -6,19 +6,31 @@
     @include bg-paralax;
     @include flex;
     @include flex-flow(column nowrap);
+
+    &::after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background: #191919;
+        opacity: .7;
+        z-index: 0;
+    }
 }
 
-.overlay{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: "";
-    background: #000;
-    opacity: .7;
-    z-index: 0;
-}
+//.overlay{
+//    position: absolute;
+//    top: 0;
+//    right: 0;
+//    bottom: 0;
+//    left: 0;
+//    content: "";
+//    background: #000;
+//    opacity: .7;
+//    z-index: 0;
+//}
 
 .jumb-content{
     color: $color-light;

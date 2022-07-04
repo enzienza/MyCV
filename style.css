@@ -1192,6 +1192,8 @@ body.dark {
     text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
   body.dark .error-code {
     text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9); }
+  body.dark .title-section::before, body.dark .title-section::after {
+    border-color: #b300b3; }
   body.dark .btn-outline-primary {
     -webkit-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
@@ -1264,7 +1266,7 @@ body.dark {
     body.dark #my-form .frm_form_field textarea:focus {
       border-color: #b300b3; }
   body.dark #my-form .frm_button_submit {
-    border-color: 1px solid #b300b3;
+    border-color: #b300b3;
     color: #b300b3; }
     body.dark #my-form .frm_button_submit:hover, body.dark #my-form .frm_button_submit:active, body.dark #my-form .frm_button_submit:focus {
       background-color: #b300b3;
@@ -1433,6 +1435,10 @@ section {
   section:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.03); }
 
+#home, #about, #resumes, #skills {
+  min-height: 100vh;
+  margin-bottom: 2rem; }
+
 .title-section {
   text-align: center;
   text-transform: capitalize;
@@ -1443,7 +1449,7 @@ section {
   .title-section::before {
     position: absolute;
     content: "";
-    border-bottom: 1px solid purple;
+    border-bottom: 2px solid purple;
     width: 80px;
     bottom: 8px;
     left: 0px;
@@ -1453,7 +1459,7 @@ section {
   .title-section::after {
     position: absolute;
     content: "";
-    border-bottom: 1px solid purple;
+    border-bottom: 2px solid purple;
     width: 40px;
     bottom: 0px;
     left: 0px;
@@ -1501,17 +1507,16 @@ section {
   -webkit-box-direction: normal;
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap; }
-
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: "";
-  background: #000;
-  opacity: .7;
-  z-index: 0; }
+  .hero-wrap::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: #191919;
+    opacity: .7;
+    z-index: 0; }
 
 .jumb-content {
   color: #fafafa;
@@ -1563,8 +1568,14 @@ section {
   .desc {
     margin-bottom: 1.5rem;
     font-size: small; } }
+#about {
+  min-height: 100vh;
+  margin-bottom: 2rem; }
+
+.about-grid {
+  margin: 2rem auto; }
 .about-detail {
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: calc(1rem + .1vmin); }
   .about-detail h3 {
     padding-bottom: .5rem; }
