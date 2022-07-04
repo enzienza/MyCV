@@ -1,26 +1,96 @@
 /**
  * Name file: scroll-show
- * Description: to make jQuery scroll to different places of the document, you can use .scrollTo()
+ * Description: this script adds an animation to the scrolling of the section
  *
- * @version: 1.0
+ * @version: 1.2
  * @author: Enza Lombardo
  */
 
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function () {
 
-  window.sr = new ScrollReveal();
+  // if section is Resumes
+  if('#resumes'){
+    const ScrollResume = document.querySelectorAll(".timeline");
+  
+    const elementInView = (el, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
+  
+      return(
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend);
+    };
+  
+    const elementOutofView = (el) => {
+      const elementTop = el.getBoundingClientRect().top;
+  
+      return (
+        elementTop > (window.innerHeight || document.documentElement.clientHeight)
+      );
+    };
+  
+    const displayScrollResume = (element) => {
+      element.classList.add("scrolled");
+    };
+  
+    const hideScrollResume = (element) => {
+      element.classList.remove("scrolled");
+    };
+  
+    const handleScrollAnimation = () => {
+      ScrollResume.forEach((el) => {
+        if(elementInView(el, 1.25)){
+          displayScrollResume(el);
+        } else if(elementOutofView(el)){
+          hideScrollResume(el);
+        }
+      });
+    };
+  
+    window.addEventListener("scroll", () =>{
+      handleScrollAnimation();
+    });
+  }
 
-  /**
-   * FADE.IN.UP
-   * Add animation for all skill-group
-   */
-  sr.reveal('.fadeInUp', {
-    origin: 'bottom',
-    distance: '100px',
-    duration: 1500,
-    easing: "cubic-bezier(.215, .61, .355, 1)",
-    interval: 600,
-    delay: 500,
-  });
+  // if section is Skills
+  if('#skills'){
+    const ScrollSkill = document.querySelectorAll(".skill-group");
 
+    const elementInView = (el, dividend = 1) => {
+      const elementTop = el.getBoundingClientRect().top;
+
+      return(
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend);
+    };
+
+    const elementOutofView = (el) => {
+      const elementTop = el.getBoundingClientRect().top;
+
+      return (
+        elementTop > (window.innerHeight || document.documentElement.clientHeight)
+      );
+    };
+
+    const displayScrollSkill = (element) => {
+      element.classList.add("scrolled");
+    };
+
+    const hideScrollSkill = (element) => {
+      element.classList.remove("scrolled");
+    };
+
+    const handleScrollAnimation = () => {
+      ScrollSkill.forEach((el) => {
+        if(elementInView(el, 1.25)){
+          displayScrollSkill(el);
+        } else if(elementOutofView(el)){
+          hideScrollSkill(el);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", () =>{
+      handleScrollAnimation();
+    });
+  }
 });

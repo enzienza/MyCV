@@ -1,0 +1,19 @@
+// main: ../_components.scss
+
+.scroll{
+    opacity: 0;
+    transition: opacity 500ms;
+
+    .scrolled{
+        opacity: 1;
+    }
+}
+
+.scrolled.fadeInDown{
+    animation: fadeInDown 1s ease-in-out both;
+}
+
+
+.scrolled.fadeInUp{
+    animation: fadeInUp 1s ease-in-out both;
+}
