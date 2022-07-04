@@ -23,7 +23,7 @@
     if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
 ?>
 
-    <div class="skill-group fadeInUp">
+    <div class="skill-group scroll fadeInUp">
         <h2 class="skill-title"><?php the_title(); ?></h2>
 
         <div class="skill-grid">

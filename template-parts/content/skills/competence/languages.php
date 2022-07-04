@@ -11,7 +11,7 @@
 ?>
 
 
-<div class="skill-group fadeInUp">
+<div class="skill-group scroll fadeInUp">
     <h2 class="skill-title"><?php _e("Langues", "MyCV") ?></h2>
     <div class="language-grid">
         <div class="language-wrapper">

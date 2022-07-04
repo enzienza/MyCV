@@ -24,7 +24,7 @@
     $my_query = new WP_query($args);
     if($my_query->have_posts()) : while($my_query->have_posts()) : $my_query->the_post();
 ?>
-<div class="timeline">
+<div class="timeline scroll fadeInUp">
     <div class="timeline-card shadow">
         <div class="timeline-item">
             <div class="timeline-date">

@@ -10,7 +10,7 @@
 ?>
 
 <section id="home" class="hero-wrap" <?php if(checked(1, get_option('add_bg_hero'), false)): ?>style="background-image: url(<?php echo get_option('bg_hero') ?>)"<?php endif;?> >
-    <div class="overlay"></div>
+<!--    <div class="overlay"></div>-->
     <div class="jumb-content">
         <?php if(get_locale() === 'fr_FR') : // Partie FR =============== ?>
             <?php //get_template_part('template-parts/content/home/translate/fr-home') ?>
