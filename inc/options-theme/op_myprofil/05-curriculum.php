@@ -114,17 +114,9 @@ class myprofil_curriculum{
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_FR                   // SLUG_SECTION
         );
-        add_settings_field(
-            'export_cv_fr',                     // SLUG_FIELD
-            __('Exporter mon CV', 'MyCV'),               // LABEL
-            [self::class,'field_export_cv_fr'],     // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_FR                   // SLUG_SECTION
-        );
 
         // -> Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'import_cv_fr', [self::class, 'handle_cvfr_upload']);
-        register_setting(self::SUB_GROUP, 'export_cv_fr');
 
         /**
          * SECTION 2 : SECTION_EN =========================================
@@ -148,17 +140,9 @@ class myprofil_curriculum{
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_EN                   // SLUG_SECTION
         );
-        add_settings_field(
-            'export_cv_en',                     // SLUG_FIELD
-            __('Exporter mon CV', 'MyCV'),               // LABEL
-            [self::class,'field_export_cv_en'],     // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_EN                   // SLUG_SECTION
-        );
 
         // -> Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'import_cv_en', [self::class, 'handle_cven_upload']);
-        register_setting(self::SUB_GROUP, 'export_cv_en');
 
 
 
@@ -184,17 +168,9 @@ class myprofil_curriculum{
             self::SUB_GROUP ,                    // SLUG_PAGE
             self::SECTION_IT                   // SLUG_SECTION
         );
-        add_settings_field(
-            'export_cv_it',                     // SLUG_FIELD
-            __('Exporter mon CV', 'MyCV'),               // LABEL
-            [self::class,'field_export_cv_it'],     // CALLBACK
-            self::SUB_GROUP ,                    // SLUG_PAGE
-            self::SECTION_IT                   // SLUG_SECTION
-        );
 
         // -> Sauvegarder les champs
         register_setting(self::SUB_GROUP, 'import_cv_it', [self::class, 'handle_cvit_upload']);
-        register_setting(self::SUB_GROUP, 'export_cv_it');
 
     }
 
@@ -304,22 +280,7 @@ class myprofil_curriculum{
             </div>
         <?php
     }
-    public static function field_export_cv_fr(){
-        $export_cv_fr = esc_attr(get_option('export_cv_fr'));
-        ?>
-            <div>
-                <input type="checkbox"
-                       id="export_cv_fr"
-                       name="export_cv_fr"
-                       value="1"
-                       <?php checked(1, $export_cv_fr, true); ?>
-                />
-                <label for="">
-                    <?php _e('Ajouter le bouton "télécharger mon cv"', 'MyCV') ?>
-                </label>
-            </div>
-        <?php
-    }
+
 
     // SECTION 2 : SECTION_EN =========================================
     public static function field_import_cv_en(){
@@ -342,28 +303,12 @@ class myprofil_curriculum{
         </div>
         <?php
     }
-    public static function field_export_cv_en(){
-        $export_cv_en = esc_attr(get_option('export_cv_en'));
-        ?>
-        <div>
-            <input type="checkbox"
-                   id="export_cv_en"
-                   name="export_cv_en"
-                   value="1"
-                <?php checked(1, $export_cv_en, true); ?>
-            />
-            <label for="">
-                <?php _e('Ajouter le bouton "télécharger mon cv"', 'MyCV') ?>
-            </label>
-        </div>
-        <?php
-    }
-   
+
     // SECTION 3 : SECTION_IT =========================================
     public static function field_import_cv_it(){
         $import_cv_it = esc_attr(get_option('import_cv_it'));
         ?>
-        <div class="grid-cols-2">
+<!--        <div class="grid-cols-2">-->
             <div class="input-file">
                 <input type="file"
                        id="import_cv_it"
@@ -377,23 +322,7 @@ class myprofil_curriculum{
                        class="w-full"
                 />
             </div>
-        </div>
-        <?php
-    }
-    public static function field_export_cv_it(){
-        $export_cv_it = esc_attr(get_option('export_cv_it'));
-        ?>
-        <div>
-            <input type="checkbox"
-                   id="export_cv_it"
-                   name="export_cv_it"
-                   value="1"
-                <?php checked(1, $export_cv_it, true); ?>
-            />
-            <label for="">
-                <?php _e('Ajouter le bouton "télécharger mon cv"', 'MyCV') ?>
-            </label>
-        </div>
+<!--        </div>-->
         <?php
     }
 

@@ -90,10 +90,6 @@
     }
 }
 
-//.fadeInUp{
-//    visibility: hidden;
-//}
-
 .language{
     &-grid{
         @include grid;
@@ -136,16 +132,20 @@
         @include flex-direction(column);
     }
     &-name{
-        font-size: medium;
+        //font-size: medium;
+        font-size: x-large;
         font-weight: 600;
     }
     &-level{
-        font-size: x-large;
+        font-size: xx-large;
         font-weight: 800;
         letter-spacing: 3px;
+        line-height: 1.5;
     }
     &-is-native{
         font-size: small;
+        //letter-spacing: 1px;
+        font-weight: 300;
     }
 }
 

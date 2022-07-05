@@ -38,10 +38,10 @@
 
     <h1 class="name font-bold tracking-4">
         <?php if(checked(1, get_option('sidebar_display_lastname'), false)): ?>
-            <?php echo esc_attr(get_option('mylastname')); ?>
+            <?php echo esc_attr(get_option('myfirstname')); ?>
         <?php endif; ?>
         <?php if(checked(1, get_option('sidebar_display_firstname'), false)): ?>
-            <?php echo esc_attr(get_option('myfirstname')); ?>
+            <?php echo esc_attr(get_option('mylastname')); ?>
         <?php endif; ?>
     </h1>
     <?php if(checked(1, get_option('sidebar_display_job'), false)): ?>

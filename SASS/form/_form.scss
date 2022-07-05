@@ -2,8 +2,6 @@
 
 // This this style replaces the style of the Formidable-Forms plugin
 #my-form{
-    margin-bottom: 3rem;
-
     .frm_form_fields > fieldset {
         border: none;
     }
@@ -113,11 +111,13 @@
     }
     @include responsive(MD){}
     @include responsive(SM){
+        margin-bottom: 2rem;
         .frm_button_submit{
             width: 100%;
         }
     }
     @include responsive(XS){
+        margin-bottom: 2rem;
         .frm_button_submit{
             width: 100%;
         }

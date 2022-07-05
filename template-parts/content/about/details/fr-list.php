@@ -37,7 +37,7 @@
             <li>
                 <span class="detail-title"><?php _e('Localité', "MyCV"); ?></span>
                 <span class="detail-separater"></span>
-                <?php echo get_option('mylocation'); ?> (<?php echo get_option('mycountry')?>)
+                <?php echo get_option('mylocation'); ?> (<?php _e("Belgique", "MyCV");?>)
             </li>
         <?php endif; ?>
 

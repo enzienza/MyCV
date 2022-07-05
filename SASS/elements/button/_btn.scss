@@ -56,6 +56,13 @@
 
 .group-btn{
     margin-top: 1rem;
+
+    .btn{
+        margin-right: 1rem;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
 }
 
 

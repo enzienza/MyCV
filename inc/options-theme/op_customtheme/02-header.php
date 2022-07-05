@@ -277,7 +277,7 @@ class mycustome_header{
                value="1"
             <?php checked(1, $sidebar_hidden_social , true) ?>
         />
-        <label for=""><?php _e("Cacher la section utilisateur de la sidebar", "MyCV"); ?></label>
+        <label for=""><?php _e("Cacher la section network de la sidebar", "MyCV"); ?></label>
         <?php
     }
 

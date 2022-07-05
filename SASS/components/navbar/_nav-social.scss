@@ -21,12 +21,31 @@
 .network{
     &-list{
         margin-bottom: .5rem;
+        position: relative;
         @include flex-row-center;
+        &::before, &::after{
+            content: "";
+            position: absolute;
+            background: rgba($color-dark, .6);
+            height: 1px;
+            top: 20px;
+            width: calc(40% - 3vw);
+        }
+
+        &::before{
+            left: 0;
+        }
+
+        &::after{
+            right: 0;
+        }
     }
     &-item{
         font-family: $font-icon;
         padding: 0.5rem;
+        color: rgba($color-dark, .6);;
         &:hover{
+            color: $color-primary-light;
         }
     }
 }
@@ -54,5 +73,19 @@
         &-list{
             @include flex-direction(column);
         }
+    }
+}
+
+@include responsive(XL){}
+@include responsive(LG){}
+@include responsive(MD){}
+@include responsive(SM){
+    .network-list::before, .network-list::after{
+        width: 2rem;
+    }
+}
+@include responsive(XS){
+    .network-list::before, .network-list::after{
+        width: 2rem;
     }
 }

@@ -160,7 +160,7 @@ class myprofil_aboutme{
         );
 
     // 3. Sauvegarder les champs
-        register_setting(self::SUB_GROUP, 'talk_show_aboutme_en');
+        register_setting(self::SUB_GROUP, 'talk_short_aboutme_en');
         register_setting(self::SUB_GROUP, 'talk_aboutme_en');
 
     /**

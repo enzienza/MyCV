@@ -67,14 +67,24 @@ section{
     }
 }
 
+
+
 @include responsive(XL){
     .desc-section{
         text-align: center;
+    }
+
+    .contact-social{
+        margin-top: calc(2em + 1vmin);
     }
 }
 @include responsive(LG){
     .desc-section{
         text-align: center;
+    }
+
+    .contact-social{
+        margin-top: calc(2em + 1vmin);
     }
 }
 @include responsive(MD){}

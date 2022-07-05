@@ -57,7 +57,7 @@
 
 <?php if(checked(1, get_option('hero_about_fr'), false)): ?>
     <p class="desc font-thin">
-        <?php echo get_option('talk_aboutme_en', "MyCV") ?>
+        <?php echo get_option('talk_short_aboutme_en', "MyCV") ?>
     </p>
 <?php endif; ?>
 

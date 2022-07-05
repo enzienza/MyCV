@@ -1,8 +1,8 @@
 // main: ../_latout.scss
 
 #about{
-    min-height: 100vh;
-    margin-bottom: 2rem;
+    //min-height: 100vh;
+    //margin-bottom: 2rem;
 }
 
 .about{
@@ -17,6 +17,7 @@
     }
     &-detail{
         margin-top: 3rem;
+        margin-bottom: 2em;
         font-size: calc(1rem + .1vmin);
         h3{
             padding-bottom: .5rem;

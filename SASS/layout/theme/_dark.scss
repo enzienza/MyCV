@@ -12,6 +12,20 @@ body.dark{
         background: $color-primary;
     }
 
+    // NETWORK
+    .network{
+        &-list::before, &-list::after{
+            background: rgba($color-light, .3);
+        }
+        &-item{
+            color: rgba($color-light, .4);
+            text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);
+            &:hover{
+                color: $color-primary-light;
+            }
+        }
+    }
+
     // FOOTER
     .footer{
         color: rgba($color-light, .5);
@@ -79,12 +93,12 @@ body.dark{
 
     // TIMELINE
     .timeline{
-        &::before{
+        &::before, &::after{
             background: $color-primary;
         }
-        &::after{
-            border-color: $color-primary;
-        }
+        //&::after{
+        //    border-color: $color-primary;
+        //}
 
         &-card{
             text-shadow: 4px 2px 4px rgba(9, 9, 9, 0.9);

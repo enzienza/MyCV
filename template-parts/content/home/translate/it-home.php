@@ -60,7 +60,7 @@
 
 <?php if(checked(1, get_option('hero_about_it'), false)) :?>
     <p class="desc font-thin">
-        <?php echo get_option('talk_aboutme_it') ?>
+        <?php echo get_option('talk_short_aboutme_it') ?>
     </p>
 <?php endif; ?>
 
