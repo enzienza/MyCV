@@ -5,3 +5,9 @@
     display: -ms-flexbox;
     display: flex;
 }
+
+.flex-between{
+    @include flex;
+    @include flex-direction(row);
+    @include justify-content(space-between)
+}
