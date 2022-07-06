@@ -187,10 +187,29 @@ class mycv_mycustome{
                 </td>
                 <td class="desc">
                     <span class="importer-desc">
-                      <?php _e("Lien pour gérer l'affichage de la la page d'erreu", "MyCV"); ?>r
+                      <?php _e("Lien pour gérer l'affichage de la la page d'erreur", "MyCV"); ?>r
                     </span>
                 </td>
             </tr>
+
+            <tr class="importer-item">
+                <td class="import-system">
+                    <span class="importer-title"><?php _e("Footer", "MyCV"); ?></span>
+                    <span class="importer-action">
+                      <a href="?page=mycustome_footer" class="install-now">
+                          <?php _e("Gérer la section", "MyCV"); ?>
+                      </a>
+                    </span>
+                </td>
+                <td class="desc">
+                    <span class="importer-desc">
+                      <?php _e("Lien pour gérer l'affichage du footer", "MyCV"); ?>
+                    </span>
+                </td>
+            </tr>
+
+
+
 
         </table>
         <?php

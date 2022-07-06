@@ -66,6 +66,10 @@ h3{
     //font-size: calc((1.8 - 1) * 1.2vw + 1rem);
 }
 
+.text-color{
+    color: $color-primary-dark;
+}
+
 img {
     max-width: 100%;
 }
