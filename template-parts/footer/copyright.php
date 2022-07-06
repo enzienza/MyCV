@@ -21,6 +21,6 @@
     </div>
 <?php elseif(checked(2, get_option('template_footer'), false)) : ?>
     <div class="copyright">
-        Copyright © 2022 <span class="">Enza</span> | <?php _e("All rights reserved", "MyCV") ?>
+        Copyright © 2022 <span class="higt">Enza</span> | <?php _e("All rights reserved", "MyCV") ?>
     </div>
 <?php endif; ?>

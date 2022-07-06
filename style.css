@@ -1462,6 +1462,8 @@ header {
     transition: color 350ms ease; }
     .footer a:hover {
       color: #e600e6; }
+  .footer .higt {
+    color: #5e5e5e; }
 
 .legal-list {
   display: -webkit-box;

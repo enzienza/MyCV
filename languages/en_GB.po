@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: MyCV 2021\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-14 15:58+0000\n"
-"PO-Revision-Date: 2022-06-27 16:20+0000\n"
+"PO-Revision-Date: 2022-07-06 08:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (UK)\n"
 "Language: en_GB\n"
@@ -15,43 +15,47 @@ msgstr ""
 "X-Loco-Version: 2.6.2; wp-6.0\n"
 "X-Domain: MyCV"
 
+#: inc/options-theme/op_customtheme/10-footer.php:178
+msgid "\"name-Theme\" © 2022 | Created by Enza Lombardo"
+msgstr "\"name-Theme\" © 2022 | Created by Enza Lombardo"
+
 #: inc/metaboxes/MB_year.php:70
 msgid "2000"
 msgstr "2000"
 
-#: inc/options-theme/op_skills/01-languages.php:323
-#: inc/options-theme/op_skills/01-languages.php:373
-#: inc/options-theme/op_skills/01-languages.php:422
+#: inc/options-theme/op_skills/01-languages.php:322
+#: inc/options-theme/op_skills/01-languages.php:372
+#: inc/options-theme/op_skills/01-languages.php:421
 msgid "<span class='font-bold'>A1</span> - niveau introductif ou de découvert"
 msgstr "<span class='font-bold'>A1</span> - Beginner"
 
-#: inc/options-theme/op_skills/01-languages.php:327
-#: inc/options-theme/op_skills/01-languages.php:377
-#: inc/options-theme/op_skills/01-languages.php:426
+#: inc/options-theme/op_skills/01-languages.php:326
+#: inc/options-theme/op_skills/01-languages.php:376
+#: inc/options-theme/op_skills/01-languages.php:425
 msgid "<span class='font-bold'>A2</span> - niveau intermédiaire ou usuel"
 msgstr "<span class='font-bold'>A2</span> - Pre-Intermediate"
 
-#: inc/options-theme/op_skills/01-languages.php:334
-#: inc/options-theme/op_skills/01-languages.php:384
-#: inc/options-theme/op_skills/01-languages.php:433
+#: inc/options-theme/op_skills/01-languages.php:333
+#: inc/options-theme/op_skills/01-languages.php:383
+#: inc/options-theme/op_skills/01-languages.php:432
 msgid "<span class='font-bold'>B1</span> - niveau seuil"
 msgstr "<span class='font-bold'>B1</span> - Intermediate"
 
-#: inc/options-theme/op_skills/01-languages.php:338
-#: inc/options-theme/op_skills/01-languages.php:388
-#: inc/options-theme/op_skills/01-languages.php:437
+#: inc/options-theme/op_skills/01-languages.php:337
+#: inc/options-theme/op_skills/01-languages.php:387
+#: inc/options-theme/op_skills/01-languages.php:436
 msgid "<span class='font-bold'>B2</span> - niveau avancé ou indépendant"
 msgstr "<span class='font-bold'>B2</span> - Upper-Intermediate"
 
-#: inc/options-theme/op_skills/01-languages.php:345
-#: inc/options-theme/op_skills/01-languages.php:395
-#: inc/options-theme/op_skills/01-languages.php:444
+#: inc/options-theme/op_skills/01-languages.php:344
+#: inc/options-theme/op_skills/01-languages.php:394
+#: inc/options-theme/op_skills/01-languages.php:443
 msgid "<span class='font-bold'>C1</span> - niveau autonome"
 msgstr "<span class='font-bold'>C1</span> - Advanced"
 
-#: inc/options-theme/op_skills/01-languages.php:349
-#: inc/options-theme/op_skills/01-languages.php:399
-#: inc/options-theme/op_skills/01-languages.php:448
+#: inc/options-theme/op_skills/01-languages.php:348
+#: inc/options-theme/op_skills/01-languages.php:398
+#: inc/options-theme/op_skills/01-languages.php:447
 msgid "<span class='font-bold'>C2</span> - niveau maîtrise"
 msgstr "<pan class='font-bold'>C2</span> - Mastery"
 
@@ -164,12 +168,6 @@ msgstr "Add"
 msgid "Ajouter \"Parler de sois\""
 msgstr "Add \"Talking about being\""
 
-#: inc/options-theme/op_myprofil/05-curriculum.php:318
-#: inc/options-theme/op_myprofil/05-curriculum.php:356
-#: inc/options-theme/op_myprofil/05-curriculum.php:394
-msgid "Ajouter le bouton \"télécharger mon cv\""
-msgstr "Add the \"upload my CV\" button"
-
 #: inc/options-theme/op_customtheme/03-home.php:628
 msgid "Ajouter le nom du job visé"
 msgstr "Add the name of the targeted job"
@@ -206,6 +204,10 @@ msgstr "Add new experience"
 msgid "Ajouter une nouvelle formation"
 msgstr "Add a new training"
 
+#: template-parts/footer/copyright.php:24
+msgid "All rights reserved"
+msgstr "All rights reserved"
+
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/05-resume.php:397
 #: inc/options-theme/op_customtheme/05-resume.php:443
@@ -215,7 +217,7 @@ msgstr "Add a new training"
 #: inc/options-theme/op_customtheme/07-skills.php:340
 #: inc/options-theme/op_customtheme/07-skills.php:393
 #: inc/options-theme/op_customtheme/08-contact.php:303
-#: inc/options-theme/op_skills/01-languages.php:162
+#: inc/options-theme/op_skills/01-languages.php:161
 #: template-parts/content/skills/competence/skill-lang/en-lang.php:29
 msgid "Anglais"
 msgstr "English"
@@ -262,9 +264,9 @@ msgstr "No training found"
 msgid "Aucune formation trouvée dans la corbeille"
 msgstr "No training found in trash"
 
-#: inc/options-theme/op_skills/01-languages.php:342
-#: inc/options-theme/op_skills/01-languages.php:392
-#: inc/options-theme/op_skills/01-languages.php:441
+#: inc/options-theme/op_skills/01-languages.php:341
+#: inc/options-theme/op_skills/01-languages.php:391
+#: inc/options-theme/op_skills/01-languages.php:440
 msgid "Avancé"
 msgstr "Advanced"
 
@@ -284,6 +286,9 @@ msgid "Behance"
 msgstr "Behance"
 
 #: inc/options-theme/op_myprofil/01-personalDetails.php:350
+#: template-parts/content/about/details/it-list.php:40
+#: template-parts/content/about/details/en-list.php:40
+#: template-parts/content/about/details/fr-list.php:40
 msgid "Belgique"
 msgstr "Belgium"
 
@@ -328,12 +333,15 @@ msgstr "It is an internship"
 msgid "Cacher la section"
 msgstr "Hide section"
 
-#: inc/options-theme/op_customtheme/02-header.php:206
 #: inc/options-theme/op_customtheme/02-header.php:280
+msgid "Cacher la section network de la sidebar"
+msgstr "Hide the social networks section of the sidebar"
+
+#: inc/options-theme/op_customtheme/02-header.php:206
 msgid "Cacher la section utilisateur de la sidebar"
 msgstr "Hide user section from sidebar"
 
-#: inc/options-theme/op_skills/01-languages.php:264
+#: inc/options-theme/op_skills/01-languages.php:263
 msgid "Cadre Européen de Référence pour les Langues"
 msgstr "Common European Framework of Reference for Languages"
 
@@ -356,6 +364,7 @@ msgid "Ce message sera présent si la boucle est vide"
 msgstr "This message will be present if the loop is empty"
 
 #. SLUG_FIELD
+#: inc/options-theme/op_customtheme/10-footer.php:123
 #: inc/options-theme/op_customtheme/09-errorpage.php:111
 #: inc/options-theme/op_customtheme/04-about.php:152
 #: inc/options-theme/op_customtheme/03-home.php:155
@@ -397,6 +406,10 @@ msgid ""
 msgstr ""
 "This part allows you to manage the display of calls-to-action present in the "
 "section"
+
+#: inc/options-theme/op_customtheme/10-footer.php:143
+msgid "Cette partie vous permet de gérer l'affichage du footer"
+msgstr "This part allows you to manage the display of the footer"
 
 #: inc/options-theme/op_customtheme/03-home.php:325
 msgid "Cette partie vous permet de gérer l'affichage du métier visé"
@@ -459,6 +472,17 @@ msgstr "Choose the image"
 msgid "Choisir l'image à afficher"
 msgstr "Choose the image to display"
 
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/10-footer.php:116
+msgid "Choisir le format"
+msgstr "Choose the format"
+
+#. SLUG_FIELD
+#: inc/options-theme/op_customtheme/10-footer.php:109
+msgid "Choisir le type"
+msgstr "Choose the type"
+
+#: inc/options-theme/op_customtheme/10-footer.php:193
 #: inc/options-theme/op_customtheme/09-errorpage.php:294
 #: inc/options-theme/op_customtheme/04-about.php:331
 #: inc/options-theme/op_customtheme/03-home.php:547
@@ -507,6 +531,24 @@ msgstr "Contact"
 msgid "Contactez moi"
 msgstr "Contact me"
 
+#: template-parts/footer/legal.php:37 template-parts/footer/legal.php:41
+#: template-parts/footer/legal.php:45
+#: inc/options-theme/op_customtheme/10-footer.php:200
+msgid "Cookies"
+msgstr "Cookies"
+
+#: inc/options-theme/op_customtheme/10-footer.php:166
+msgid "Copyright + partie légale"
+msgstr "Copyright + legal part"
+
+#: inc/options-theme/op_customtheme/10-footer.php:182
+msgid "Copyright ©  2022 Enza | All rights reserved"
+msgstr "Copyright © 2022 Enza | All rights reserved"
+
+#: template-parts/footer/copyright.php:19
+msgid "Created by"
+msgstr "Created by"
+
 #. slug parent
 #. page_title
 #: inc/options-theme/op_myprofil/05-curriculum.php:59
@@ -537,6 +579,10 @@ msgstr ""
 #: inc/options-theme/op_myprofil/01-personalDetails.php:139
 msgid "Date de naissance"
 msgstr "Date of Birth"
+
+#. Name of the template
+msgid "default"
+msgstr "default"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_customtheme/05-resume.php:127
@@ -618,13 +664,6 @@ msgstr "Error page"
 msgid "Ex: Oups! Une erreur s'est produite"
 msgstr "Ex: Oops, an error has occurred"
 
-#. SLUG_FIELD
-#: inc/options-theme/op_myprofil/05-curriculum.php:119
-#: inc/options-theme/op_myprofil/05-curriculum.php:153
-#: inc/options-theme/op_myprofil/05-curriculum.php:189
-msgid "Exporter mon CV"
-msgstr "Exporter mon CV"
-
 #: inc/post-type/cpt_experience.php:23
 msgid "Expérience"
 msgstr "Experience"
@@ -646,6 +685,14 @@ msgstr "Filter experiences list"
 msgid "Filtrer la liste des formations"
 msgstr "Filter the list of trainings "
 
+#. slug parent
+#. page_title
+#: inc/options-theme/op_customtheme/10-footer.php:55
+#: inc/options-theme/op_customtheme/10-footer.php:56
+#: inc/options-theme/op_customtheme/01-custometheme.php:197
+msgid "Footer"
+msgstr "Footer"
+
 #: inc/post-type/cpt_formation.php:23
 msgid "Formation"
 msgstr "Training"
@@ -659,22 +706,22 @@ msgstr "Training"
 #: inc/options-theme/op_customtheme/07-skills.php:331
 #: inc/options-theme/op_customtheme/07-skills.php:384
 #: inc/options-theme/op_customtheme/08-contact.php:294
-#: inc/options-theme/op_skills/01-languages.php:127
-#: template-parts/content/skills/competence/skill-lang/fr-lang.php:28
+#: inc/options-theme/op_skills/01-languages.php:126
+#: template-parts/content/skills/competence/skill-lang/fr-lang.php:27
 msgid "Français"
 msgstr "French"
 
-#: inc/options-theme/op_myprofil/05-curriculum.php:217
+#: inc/options-theme/op_myprofil/05-curriculum.php:193
 #: inc/options-theme/op_myprofil/04-aboutme.php:218
 msgid "Gestion de la section en anglais"
 msgstr "Management of the section in English"
 
-#: inc/options-theme/op_myprofil/05-curriculum.php:208
+#: inc/options-theme/op_myprofil/05-curriculum.php:184
 #: inc/options-theme/op_myprofil/04-aboutme.php:210
 msgid "Gestion de la section en français"
 msgstr "Management of the section in French"
 
-#: inc/options-theme/op_myprofil/05-curriculum.php:226
+#: inc/options-theme/op_myprofil/05-curriculum.php:202
 #: inc/options-theme/op_myprofil/04-aboutme.php:226
 msgid "Gestion de la section en italien"
 msgstr "Management of the section in Italian"
@@ -708,6 +755,7 @@ msgstr "Manage page"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_customtheme/05-resume.php:105
+#: inc/options-theme/op_customtheme/10-footer.php:101
 #: inc/options-theme/op_customtheme/09-errorpage.php:103
 #: inc/options-theme/op_customtheme/04-about.php:102
 #: inc/options-theme/op_customtheme/01-custometheme.php:90
@@ -716,6 +764,7 @@ msgstr "Manage page"
 #: inc/options-theme/op_customtheme/01-custometheme.php:137
 #: inc/options-theme/op_customtheme/01-custometheme.php:152
 #: inc/options-theme/op_customtheme/01-custometheme.php:168
+#: inc/options-theme/op_customtheme/01-custometheme.php:200
 #: inc/options-theme/op_customtheme/07-skills.php:104
 #: inc/options-theme/op_customtheme/08-contact.php:103
 msgid "Gérer la section"
@@ -774,8 +823,8 @@ msgstr "Background image"
 
 #. SLUG_FIELD
 #: inc/options-theme/op_myprofil/05-curriculum.php:112
-#: inc/options-theme/op_myprofil/05-curriculum.php:146
-#: inc/options-theme/op_myprofil/05-curriculum.php:182
+#: inc/options-theme/op_myprofil/05-curriculum.php:138
+#: inc/options-theme/op_myprofil/05-curriculum.php:166
 msgid "Importer mon CV"
 msgstr "Import my CV"
 
@@ -794,9 +843,9 @@ msgstr "Training information"
 msgid "Instagram"
 msgstr "Instagram"
 
-#: inc/options-theme/op_skills/01-languages.php:331
-#: inc/options-theme/op_skills/01-languages.php:381
-#: inc/options-theme/op_skills/01-languages.php:430
+#: inc/options-theme/op_skills/01-languages.php:330
+#: inc/options-theme/op_skills/01-languages.php:380
+#: inc/options-theme/op_skills/01-languages.php:429
 msgid "Intermédiaire"
 msgstr "Intermediate"
 
@@ -809,8 +858,8 @@ msgstr "Intermediate"
 #: inc/options-theme/op_customtheme/07-skills.php:349
 #: inc/options-theme/op_customtheme/07-skills.php:402
 #: inc/options-theme/op_customtheme/08-contact.php:312
-#: inc/options-theme/op_skills/01-languages.php:197
-#: template-parts/content/skills/competence/skill-lang/it-lang.php:28
+#: inc/options-theme/op_skills/01-languages.php:196
+#: template-parts/content/skills/competence/skill-lang/it-lang.php:27
 msgid "Italien"
 msgstr "Italian"
 
@@ -820,7 +869,7 @@ msgstr "Italian"
 msgid "Job"
 msgstr "Job"
 
-#: inc/options-theme/op_skills/01-languages.php:234
+#: inc/options-theme/op_skills/01-languages.php:233
 msgid ""
 "La liste des niveaux de langue CECRL<span class='footnote-mark'><a "
 "href='#fn1'>1</a></span>"
@@ -829,20 +878,20 @@ msgstr ""
 "language levels "
 
 #. SLUG_FIELD
-#: inc/options-theme/op_skills/01-languages.php:135
-#: inc/options-theme/op_skills/01-languages.php:170
-#: inc/options-theme/op_skills/01-languages.php:205
-#: template-parts/content/skills/competence/skill-lang/it-lang.php:43
-#: template-parts/content/skills/competence/skill-lang/fr-lang.php:43
+#: inc/options-theme/op_skills/01-languages.php:134
+#: inc/options-theme/op_skills/01-languages.php:169
+#: inc/options-theme/op_skills/01-languages.php:204
+#: template-parts/content/skills/competence/skill-lang/it-lang.php:42
+#: template-parts/content/skills/competence/skill-lang/fr-lang.php:42
 #: template-parts/content/skills/competence/skill-lang/en-lang.php:44
 msgid "Langue maternelle"
 msgstr "Native language"
 
 #. slug parent
 #. TITLE_PAGE
+#: inc/options-theme/op_skills/01-languages.php:61
 #: inc/options-theme/op_skills/01-languages.php:62
-#: inc/options-theme/op_skills/01-languages.php:63
-#: inc/options-theme/op_skills/01-languages.php:76
+#: inc/options-theme/op_skills/01-languages.php:75
 #: template-parts/content/skills/competence/languages.php:15
 msgid "Langues"
 msgstr "Languages"
@@ -856,7 +905,8 @@ msgid "Lien pour gérer l'affichage de l'header"
 msgstr "Link to manage the header display"
 
 #: inc/options-theme/op_customtheme/01-custometheme.php:190
-msgid "Lien pour gérer l'affichage de la la page d'erreu"
+#| msgid "Lien pour gérer l'affichage de la la page d'erreu"
+msgid "Lien pour gérer l'affichage de la la page d'erreur"
 msgstr "Link to manage the display of the error page"
 
 #: inc/options-theme/op_customtheme/01-custometheme.php:112
@@ -879,6 +929,10 @@ msgstr "Link to manage the display of the course section"
 #: inc/options-theme/op_customtheme/01-custometheme.php:128
 msgid "Lien pour gérer l'affichage de la section è propos"
 msgstr "Link to manage the display of the about section"
+
+#: inc/options-theme/op_customtheme/01-custometheme.php:206
+msgid "Lien pour gérer l'affichage du footer"
+msgstr "Link to manage the display of the footer"
 
 #: inc/options-theme/op_customtheme/03-home.php:477
 #: inc/options-theme/op_customtheme/03-home.php:498
@@ -932,6 +986,12 @@ msgstr "Hide the home section of the theme"
 #: inc/options-theme/op_customtheme/07-skills.php:320
 msgid "Masquer la section skill du theme"
 msgstr "Hide theme competence section"
+
+#: template-parts/footer/legal.php:18 template-parts/footer/legal.php:22
+#: template-parts/footer/legal.php:26
+#: inc/options-theme/op_customtheme/10-footer.php:196
+msgid "Mentions légales"
+msgstr "Legal notice"
 
 #. SLUG_SECTION
 #: inc/options-theme/op_myprofil/01-personalDetails.php:162
@@ -1053,34 +1113,34 @@ msgstr "MyCV 2021"
 msgid "Métier"
 msgstr "Job"
 
-#: inc/options-theme/op_skills/01-languages.php:256
+#: inc/options-theme/op_skills/01-languages.php:255
 msgid "niveau autonome"
 msgstr "Advanced"
 
-#: inc/options-theme/op_skills/01-languages.php:249
+#: inc/options-theme/op_skills/01-languages.php:248
 msgid "niveau avancé ou indépendant"
 msgstr "Upper-Intermediate"
 
 #. SLUG_FIELD
-#: inc/options-theme/op_skills/01-languages.php:142
-#: inc/options-theme/op_skills/01-languages.php:177
-#: inc/options-theme/op_skills/01-languages.php:212
+#: inc/options-theme/op_skills/01-languages.php:141
+#: inc/options-theme/op_skills/01-languages.php:176
+#: inc/options-theme/op_skills/01-languages.php:211
 msgid "Niveau de maîtrise"
 msgstr "Mastery level"
 
-#: inc/options-theme/op_skills/01-languages.php:241
+#: inc/options-theme/op_skills/01-languages.php:240
 msgid "niveau intermédiaire ou usuel"
 msgstr "Pre-Intermediate"
 
-#: inc/options-theme/op_skills/01-languages.php:240
+#: inc/options-theme/op_skills/01-languages.php:239
 msgid "niveau introductif ou de découverte"
 msgstr "Beginner"
 
-#: inc/options-theme/op_skills/01-languages.php:257
+#: inc/options-theme/op_skills/01-languages.php:256
 msgid "niveau maîtrise"
 msgstr "Mastery"
 
-#: inc/options-theme/op_skills/01-languages.php:248
+#: inc/options-theme/op_skills/01-languages.php:247
 msgid "niveau seuil"
 msgstr "Advanced"
 
@@ -1101,9 +1161,9 @@ msgstr "Full Name"
 
 #: inc/metaboxes/MB_info_formation.php:66 inc/metaboxes/MB_info_resume.php:67
 #: inc/metaboxes/MB_info_resume.php:72
-#: inc/options-theme/op_skills/01-languages.php:312
-#: inc/options-theme/op_skills/01-languages.php:362
-#: inc/options-theme/op_skills/01-languages.php:411
+#: inc/options-theme/op_skills/01-languages.php:311
+#: inc/options-theme/op_skills/01-languages.php:361
+#: inc/options-theme/op_skills/01-languages.php:410
 #: inc/customize/columns/admin-experiences.php:103
 msgid "Non"
 msgstr "No"
@@ -1122,9 +1182,9 @@ msgstr "New training"
 
 #: inc/metaboxes/MB_info_formation.php:65 inc/metaboxes/MB_info_resume.php:66
 #: inc/metaboxes/MB_info_resume.php:71
-#: inc/options-theme/op_skills/01-languages.php:311
-#: inc/options-theme/op_skills/01-languages.php:361
-#: inc/options-theme/op_skills/01-languages.php:410
+#: inc/options-theme/op_skills/01-languages.php:310
+#: inc/options-theme/op_skills/01-languages.php:360
+#: inc/options-theme/op_skills/01-languages.php:409
 msgid "Oui"
 msgstr "Yes"
 
@@ -1170,6 +1230,10 @@ msgstr "Customise the resume section"
 msgid "Personnaliser la section skill"
 msgstr "Customize the skill section"
 
+#: inc/options-theme/op_customtheme/10-footer.php:69
+msgid "Personnaliser le footer"
+msgstr "Customise the footer"
+
 #: inc/options-theme/op_customtheme/02-header.php:70
 msgid "Personnaliser le header"
 msgstr "Customize the header"
@@ -1207,9 +1271,9 @@ msgstr "Percentage"
 msgid "Préciser l'année"
 msgstr "Specify year"
 
-#: inc/options-theme/op_skills/01-languages.php:275
-#: inc/options-theme/op_skills/01-languages.php:284
-#: inc/options-theme/op_skills/01-languages.php:293
+#: inc/options-theme/op_skills/01-languages.php:274
+#: inc/options-theme/op_skills/01-languages.php:283
+#: inc/options-theme/op_skills/01-languages.php:292
 msgid "Précisé le niveau de maîtrise de cette langue"
 msgstr "Specify the level of proficiency in this language"
 
@@ -1277,7 +1341,7 @@ msgid "Section dédiée à la traduction du post"
 msgstr "Section dedicated to the translation of the post"
 
 #. SLUG_SECTION
-#: inc/options-theme/op_myprofil/05-curriculum.php:139
+#: inc/options-theme/op_myprofil/05-curriculum.php:131
 msgid "Section en anglais"
 msgstr "English section"
 
@@ -1287,7 +1351,7 @@ msgid "Section en français"
 msgstr "French section"
 
 #. SLUG_SECTION
-#: inc/options-theme/op_myprofil/05-curriculum.php:175
+#: inc/options-theme/op_myprofil/05-curriculum.php:159
 msgid "Section en italien"
 msgstr "Italian section"
 
@@ -1349,6 +1413,10 @@ msgstr "On this page you can manage the resume section of the site"
 msgid "Sur cette page vous pouvez gérer la section des skills du site"
 msgstr "On this page you can manage the skills section of the site"
 
+#: inc/options-theme/op_customtheme/10-footer.php:71
+msgid "Sur cette page vous pouvez gérer le footer du site"
+msgstr "On this page you can manage the footer of the site"
+
 #: inc/options-theme/op_customtheme/02-header.php:72
 msgid "Sur cette page vous pouvez gérer le header du site"
 msgstr "On this page you can manage the header of the site"
@@ -1373,7 +1441,7 @@ msgstr "On this page you can manage your Curriculum Vitae information"
 msgid "Sur cette page vous pouvez gérer les url de vos réseaux sociaux"
 msgstr "On this page you can manage the URLs of your social networks"
 
-#: inc/options-theme/op_skills/01-languages.php:78
+#: inc/options-theme/op_skills/01-languages.php:77
 msgid "Sur cette page vous pouvez gérer vos compétences en langues"
 msgstr "On this page you can manage your language skills"
 
@@ -1497,15 +1565,20 @@ msgstr "Download CV"
 msgid "Téléphone"
 msgstr "Phone"
 
-#: inc/options-theme/op_skills/01-languages.php:254
+#: inc/options-theme/op_customtheme/10-footer.php:162
+msgid "Uniquement le copyright"
+msgstr ""
+"Copyright only\n"
+
+#: inc/options-theme/op_skills/01-languages.php:253
 msgid "Utilisateur avancé"
 msgstr "Advanced user"
 
-#: inc/options-theme/op_skills/01-languages.php:246
+#: inc/options-theme/op_skills/01-languages.php:245
 msgid "Utilisateur intermédiaire"
 msgstr "Intermediate user"
 
-#: inc/options-theme/op_skills/01-languages.php:238
+#: inc/options-theme/op_skills/01-languages.php:237
 msgid "Utilisateur élémentaire"
 msgstr "Basic user"
 
@@ -1530,9 +1603,9 @@ msgstr "About me"
 msgid "Âge"
 msgstr "Age"
 
-#: inc/options-theme/op_skills/01-languages.php:320
-#: inc/options-theme/op_skills/01-languages.php:370
-#: inc/options-theme/op_skills/01-languages.php:419
+#: inc/options-theme/op_skills/01-languages.php:319
+#: inc/options-theme/op_skills/01-languages.php:369
+#: inc/options-theme/op_skills/01-languages.php:418
 msgid "Élémentaire"
 msgstr "Beginner"
 
